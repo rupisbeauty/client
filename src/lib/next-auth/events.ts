@@ -1,6 +1,6 @@
 import { type NextAuthOptions } from 'next-auth';
 import { debug as globalDebug, dev } from '../../utils';
-import { onCreateuser } from './handlers/onCreateUser';
+// import { onCreateuser } from './handlers/onCreateUser';
 // @link: https://next-auth.js.org/configuration/options#events
 
 const debug = globalDebug || false;
@@ -17,11 +17,11 @@ export const events: NextAuthOptions['events'] = {
   },
   async createUser(message) {
     dev.log('event:createUser | message', message, debug);
-    await onCreateuser({
-      id: message?.user?.id,
-      name: String(message?.user?.name),
-      email: String(message?.user?.email),
-    });
+    // await onCreateuser({
+    //   id: message?.user?.id,
+    //   name: String(message?.user?.name),
+    //   email: String(message?.user?.email),
+    // });
   },
   async updateUser(message) {
     // await wait(50);
