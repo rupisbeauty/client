@@ -4,7 +4,7 @@ import { debug as globalDebug, dev } from '@/utils';
 import { Account, Profile, User, type CallbacksOptions } from 'next-auth';
 import { AdapterUser } from 'next-auth/adapters';
 import { JWT } from 'next-auth/jwt';
-import { refreshAccessToken } from '../spotify-web-api/token';
+// import { refreshAccessToken } from '../spotify-web-api/token';
 
 const debug: boolean = globalDebug || false;
 
@@ -45,43 +45,7 @@ export const jwtCallback: JWTCallback = async ({
     debug
   );
 
-  if (account && user) {
-    // initial sign in - add tokens to jwt
-    dev.log('callback:jwt::initial-signin', { token }, debug);
-    return {
-      ...token,
-      accessToken: account.access_token,
-      refreshToken: account.refresh_token,
-      username: account.providerAccountId,
-      // converted to milliseconds
-      accessTokenExpires: Number(account.expires_at) * 1000, // convert to MS
-    };
-  }
-
-  if (Date.now() < Number(token.accessTokenExpires)) {
-    dev.log(
-      'callback:jwt:token NOT EXPIRED',
-      {
-        expired: Date.now() > (token?.accessTokenExpires as number),
-        expiresIn: (token?.accessTokenExpires as number) - Date.now(),
-        tokenExpires: token?.accessTokenExpires,
-        now: Date.now(),
-      },
-      debug
-    );
-    return token;
-  }
-
-  //access token has expired, so we need to refresh it
-  dev.log(
-    '🎟 Token Expired. REFRESHING...',
-    { token: token.accessToken },
-    debug
-  );
-  const jwt: JWT = await refreshAccessToken(token);
-  dev.log('🔵 | jwtCallback:RefreshedToken| line 65 | jwt', jwt, debug);
-  if (!jwt) throw jwt;
-  return jwt;
+  return token;
 };
 
 export const signInCallback: CallbacksOptions['signIn'] = ({

@@ -1,6 +1,5 @@
 import { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
 import { Session } from 'next-auth';
-import SpotifyWebApi from 'spotify-web-api-node';
 import { type PrismaClientType } from '../prisma';
 
 interface WithUser extends Session {
@@ -12,7 +11,6 @@ interface WithUser extends Session {
 export type AppContextWithSpotify = {
   session: WithUser | null;
   prisma: PrismaClientType;
-  spotifyApi: Omit<typeof SpotifyWebApi, 'prototype'>;
 };
 
 // WIP: unused, need to type error handling in _app.tsx
