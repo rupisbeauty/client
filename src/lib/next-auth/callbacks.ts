@@ -61,11 +61,7 @@ export const signInCallback: CallbacksOptions['signIn'] = ({
     debug
   );
 
-  if (!email?.verificationRequest) {
-    // @TODO: add logic to ensure a verification message is shown, and should ideally block login
-  } else if (!(user as PrismaUser)?.isActive) {
-    //
-  }
+
   return true;
 };
 
