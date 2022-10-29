@@ -1,30 +1,32 @@
-import { env } from '@/env/server.mjs';
-import { ONE_DAY } from '@/utils';
 import { type NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import EmailProvider from 'next-auth/providers/email';
 import SpotifyProvider from 'next-auth/providers/spotify';
-import { LOGIN_URL } from '../spotify-web-api/index';
+import { env } from '../../../src/env/server.mjs';
+import { ONE_DAY } from '../../utils';
+// import { LOGIN_URL } from '../spotify-web-api/index';
 import { authorize } from './handlers';
 
 const SPOTIFY = SpotifyProvider({
-  clientId: env.SPOTIFY_CLIENT_ID,
-  clientSecret: env.SPOTIFY_CLIENT_SECRET,
-  authorization: LOGIN_URL,
+  clientId: '',
+  // clientId: env.SPOTIFY_CLIENT_ID,
+  // clientSecret: env.SPOTIFY_CLIENT_SECRET,
+  clientSecret: '',
+  // authorization: LOGIN_URL,
+  authorization: '',
 });
 
 const EMAIL = EmailProvider({
-  server: {
-    host: env.SMTP_HOST,
-    port: Number(env.SMTP_PORT),
-    auth: {
-      user: env.EMAIL_FROM,
-      pass: env.SMTP_PASS,
-    },
-  },
-  from: env.EMAIL_FROM,
-  maxAge: ONE_DAY, // maxAge of magiclink jwt
-
+  // server: {
+  //   host: env.SMTP_HOST,
+  //   port: Number(env.SMTP_PORT),
+  //   auth: {
+  //     user: env.EMAIL_FROM,
+  //     pass: env.SMTP_PASS,
+  //   },
+  // },
+  // from: env.EMAIL_FROM,
+  // maxAge: ONE_DAY, // maxAge of magiclink jwt
   /**
    * @link: https://next-auth.js.org/providers/email
    * tap into the builtin email verification request
