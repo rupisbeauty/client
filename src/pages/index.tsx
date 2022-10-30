@@ -1,13 +1,16 @@
+import { trpc } from '@/utils/trpc';
 import { type NextPage } from 'next';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Head from 'next/head';
-import { trpc } from '@/utils/trpc';
 
-import { Box, Button, chakra, Flex } from '@chakra-ui/react';
 import { cancelRetry, isDev } from '@/utils';
+import { Box, Button, chakra, Flex } from '@chakra-ui/react';
 
 const Home: NextPage = () => {
-  const hello = trpc.example.hello.useQuery({ text: 'from tRPC' });
+  const hello = trpc.example.hello.useQuery(
+    { text: 'from tRPC' },
+    { ...cancelRetry }
+  );
 
   return (
     <>
