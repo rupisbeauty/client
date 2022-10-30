@@ -51,7 +51,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
         <ScrollSlide dir="up" from="top">
           <Bar as="header" position="sticky" top={0}>
             <Text color="white" fontSize="2xl">
-              Company Name
+              {title}
             </Text>
           </Bar>
         </ScrollSlide>
@@ -71,7 +71,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
         <ScrollSlide dir="down" from="bottom">
           <Bar as="footer" position="sticky" bottom={0} h="36" maxH={'200px'}>
             <Text color="white" fontSize="2xl">
-              Company Name
+              {title}
             </Text>
           </Bar>
         </ScrollSlide>

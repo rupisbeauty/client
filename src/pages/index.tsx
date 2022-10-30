@@ -1,24 +1,13 @@
-import { trpc } from '@/utils/trpc';
+import { Box, chakra, Flex } from '@chakra-ui/react';
+import { PageLayout } from 'chakra.ui';
 import { type NextPage } from 'next';
-import { signIn, signOut, useSession } from 'next-auth/react';
-import Head from 'next/head';
-
-import { cancelRetry, isDev } from '@/utils';
-import { Box, Button, chakra, Flex } from '@chakra-ui/react';
 
 const Home: NextPage = () => {
-  const hello = trpc.example.hello.useQuery(
-    { text: 'from tRPC' },
-    { ...cancelRetry }
-  );
-
   return (
-    <>
-      <Head>
-        <title>Rupi&apos;s Beauty Studio</title>
-        <meta name="description" content="Eyebrows, facials, waxing & more" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <PageLayout
+      title="Rupi's Beauty Studio"
+      description="Eyebrows, facials, waxing & more"
+    >
       <Flex
         display="flex"
         align="center"
@@ -47,52 +36,10 @@ const Home: NextPage = () => {
             Beauty Studio
           </chakra.h1>
           <chakra.h2 fontWeight={600}>Coming Soon!</chakra.h2>
-          {isDev && (
-            <Flex
-              pt={2}
-              fontSize="md"
-              lineHeight="2rem"
-              color="blue.500"
-              direction="column"
-              align="center"
-              justify="center"
-              w="full"
-            >
-              {hello.data ? (
-                <chakra.p m={0}>{hello.data.greeting}</chakra.p>
-              ) : (
-                <p>Loading...</p>
-              )}
-            </Flex>
-          )}
-          <AuthShowcase />
         </Flex>
       </Flex>
-    </>
+    </PageLayout>
   );
 };
 
 export default Home;
-
-const AuthShowcase: React.FC = () => {
-  const { data: secretMessage } = trpc.auth.getSecretMessage.useQuery(
-    undefined,
-    {
-      ...cancelRetry,
-    }
-  );
-
-  const { data: sessionData } = useSession();
-
-  return (
-    <Flex m={1} direction="column" align="center" gap={4}>
-      {sessionData && (
-        <chakra.p>Logged in as {sessionData?.user?.name}</chakra.p>
-      )}
-      {secretMessage && <chakra.p>{secretMessage}</chakra.p>}
-      <Button onClick={sessionData ? () => signOut() : () => signIn()}>
-        {sessionData ? 'Sign out' : 'Sign in'}
-      </Button>
-    </Flex>
-  );
-};
