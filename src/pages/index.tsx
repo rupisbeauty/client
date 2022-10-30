@@ -4,7 +4,7 @@ import { PageLayout } from 'chakra.ui';
 import { type NextPage } from 'next';
 
 const Home: NextPage = () => {
-  analytics.track('page:home');
+  analytics.page();
   return (
     <PageLayout
       title="Rupi's Beauty Studio"
