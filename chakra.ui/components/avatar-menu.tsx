@@ -59,7 +59,7 @@ export function AvatarMenu() {
               <MenuItem w="full">
                 <ChNextLink href="/admin">Admin</ChNextLink>
               </MenuItem>
-              <MenuItem onClick={onPromise(handleSignOut)}>Sign Out</MenuItem>
+              <MenuItem onClick={void handleSignOut}>Sign Out</MenuItem>
             </>
           )}
           <hr />
