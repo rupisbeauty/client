@@ -1,10 +1,10 @@
-import { debug as globalDebug, dev } from '@/utils';
 import {
-  ChakraTheme,
   extendTheme,
   withDefaultColorScheme,
   withDefaultProps,
+  type ChakraTheme,
 } from '@chakra-ui/react';
+import { debug as globalDebug, dev } from '../../src/utils';
 import { components } from './components';
 import { foundations } from './foundations';
 import { styles } from './styles';

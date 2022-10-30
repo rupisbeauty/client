@@ -1,14 +1,14 @@
-import { SEOConfig } from '@/utils/seo/base';
 import {
-  ChakraProps,
-  ContainerProps,
   Flex,
-  FlexProps,
   Text,
+  type ChakraProps,
+  type ContainerProps,
+  type FlexProps,
 } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
-import layout from '__data/layout.json';
 import { Sidebar } from '.';
+import { SEOConfig } from '../../src/utils/seo/base';
+import layout from '../../__data/layout.json';
 import { AvatarMenu, Bar, ModeToggle } from '../components';
 import { ScrollSlide, transitionDown as variants } from '../framer';
 import { MotionBox } from '../framer/motion';

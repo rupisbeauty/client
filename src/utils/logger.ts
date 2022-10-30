@@ -1,4 +1,4 @@
-import { debug as globalDebug, isProd } from '@/utils';
+import { debug as globalDebug, isProd } from '../utils';
 
 const debug: boolean = globalDebug || false;
 

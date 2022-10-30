@@ -1,10 +1,8 @@
-import { Awaitable } from '@/types';
-import { PrismaUser } from '@/types/zod/prisma';
-import { debug as globalDebug, dev } from '@/utils';
-import { Account, Profile, User, type CallbacksOptions } from 'next-auth';
-import { AdapterUser } from 'next-auth/adapters';
-import { JWT } from 'next-auth/jwt';
-// import { refreshAccessToken } from '../spotify-web-api/token';
+import type{ Account, Profile, User, CallbacksOptions } from 'next-auth';
+import type{ AdapterUser } from 'next-auth/adapters';
+import type{ JWT } from 'next-auth/jwt';
+import type{ Awaitable } from '../../../src/types';
+import { debug as globalDebug, dev } from '../../../src/utils';
 
 const debug: boolean = globalDebug || false;
 
@@ -60,7 +58,6 @@ export const signInCallback: CallbacksOptions['signIn'] = ({
     { user, account, profile, email, credentials },
     debug
   );
-
 
   return true;
 };

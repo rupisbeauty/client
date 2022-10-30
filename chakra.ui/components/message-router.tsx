@@ -1,4 +1,4 @@
-import { debug, dev, isBrowser, ONE_SECOND } from '@/utils';
+import { debug, dev, isBrowser, ONE_SECOND } from '../../src/utils';
 import { useToast } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';

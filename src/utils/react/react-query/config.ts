@@ -1,4 +1,4 @@
-import { ONE_DAY, ONE_MIN } from '@/utils';
+import { ONE_DAY, ONE_MIN } from '../../constants';
 
 export const cancelRetry = {
   staleTime: ONE_DAY,
