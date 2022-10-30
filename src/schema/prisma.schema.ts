@@ -1,5 +1,5 @@
+import { errorMessages, typeErrorMessage } from '@/utils';
 import { z } from 'zod';
-import { errorMessages, typeErrorMessage } from '../utils/zod/index';
 
 // NOTE: all inferred ts types can be found at: "@/types/zod/prisma.ts"
 

@@ -1,5 +1,5 @@
 import { type NextAuthOptions } from 'next-auth';
-import { debug as globalDebug, dev } from '../../utils';
+import { debug as globalDebug, dev } from '@/utils';
 // import { onCreateuser } from './handlers/onCreateUser';
 // @link: https://next-auth.js.org/configuration/options#events
 

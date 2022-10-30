@@ -1,5 +1,5 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
-import { debug as globalDebug, dev } from '../../utils';
+import { debug as globalDebug, dev } from '@/utils';
 
 const debug: boolean = globalDebug || true;
 interface Props {

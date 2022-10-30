@@ -1,3 +1,4 @@
+import { SEOConfig } from '@/utils/seo/base';
 import {
   Flex,
   Text,
@@ -6,9 +7,8 @@ import {
   type FlexProps,
 } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
+import layout from '__data/layout.json';
 import { Sidebar } from '.';
-import { SEOConfig } from '../../src/utils/seo/base';
-import layout from '../../__data/layout.json';
 import { AvatarMenu, Bar, ModeToggle } from '../components';
 import { ScrollSlide, transitionDown as variants } from '../framer';
 import { MotionContainer } from '../framer/motion';

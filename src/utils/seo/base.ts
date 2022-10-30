@@ -1,4 +1,4 @@
-import config from '../../../__data/config.json';
+import config from '__data/config.json';
 
 export function SEOConfig(
   title: string,

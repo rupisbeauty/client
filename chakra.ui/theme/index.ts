@@ -4,7 +4,7 @@ import {
   withDefaultProps,
   type ChakraTheme,
 } from '@chakra-ui/react';
-import { debug as globalDebug, dev } from '../../src/utils';
+import { debug as globalDebug, dev } from '@/utils';
 import { components } from './components';
 import { foundations } from './foundations';
 import { styles } from './styles';

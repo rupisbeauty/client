@@ -2,8 +2,8 @@ import { type NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import EmailProvider from 'next-auth/providers/email';
 import SpotifyProvider from 'next-auth/providers/spotify';
-import { env } from '../../../src/env/server.mjs';
-import { ONE_DAY } from '../../utils';
+import { env } from '@/env/server.mjs';
+import { ONE_DAY } from '@/utils';
 // import { LOGIN_URL } from '../spotify-web-api/index';
 import { authorize } from './handlers';
 

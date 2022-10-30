@@ -4,7 +4,7 @@
 // import newAppDetail from '__data/prisma-defaults/new-app-detail.json';
 // import newColorScheme from '__data/prisma-defaults/new-colorScheme.json';
 // import newPreference from '__data/prisma-defaults/new-preference.json';
-// import { getUsernameFromEmail } from '../../../utils/fns';
+// import { getUsernameFromEmail } from '@/utils/fns';
 
 export { noop } from '@tanstack/query-core/build/lib/utils';
 

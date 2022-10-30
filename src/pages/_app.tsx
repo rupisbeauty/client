@@ -2,10 +2,10 @@ import { type NextComponentType } from 'next';
 import { SessionProvider, useSession } from 'next-auth/react';
 import { type AppType } from 'next/app';
 import Head from 'next/head';
-import { ChakraWrapper, FullScreenLoader } from '../../chakra.ui';
-import { type SessionWithUser } from '../lib/next-auth/types/index';
-import { ErrorBoundary } from '../utils';
-import { trpc } from '../utils/trpc';
+import { ChakraWrapper, FullScreenLoader } from 'chakra.ui';
+import { type SessionWithUser } from '@/lib/next-auth/types/index';
+import { ErrorBoundary } from '@/utils';
+import { trpc } from '@/utils/trpc';
 
 const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
   Component,

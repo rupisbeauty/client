@@ -7,8 +7,8 @@ import {
 } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import { Sidebar } from '.';
-import { SEOConfig } from '../../src/utils/seo/base';
-import layout from '../../__data/layout.json';
+import { SEOConfig } from '@/utils/seo/base';
+import layout from '__data/layout.json';
 import { AvatarMenu, Bar, ModeToggle } from '../components';
 import { ScrollSlide, transitionDown as variants } from '../framer';
 import { MotionBox } from '../framer/motion';

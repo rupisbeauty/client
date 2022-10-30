@@ -1,6 +1,6 @@
 import { ColorModeScript } from '@chakra-ui/react';
+import { config } from 'chakra.ui/theme/foundations/config';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-import { config } from '../../chakra.ui/theme/foundations/config';
 
 class Doc extends Document {
   render() {

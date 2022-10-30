@@ -1,8 +1,8 @@
 import type{ Account, Profile, User, CallbacksOptions } from 'next-auth';
 import type{ AdapterUser } from 'next-auth/adapters';
 import type{ JWT } from 'next-auth/jwt';
-import type{ Awaitable } from '../../../src/types';
-import { debug as globalDebug, dev } from '../../../src/utils';
+import type{ Awaitable } from '@/types';
+import { debug as globalDebug, dev } from '@/utils';
 
 const debug: boolean = globalDebug || false;
 

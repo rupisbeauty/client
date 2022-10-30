@@ -1,5 +1,5 @@
 import type { z } from 'zod';
-import type * as auth from '../../schema';
+import type * as auth from '@/schema';
 
 export type UserInput = z.TypeOf<typeof auth.userInputSchema>;
 

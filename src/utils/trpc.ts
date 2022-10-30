@@ -3,7 +3,7 @@ import { createTRPCNext } from "@trpc/next";
 import { type GetInferenceHelpers } from "@trpc/server";
 import superjson from "superjson";
 import { getBaseUrl } from "./fns";
-import { type AppRouter } from "../server/trpc/router/_app";
+import { type AppRouter } from "@/server/trpc/router/_app";
 
 
 export const trpc = createTRPCNext<AppRouter>({

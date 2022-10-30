@@ -1,5 +1,5 @@
+import * as prismaSchema from '@/schema/prisma.schema';
 import { z } from 'zod';
-import * as prismaSchema from '../../schema/prisma.schema';
 
 // @NOTE: these types have been inferred from zod schema for prisma as imported above.
 
