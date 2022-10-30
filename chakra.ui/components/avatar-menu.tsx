@@ -1,4 +1,3 @@
-import { onPromise } from '@/utils';
 import {
   Avatar,
   Box,
@@ -50,7 +49,7 @@ export function AvatarMenu() {
         <MenuList border="lg">
           {!session ? (
             <>
-              <MenuItem onClick={onPromise(handleSignIn)}>Sign in</MenuItem>
+              <MenuItem onClick={void handleSignIn}>Sign in</MenuItem>
               <MenuItem>
                 <ChNextLink href="/auth/register">Sign up</ChNextLink>
               </MenuItem>
