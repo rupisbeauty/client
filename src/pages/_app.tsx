@@ -4,7 +4,6 @@ import { type AppType } from 'next/app';
 import Head from 'next/head';
 import { ChakraWrapper, FullScreenLoader } from '../../chakra.ui';
 import { type SessionWithUser } from '../lib/next-auth/types/index';
-import '../styles/globals.css';
 import { ErrorBoundary } from '../utils';
 import { trpc } from '../utils/trpc';
 

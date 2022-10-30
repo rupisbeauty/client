@@ -50,6 +50,7 @@ const Home: NextPage = () => {
               fontSize="md"
               lineHeight="2rem"
               color="blue.500"
+              direction="column"
               align="center"
               justify="center"
               w="full"
@@ -59,9 +60,9 @@ const Home: NextPage = () => {
               ) : (
                 <p>Loading...</p>
               )}
+              <AuthShowcase />
             </Flex>
           )}
-          <AuthShowcase />
         </Flex>
       </Flex>
     </>
