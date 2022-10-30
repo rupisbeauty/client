@@ -60,9 +60,9 @@ const Home: NextPage = () => {
               ) : (
                 <p>Loading...</p>
               )}
-              <AuthShowcase />
             </Flex>
           )}
+          <AuthShowcase />
         </Flex>
       </Flex>
     </>
