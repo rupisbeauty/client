@@ -1,3 +1,5 @@
+import { dev } from './logger';
+
 export const getBaseUrl = () => {
   if (typeof window !== 'undefined') return ''; // browser should use relative url
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`; // SSR should use vercel url
@@ -12,7 +14,7 @@ export const getBaseUrl = () => {
  * @param {(event: React.SyntheticEvent) => Promise<T>} promise
  * @return {*}
  */
- export function onPromise<T>(
+export function onPromise<T>(
   // used to wrap react-hook-forms's submit handler
   // https://github.com/react-hook-form/react-hook-form/discussions/8020#discussioncomment-3429261
   promise: (event: React.SyntheticEvent) => Promise<T>
