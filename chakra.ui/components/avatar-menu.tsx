@@ -1,3 +1,4 @@
+import { onPromise } from '@/utils/fns';
 import {
   Avatar,
   Box,
@@ -11,9 +12,7 @@ import {
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 
-const defaultLinks = [
-  { label: 'home', href: '/' },
-];
+const defaultLinks = [{ label: 'home', href: '/' }];
 
 const ChNextLink = chakra(Link);
 
@@ -48,7 +47,7 @@ export function AvatarMenu() {
         <MenuList border="lg">
           {!session ? (
             <>
-              <MenuItem onClick={void handleSignIn}>Sign in</MenuItem>
+              <MenuItem onClick={onPromise(handleSignIn)}>Sign in</MenuItem>
               <MenuItem>
                 <ChNextLink href="/auth/register">Sign up</ChNextLink>
               </MenuItem>
@@ -58,7 +57,7 @@ export function AvatarMenu() {
               <MenuItem w="full">
                 <ChNextLink href="/admin">Admin</ChNextLink>
               </MenuItem>
-              <MenuItem onClick={void handleSignOut}>Sign Out</MenuItem>
+              <MenuItem onClick={onPromise(handleSignOut)}>Sign Out</MenuItem>
             </>
           )}
           <hr />
