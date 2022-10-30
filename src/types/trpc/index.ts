@@ -1,17 +1,17 @@
 import { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
-import { Session } from 'next-auth';
-import { type PrismaClientType } from '../prisma';
+import type { Session } from 'next-auth';
+import type { PrismaClientType } from '../prisma';
 
-interface WithUser extends Session {
+export interface WithUser extends Session {
   id?: string;
   email?: string;
   image?: string;
 }
 
-export type AppContextWithSpotify = {
-  session: WithUser | null;
-  prisma: PrismaClientType;
-};
+// export type AppContextWithSpotify = {
+//   session: WithUser | null;
+//   prisma: PrismaClientType;
+// };
 
 // WIP: unused, need to type error handling in _app.tsx
 export type TRPCErrorResult = {

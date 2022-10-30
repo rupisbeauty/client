@@ -27,7 +27,7 @@ export function AvatarMenu() {
 
   const handleSignIn = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    await signIn('spotify');
+    await signIn('google');
   };
 
   return (

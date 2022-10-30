@@ -3,6 +3,8 @@ import { debug as globalDebug, dev } from '@/utils';
 // import { onCreateuser } from './handlers/onCreateUser';
 // @link: https://next-auth.js.org/configuration/options#events
 
+// NOTE: UNUSED IN THIS PROJECT
+
 const debug = globalDebug || false;
 
 export const events: NextAuthOptions['events'] = {

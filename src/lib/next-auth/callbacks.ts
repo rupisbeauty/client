@@ -7,6 +7,7 @@ import { debug as globalDebug, dev } from '@/utils';
 const debug: boolean = globalDebug || false;
 
 /**
+ * UNUSED IN THIS PROJECT
  * Next Auth Callbacks
  * Order of operation: [redirect => signIn => jwt => session]
  */

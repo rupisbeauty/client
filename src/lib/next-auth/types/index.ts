@@ -1,6 +1,6 @@
-import { Session, User } from 'next-auth';
-import { BuiltInProviderType } from 'next-auth/providers';
-import { ClientSafeProvider, LiteralUnion } from 'next-auth/react';
+import type { Session } from 'next-auth';
+import type { BuiltInProviderType } from 'next-auth/providers';
+import type { ClientSafeProvider, LiteralUnion } from 'next-auth/react';
 
 export type NextAuthProvider = Record<
   LiteralUnion<BuiltInProviderType, string>,

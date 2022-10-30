@@ -1,16 +1,14 @@
+import { env } from '@/env/server.mjs';
+import { ONE_DAY } from '@/utils';
 import { type NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import EmailProvider from 'next-auth/providers/email';
-import SpotifyProvider from 'next-auth/providers/spotify';
-import { env } from '@/env/server.mjs';
-import { ONE_DAY } from '@/utils';
+import GoogleProvider from 'next-auth/providers/google';
 // import { LOGIN_URL } from '../spotify-web-api/index';
-import { authorize } from './handlers';
+// import { authorize } from './handlers';
 
-const SPOTIFY = SpotifyProvider({
+const GOOGLE = GoogleProvider({
   clientId: '',
-  // clientId: env.SPOTIFY_CLIENT_ID,
-  // clientSecret: env.SPOTIFY_CLIENT_SECRET,
   clientSecret: '',
   // authorization: LOGIN_URL,
   authorization: '',
@@ -40,23 +38,23 @@ const EMAIL = EmailProvider({
   // },
 });
 
-const CREDENTIALS = CredentialsProvider({
-  type: 'credentials',
-  credentials: {
-    // @link: https://next-auth.js.org/configuration/providers/credentials#how-to
-    // The credentials is used to generate a suitable form on the sign in page.
-    // You can specify whatever fields you are expecting to be submitted.
-    email: {
-      label: 'Email',
-      type: 'text',
-      placeholder: 'you@youremail.com',
-    },
-    password: { label: 'Password', type: 'password' },
-  },
+// const CREDENTIALS = CredentialsProvider({
+//   type: 'credentials',
+//   credentials: {
+//     // @link: https://next-auth.js.org/configuration/providers/credentials#how-to
+//     // The credentials is used to generate a suitable form on the sign in page.
+//     // You can specify whatever fields you are expecting to be submitted.
+//     email: {
+//       label: 'Email',
+//       type: 'text',
+//       placeholder: 'you@youremail.com',
+//     },
+//     password: { label: 'Password', type: 'password' },
+//   },
 
-  authorize: async (
-    credentials: Record<'email' | 'password', string> | undefined
-  ) => authorize(credentials),
-});
+//   authorize: async (
+//     credentials: Record<'email' | 'password', string> | undefined
+//   ) => authorize(credentials),
+// });
 
-export const providers: NextAuthOptions['providers'] = [SPOTIFY, EMAIL];
+export const providers: NextAuthOptions['providers'] = [GOOGLE, EMAIL];
