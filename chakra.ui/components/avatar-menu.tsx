@@ -13,7 +13,6 @@ import Link from 'next/link';
 
 const defaultLinks = [
   { label: 'home', href: '/' },
-  { label: 'profile', href: '/me' },
 ];
 
 const ChNextLink = chakra(Link);
