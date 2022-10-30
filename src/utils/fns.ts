@@ -1,5 +1,3 @@
-import { dev } from './logger';
-
 export const getBaseUrl = () => {
   if (typeof window !== 'undefined') return ''; // browser should use relative url
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`; // SSR should use vercel url
@@ -22,7 +20,7 @@ export function onPromise<T>(
   return (event: React.SyntheticEvent) => {
     if (promise) {
       promise(event).catch((error) => {
-        dev.error('Unexpected error', error, debug);
+        console.error('Unexpected error', error);
       });
     }
   };
