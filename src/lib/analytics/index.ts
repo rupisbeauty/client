@@ -1,7 +1,7 @@
 import mixpanelPlugin from '@analytics/mixpanel';
 import Analytics from 'analytics';
 
-const analytics = Analytics({
+export const analytics = Analytics({
   app: "Rupi's Beauty Studio",
   plugins: [
     mixpanelPlugin({
@@ -9,5 +9,3 @@ const analytics = Analytics({
     }),
   ],
 });
-
-export default analytics;

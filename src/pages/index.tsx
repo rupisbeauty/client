@@ -1,10 +1,8 @@
-import analytics from '@/lib/analytics';
 import { Box, chakra, Flex } from '@chakra-ui/react';
 import { PageLayout } from 'chakra.ui';
 import { type NextPage } from 'next';
 
 const Home: NextPage = () => {
-  analytics.page();
   return (
     <PageLayout
       title="Rupi's Beauty Studio"
