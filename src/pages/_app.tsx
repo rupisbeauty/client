@@ -1,15 +1,17 @@
+import { Analytics } from '@/components';
+import { type SessionWithUser } from '@/lib/next-auth/types/index';
+import { ErrorBoundary } from '@/utils';
+import { trpc } from '@/utils/trpc';
+import { ChakraWrapper, FullScreenLoader } from 'chakra.ui';
 import { type NextComponentType } from 'next';
 import { SessionProvider, useSession } from 'next-auth/react';
 import { type AppType } from 'next/app';
 import Head from 'next/head';
-import { ChakraWrapper, FullScreenLoader } from 'chakra.ui';
-import { type SessionWithUser } from '@/lib/next-auth/types/index';
-import { ErrorBoundary } from '@/utils';
-import { trpc } from '@/utils/trpc';
 
 const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
   Component,
   pageProps: { session, cookies, ...pageProps },
+  router,
 }) => {
   const { auth } = Component as NextComponentType & { auth?: boolean };
 
@@ -24,13 +26,15 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
       <ErrorBoundary>
         <SessionProvider session={session}>
           <ChakraWrapper cookies={cookies}>
-            {auth ? (
-              <Auth>
+            <Analytics asPath={router.asPath} session={session}>
+              {auth ? (
+                <Auth>
+                  <Component {...pageProps} />
+                </Auth>
+              ) : (
                 <Component {...pageProps} />
-              </Auth>
-            ) : (
-              <Component {...pageProps} />
-            )}
+              )}
+            </Analytics>
           </ChakraWrapper>
         </SessionProvider>
       </ErrorBoundary>
