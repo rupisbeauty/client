@@ -1,3 +1,4 @@
+import { authEventChannel } from '@/utils/event-bus';
 import { onPromise } from '@/utils/fns';
 import {
   Avatar,
@@ -11,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 const defaultLinks = [{ label: 'home', href: '/' }];
 
@@ -21,12 +23,28 @@ export function AvatarMenu() {
   const handleSignOut = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     await signOut();
+    authEventChannel.emit('on-sign-out');
   };
 
   const handleSignIn = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     await signIn('google');
+    authEventChannel.emit('on-sign-in');
   };
+
+  useEffect(() => {
+    const signInSubscription = authEventChannel.on('on-sign-in', () => {
+      console.log('user signed in');
+    });
+    const signOutSubscription = authEventChannel.on('on-sign-out', () => {
+      console.log('user signed out');
+    });
+
+    return () => {
+      signInSubscription();
+      signOutSubscription();
+    };
+  }, []);
 
   return (
     <Box pos="fixed" top={6} right={6} zIndex="docked">
@@ -34,8 +52,8 @@ export function AvatarMenu() {
         {status !== 'loading' ? (
           <MenuButton
             as={Avatar}
-            name={session?.user?.email ?? ''}
-            src={session?.user?.image ?? ''}
+            name={String(session?.user?.email)}
+            src={session?.user?.image}
             _hover={{ cursor: 'pointer', border: 'lg' }}
             loading="lazy"
             outline="2px solid"
