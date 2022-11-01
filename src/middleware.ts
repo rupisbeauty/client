@@ -14,7 +14,9 @@ export async function middleware(req: NextRequest) {
 
   const { pathname } = req.nextUrl;
 
-  if (pathname.includes('api/auth') || token) {
+  const whitelist = ['api/auth', '/'];
+
+  if (whitelist.includes(pathname) || token) {
     dev.log('response.next at middleware', null, debug);
     return NextResponse.next();
   }
@@ -23,7 +25,7 @@ export async function middleware(req: NextRequest) {
   //requesting a protected route
 
   // const protectedRoutes = ['admin', 'me'];
-  const protectedRoutes: string[] = [];
+  const protectedRoutes: string[] = ['/admin'];
 
   const isProtectedRoute = protectedRoutes.every((path) => path === pathname);
 
