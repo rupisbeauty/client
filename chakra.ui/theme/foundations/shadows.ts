@@ -1,4 +1,4 @@
-import { ChakraTheme } from '@chakra-ui/react';
+import type { ChakraTheme } from '@chakra-ui/react';
 
 export const shadows: ChakraTheme['shadows'] = {
   '2xl-dark-': '0 25px 50px -12px rgba(255, 255, 255, 0.25)',

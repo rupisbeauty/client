@@ -1,4 +1,4 @@
-import { ChakraTheme } from '@chakra-ui/react';
+import type { ChakraTheme } from '@chakra-ui/react';
 
 export const textStyles: ChakraTheme['textStyles'] = {
   h1: {

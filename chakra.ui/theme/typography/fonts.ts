@@ -1,4 +1,4 @@
-import { ChakraTheme, theme as base } from '@chakra-ui/react';
+import { theme as base, type ChakraTheme } from '@chakra-ui/react';
 
 export const fonts: ChakraTheme['fonts'] = {
   heading: `Josefin Sans, ${base.fonts.heading}`,

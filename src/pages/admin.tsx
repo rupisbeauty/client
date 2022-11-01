@@ -1,6 +1,7 @@
+import { type NextPageWithAuth } from '@/types';
 import { AdminLayout } from 'chakra.ui';
 
-const AdminDashboard = () => {
+const AdminDashboard: NextPageWithAuth & { auth: boolean } = () => {
   return (
     <AdminLayout title="admin" description="no-follow">
       Admin

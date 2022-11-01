@@ -1,5 +1,5 @@
-import { chakra, ChakraProps } from '@chakra-ui/react';
-import Image, { ImageProps } from 'next/image';
+import { chakra, type ChakraProps } from '@chakra-ui/react';
+import Image, { type ImageProps } from 'next/image';
 
 export const ChakraNextImage = chakra(Image, {
   shouldForwardProp: (prop) => {

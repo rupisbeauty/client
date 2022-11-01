@@ -1,7 +1,7 @@
 import { Slide } from '@chakra-ui/react';
 import {
-  DirectionEnum,
   useScrollDirection,
+  type DirectionEnum,
 } from './hooks/use-scroll-direction';
 
 type AllPositionFromEnum = 'top' | 'bottom' | 'left' | 'right';
