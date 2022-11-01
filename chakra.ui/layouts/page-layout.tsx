@@ -27,7 +27,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
   const displayFooter = layout?.structure?.footer.show !== 'false';
 
   return (
-    <Flex flexDirection="column" w="full" border="1px solid blue">
+    <Flex flexDirection="column" w="full">
       <NextSeo {...SEOConfig(title, subtitle, description)} />
       <ModeToggle />
       <AvatarMenu />
