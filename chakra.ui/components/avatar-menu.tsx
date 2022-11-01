@@ -52,8 +52,8 @@ export function AvatarMenu() {
         {status !== 'loading' ? (
           <MenuButton
             as={Avatar}
-            name={String(session?.user?.email)}
-            src={session?.user?.image}
+            name={String(session?.user?.email ?? '')}
+            src={session?.user?.image ?? ''}
             _hover={{ cursor: 'pointer', border: 'lg' }}
             loading="lazy"
             outline="2px solid"
