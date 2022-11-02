@@ -31,7 +31,7 @@ const Home: NextPage = () => {
             lineHeight={1.5}
           >
             <Box as="span" color="rgba(216, 180, 254, 100%)">
-              Rupi&apos;s
+              Rupi
             </Box>{' '}
             Beauty Studio
           </chakra.h1>
