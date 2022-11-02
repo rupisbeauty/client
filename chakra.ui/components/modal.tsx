@@ -1,5 +1,5 @@
+import type { BoxProps, ModalProps } from '@chakra-ui/react';
 import {
-  BoxProps,
   Button,
   Modal,
   ModalBody,
@@ -8,7 +8,6 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  ModalProps,
 } from '@chakra-ui/react';
 
 type CustomModalProps = {
@@ -42,7 +41,6 @@ export const CHModal: React.FC<ModalProps & BoxProps & CustomModalProps> = ({
   // bg = 'brand.200',
   ...rest
 }) => {
-
   // const handleHandler = (event: React.MouseEventHandler<HTMLButtonElement>) => {
   //   handler.action(event);
   //   onClose();

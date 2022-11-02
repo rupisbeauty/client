@@ -1,4 +1,4 @@
-import { ChakraTheme } from '@chakra-ui/react';
+import type { ChakraTheme } from '@chakra-ui/react';
 import { fonts } from './fonts';
 
 export const typography: Pick<

@@ -1,3 +1,3 @@
-import { ChakraTheme } from '@chakra-ui/react';
+import type { ChakraTheme } from '@chakra-ui/react';
 
 export const sizes: ChakraTheme['sizes'] = {};

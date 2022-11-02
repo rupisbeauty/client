@@ -1,4 +1,4 @@
-import { ChakraTheme, extendTheme } from '@chakra-ui/react';
+import { extendTheme, type ChakraTheme } from '@chakra-ui/react';
 import { theme } from '../theme';
 
 export function mergeTheme(colorScheme: ChakraTheme['colors']) {

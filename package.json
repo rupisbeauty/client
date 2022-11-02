@@ -20,6 +20,7 @@
     "@chakra-ui/theme-tools": "^2.0.12",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@fontsource/rambla": "^4.5.11",
     "@hookform/resolvers": "^2.9.10",
     "@next-auth/prisma-adapter": "^1.0.4",
     "@prisma/client": "^4.5.0",

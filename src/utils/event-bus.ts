@@ -41,7 +41,7 @@ export function eventbus<E extends EventMap>(
   const once: EventBus<E>['once'] = (key, handler) => {
     const handleOnce = (payload: Parameters<typeof handler>) => {
       handler(payload);
-      // TODO: find out a better way to type `handleOnce`
+      // TODO: find a better way to type `handleOnce`
       off(key, handleOnce as typeof handler);
     };
 

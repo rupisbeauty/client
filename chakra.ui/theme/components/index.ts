@@ -1,5 +1,5 @@
 import { theme as base } from '@chakra-ui/react';
-import { StyleConfig } from '@chakra-ui/theme-tools';
+import type { StyleConfig } from '@chakra-ui/theme-tools';
 
 export const components: Record<string, StyleConfig> = {
   Button: {
@@ -42,9 +42,10 @@ export const components: Record<string, StyleConfig> = {
     baseStyle: {
       posiition: 'relative',
       w: 'full',
-      p: 8,
+      px: 8,
+      py: 14,
       maxH: 20,
-      zInded: 'tooltip',
+      zIndex: 'tooltip',
       bg: 'gray.900', // @FIXME: add mode support
     },
   },

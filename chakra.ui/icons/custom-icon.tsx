@@ -1,4 +1,4 @@
-import { Box, ChakraProps } from '@chakra-ui/react';
+import { Box, type ChakraProps } from '@chakra-ui/react';
 import { paths } from './paths';
 
 type CustomIconProps = {

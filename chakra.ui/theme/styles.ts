@@ -1,5 +1,5 @@
-import { ChakraTheme } from '@chakra-ui/react';
-import { GlobalStyleProps, mode } from '@chakra-ui/theme-tools';
+import type { ChakraTheme } from '@chakra-ui/react';
+import { mode, type GlobalStyleProps } from '@chakra-ui/theme-tools';
 
 export const styles: ChakraTheme['styles'] = {
   global: (props: GlobalStyleProps) => ({
