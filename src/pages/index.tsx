@@ -5,7 +5,7 @@ import { type NextPage } from 'next';
 const Home: NextPage = () => {
   return (
     <PageLayout
-      title="Rupi's Beauty Studio"
+      title="Rupi Beauty Studio"
       description="Eyebrows, facials, waxing & more"
     >
       <Flex

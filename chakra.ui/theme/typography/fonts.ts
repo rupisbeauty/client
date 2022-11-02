@@ -1,8 +1,9 @@
 import { theme as base, type ChakraTheme } from '@chakra-ui/react';
+import '@fontsource/rambla';
 
 export const fonts: ChakraTheme['fonts'] = {
-  heading: `Josefin Sans, ${base.fonts.heading}`,
-  body: `ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+  heading: `Rambla, ${base.fonts.heading}`,
+  body: `Rambla, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
   "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
   default: `-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,

@@ -42,9 +42,10 @@ export const components: Record<string, StyleConfig> = {
     baseStyle: {
       posiition: 'relative',
       w: 'full',
-      p: 8,
+      px: 8,
+      py: 14,
       maxH: 20,
-      zInded: 'tooltip',
+      zIndex: 'tooltip',
       bg: 'gray.900', // @FIXME: add mode support
     },
   },

@@ -1,5 +1,5 @@
 import type { HTMLChakraProps, ThemingProps } from '@chakra-ui/react';
-import { Flex, forwardRef, useStyleConfig } from '@chakra-ui/react';
+import { HStack, forwardRef, useStyleConfig } from '@chakra-ui/react';
 
 export interface CustomBarProps extends HTMLChakraProps<'div'>, ThemingProps {}
 
@@ -8,7 +8,7 @@ export const Bar = forwardRef<CustomBarProps, 'div'>((props, ref) => {
   const styles = useStyleConfig('Bar', {});
 
   return (
-    <Flex
+    <HStack
       ref={ref}
       __css={styles}
       justifyContent="space-between"
@@ -16,6 +16,6 @@ export const Bar = forwardRef<CustomBarProps, 'div'>((props, ref) => {
       {...rest}
     >
       {children}
-    </Flex>
+    </HStack>
   );
 });
