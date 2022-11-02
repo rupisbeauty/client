@@ -10,6 +10,7 @@ import Head from 'next/head';
 const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
   Component,
   pageProps: { session, cookies, ...pageProps },
+  router,
 }) => {
   const { auth } = Component as NextComponentTypeWithAuth;
 
@@ -24,13 +25,14 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
       <ErrorBoundary>
         <SessionProvider session={session}>
           <ChakraWrapper cookies={cookies}>
-            {auth ? (
-              <Auth>
+              {auth ? (
+                <Auth>
+                  <Component {...pageProps} />
+                </Auth>
+              ) : (
                 <Component {...pageProps} />
-              </Auth>
-            ) : (
-              <Component {...pageProps} />
-            )}
+              )}
+            </Analytics>
           </ChakraWrapper>
         </SessionProvider>
       </ErrorBoundary>
