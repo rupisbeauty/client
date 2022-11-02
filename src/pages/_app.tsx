@@ -25,14 +25,13 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
       <ErrorBoundary>
         <SessionProvider session={session}>
           <ChakraWrapper cookies={cookies}>
-              {auth ? (
-                <Auth>
-                  <Component {...pageProps} />
-                </Auth>
-              ) : (
+            {auth ? (
+              <Auth>
                 <Component {...pageProps} />
-              )}
-            </Analytics>
+              </Auth>
+            ) : (
+              <Component {...pageProps} />
+            )}
           </ChakraWrapper>
         </SessionProvider>
       </ErrorBoundary>
