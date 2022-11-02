@@ -3,6 +3,8 @@ import {
   cookieStorageManagerSSR,
   localStorageManager,
 } from '@chakra-ui/react';
+import '@fontsource/rambla/400.css';
+import '@fontsource/rambla/700.css';
 import type { GetServerSidePropsContext } from 'next';
 import { theme } from '../theme';
 

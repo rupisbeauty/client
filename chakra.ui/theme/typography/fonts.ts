@@ -1,5 +1,4 @@
 import { theme as base, type ChakraTheme } from '@chakra-ui/react';
-import '@fontsource/rambla';
 
 export const fonts: ChakraTheme['fonts'] = {
   heading: `Rambla, ${base.fonts.heading}`,
