@@ -10,6 +10,7 @@ import Head from 'next/head';
 const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
   Component,
   pageProps: { session, cookies, ...pageProps },
+  router,
 }) => {
   const { auth } = Component as NextComponentTypeWithAuth;
 
