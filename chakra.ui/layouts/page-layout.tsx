@@ -1,8 +1,8 @@
-import { NavMenu } from '@/components';
+import { Logo, NavMenu } from '@/components';
 import { isDev } from '@/utils';
 import { SEOConfig } from '@/utils/seo/base';
 import type { ChakraProps, ContainerProps, FlexProps } from '@chakra-ui/react';
-import { Box, chakra, Flex, HStack, Text, VStack } from '@chakra-ui/react';
+import { chakra, Flex, HStack, Text } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import layout from '__data/layout.json';
 import { Sidebar } from '.';
@@ -10,30 +10,6 @@ import { AvatarMenu, Bar, ModeToggle } from '../components';
 import { ScrollSlide, transitionDown as variants } from '../framer';
 import { MotionContainer } from '../framer/motion';
 import type { LayoutProps } from './types';
-
-export const Logo = ({ title }: { title: string }) => {
-  return (
-    <HStack px={3} transform="scale(0.9)" gap={2} border="2px solid black">
-      <chakra.h1 fontSize="3xl" color="brand.900" fontWeight="normal">
-        {title.split(' ')[0]?.toUpperCase()}
-      </chakra.h1>
-      <Box h="3em" borderLeft="2px solid gray" />
-      <VStack gap={1}>
-        <Text fontSize="xl" color="brand.900" lineHeight="0.75rem">
-          {title.split(' ')[1]?.toLowerCase()}
-        </Text>
-        <Text
-          fontSize="xl"
-          color="brand.900"
-          lineHeight="0.75rem"
-          letterSpacing="wider"
-        >
-          {title.split(' ')[2]?.toLowerCase()}
-        </Text>
-      </VStack>
-    </HStack>
-  );
-};
 
 const mainStyles: ChakraProps & ContainerProps & FlexProps = {
   flex: 1,

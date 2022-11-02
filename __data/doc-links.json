@@ -69,12 +69,12 @@
     ]
   },
   {
-    "name": "Supabase",
+    "name": "PlanetScale",
     "description": "Open source Firebase alternative.",
     "links": [
-      { "documentation": "https://supabase.com/docs/reference" },
+      { "documentation": "https://planetscale.com/docs" },
       {
-        "dashboard": "https://app.supabase.com/project/chojalmwppajnzqyyaxv/editor/19103"
+        "dashboard": "https://app.planetscale.com/rupibeautystudio/rupis-dev"
       }
     ]
   },
@@ -96,5 +96,53 @@
     "name": "React Hook Form",
     "description": "Performant, flexible and extensible forms with easy-to-use validation.",
     "links": [{ "documentation": "https://react-hook-form.com/api" }]
+  },
+  {
+    "name": "Vercel",
+    "description": "Vercel is the platform for frontend developers, providing the speed and reliability innovators need to create at the moment of inspiration.",
+    "links": [{ "documentation": "https://vercel.com/docs" }]
+  },
+  {
+    "name": "LogAlert",
+    "description": "Alerts designed for Vercel logs",
+    "links": [
+      { "documentation": "https://logalert.app/docs" },
+      { "dashboard": "https://app.logalert.app/" }
+    ]
+  },
+  {
+    "name": "Mixpanel",
+    "description": "Powerful, self-serve product analytics to help you convert, engage, and retain more users.",
+    "links": [
+      { "documentation": "https://developer.mixpanel.com/docs" },
+      {
+        "dashboard": "https://mixpanel.com/project/2831697/view/3365657/app/dashboards"
+      }
+    ]
+  },
+  {
+    "name": "Analytics",
+    "description": "Analytics is a lightweight abstraction library for tracking page views, custom events, & identify visitors. It is pluggable & designed to work with any third-party analytics tool or your own backend.",
+    "links": [{ "documentation": "https://getanalytics.io/" }]
+  },
+  {
+    "name": "Crisp",
+    "description": "The all-in-one business messaging platform that gathers teams, conversations, data and knowledge, around one place",
+    "links": [
+      { "documentation": "https://docs.crisp.chat/" },
+      {
+        "dashboard": "https://app.crisp.chat/website/ac7d03bd-2065-4273-9884-8125f93a4858/inbox/"
+      }
+    ]
+  },
+  {
+    "name": "Google OAuth2",
+    "description": "User authentication for users with a google email.",
+    "links": [
+      { "documentation": "https://docs.crisp.chat/" },
+      {
+        "dashboard": "https://console.cloud.google.com/getting-started?pli=1"
+      }
+    ]
   }
 ]
