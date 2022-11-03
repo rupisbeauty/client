@@ -30,9 +30,7 @@ const Home: NextPage = () => {
             fontWeight={800}
             lineHeight={1.5}
           >
-            <Box as="span" color="rgba(216, 180, 254, 100%)">
-              Rupi
-            </Box>{' '}
+            <chakra.span color="rgba(216, 180, 254, 100%)">Rupi</chakra.span>{' '}
             Beauty Studio
           </chakra.h1>
           <chakra.h2 fontWeight={600}>Coming Soon!</chakra.h2>

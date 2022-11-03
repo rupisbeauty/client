@@ -1,5 +1,1 @@
-import type { ReactNode } from 'react';
-
-export type ChildrenAsProps = {
-  children: ReactNode;
-};
+import { noop } from '@tanstack/query-core/build/lib/utils';
