@@ -17,3 +17,5 @@ export const isProd = process.env.NODE_ENV === 'production';
 export const isDev = process.env.NODE_ENV === 'development';
 
 export const debug = isDev && false;
+
+export const NEXT_AUTH_SESSION_TOKEN_KEY = 'next-auth.session-token';
