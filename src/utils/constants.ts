@@ -19,3 +19,9 @@ export const isDev = process.env.NODE_ENV === 'development';
 export const debug = isDev && false;
 
 export const NEXT_AUTH_SESSION_TOKEN_KEY = 'next-auth.session-token';
+
+// image cdn link components
+export const CDN_URL = 'https://cdn.jsdelivr.net/gh/rupistudio/assets@main';
+export const LOCATIONS_DIR = '/images/locations';
+export const BRAND_DIR = '/brand';
+export const PEOPLE_DIR = '/images/people';

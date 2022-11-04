@@ -13,6 +13,9 @@ const config = {
     locales: ['en'],
     defaultLocale: 'en',
   },
+  images: {
+    domains: ['cdn.jsdelivr.net'],
+  },
   // @NOTE: use partytown to enable workers
   // yarn add -D @builder.io/partytown
   // experimental: {

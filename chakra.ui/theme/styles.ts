@@ -17,19 +17,19 @@ export const styles: ChakraTheme['styles'] = {
       boxSizing: 'border-box',
       wordWrap: 'break-word',
     },
-    '*::-webkit-scrollbar-track': {
-      boxShadow: 'inset 0 0 6px var(--chakra-colors-bg1)',
-      borderRadius: '10px',
-      backgroundColor: 'transparent',
-    },
-    '*::-webkit-scrollbar': {
-      width: '9px',
-    },
-    '*::-webkit-scrollbar-thumb': {
-      borderRadius: '10px',
-      boxShadow: 'inset 0 0 6px var(--chakra-colors-secondary)',
-      backgroundColor: 'var(--chakra-colors-secondary)',
-    },
+    // '*::-webkit-scrollbar-track': {
+    //   boxShadow: 'inset 0 0 6px var(--chakra-colors-bg1)',
+    //   borderRadius: '10px',
+    //   backgroundColor: 'transparent',
+    // },
+    // '*::-webkit-scrollbar': {
+    //   width: '9px',
+    // },
+    // '*::-webkit-scrollbar-thumb': {
+    //   borderRadius: '10px',
+    //   boxShadow: 'inset 0 0 6px var(--chakra-colors-secondary)',
+    //   backgroundColor: 'var(--chakra-colors-secondary)',
+    // },
     'html, body': {
       margin: 0,
       padding: 0,
