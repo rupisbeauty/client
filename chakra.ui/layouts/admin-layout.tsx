@@ -1,11 +1,12 @@
-import { Logo, NavMenu } from '@/components';
+import { NavMenu } from '@/components';
+import { BRAND_DIR, CDN_URL } from '@/utils';
 import { SEOConfig } from '@/utils/seo/base';
 import type { ChakraProps, ContainerProps, FlexProps } from '@chakra-ui/react';
-import { Flex, HStack, Text } from '@chakra-ui/react';
+import { Box, Flex, Text, VStack } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import layout from '__data/layout.json';
 import { Sidebar } from '.';
-import { AvatarMenu, Bar, ModeToggle } from '../components';
+import { AvatarMenu, Bar, ChakraNextImage, ModeToggle } from '../components';
 import { ScrollSlide, transitionDown as variants } from '../framer';
 import { MotionContainer } from '../framer/motion';
 import type { LayoutProps } from './types';
@@ -46,7 +47,15 @@ export const AdminLayout: React.FC<LayoutProps> = ({
             justifyContent="space-between"
             shadow="md"
           >
-            <Logo title={title} />
+            <Box position="relative" w="80px" h="87px" flex={1}>
+              <ChakraNextImage
+                width="80"
+                height="87"
+                objectFit="contain"
+                src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
+                alt=""
+              />
+            </Box>
             <NavMenu />
           </Bar>
         </ScrollSlide>
@@ -75,10 +84,18 @@ export const AdminLayout: React.FC<LayoutProps> = ({
             color="brand.900"
             shadow="2xl-dark-"
           >
-            <HStack align="flex-end">
-              <Logo title={title} />
-              <Text fontSize="xl">&copy; {new Date().getFullYear()} </Text>
-            </HStack>
+            <VStack justify="flex-end">
+              <Box position="relative" w="80px" h="87px" flex={1}>
+                <ChakraNextImage
+                  width="80"
+                  height="87"
+                  objectFit="contain"
+                  src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
+                  alt=""
+                />
+                <Text fontSize="xl">&copy; {new Date().getFullYear()} </Text>
+              </Box>
+            </VStack>
           </Bar>
         </ScrollSlide>
       )}
