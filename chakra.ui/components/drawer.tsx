@@ -16,6 +16,8 @@ type DrawerProps = {
   onOpen?: () => void;
   Header?: React.ElementType; // throws an error with ReactNode
   Footer?: React.ElementType; // throws an error with ReactNode
+  placement?: 'left' | 'right' | 'bottom' | 'top';
+  type?: 'default' | 'consent';
 };
 
 export const Drawer = ({
@@ -25,20 +27,25 @@ export const Drawer = ({
   Header,
   Footer,
   children,
+  placement = 'left',
+  type = 'default',
 }: DrawerProps) => {
   const btnRef = useRef<HTMLInputElement>(null);
   return (
     <>
       <ChDrawer
         isOpen={isOpen}
-        placement="left"
+        placement={placement}
         onClose={onClose}
         finalFocusRef={btnRef}
-        size="md"
+        size="lg"
+        preserveScrollBarGap
+        // size={placement !== 'bottom' ? 'md' : 'lg'}
+        // placement="bottom"
       >
         <DrawerOverlay>
           <DrawerContent>
-            <DrawerCloseButton size="sm" />
+            {type !== 'consent' && <DrawerCloseButton size="sm" />}
             {Header && (
               <DrawerHeader>
                 <Header />

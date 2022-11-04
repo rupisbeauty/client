@@ -8,12 +8,12 @@ import layout from '__data/layout.json';
 import { Sidebar } from '.';
 import { AvatarMenu, Bar, ModeToggle } from '../components';
 import { ScrollSlide, transitionDown as variants } from '../framer';
-import { MotionContainer } from '../framer/motion';
+import { MotionBox } from '../framer/motion';
 import type { LayoutProps } from './types';
 
 const mainStyles: ChakraProps & ContainerProps & FlexProps = {
   flex: 1,
-  maxW: 'container.lg',
+  w: 'full',
   px: [4, null, 0],
   ml: 'auto',
   centerContent: true,
@@ -34,7 +34,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
       <ModeToggle />
       <AvatarMenu />
       {displayHeader && (
-        <ScrollSlide dir="up" from="top">
+        <ScrollSlide dir="down" from="top">
           <Bar
             as="header"
             position="sticky"
@@ -49,7 +49,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
         </ScrollSlide>
       )}
       <Sidebar />
-      <MotionContainer
+      <MotionBox
         as="main"
         layerStyle="flex-center"
         sx={mainStyles}
@@ -59,10 +59,10 @@ export const PageLayout: React.FC<LayoutProps> = ({
         variants={variants}
       >
         {children}
-      </MotionContainer>
-      {isDev && <chakra.section w="full" minH="90vh" bg="green" />}
+      </MotionBox>
+      {/* {isDev && <chakra.section w="full" minH="90vh" bg="green" />} */}
       {displayFooter && (
-        <ScrollSlide dir="down" from="bottom">
+        <ScrollSlide dir="up" from="bottom">
           <Bar
             as="footer"
             position="sticky"

@@ -16,3 +16,10 @@ export interface SessionWithUser extends Session {
   image: string;
   emailVerified?: string;
 }
+
+// export type SessionUser = {
+//   id: string;
+//   email: string;
+//   image: string;
+//   emailVerified?: string;
+// };
