@@ -1,4 +1,5 @@
 import {
+  Box,
   Drawer as ChDrawer,
   DrawerBody,
   DrawerCloseButton,
@@ -32,7 +33,7 @@ export const Drawer = ({
 }: DrawerProps) => {
   const btnRef = useRef<HTMLInputElement>(null);
   return (
-    <>
+    <Box as="aside">
       <ChDrawer
         isOpen={isOpen}
         placement={placement}
@@ -61,6 +62,6 @@ export const Drawer = ({
           </DrawerContent>
         </DrawerOverlay>
       </ChDrawer>
-    </>
+    </Box>
   );
 };
