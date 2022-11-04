@@ -1,8 +1,8 @@
-import { Logo, NavMenu } from '@/components'; // @TODO: remove old logo
+import { NavMenu } from '@/components';
 import { BRAND_DIR, CDN_URL } from '@/utils';
 import { SEOConfig } from '@/utils/seo/base';
 import type { ChakraProps, ContainerProps, FlexProps } from '@chakra-ui/react';
-import { Box, chakra, Flex, Text, VStack } from '@chakra-ui/react';
+import { Box, Flex, Text, VStack } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import layout from '__data/layout.json';
 import { Sidebar } from '.';
@@ -48,7 +48,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
                 width="80"
                 height="87"
                 objectFit="contain"
-                src={`${CDN_URL}${BRAND_DIR}/rupi-icon.png`}
+                src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
                 alt=""
               />
             </Box>
@@ -87,7 +87,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
                   width="80"
                   height="87"
                   objectFit="contain"
-                  src={`${CDN_URL}${BRAND_DIR}/rupi-icon.png`}
+                  src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
                   alt=""
                 />
                 <Text fontSize="xl">&copy; {new Date().getFullYear()} </Text>

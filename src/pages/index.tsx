@@ -32,7 +32,7 @@ const Home: NextPage = () => {
             width="500"
             height="430"
             objectFit="contain"
-            src={`${CDN_URL}${BRAND_DIR}/RUPI-NEW-LOGO-PNG.png`}
+            src={`${CDN_URL}${BRAND_DIR}/RUPI-NEW-LOGO-PNG-MD.png`}
             alt=""
             priority
           />
