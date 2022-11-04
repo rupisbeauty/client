@@ -39,6 +39,7 @@ export const Drawer = ({
         onClose={onClose}
         finalFocusRef={btnRef}
         size="lg"
+        preserveScrollBarGap
         // size={placement !== 'bottom' ? 'md' : 'lg'}
         // placement="bottom"
       >
