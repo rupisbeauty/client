@@ -50,6 +50,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
                 objectFit="contain"
                 src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
                 alt=""
+                priority
               />
             </Box>
             <NavMenu />
@@ -68,7 +69,6 @@ export const PageLayout: React.FC<LayoutProps> = ({
       >
         {children}
       </MotionBox>
-      {/* {isDev && <chakra.section w="full" minH="90vh" bg="green" />} */}
       {displayFooter && (
         <ScrollSlide dir="up" from="bottom">
           <Bar
@@ -89,6 +89,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
                   objectFit="contain"
                   src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
                   alt=""
+                  priority
                 />
                 <Text fontSize="xl">&copy; {new Date().getFullYear()} </Text>
               </Box>

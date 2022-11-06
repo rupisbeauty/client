@@ -20,13 +20,6 @@ const Home: NextPage = () => {
         align="center"
         justify="center"
       >
-        {/* <Box h="auto" maxH="80vh" w="full">
-          <Flex position="absolute" inset={0} zIndex="-2">
-            <Box w="full" bg="white" />
-            <Box w="full" bg="green.200" maxH="80vh" mt={44} opacity={0.3} />
-          </Flex>
-        </Box> */}
-
         <Box position="relative" w="30vw" flex={1} mt="30em">
           <ChakraNextImage
             width="500"

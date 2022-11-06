@@ -54,9 +54,10 @@ export const AdminLayout: React.FC<LayoutProps> = ({
                 objectFit="contain"
                 src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
                 alt=""
+                priority
               />
             </Box>
-            <NavMenu />
+            {/* <NavMenu /> */}
           </Bar>
         </ScrollSlide>
       )}
@@ -92,6 +93,7 @@ export const AdminLayout: React.FC<LayoutProps> = ({
                   objectFit="contain"
                   src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
                   alt=""
+                  priority
                 />
                 <Text fontSize="xl">&copy; {new Date().getFullYear()} </Text>
               </Box>

@@ -5,8 +5,8 @@ const ChNextLink = chakra(Link);
 
 const menu = {
   about: '/about',
-  treatments: '/treatments',
-  packages: '/packages',
+  treatments: '/services',
+  packages: '/reviews',
   contact: '/contact',
 };
 
