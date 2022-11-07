@@ -11,16 +11,6 @@ import { Footer } from './footer';
 import { Header } from './header';
 import type { LayoutProps } from './types';
 
-const mainStyles: ChakraProps & ContainerProps & FlexProps = {
-  flex: 1,
-  w: 'full',
-  px: [4, null, 0],
-  ml: 'auto',
-  centerContent: true,
-  background: 'bodyBg',
-  height: '100%',
-};
-
 export const PageLayout: React.FC<LayoutProps> = ({
   title = 'Site Title',
   subtitle = '',
@@ -31,7 +21,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
   const displayFooter = layout?.structure?.footer.show !== 'false';
 
   return (
-    <Flex flexDirection="column" w="full" fontFamily="body" height="100%">
+    <Flex flexDirection="column" w="full" fontFamily="body" height="100vh">
       <NextSeo {...SEOConfig(title, subtitle, description)} />
       <ModeToggle />
       <AvatarMenu />
@@ -39,8 +29,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
       <Sidebar />
       <MotionBox
         as="main"
-        layerStyle="flex-center"
-        sx={mainStyles}
+        layerStyle="main"
         initial="hidden"
         animate="enter"
         exit="exit"

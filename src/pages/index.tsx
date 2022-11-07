@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         align="center"
         justify="center"
       >
-        <Box position="relative" w="30vw" flex={1} mt="30em">
+        <Box position="relative" w="20vw" flex={1} height="100vh">
           <ChakraNextImage
             width="500"
             height="430"

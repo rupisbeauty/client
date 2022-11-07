@@ -26,18 +26,6 @@ export const components: Record<string, StyleConfig> = {
       }),
     },
   },
-  Widget: {
-    baseStyle: {
-      color: 'text',
-      bg: 'transparent',
-      w: 'full',
-      minH: '200px',
-      p: 4,
-      borderRadius: 'lg',
-      border: '1px solid',
-      borderColor: 'panel-border',
-    },
-  },
   Bar: {
     baseStyle: {
       posiition: 'relative',

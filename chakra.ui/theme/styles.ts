@@ -1,5 +1,5 @@
 import type { ChakraTheme } from '@chakra-ui/react';
-import { mode, type GlobalStyleProps } from '@chakra-ui/theme-tools';
+import { type GlobalStyleProps } from '@chakra-ui/theme-tools';
 
 export const styles: ChakraTheme['styles'] = {
   global: (props: GlobalStyleProps) => ({
@@ -13,7 +13,7 @@ export const styles: ChakraTheme['styles'] = {
       WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
     },
     '*, *::before, *::after': {
-      borderColor: mode('gray.500', 'gray.700')(props),
+      borderColor: 'rootBorder',
       boxSizing: 'border-box',
       wordWrap: 'break-word',
     },
@@ -39,23 +39,22 @@ export const styles: ChakraTheme['styles'] = {
       fontSize: '85.2%', // == 10px
       fontFamily: 'default',
       background: 'transparent',
-      height: '100vh',
+      height: '100%',
     },
     body: {
       position: 'relative',
       fontFamily: 'body',
-      // color: mode('brand.900', 'brand.50')(props),
       fontSize: '1.5rem',
       lineHeight: 2,
       textRendering: 'optimizeLegibility',
       WebkitTextSizeAdjust: 'none',
       MozFontSmoothing: 'grayscale',
-      background: 'bodyBg',
       overflowX: 'auto',
       maxW: 'full',
+      backgroundColor: 'bodyBg',
     },
     '*::placeholder': {
-      color: mode('gray.400', 'whiteAlpha.300')(props),
+      color: 'placeholder',
     },
     'input:focus': {
       border: 'inherit',
@@ -78,8 +77,7 @@ export const styles: ChakraTheme['styles'] = {
     },
     a: {
       textDecoration: 'none',
-      color: 'inherit',
-      // color: mode('black', 'white')(props),
+      color: 'link',
     },
     h1: {
       textStyle: 'h1',
