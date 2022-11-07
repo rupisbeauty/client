@@ -1063,6 +1063,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/alice@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/alice/-/alice-4.5.10.tgz#d2fe51aaf4098e627371e43c62010c7ccaac1fc5"
+  integrity sha512-MJveFvHGyrCvbfjLuNCy7/Zu1YpNLRegQcAnScx8b9eDqYpTUOqzkok8VMoo0xH0m8eI7299wMme0Y054yKICg==
+
 "@fontsource/rambla@^4.5.11":
   version "4.5.11"
   resolved "https://registry.yarnpkg.com/@fontsource/rambla/-/rambla-4.5.11.tgz#ab2dc3d023a82469dd5383864034a5e82dbcafaa"
