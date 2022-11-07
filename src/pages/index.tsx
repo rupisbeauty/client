@@ -14,7 +14,6 @@ const Home: NextPage = () => {
         position="relative"
         w="full"
         // maxW={['640px', '768px', '1024px', '1280px', '1536px']}
-        h="60vh"
         p={4}
         direction="column"
         align="center"

@@ -39,6 +39,7 @@ export const styles: ChakraTheme['styles'] = {
       fontSize: '85.2%', // == 10px
       fontFamily: 'default',
       background: 'transparent',
+      height: '100vh',
     },
     body: {
       position: 'relative',
@@ -49,8 +50,8 @@ export const styles: ChakraTheme['styles'] = {
       textRendering: 'optimizeLegibility',
       WebkitTextSizeAdjust: 'none',
       MozFontSmoothing: 'grayscale',
-      // bg: mode('brand.50', 'brand.900')(props),
-      overflowX: 'hidden',
+      background: 'bodyBg',
+      overflowX: 'auto',
       maxW: 'full',
     },
     '*::placeholder': {
@@ -60,10 +61,10 @@ export const styles: ChakraTheme['styles'] = {
       border: 'inherit',
     },
     'input:focus:invalid': {
-      backround: 'rgba(255, 224, 224, 1)',
+      background: 'rgba(255, 224, 224, 1)',
     },
     'input:focus, input:focus:valid': {
-      backround: 'rgba(226, 250, 219, 1)',
+      background: 'rgba(226, 250, 219, 1)',
     },
     'a:active, a:focus, a:visited': {
       outline: 0,

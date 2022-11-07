@@ -1,14 +1,14 @@
-import { NavMenu } from '@/components';
-import { BRAND_DIR, CDN_URL } from '@/utils';
 import { SEOConfig } from '@/utils/seo/base';
 import type { ChakraProps, ContainerProps, FlexProps } from '@chakra-ui/react';
-import { Box, Flex, Text, VStack } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import layout from '__data/layout.json';
 import { Sidebar } from '.';
-import { AvatarMenu, Bar, ChakraNextImage, ModeToggle } from '../components';
-import { ScrollSlide, transitionDown as variants } from '../framer';
+import { AvatarMenu, ModeToggle } from '../components';
+import { transitionDown as variants } from '../framer';
 import { MotionBox } from '../framer/motion';
+import { Footer } from './footer';
+import { Header } from './header';
 import type { LayoutProps } from './types';
 
 const mainStyles: ChakraProps & ContainerProps & FlexProps = {
@@ -17,6 +17,8 @@ const mainStyles: ChakraProps & ContainerProps & FlexProps = {
   px: [4, null, 0],
   ml: 'auto',
   centerContent: true,
+  background: 'bodyBg',
+  height: '100%',
 };
 
 export const PageLayout: React.FC<LayoutProps> = ({
@@ -29,34 +31,11 @@ export const PageLayout: React.FC<LayoutProps> = ({
   const displayFooter = layout?.structure?.footer.show !== 'false';
 
   return (
-    <Flex flexDirection="column" w="full" fontFamily="body">
+    <Flex flexDirection="column" w="full" fontFamily="body" height="100%">
       <NextSeo {...SEOConfig(title, subtitle, description)} />
       <ModeToggle />
       <AvatarMenu />
-      {displayHeader && (
-        <ScrollSlide dir="down" from="top">
-          <Bar
-            as="header"
-            position="sticky"
-            top={0}
-            bg="brand.50"
-            justifyContent="space-between"
-            shadow="md"
-          >
-            <Box position="relative" w="80px" h="87px" flex={1}>
-              <ChakraNextImage
-                width="80"
-                height="87"
-                objectFit="contain"
-                src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
-                alt=""
-                priority
-              />
-            </Box>
-            <NavMenu />
-          </Bar>
-        </ScrollSlide>
-      )}
+      {displayHeader && <Header />}
       <Sidebar />
       <MotionBox
         as="main"
@@ -69,34 +48,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
       >
         {children}
       </MotionBox>
-      {displayFooter && (
-        <ScrollSlide dir="up" from="bottom">
-          <Bar
-            as="footer"
-            position="sticky"
-            bottom={0}
-            h="36"
-            maxH={'200px'}
-            bg="brand.50"
-            color="brand.900"
-            shadow="2xl-dark-"
-          >
-            <VStack justify="flex-end">
-              <Box position="relative" w="80px" h="87px" flex={1}>
-                <ChakraNextImage
-                  width="80"
-                  height="87"
-                  objectFit="contain"
-                  src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
-                  alt=""
-                  priority
-                />
-                <Text fontSize="xl">&copy; {new Date().getFullYear()} </Text>
-              </Box>
-            </VStack>
-          </Bar>
-        </ScrollSlide>
-      )}
+      {displayFooter && <Footer />}
     </Flex>
   );
 };

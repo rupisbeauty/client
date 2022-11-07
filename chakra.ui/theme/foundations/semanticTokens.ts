@@ -23,5 +23,13 @@ export const semanticTokens: ChakraTheme['semanticTokens'] = {
       default: 'brand.300',
       _dark: 'brand.500',
     },
+    bodyBg: {
+      default: '#FFF1E4',
+      _dark: '#190C00',
+    },
+    barBg: {
+      default: 'red.50',
+      _dark: 'gray.900',
+    },
   },
 };
