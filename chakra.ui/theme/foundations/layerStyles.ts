@@ -14,6 +14,7 @@ export const layerStyles: ChakraTheme['layerStyles'] = {
     w: 'full',
     px: [4, null, 0],
     ml: 'auto',
-    background: 'bodyBg',
+    mt: '10vh',
+    zIndex: 0,
   },
 };

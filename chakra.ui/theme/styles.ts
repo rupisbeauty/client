@@ -1,5 +1,5 @@
 import type { ChakraTheme } from '@chakra-ui/react';
-import { type GlobalStyleProps } from '@chakra-ui/theme-tools';
+import { mode, type GlobalStyleProps } from '@chakra-ui/theme-tools';
 
 export const styles: ChakraTheme['styles'] = {
   global: (props: GlobalStyleProps) => ({
@@ -51,7 +51,7 @@ export const styles: ChakraTheme['styles'] = {
       MozFontSmoothing: 'grayscale',
       overflowX: 'auto',
       maxW: 'full',
-      backgroundColor: 'bodyBg',
+      backgroundColor: mode('#FFF1E4', '#190C00')(props), // same as bodyBg token
     },
     '*::placeholder': {
       color: 'placeholder',

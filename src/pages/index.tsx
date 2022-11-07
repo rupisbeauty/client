@@ -1,4 +1,4 @@
-import { HeroGrid } from '@/components/home/hero-grid';
+import { Hero, HeroGrid } from '@/components/home';
 import { BRAND_DIR, CDN_URL } from '@/utils';
 import { Box, chakra, Flex } from '@chakra-ui/react';
 import { ChakraNextImage, PageLayout } from 'chakra.ui';
@@ -13,12 +13,11 @@ const Home: NextPage = () => {
       <Flex
         position="relative"
         w="full"
-        // maxW={['640px', '768px', '1024px', '1280px', '1536px']}
         p={4}
         direction="column"
-        align="center"
-        justify="center"
+        layerStyle="flex-center"
       >
+        {/* <Hero /> */}
         <Box position="relative" w="20vw" flex={1} height="100vh">
           <ChakraNextImage
             width="500"

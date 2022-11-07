@@ -28,12 +28,12 @@ export const components: Record<string, StyleConfig> = {
   },
   Bar: {
     baseStyle: {
-      posiition: 'relative',
+      posiition: 'fixed',
       w: 'full',
       px: 8,
       py: 14,
       maxH: 20,
-      zIndex: 'tooltip',
+      // zIndex: 'docked',
       bg: 'gray.900', // @FIXME: add mode support
     },
   },

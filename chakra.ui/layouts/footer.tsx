@@ -8,10 +8,7 @@ export const Footer = () => {
     <ScrollSlide dir="up" from="bottom">
       <Bar
         as="footer"
-        position="sticky"
         bottom={0}
-        h="36"
-        maxH={'200px'}
         bg="barBg"
         color="brand.900"
         shadow="2xl-dark-"

@@ -25,3 +25,4 @@ export const CDN_URL = 'https://cdn.jsdelivr.net/gh/rupistudio/assets@main';
 export const LOCATIONS_DIR = '/images/locations';
 export const BRAND_DIR = '/brand';
 export const PEOPLE_DIR = '/images/people';
+export const PLACEHOLDER_DIR = '/images/placeholder';

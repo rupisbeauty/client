@@ -21,23 +21,32 @@ export const PageLayout: React.FC<LayoutProps> = ({
   const displayFooter = layout?.structure?.footer.show !== 'false';
 
   return (
-    <Flex flexDirection="column" w="full" fontFamily="body" height="100vh">
+    <>
       <NextSeo {...SEOConfig(title, subtitle, description)} />
       <ModeToggle />
       <AvatarMenu />
-      {displayHeader && <Header />}
-      <Sidebar />
-      <MotionBox
-        as="main"
-        layerStyle="main"
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
+      <Flex
+        position="relative"
+        flexDirection="column"
+        w="full"
+        h="100%"
+        fontFamily="body"
+        id="page-layout"
       >
-        {children}
-      </MotionBox>
-      {displayFooter && <Footer />}
-    </Flex>
+        {displayHeader && <Header />}
+        <Sidebar />
+        <MotionBox
+          as="main"
+          layerStyle="main"
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+        >
+          {children}
+        </MotionBox>
+        {displayFooter && <Footer />}
+      </Flex>
+    </>
   );
 };
