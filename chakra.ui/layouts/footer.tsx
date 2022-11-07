@@ -1,5 +1,5 @@
 import { BRAND_DIR, CDN_URL } from '@/utils';
-import { Box, Text, VStack } from '@chakra-ui/react';
+import { Box, HStack, Text } from '@chakra-ui/react';
 import { Bar, ChakraNextImage } from '../components';
 import { ScrollSlide } from '../framer';
 
@@ -13,8 +13,8 @@ export const Footer = () => {
         color="brand.900"
         shadow="2xl-dark-"
       >
-        <VStack justify="flex-end">
-          <Box position="relative" w="80px" h="87px" flex={1}>
+        <HStack justify="flex-end" w="full">
+          <Box position="relative" w="80px" flex={1}>
             <ChakraNextImage
               width="80"
               height="87"
@@ -23,9 +23,9 @@ export const Footer = () => {
               alt=""
               priority
             />
-            <Text fontSize="xl">&copy; {new Date().getFullYear()} </Text>
           </Box>
-        </VStack>
+          <Text fontSize="xl">&copy; {new Date().getFullYear()} </Text>
+        </HStack>
       </Bar>
     </ScrollSlide>
   );

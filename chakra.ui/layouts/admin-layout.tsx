@@ -5,7 +5,7 @@ import layout from '__data/layout.json';
 import { Sidebar } from '.';
 import { AvatarMenu, ModeToggle } from '../components';
 import { transitionDown as variants } from '../framer';
-import { MotionContainer } from '../framer/motion';
+import { MotionBox } from '../framer/motion';
 import { Footer } from './footer';
 import { Header } from './header';
 import type { LayoutProps } from './types';
@@ -20,7 +20,7 @@ export const AdminLayout: React.FC<LayoutProps> = ({
   const displayFooter = layout?.structure?.footer.show !== 'false';
 
   return (
-    <Flex flexDirection="column">
+    <>
       <NextSeo
         {...SEOConfig(title, subtitle, description)}
         noindex={true}
@@ -28,19 +28,42 @@ export const AdminLayout: React.FC<LayoutProps> = ({
       />
       <ModeToggle />
       <AvatarMenu />
-      {displayHeader && <Header />}
-      <Sidebar />
-      <MotionContainer
-        as="main"
-        layerStyle="main"
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
+      <Flex
+        position="relative"
+        flexDirection="column"
+        w="full"
+        h="100%"
+        fontFamily="body"
+        id="admin-layout"
+      >
+        {displayHeader && <Header />}
+        <Sidebar />
+        <Main>{children}</Main>
+        {displayFooter && <Footer />}
+      </Flex>
+    </>
+  );
+};
+
+export const Main = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <MotionBox
+      as="main"
+      layerStyle="main"
+      initial="hidden"
+      animate="enter"
+      exit="exit"
+      variants={variants}
+    >
+      <Flex
+        position="relative"
+        w="full"
+        p={4}
+        direction="column"
+        layerStyle="flex-center"
       >
         {children}
-      </MotionContainer>
-      {displayFooter && <Footer />}
-    </Flex>
+      </Flex>
+    </MotionBox>
   );
 };

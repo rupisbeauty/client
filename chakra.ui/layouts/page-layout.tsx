@@ -1,5 +1,4 @@
 import { SEOConfig } from '@/utils/seo/base';
-import type { ChakraProps, ContainerProps, FlexProps } from '@chakra-ui/react';
 import { Flex } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import layout from '__data/layout.json';
@@ -35,18 +34,33 @@ export const PageLayout: React.FC<LayoutProps> = ({
       >
         {displayHeader && <Header />}
         <Sidebar />
-        <MotionBox
-          as="main"
-          layerStyle="main"
-          initial="hidden"
-          animate="enter"
-          exit="exit"
-          variants={variants}
-        >
-          {children}
-        </MotionBox>
+        <Main>{children}</Main>
         {displayFooter && <Footer />}
       </Flex>
     </>
+  );
+};
+
+export const Main = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <MotionBox
+      as="main"
+      layerStyle="main"
+      initial="hidden"
+      animate="enter"
+      exit="exit"
+      variants={variants}
+      mt={44}
+    >
+      <Flex
+        position="relative"
+        w="full"
+        p={4}
+        direction="column"
+        layerStyle="flex-center"
+      >
+        {children}
+      </Flex>
+    </MotionBox>
   );
 };

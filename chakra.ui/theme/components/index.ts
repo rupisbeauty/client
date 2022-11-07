@@ -33,7 +33,6 @@ export const components: Record<string, StyleConfig> = {
       px: 8,
       py: 14,
       maxH: 20,
-      // zIndex: 'docked',
       bg: 'gray.900', // @FIXME: add mode support
     },
   },
