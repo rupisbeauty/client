@@ -8,22 +8,33 @@ export const semanticTokens: ChakraTheme['semanticTokens'] = {
       _dark: 'brand.40',
     },
     primary: '#D3B734',
-    secondary: '#FAC4C4',
+    secondary: {
+      default: '#739694',
+      _dark: '#a4c0b9',
+    },
+    accent: {
+      default: '#739694',
+      _dark: '#a4c0b9',
+    },
+    gray: {
+      default: '#B4BFC7',
+      _dark: '#707B83',
+    },
+    bodyBg: {
+      default: '#FFF1E4',
+      _dark: '#191b1d',
+    },
     link: {
       default: 'black',
-      _dark: '#FFECDA',
+      _dark: '#FFF1E4',
     },
     heading: {
       default: 'brand.300',
       _dark: 'brand.500',
     },
-    bodyBg: {
-      default: '#FFF1E4',
-      _dark: '#190C00',
-    },
     barBg: {
-      default: 'red.50',
-      _dark: '#272727',
+      default: 'red.50', // #FFF5F5
+      _dark: '#212325',
     },
     placeholder: {
       default: 'gray.400',

@@ -31,6 +31,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
         h="100%"
         fontFamily="body"
         id="page-layout"
+        bg="bodyBg"
       >
         {displayHeader && <Header />}
         <Sidebar />
@@ -50,14 +51,15 @@ export const Main = ({ children }: { children: React.ReactNode }) => {
       animate="enter"
       exit="exit"
       variants={variants}
-      mt={44}
+      // mt={24}
     >
       <Flex
         position="relative"
         w="full"
-        p={4}
+        px={12}
         direction="column"
         layerStyle="flex-center"
+        h="100vh"
       >
         {children}
       </Flex>
