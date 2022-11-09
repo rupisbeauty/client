@@ -13,7 +13,7 @@ export const styles: ChakraTheme['styles'] = {
       WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
     },
     '*, *::before, *::after': {
-      borderColor: mode('gray.500', 'gray.700')(props),
+      borderColor: 'rootBorder',
       boxSizing: 'border-box',
       wordWrap: 'break-word',
     },
@@ -39,31 +39,31 @@ export const styles: ChakraTheme['styles'] = {
       fontSize: '85.2%', // == 10px
       fontFamily: 'default',
       background: 'transparent',
+      height: '100%',
     },
     body: {
       position: 'relative',
       fontFamily: 'body',
-      // color: mode('brand.900', 'brand.50')(props),
       fontSize: '1.5rem',
       lineHeight: 2,
       textRendering: 'optimizeLegibility',
       WebkitTextSizeAdjust: 'none',
       MozFontSmoothing: 'grayscale',
-      // bg: mode('brand.50', 'brand.900')(props),
-      overflowX: 'hidden',
+      overflowX: 'auto',
       maxW: 'full',
+      backgroundColor: mode('#FFF1E4', '#190C00')(props), // same as bodyBg token
     },
     '*::placeholder': {
-      color: mode('gray.400', 'whiteAlpha.300')(props),
+      color: 'placeholder',
     },
     'input:focus': {
       border: 'inherit',
     },
     'input:focus:invalid': {
-      backround: 'rgba(255, 224, 224, 1)',
+      background: 'rgba(255, 224, 224, 1)',
     },
     'input:focus, input:focus:valid': {
-      backround: 'rgba(226, 250, 219, 1)',
+      background: 'rgba(226, 250, 219, 1)',
     },
     'a:active, a:focus, a:visited': {
       outline: 0,
@@ -77,8 +77,7 @@ export const styles: ChakraTheme['styles'] = {
     },
     a: {
       textDecoration: 'none',
-      color: 'inherit',
-      // color: mode('black', 'white')(props),
+      color: 'link',
     },
     h1: {
       textStyle: 'h1',

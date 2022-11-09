@@ -5,8 +5,8 @@ const ChNextLink = chakra(Link);
 
 const menu = {
   about: '/about',
-  treatments: '/treatments',
-  packages: '/packages',
+  services: '/services',
+  packages: '/reviews',
   contact: '/contact',
 };
 
@@ -18,7 +18,6 @@ export const NavMenu = () => {
       flex={1}
       justify="flex-end"
       mr={20}
-      color="brand.900"
     >
       {Object.keys(menu).length &&
         Object.entries(menu).map(([key, value]) => (

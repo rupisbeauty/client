@@ -1,10 +1,10 @@
+import { debug as globalDebug, dev } from '@/utils';
 import {
   extendTheme,
   withDefaultColorScheme,
   withDefaultProps,
   type ChakraTheme,
 } from '@chakra-ui/react';
-import { debug as globalDebug, dev } from '@/utils';
 import { components } from './components';
 import { foundations } from './foundations';
 import { styles } from './styles';
@@ -23,7 +23,7 @@ export const theme: Partial<ChakraTheme> = extendTheme(
   withDefaultColorScheme({ colorScheme: 'brand' }),
   withDefaultProps({
     defaultProps: {
-      color: 'text',
+      color: 'body',
     },
     // components: ['Heading', 'Text'],
   })

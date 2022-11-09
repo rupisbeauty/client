@@ -26,26 +26,13 @@ export const components: Record<string, StyleConfig> = {
       }),
     },
   },
-  Widget: {
-    baseStyle: {
-      color: 'text',
-      bg: 'transparent',
-      w: 'full',
-      minH: '200px',
-      p: 4,
-      borderRadius: 'lg',
-      border: '1px solid',
-      borderColor: 'panel-border',
-    },
-  },
   Bar: {
     baseStyle: {
-      posiition: 'relative',
+      posiition: 'fixed',
       w: 'full',
       px: 8,
       py: 14,
       maxH: 20,
-      zIndex: 'tooltip',
       bg: 'gray.900', // @FIXME: add mode support
     },
   },

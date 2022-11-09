@@ -47,7 +47,7 @@ export function AvatarMenu() {
   }, []);
 
   return (
-    <Box pos="fixed" top={6} right={6} zIndex="docked">
+    <Box pos="fixed" top={6} right={6} zIndex="dropdown">
       <Menu placement="bottom-end" boundary="scrollParent" closeOnSelect>
         {status !== 'loading' ? (
           <MenuButton
