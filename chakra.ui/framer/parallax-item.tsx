@@ -1,3 +1,4 @@
+// @link: https://medium.com/workbench/floating-parallax-images-with-react-and-framer-motion-2f3703a8a070
 import { chakra } from '@chakra-ui/react';
 import { useScroll, useSpring, useTransform } from 'framer-motion';
 import React, {
