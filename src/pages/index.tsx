@@ -1,22 +1,62 @@
 import { Hero } from '@/components/home';
 import { BRAND_DIR, CDN_URL } from '@/utils';
-import { Box, chakra } from '@chakra-ui/react';
-import { ChakraNextImage, PageLayout } from 'chakra.ui';
+import { Box, chakra, Container } from '@chakra-ui/react';
+import { ChakraNextImage, PageLayout, ParallaxItem } from 'chakra.ui';
 import { type NextPage } from 'next';
-import { isDev } from '../utils/constants';
+import { Background, Parallax } from 'react-parallax';
+import { FramerParallax } from '../../chakra.ui/framer/parallax';
+import { isDev, LOCATIONS_DIR } from '../utils/constants';
+
+const insideStyles = {
+  background: 'white',
+  padding: 20,
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%,-50%)',
+  color: 'black',
+};
 
 const Home: NextPage = () => {
   return (
-    <PageLayout
-      title="Rupi Beauty Studio"
-      description="Eyebrows, facials, waxing & more"
-    >
-      {isDev ? <Hero /> : <ComingSoon />}
-    </PageLayout>
+    <>
+      <PageLayout
+        title="Rupi Beauty Studio"
+        description="Eyebrows, facials, waxing & more"
+      >
+        <FramerParallax>
+          <Initial />
+        </FramerParallax>
+        <Parallax
+          bgImage={`${CDN_URL}${LOCATIONS_DIR}/pearl-river-interior.jpeg`}
+          strength={-100}
+        >
+          <chakra.div height={500}>
+            <chakra.div sx={insideStyles}>Reverse direction</chakra.div>
+          </chakra.div>
+        </Parallax>
+      </PageLayout>
+    </>
   );
 };
 
+// @link: https://codepen.io/silvandiepen/pen/NOboze
+
 export default Home;
+
+export const Initial = () => {
+  return (
+    <>
+      {isDev ? (
+        <>
+          <Hero />
+        </>
+      ) : (
+        <ComingSoon />
+      )}
+    </>
+  );
+};
 
 export const ComingSoon = () => {
   return (

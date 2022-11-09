@@ -13,8 +13,8 @@ import { ChakraNextImage, CustomIcon } from 'chakra.ui';
 
 export const Hero = () => {
   return (
-    <Container w="full" maxW="container.lg">
-      <HStack w="full">
+    <Container as="section" w="full" maxW="container.lg" h="100vh">
+      <HStack w="full" h="100%" maxW="contain">
         <Box width="full" px={16}>
           <chakra.p fontSize="2xl" letterSpacing={1.1} color="accent">
             Let Us Help You...
@@ -57,6 +57,7 @@ export const Hero = () => {
             </chakra.p>
           </HStack>
         </Box>
+
         <Box
           position="relative"
           width="full"
