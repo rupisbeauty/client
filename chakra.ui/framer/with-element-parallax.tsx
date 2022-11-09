@@ -1,4 +1,5 @@
 /* eslint-disable */
+// @link: https://blog.gilesperry.info/advanced-scroll-effects-in-framer
 import { useScroll, useTransform } from 'framer-motion';
 import type { ComponentType, FC, ReactNode } from 'react';
 import { createRef } from 'react';
