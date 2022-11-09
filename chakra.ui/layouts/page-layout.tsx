@@ -39,7 +39,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
   );
 };
 
-export const Main = ({ children }: { children: React.ReactNode }) => {
+const Main = ({ children }: { children: React.ReactNode }) => {
   return (
     <MotionBox
       as="main"
