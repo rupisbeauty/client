@@ -8,15 +8,6 @@ import { isBrowser } from 'framer-motion';
 import { SessionProvider, useSession } from 'next-auth/react';
 import { type AppType } from 'next/app';
 import Head from 'next/head';
-import Script from 'next/script';
-
-function getConsent(): boolean {
-  if (!isBrowser) return false;
-  const consent = localStorage.getItem('rbs-consent');
-  if (consent !== null) return JSON.parse(consent);
-  localStorage.setItem('rbs-consent', 'false');
-  return false;
-}
 
 const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
   Component,
@@ -33,26 +24,6 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
       </Head>
-      {getConsent() && process.env.NEXT_PUBLIC_CRISP_WEBSITE_ID ? (
-        <Script
-          // @TODO: explore nextjs worker strategy:
-          // @link: https://nextjs.org/docs/api-reference/next/script#worker
-          id="crisp-widget"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.$crisp=[];
-            window.CRISP_WEBSITE_ID="${process.env.NEXT_PUBLIC_CRISP_WEBSITE_ID}";
-            (function(){
-              const d = document;
-              const s = d.createElement("script");
-              s.src = "https://client.crisp.chat/l.js";
-              s.async = 1;
-              d.getElementsByTagName("head")[0].appendChild(s);
-            })();`,
-          }}
-        />
-      ) : null}
       <ErrorBoundary>
         <SessionProvider session={session}>
           <ChakraWrapper cookies={cookies}>
