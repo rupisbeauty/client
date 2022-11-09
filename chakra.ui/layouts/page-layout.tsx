@@ -1,5 +1,5 @@
 import { SEOConfig } from '@/utils/seo/base';
-import { Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import layout from '__data/layout.json';
 import { Sidebar } from '.';
@@ -24,17 +24,14 @@ export const PageLayout: React.FC<LayoutProps> = ({
       <NextSeo {...SEOConfig(title, subtitle, description)} />
       <ModeToggle />
       <AvatarMenu />
+      <Sidebar />
       <Flex
+        id="page-layout"
         position="relative"
         flexDirection="column"
-        w="full"
-        h="100%"
         fontFamily="body"
-        id="page-layout"
-        bg="bodyBg"
       >
         {displayHeader && <Header />}
-        <Sidebar />
         <Main>{children}</Main>
         {displayFooter && <Footer />}
       </Flex>
@@ -46,23 +43,16 @@ export const Main = ({ children }: { children: React.ReactNode }) => {
   return (
     <MotionBox
       as="main"
-      layerStyle="main"
       initial="hidden"
       animate="enter"
       exit="exit"
       variants={variants}
-      // mt={24}
+      position="relative"
+      w="full"
     >
-      <Flex
-        position="relative"
-        w="full"
-        px={12}
-        direction="column"
-        layerStyle="flex-center"
-        h="100vh"
-      >
+      <Box position="relative" w="full">
         {children}
-      </Flex>
+      </Box>
     </MotionBox>
   );
 };
