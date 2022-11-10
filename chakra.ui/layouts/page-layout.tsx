@@ -30,6 +30,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
         position="relative"
         flexDirection="column"
         fontFamily="body"
+        bg="bg"
       >
         {displayHeader && <Header />}
         <Main>{children}</Main>

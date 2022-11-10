@@ -14,13 +14,13 @@ export const Footer = () => {
         shadow="2xl-dark-"
       >
         <HStack justify="flex-end" w="full">
-          <Box position="relative" w="80px" flex={1}>
+          <Box position="relative" w="80px" height="87px" flex={1}>
             <ChakraNextImage
               width="80"
               height="87"
               objectFit="contain"
               src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
-              alt=""
+              alt="Rupi Beauty Studio"
               priority
             />
           </Box>

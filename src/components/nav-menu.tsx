@@ -12,13 +12,7 @@ const menu = {
 
 export const NavMenu = () => {
   return (
-    <HStack
-      as="nav"
-      w="full"
-      flex={1}
-      justify="flex-end"
-      mr={20}
-    >
+    <HStack as="nav" w="full" flex={1} justify="flex-end" mr={20}>
       {Object.keys(menu).length &&
         Object.entries(menu).map(([key, value]) => (
           <ChNextLink
@@ -27,6 +21,13 @@ export const NavMenu = () => {
             px={3}
             fontSize="xl"
             letterSpacing="widest"
+            color="navLink"
+            fontWeight={600}
+            textShadow="md"
+            _hover={{
+              color: 'primary',
+              textDecoration: 'none',
+            }}
           >
             {key.toUpperCase()}
           </ChNextLink>

@@ -2,10 +2,15 @@ import { BRAND_DIR, CDN_URL } from '@/utils';
 import { Box, chakra, Flex } from '@chakra-ui/react';
 import { ChakraNextImage } from 'chakra.ui';
 
-
 export const ComingSoon = () => {
   return (
-    <Flex flexDirection="column" justify="center" alignItems="center" mt={72}>
+    <Flex
+      flexDirection="column"
+      justify="center"
+      alignItems="center"
+      mt={72}
+      h="100vh"
+    >
       <Box position="relative" flex={1} my="auto">
         <ChakraNextImage
           width="500"
