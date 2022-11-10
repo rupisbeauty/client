@@ -1,40 +1,48 @@
 import type { ChakraTheme } from '@chakra-ui/react';
+import { darken, lighten } from 'color2k'; // https://color2k.com/
 
 export const semanticTokens: ChakraTheme['semanticTokens'] = {
   colors: {
-    error: 'red.400',
-    body: {
-      default: 'brand.900',
-      _dark: 'brand.40',
+    bg: {
+      default: '#FFF1E4',
+      _dark: '#101819',
     },
     primary: '#D3B734',
     secondary: {
-      default: '#739694',
-      _dark: '#a4c0b9',
+      default: '#FAC4C4',
+      _dark: '#FF8E8E',
     },
     accent: {
-      default: '#739694',
-      _dark: '#a4c0b9',
+      default: '#F9D1FF',
+      _dark: '#DDABE4',
+    },
+    error: {
+      default: '#FF5F5F',
+      _dark: '#FD2828',
+    },
+    warning: {
+      default: '#F0DD33',
+      _dark: '#F6DF08',
+    },
+    success: {
+      default: '#7AEE9A',
+      _dark: '#75E308',
     },
     gray: {
       default: '#B4BFC7',
       _dark: '#707B83',
     },
-    bodyBg: {
-      default: '#FFF1E4',
-      _dark: '#191b1d',
-    },
     link: {
-      default: 'black',
-      _dark: '#FFF1E4',
-    },
-    heading: {
-      default: 'brand.300',
-      _dark: 'brand.500',
+      default: '#7AC4EE',
+      _dark: '#1482D1',
     },
     barBg: {
-      default: 'red.50', // #FFF5F5
-      _dark: '#212325',
+      default: '#FDE4CC',
+      _dark: '#2D3738',
+    },
+    navLink: {
+      default: darken('#D3B734', 0.2),
+      _dark: lighten('#D3B734', 0.2),
     },
     placeholder: {
       default: 'gray.400',
