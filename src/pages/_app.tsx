@@ -4,7 +4,6 @@ import { type NextComponentTypeWithAuth } from '@/types';
 import { ErrorBoundary } from '@/utils';
 import { trpc } from '@/utils/trpc';
 import { ChakraWrapper, FullScreenLoader } from 'chakra.ui';
-import { isBrowser } from 'framer-motion';
 import { SessionProvider, useSession } from 'next-auth/react';
 import { type AppType } from 'next/app';
 import Head from 'next/head';
