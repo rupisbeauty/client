@@ -1,3 +1,5 @@
+import { isBrowser } from "./constants";
+
 export const getBaseUrl = () => {
   if (typeof window !== 'undefined') return ''; // browser should use relative url
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`; // SSR should use vercel url
@@ -52,4 +54,17 @@ export function flattenObjects<T, U>(arr: T[], key = 'label') {
     {}
   );
   return object as U;
+}
+
+export function getAnonId() {
+  if (!isBrowser) return undefined;
+  return localStorage.getItem('__anon_id');
+}
+
+export function getConsent(): boolean {
+  if (!isBrowser) return false;
+  const consent = localStorage.getItem('rbs-consent');
+  if (consent !== null) return JSON.parse(consent);
+  localStorage.setItem('rbs-consent', 'false');
+  return false;
 }
