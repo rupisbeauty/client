@@ -31,9 +31,9 @@ export function ScrollSection({
         h: '50vh',
         opacity: 0.4,
         zIndex: -1,
-        bg: `url(${bgImage})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'none',
+        bg: `url(${bgImage}) no-repeat`,
+        backgroundPosition: ['left center', null, 'center center'],
+        backgroundSize: '50% 50%',
       }}
     >
       {children}
@@ -43,7 +43,8 @@ export function ScrollSection({
       bgImage={bgImage}
       bgImageAlt="Rupi Pearl River, NY location interior"
       strength={strength}
-      style={{ opacity: 0.35, backgroundColor: bgColor }}
+      style={{ backgroundColor: bgColor }}
+      bgStyle={{ backdropFilter: 'opacity(0.35)' }}
     >
       {children}
     </Parallax>

@@ -30,8 +30,7 @@ export const FramerParallax = ({
   // end our animation when we've scrolled the offset specified
   const final = elementTop + offset;
 
-  // const y = useTransform(scrollY, [initial, final], [offset, -offset]);
-  const yRange = useTransform(scrollY, [initial, final], [offset, -offset]);
+  const yRange = useTransform(scrollY, [initial, final], [-offset, offset]);
   // apply a spring to ease the result
   const y = useSpring(yRange, { stiffness: 400, damping: 90 });
 
@@ -60,7 +59,7 @@ export const FramerParallax = ({
   }
 
   return (
-    <MotionBox ref={ref} style={{ y }}>
+    <MotionBox ref={ref} style={{ y }} m={0} p={0}>
       {children}
     </MotionBox>
   );
