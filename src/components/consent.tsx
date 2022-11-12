@@ -1,13 +1,15 @@
 // @NOTE: see the useage of @use-cookie-consent-react for insight
 // @link: https://github.com/use-cookie-consent/use-cookie-consent
 import { getConsent } from '@/utils';
-import { Text, useDisclosure } from '@chakra-ui/react';
+import { chakra } from '@chakra-ui/react';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Banner } from './banner';
 
+const ChNextLink = chakra(Link);
+
 export const CookieConsent = () => {
   const [consent, setConsent] = useState<boolean>(false);
-  const { onClose } = useDisclosure();
 
   useEffect(() => {
     const localConsent = getConsent();
@@ -21,16 +23,17 @@ export const CookieConsent = () => {
   }, [consent]);
 
   return !consent ? (
-    <Banner
-      btnLabel="I Understand"
-      onClick={() => setConsent(true)}
-      onClose={onClose}
-    >
-      <Text fontWeight="medium">
+    <Banner btnLabel="I Understand" onClick={() => setConsent(true)}>
+      <chakra.p fontWeight="medium" lineHeight={1.4}>
         We use cookies to personalize content and provide you with a better
         browsing experience.
-      </Text>
-      <Text color="muted">Read our Privacy Policy</Text>
+      </chakra.p>
+      <chakra.p fontSize="md" fontStyle="italic" color="gray.500" lineHeight={1.4}>
+        For more info check out our
+        <ChNextLink href="/policies/privacy" px={1} fontStyle="normal">
+          Privacy Policy
+        </ChNextLink>
+      </chakra.p>
     </Banner>
   ) : null;
 };

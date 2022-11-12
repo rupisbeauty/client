@@ -1,12 +1,12 @@
-import { Box, type ChakraProps } from '@chakra-ui/react';
+import { Box, type BoxProps, type ChakraProps } from '@chakra-ui/react';
 import { paths } from './paths';
 
 type CustomIconProps = {
   icon: string;
-  size: string;
+  size: string | number | string[] | number[];
   color?: string;
   stroke?: string;
-};
+} & BoxProps;
 
 export const CustomIcon: React.FC<CustomIconProps> = ({
   icon = 'add',

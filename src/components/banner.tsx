@@ -10,84 +10,84 @@ import {
   useBreakpointValue,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { FC, ReactNode } from 'react';
+import { CookieIcon } from 'chakra.ui';
+import type { FC, ReactNode } from 'react';
+import { useState } from 'react';
 
 interface BannerProps {
   children: ReactNode;
   btnLabel: string;
   onClick: () => void;
-  onClose: () => void;
 }
 
-export const Banner: FC<BannerProps> = ({
-  children,
-  btnLabel,
-  onClick,
-  onClose,
-}) => {
+export const Banner: FC<BannerProps> = ({ children, btnLabel, onClick }) => {
   const isMobile = useBreakpointValue({ base: true, md: false });
-  return (
+  const boxShadow = useColorModeValue('sm', 'sm-dark');
+  const [hide, setHide] = useState<boolean>(false);
+
+  return !hide ? (
     <Box
       as="section"
       position="fixed"
-      bottom={0}
+      bottom={16}
       left={0}
       right={0}
-      // pb={{ base: '12', md: '24' }}
       zIndex="banner"
     >
-      <Box bg="primary" boxShadow={useColorModeValue('sm', 'sm-dark')}>
-        <Container
-          py={{ base: '4', md: '2.5' }}
-          maxW="container.xl"
-          position="relative"
+      <Container
+        py={{ base: '4', md: '2.5' }}
+        maxW="container.xl"
+        position="relative"
+        rounded="md"
+        bg="bg"
+        boxShadow={boxShadow}
+        border="0.05px solid"
+        borderColor="gray"
+      >
+        <CloseButton
+          display={{ sm: 'none' }}
+          position="absolute"
+          right="2"
+          top="2"
+          onClick={() => setHide(!hide)}
+        />
+        <Stack
+          direction={{ base: 'column', sm: 'row' }}
+          justify="space-between"
+          spacing={{ base: '3', md: '2' }}
         >
-          <CloseButton
-            display={{ sm: 'none' }}
-            position="absolute"
-            right="2"
-            top="2"
-            onClick={onClose}
-          />
+          <Stack
+            spacing="4"
+            direction={{ base: 'column', md: 'row' }}
+            align={{ base: 'start', md: 'center' }}
+          >
+            {!isMobile && (
+              <Square size="12" bg="primary" borderRadius="md" color="white">
+                <Icon as={CookieIcon} boxSize="6" />
+              </Square>
+            )}
+            <Box pe={{ base: '4', sm: '0' }}>{children}</Box>
+          </Stack>
           <Stack
             direction={{ base: 'column', sm: 'row' }}
-            justify="space-between"
-            spacing={{ base: '3', md: '2' }}
+            spacing={{ base: '3', sm: '2' }}
+            align={{ base: 'stretch', sm: 'center' }}
           >
-            <Stack
-              spacing="4"
-              direction={{ base: 'column', md: 'row' }}
-              align={{ base: 'start', md: 'center' }}
+            <Button
+              variant="solid"
+              colorScheme="yellow"
+              width="full"
+              onClick={onClick}
             >
-              {!isMobile && (
-                <Square size="12" bg="bg-subtle" borderRadius="md">
-                  <Icon as={InfoIcon} boxSize="6" />
-                </Square>
-              )}
-              <Stack
-                direction={{ base: 'column', md: 'row' }}
-                spacing={{ base: '0.5', md: '1.5' }}
-                pe={{ base: '4', sm: '0' }}
-              >
-                {children}
-              </Stack>
-            </Stack>
-            <Stack
-              direction={{ base: 'column', sm: 'row' }}
-              spacing={{ base: '3', sm: '2' }}
-              align={{ base: 'stretch', sm: 'center' }}
-            >
-              <Button variant="blue" width="full" onClick={onClick}>
-                {btnLabel}
-              </Button>
-              <CloseButton
-                display={{ base: 'none', sm: 'inline-flex' }}
-                onClick={onClose}
-              />
-            </Stack>
+              {btnLabel}
+            </Button>
+            <CloseButton
+              display={{ base: 'none', sm: 'inline-flex' }}
+              onClick={() => setHide(!hide)}
+            />
           </Stack>
-        </Container>
-      </Box>
+        </Stack>
+      </Container>
     </Box>
-  );
+  ) : null;
 };
