@@ -1,5 +1,5 @@
 import { SEOConfig } from '@/utils/seo/base';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import layout from '__data/layout.json';
 import { Sidebar } from '.';
@@ -25,17 +25,9 @@ export const PageLayout: React.FC<LayoutProps> = ({
       <ModeToggle />
       <AvatarMenu />
       <Sidebar />
-      <Flex
-        id="page-layout"
-        position="relative"
-        flexDirection="column"
-        fontFamily="body"
-        bg="bg"
-      >
-        {displayHeader && <Header />}
-        <Main>{children}</Main>
-        {displayFooter && <Footer />}
-      </Flex>
+      {displayHeader && <Header />}
+      <Main>{children}</Main>
+      {displayFooter && <Footer />}
     </>
   );
 };

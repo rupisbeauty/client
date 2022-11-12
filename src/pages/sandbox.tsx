@@ -1,13 +1,11 @@
+import { ScrollSection } from '@/components';
 import { Hero } from '@/components/home';
 import { ComingSoon } from '@/components/home/coming-soon';
-import { CDN_URL } from '@/utils';
+import { Hero2 } from '@/components/home/hero';
+import { isDev } from '@/utils';
 import { Box, chakra } from '@chakra-ui/react';
-import { HorizontalParallax, PageLayout } from 'chakra.ui';
-import { useReducedMotion } from 'framer-motion';
+import { FramerParallax, HorizontalParallax, PageLayout } from 'chakra.ui';
 import { type NextPage } from 'next';
-import { Parallax } from 'react-parallax';
-import { FramerParallax } from '../../chakra.ui/framer/parallax';
-import { BRAND_DIR, isDev, LOCATIONS_DIR } from '../utils/constants';
 
 const insideStyles = {
   background: 'white',
@@ -30,89 +28,43 @@ function ParallaxItem() {
   );
 }
 
+const Slide = () => (
+  <Box w="full" h="100vh" bg="green" border="1px solid red" />
+);
+
 const Sandbox: NextPage = () => {
-  const shouldReduceMotion = useReducedMotion();
   return (
-    <>
-      <PageLayout
-        title="Rupi Beauty Studio"
-        description="Eyebrows, facials, waxing & more"
-      >
-        <Box
-          w="sm"
-          h="sm"
-          bg="secondary"
-          position="absolute"
-          top="10em"
-          right="20em"
-          zIndex={0}
-        />
-        <FramerParallax offset={200}>
-          <Initial />
-        </FramerParallax>
-        {shouldReduceMotion ? (
-          <Box
-            position="relative"
-            zIndex={1}
-            h="50vh"
-            _after={{
-              content: '""',
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              w: 'full',
-              h: '50vh',
-              opacity: 0.4,
-              zIndex: -1,
-              bg: `url(${CDN_URL}${BRAND_DIR}/tile_background.png)`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'none',
-            }}
-          >
-            <ParallaxItem />
-          </Box>
-        ) : (
-          <Parallax
-            bgImage={`${CDN_URL}${BRAND_DIR}/tile_background.png`}
-            bgImageAlt="Rupi Pearl River, NY location interior"
-            strength={-200}
-            style={{ opacity: 0.35, backgroundColor: '#EDDFEF' }}
-          >
-            <ParallaxItem />
-          </Parallax>
-        )}
-        <HorizontalParallax speed={1.5}>
+    <PageLayout
+      title="Rupi Beauty Studio"
+      description="Eyebrows, facials, waxing & more"
+    >
+      {/* <FramerParallax offset={200}> */}
+      <Hero2 />
+      {/* </FramerParallax> */}
+
+      <ScrollSection>
+        <ParallaxItem />
+      </ScrollSection>
+
+      {/* <HorizontalParallax speed={2.25}>
           <chakra.h2
             color="bg"
             fontSize="9xl"
             __css={{
-              '-webkit-text-stroke': '0.25px',
-              '-webkit-text-stroke-color': '#D3B734',
+              WebkitTextStroke: '0.25px',
+              WebkitTextStrokeColor: '#D3B734',
             }}
           >{`Can't wait to meet you!`}</chakra.h2>
-        </HorizontalParallax>
-        <FramerParallax offset={200}>
-          <Initial />
-        </FramerParallax>
-      </PageLayout>
-    </>
+        </HorizontalParallax> */}
+      <Slide />
+      <Slide />
+      <Slide />
+      <Slide />
+      <Slide />
+    </PageLayout>
   );
 };
 
 // @link: https://codepen.io/silvandiepen/pen/NOboze
 
 export default Sandbox;
-
-export const Initial = () => {
-  return (
-    <>
-      {isDev ? (
-        <>
-          <Hero />
-        </>
-      ) : (
-        <ComingSoon />
-      )}
-    </>
-  );
-};
