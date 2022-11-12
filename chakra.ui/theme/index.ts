@@ -7,7 +7,6 @@ import {
 } from '@chakra-ui/react';
 import { components } from './components';
 import { foundations } from './foundations';
-import { styles } from './styles';
 import { typography } from './typography';
 
 const debug = globalDebug || false;
@@ -15,7 +14,6 @@ const debug = globalDebug || false;
 export const theme: Partial<ChakraTheme> = extendTheme(
   {
     blur: {},
-    styles,
     components,
     ...foundations,
     ...typography,

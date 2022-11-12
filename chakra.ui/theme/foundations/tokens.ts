@@ -33,7 +33,7 @@ export const semanticTokens: ChakraTheme['semanticTokens'] = {
       _dark: '#707B83',
     },
     link: {
-      default: '#7AC4EE',
+      default: '#3499d4',
       _dark: '#1482D1',
     },
     barBg: {
