@@ -21,7 +21,7 @@ export function ScrollSection({
     <Box
       position="relative"
       zIndex={1}
-      h="50vh"
+      minH="50vh"
       _after={{
         content: '""',
         position: 'absolute',
@@ -39,14 +39,23 @@ export function ScrollSection({
       {children}
     </Box>
   ) : (
-    <Parallax
-      bgImage={bgImage}
-      bgImageAlt="Rupi Pearl River, NY location interior"
-      strength={strength}
-      style={{ backgroundColor: bgColor }}
-      bgStyle={{ backdropFilter: 'opacity(0.35)' }}
-    >
-      {children}
-    </Parallax>
+    <>
+      {/* <Box
+        w="full"
+        h="50vh"
+        zIndex={-1}
+        bg={bgColor}
+        transform="translateY(50vh)"
+      /> */}
+      <Parallax
+        bgImage={bgImage}
+        bgImageAlt="Rupi Pearl River, NY location interior"
+        strength={strength}
+        style={{ backgroundColor: bgColor}}
+        // bgStyle={{ backdropFilter: 'opacity(0.35)' }}
+      >
+        {children}
+      </Parallax>
+    </>
   );
 }

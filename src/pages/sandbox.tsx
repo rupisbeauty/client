@@ -1,30 +1,62 @@
-import { ScrollSection } from '@/components';
-import { Hero } from '@/components/home';
-import { ComingSoon } from '@/components/home/coming-soon';
-import { Hero2 } from '@/components/home/hero';
-import { isDev } from '@/utils';
-import { Box, chakra } from '@chakra-ui/react';
-import { FramerParallax, HorizontalParallax, PageLayout } from 'chakra.ui';
+import { About, CoreServices, Hero, Map, ScrollSection } from '@/components';
+import { CDN_URL, Debugger, ResDebugger, SERVICES_DIR } from '@/utils';
+import {
+  Badge,
+  Box,
+  chakra,
+  Container,
+  Flex,
+  Grid,
+  HStack,
+  Stack,
+  VStack,
+} from '@chakra-ui/react';
+import { PageLayout } from 'chakra.ui';
 import { type NextPage } from 'next';
-
-const insideStyles = {
-  background: 'white',
-  padding: 20,
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%,-50%)',
-  color: 'black',
-  border: '10px solid',
-  // borderColor: 'var(--chakra-colors-primary)',
-  borderColor: '#EDDFEF',
-};
 
 function ParallaxItem() {
   return (
-    <chakra.div height={500} zIndex={1}>
-      <chakra.div sx={insideStyles}>Reverse direction</chakra.div>
-    </chakra.div>
+    <Box zIndex={1} height={500} display="flex" layerStyle="flex-center">
+      <Stack
+        direction="column"
+        justifyContent="center"
+        gap={6}
+        borderRadius="lg"
+        p={8}
+        bg="white"
+        shadow="md"
+        my={6}
+      >
+        <chakra.h2 color="gray.500" lineHeight="1">
+          Come Visit Us At Our Newest Location
+        </chakra.h2>
+        <VStack m={0} p={0}>
+          <chakra.p
+            textAlign="center"
+            fontSize="4xl"
+            lineHeight="1"
+            m={0}
+            p={0}
+          >
+            ⭐️⭐️⭐️⭐️⭐️
+          </chakra.p>
+          <HStack mx="auto" w="full" justifyContent="center">
+            <chakra.p color="gray.600">5.0 /</chakra.p>
+            <chakra.p color="gray.600">8 Reviews</chakra.p>
+          </HStack>
+        </VStack>
+        <Box
+          w="full"
+          ml="auto"
+          p={2}
+          border="1px"
+          borderColor="gray.600"
+          borderRadius="md"
+        >
+          <Map width={425} height={175} />
+        </Box>
+      </Stack>
+    </Box>
   );
 }
 
@@ -38,29 +70,12 @@ const Sandbox: NextPage = () => {
       title="Rupi Beauty Studio"
       description="Eyebrows, facials, waxing & more"
     >
-      {/* <FramerParallax offset={200}> */}
-      <Hero2 />
-      {/* </FramerParallax> */}
-
+      <Hero />
       <ScrollSection>
         <ParallaxItem />
       </ScrollSection>
-
-      {/* <HorizontalParallax speed={2.25}>
-          <chakra.h2
-            color="bg"
-            fontSize="9xl"
-            __css={{
-              WebkitTextStroke: '0.25px',
-              WebkitTextStrokeColor: '#D3B734',
-            }}
-          >{`Can't wait to meet you!`}</chakra.h2>
-        </HorizontalParallax> */}
-      <Slide />
-      <Slide />
-      <Slide />
-      <Slide />
-      <Slide />
+      <About />
+      <CoreServices />
     </PageLayout>
   );
 };
