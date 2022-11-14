@@ -60,7 +60,7 @@ export const About = () => {
           />
         </Box>
         <chakra.h2
-          fontSize="6xl"
+          fontSize={{ base: '4xl', xl: '6xl' }}
           color="primary"
           fontFamily="body"
           letterSpacing="wider"
@@ -78,12 +78,15 @@ export const About = () => {
           py={4}
           my={20}
           textAlign="center"
-          bg="gray.200"
-          shadow="md"
+          letterSpacing="wide"
+          // bg="gray.200"
+          // shadow="md"
+          backgroundImage={`url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='27' ry='27' stroke='%23D3B734' stroke-width='5' stroke-dasharray='13%2c 20%2c 15%2c 21' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+      border-radius: 27px;`}
         >
-          <chakra.span textDecor="underline" color="green.600">
-            Over 15 Years{' '}
-          </chakra.span>
+          <chakra.span color="green.600" fontWeight={700}>
+            Over 15 Years
+          </chakra.span>{' '}
           of Esthetic Industry Experience
           <chakra.span display="block">Licensed in NY / NJ</chakra.span>
         </chakra.p>
@@ -93,6 +96,7 @@ export const About = () => {
             textDecoration="underline"
             my={8}
             color="gray.600"
+            fontSize={{ base: '2xl', md: '3xl' }}
           >
             State & Local Certifications:
           </chakra.h2>
@@ -103,8 +107,6 @@ export const About = () => {
             justifyContent="center"
             flexWrap={{ base: 'wrap', lg: 'nowrap' }}
             gap={{ base: 1, lg: 4 }}
-            // maxW={{ base: '70%', lg: '80%' }}
-            fontSize={{ base: 'xs', sm: 'sm', md: 'base' }}
             mx="auto"
           >
             <Badge rounded="md" p={2} colorScheme="gray">
@@ -131,10 +133,10 @@ export const About = () => {
           </Stack>
         </Box>
         <Box
-          w={{ base: '100%', lg: '50%' }}
+          w={{ base: '100%', md: '80%', lg: '60%', xl: '50%' }}
           color="gray.600"
           mt={24}
-          textAlign="center"
+          textAlign={{ base: 'justify', sm: 'center' }}
         >
           <chakra.p fontSize={{ base: 'xl', lg: '2xl' }} mb={9}>
             We are committed to helping you look and feel your best. Our

@@ -51,20 +51,24 @@ export const CoreServices = () => (
     as="section"
     id="services"
     position="relative"
-    w="max(20vw, 100%)"
+    // w="max(20vw, 100%)"
     maxW="container.xl"
     minH="100vh"
     centerContent
     p={16}
-    pt={32}
-    // bg="bg"
+    pt={{ lg: 32 }}
     bgGradient={[
       'linear(to-r, #FDE4CC, #FFF1E4 )',
       'linear(to-t, #FDE4CC, #FFF1E4 )',
     ]}
   >
     <VStack>
-      <chakra.h1 color="gray.600" lineHeight="1" mb="-1em">
+      <chakra.h1
+        color="gray.600"
+        lineHeight="1"
+        mb="-1em"
+        fontSize={{ base: '4xl', sm: '5xl' }}
+      >
         Core Services
       </chakra.h1>
       <Box
@@ -84,7 +88,7 @@ export const CoreServices = () => (
     <Grid
       w="full"
       my={16}
-      p={12}
+      p={{ base: 4, lg: 12 }}
       gap={9}
       gridTemplateColumns={{
         base: 'auto',
@@ -92,8 +96,6 @@ export const CoreServices = () => (
         lg: 'auto auto auto',
       }}
       justifyContent="center"
-      // border="4px dashed"
-      // borderColor="brand.600"
       backgroundImage={`url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='27' ry='27' stroke='%23D3B734' stroke-width='5' stroke-dasharray='13%2c 20%2c 15%2c 21' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
       border-radius: 27px;`}
     >
@@ -134,7 +136,12 @@ export const CoreServices = () => (
               opacity: 0.7,
             }}
           >
-            <chakra.p px={2} color="gray.600" fontWeight={600} fontSize="2xl">
+            <chakra.p
+              px={2}
+              color="gray.600"
+              fontWeight={600}
+              fontSize={{ base: 'lg', xl: '2xl' }}
+            >
               {image?.title}
             </chakra.p>
           </Box>

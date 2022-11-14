@@ -1,6 +1,7 @@
 import { About, CoreServices, Hero, Map, ScrollSection } from '@/components';
 import { CDN_URL, Debugger, ResDebugger, SERVICES_DIR } from '@/utils';
 import {
+  AspectRatio,
   Badge,
   Box,
   chakra,
@@ -27,33 +28,25 @@ function ParallaxItem() {
         shadow="md"
         my={6}
       >
-        <chakra.h2 color="gray.500" lineHeight="1">
+        <chakra.h2
+          color="secondary"
+          lineHeight="1"
+          textAlign="center"
+          textShadow=""
+        >
           Come Visit Us At Our Newest Location
         </chakra.h2>
-        <VStack m={0} p={0}>
-          <chakra.p
-            textAlign="center"
-            fontSize="4xl"
-            lineHeight="1"
-            m={0}
-            p={0}
-          >
-            ⭐️⭐️⭐️⭐️⭐️
-          </chakra.p>
-          <HStack mx="auto" w="full" justifyContent="center">
-            <chakra.p color="gray.600">5.0 /</chakra.p>
-            <chakra.p color="gray.600">8 Reviews</chakra.p>
-          </HStack>
-        </VStack>
+
         <Box
-          w="full"
           ml="auto"
           p={2}
           border="1px"
           borderColor="gray.600"
           borderRadius="md"
         >
-          <Map width={425} height={175} />
+          <AspectRatio ratio={16 / 9}>
+            <Map width={425} height={175} />
+          </AspectRatio>
         </Box>
       </Stack>
     </Box>

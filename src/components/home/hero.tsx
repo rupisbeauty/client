@@ -31,7 +31,7 @@ export const Column1 = () => {
         <chakra.h2
           as="h1"
           color="primary"
-          fontSize={{ base: '6xl', sm: '7xl', md: '9xl', lg: '7xl', xl: '8xl' }}
+          fontSize={{ base: '6xl', sm: '7xl', md: '8Fxl', lg: '7xl' }}
           fontWeight={400}
           lineHeight={1.2}
           textShadow="0px 1px 1px #555"
@@ -83,7 +83,7 @@ export const Column2 = () => {
 export const CTABox = () => (
   <Box
     position="absolute"
-    bottom={{ base: 0, md: 36, lg: -4, xl: 12 }}
+    bottom={{ base: 10, md: 24, lg: -4, xl: 12 }}
     height={24}
     bg="barBg"
     rounded="lg"
@@ -95,34 +95,37 @@ export const CTABox = () => (
       bg: 'bg',
     }}
   >
-    <Flex align="center" h="100%" p={6} gap={1}>
+    <Flex align="center" h="100%" p={{ base: 6, lg: 6 }} gap={1}>
+      <VStack layerStyle="flex-center" w='10%'>
       <CustomIcon
         icon="phone"
-        size={[6, 10, 10, 12]}
+        size={[6, 10, 10, 10]}
         textShadow="0px 2px 3px #555"
         color="gray.600"
       />
-      <Divider transform="rotate(90deg)" w="5em" borderColor="gray.600" />
-      <Stack>
+      </VStack>
+      <Divider transform="rotate(90deg)" w="3em" borderColor="gray.600" />
+      <Box textAlign="center" w="full" flex={1}>
         <chakra.p
-          lineHeight="1"
+          // lineHeight="1.5"
           display={{ base: 'none', sm: 'block', md: 'block' }}
         >
           Book your first appointment today!
         </chakra.p>
         <chakra.p
-          fontSize={{ base: '2xl', md: '3xl' }}
+          fontSize={{ base: '2xl', md: '2xl', xl: '2xl' }}
           fontWeight={600}
           letterSpacing="wider"
           color="gray.600"
           lineHeight="1"
+          textAlign="center"
           _hover={{
             cursor: 'pointer',
           }}
         >
           (862) 571-7873
         </chakra.p>
-      </Stack>
+      </Box>
     </Flex>
   </Box>
 );
@@ -134,7 +137,7 @@ export const Hero = () => {
       position="relative"
       w="full"
       maxW="container.xl"
-      minH="90vh"
+      minH="70vh"
       py={16}
       px={{ lg: 12 }}
       overflowX={['hidden', null, null, 'initial']}

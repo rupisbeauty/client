@@ -4,9 +4,9 @@ import Link from 'next/link';
 const ChNextLink = chakra(Link);
 
 const menu = {
-  about: '/about',
-  services: '/services',
-  packages: '/reviews',
+  about: '#about',
+  services: '#services',
+  reviews: '/reviews',
   contact: '/contact',
 };
 

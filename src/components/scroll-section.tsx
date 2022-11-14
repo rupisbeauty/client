@@ -40,19 +40,13 @@ export function ScrollSection({
     </Box>
   ) : (
     <>
-      {/* <Box
-        w="full"
-        h="50vh"
-        zIndex={-1}
-        bg={bgColor}
-        transform="translateY(50vh)"
-      /> */}
       <Parallax
         bgImage={bgImage}
         bgImageAlt="Rupi Pearl River, NY location interior"
         strength={strength}
-        style={{ backgroundColor: bgColor}}
-        // bgStyle={{ backdropFilter: 'opacity(0.35)' }}
+        // style={{ backgroundColor: bgColor }}
+        // style={{ backdropFilter: 'opacity(0.5)'}}
+        bgImageStyle={{ opacity: 0.35, objectFit: 'contain' }}
       >
         {children}
       </Parallax>
