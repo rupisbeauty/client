@@ -5,7 +5,7 @@
       "show": "true"
     },
     "footer": {
-      "show": "true"
+      "show": "false"
     }
   }
 }

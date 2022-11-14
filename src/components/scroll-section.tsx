@@ -6,12 +6,10 @@ import { Parallax } from 'react-parallax';
 
 export function ScrollSection({
   bgImage = `${CDN_URL}${BRAND_DIR}/tile_background.png`,
-  bgColor = '#FDE4CC',
   strength = -200,
   children,
 }: {
   bgImage?: string;
-  bgColor?: string;
   strength?: number;
   children: ReactNode;
 }) {
@@ -34,6 +32,7 @@ export function ScrollSection({
         bg: `url(${bgImage}) no-repeat`,
         backgroundPosition: ['left center', null, 'center center'],
         backgroundSize: '50% 50%',
+        overflow: 'hidden',
       }}
     >
       {children}
@@ -44,8 +43,6 @@ export function ScrollSection({
         bgImage={bgImage}
         bgImageAlt="Rupi Pearl River, NY location interior"
         strength={strength}
-        // style={{ backgroundColor: bgColor }}
-        // style={{ backdropFilter: 'opacity(0.5)'}}
         bgImageStyle={{ opacity: 0.35, objectFit: 'contain' }}
       >
         {children}
