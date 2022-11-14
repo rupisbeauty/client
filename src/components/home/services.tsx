@@ -59,7 +59,7 @@ export const CoreServices = () => (
     pt={{ lg: 32 }}
     bgGradient={[
       'linear(to-r, #FDE4CC, #FFF1E4 )',
-      'linear(to-t, #FDE4CC, #FFF1E4 )',
+      'linear(to-b, #FFF1E4, #FDE4CC )',
     ]}
   >
     <VStack>
