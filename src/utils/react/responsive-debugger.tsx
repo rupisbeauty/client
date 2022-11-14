@@ -22,19 +22,14 @@ export const ResDebugger = ({
     if (React.isValidElement(child)) {
       return React.cloneElement(child as React.ReactElement<any>, {
         ...child.props,
-        border: '5px solid',
-        borderColor: {
+        outline: '5px solid',
+        outlineColor: {
           base: colors[4],
           sm: colors[3],
           md: colors[2],
           lg: colors[1],
           xl: colors[0],
         },
-        // style: {
-        //   border: '1px solid',
-        //   borderColor: ,
-        //   margin: 0.5,
-        // },
       });
     }
   });

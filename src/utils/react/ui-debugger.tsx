@@ -1,15 +1,15 @@
 import React from 'react';
 
 const colors = [
-  'red',
-  'blue',
-  'green',
+  'red.500',
+  'blue.500',
+  'green.500',
   'brown',
-  'purple',
+  'purple.500',
   'pink',
-  'orange',
+  'orange.500',
   'black',
-  'gray',
+  'gray.500',
 ];
 
 export const Debugger = ({
@@ -22,11 +22,9 @@ export const Debugger = ({
     if (React.isValidElement(child)) {
       return React.cloneElement(child as React.ReactElement<any>, {
         ...child.props,
-        style: {
-          border: '1px solid',
-          borderColor: colors[Math.floor(Math.random() * colors.length)],
-          margin: 0.5,
-        },
+        outline: '1px solid',
+        outlineColor: colors[Math.floor(Math.random() * colors.length)],
+        margin: 0.5,
       });
     }
   });
