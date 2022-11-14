@@ -15,7 +15,7 @@ export const Header = () => {
               height="172"
               objectFit="contain"
               src={`${CDN_URL}${BRAND_DIR}/rupi-title-w-icon.png`}
-              alt=""
+              alt="Rupi Beauty Studio"
               priority
             />
           </Box>
