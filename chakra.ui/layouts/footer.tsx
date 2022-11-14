@@ -6,7 +6,7 @@ import { ScrollSlide } from '../framer';
 
 export const Footer = () => {
   return (
-    <Box zIndex="docked">
+    <Box zIndex="docked" position="fixed">
       <ScrollSlide dir="up" from="bottom">
         <Bar as="footer" bottom={0} bg="barBg" shadow="md">
           <HStack h="100%" align="flex-end" maxW="lg">

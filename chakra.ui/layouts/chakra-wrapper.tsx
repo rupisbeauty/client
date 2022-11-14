@@ -22,7 +22,11 @@ export const ChakraWrapper: React.FC<ChakraProps> = ({ cookies, children }) => {
       : localStorageManager;
 
   return (
-    <ChakraProvider resetCSS theme={theme} colorModeManager={colorModeManager}>
+    <ChakraProvider
+      resetCSS
+      theme={theme}
+      // colorModeManager={colorModeManager} //
+    >
       {children}
     </ChakraProvider>
   );
