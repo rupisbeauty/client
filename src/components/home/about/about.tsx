@@ -1,8 +1,9 @@
 import { CDN_URL } from '@/utils';
-import { Box, chakra, Container, Stack } from '@chakra-ui/react';
+import { Box, chakra, Container, Divider, Stack } from '@chakra-ui/react';
 import Image from 'next/image';
 import { LOCATIONS_DIR } from '../../../utils/constants';
 import SectionTitle from '../../section-title';
+import { FullLogo } from '../contact';
 import { Decorators } from './decorators';
 import { LicenseInfo } from './license-info';
 import { LicensesStack } from './licenses-stack';
@@ -28,6 +29,8 @@ export const About = () => {
         overflowX={{ base: 'hidden', lg: 'initial' }}
       >
         <Decorators />
+        <FullLogo />
+        <Divider borderColor="gray.200" />
         <chakra.h2
           fontSize={{ base: '4xl', xl: '6xl' }}
           color="secondary"
