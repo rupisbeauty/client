@@ -25,6 +25,7 @@ export const About = () => {
         bg="white"
         borderRadius="3xl"
         mb={24}
+        overflowX="hidden"
       >
         <Decorators />
         <chakra.h2
@@ -41,7 +42,7 @@ export const About = () => {
         </chakra.h2>
         <Stack
           w="full"
-          direction={{ base: 'column', md: 'row' }}
+          direction={{ base: 'column', lg: 'row' }}
           alignItems="center"
         >
           <Image
@@ -67,23 +68,6 @@ export const About = () => {
           </Box>
         </Stack>
         <Box position="relative" textAlign="center">
-          <chakra.h2
-            fontFamily="body"
-            textDecoration="underline"
-            mt={8}
-            color="gray.600"
-            fontSize={{ base: '2xl', md: '3xl' }}
-          >
-            State & Local Certifications:
-          </chakra.h2>
-          <chakra.p
-            w={{ base: '100%', md: '60%' }}
-            fontSize={{ base: 'xl', lg: '2xl' }}
-            textAlign="center"
-            mx="auto"
-          >
-            Our estheticians are skilled and licensed in the following fields:
-          </chakra.p>
           <LicensesStack />
         </Box>
       </Container>
