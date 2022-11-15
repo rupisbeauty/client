@@ -41,3 +41,46 @@ export const serviceImages: NextJSImage[] = [
     height: '800',
   },
 ];
+
+export const licenses: NextJSImage[] = [
+  {
+    fileName: '/service-laser-hair-removal.jpg',
+    title: 'Laser Hair Removal',
+    alt: 'Laser Hair Removal treatment',
+    attr: 'Image by senivpetro on Freepik',
+    width: '1200',
+    height: '800',
+  },
+  {
+    fileName: '/service-makeup-artist.jpg',
+    title: 'Makeup Artist',
+    alt: 'Makeup Artist',
+    attr: 'Image by valuavitaly on Freepik',
+    width: '1200',
+    height: '867',
+  },
+  {
+    fileName: '/service-dermaplaning.jpg',
+    title: 'Dermaplaning',
+    alt: 'Dermaplaning treatment',
+    attr: '',
+    width: '1000',
+    height: '800',
+  },
+  {
+    fileName: '/service-microneedling.jpg',
+    title: 'Micro-needling',
+    alt: 'Microneedling treatment',
+    attr: 'Image by senivpetro',
+    width: '1200',
+    height: '800',
+  },
+  {
+    fileName: '/service-hyaluron-pen.jpg',
+    title: 'Hyaluron Pen',
+    alt: 'Hyaluron treatment',
+    attr: 'Image by senivpetro',
+    width: '1200',
+    height: '800',
+  },
+];

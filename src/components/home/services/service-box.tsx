@@ -15,9 +15,6 @@ export const ServiceBox = ({
       key={image.fileName}
       position="relative"
       w="100%"
-      // _last={{
-      //   gridColumnEnd: { base: 0, lg: -2 },
-      // }}
     >
       <Image
         src={`${CDN_URL}${SERVICES_DIR}${image.fileName}`}
