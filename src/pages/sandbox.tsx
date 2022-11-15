@@ -1,3 +1,5 @@
+'use-client';
+
 import {
   About,
   CoreServices,
@@ -20,6 +22,7 @@ const Sandbox: NextPage = () => {
       </ScrollSection>
       <About />
       <CoreServices />
+      <div data-trustmary-widget="CIUJC3KSW"></div>
     </PageLayout>
   );
 };

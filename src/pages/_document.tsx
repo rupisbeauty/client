@@ -18,6 +18,7 @@ class Doc extends Document {
           <ColorModeScript initialColorMode={config?.initialColorMode} />
           <Main />
           <NextScript />
+          <Script src="https://widget.trustmary.com/CIUJC3KSW" async />
         </body>
       </Html>
     );
