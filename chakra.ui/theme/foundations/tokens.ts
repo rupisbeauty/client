@@ -9,11 +9,11 @@ export const semanticTokens: ChakraTheme['semanticTokens'] = {
     },
     primary: '#D3B734',
     secondary: {
-      default: '#FAC4C4',
+      default: '#ffaa7a',
       _dark: '#FF8E8E',
     },
     accent: {
-      default: '#F9D1FF',
+      default: '#ff7a7a',
       _dark: '#DDABE4',
     },
     error: {
