@@ -9,8 +9,8 @@ import {
   Stack,
   VStack,
 } from '@chakra-ui/react';
-import { MapContainer } from '../map';
-import SectionTitle from '../section-title';
+import { MapContainer } from '../../map';
+import SectionTitle from '../../section-title';
 import { FullLogo } from './full-logo';
 import { StoreIcon } from './store-icon';
 

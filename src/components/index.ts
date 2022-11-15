@@ -1,5 +1,5 @@
 export * from './analytics';
-export * from './contact';
+export * from './home/contact';
 // export * from './banner';
 export * from './home';
 export * from './map';
