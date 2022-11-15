@@ -3,19 +3,9 @@ import { Box, chakra } from '@chakra-ui/react';
 import Image from 'next/image';
 import { type NextJSImage } from './service-images';
 
-export const ServiceBox = ({
-  image,
-  isCDN = false,
-}: {
-  image: NextJSImage;
-  isCDN?: boolean;
-}) => {
+export const ServiceBox = ({ image }: { image: NextJSImage }) => {
   return (
-    <Box
-      key={image.fileName}
-      position="relative"
-      w="100%"
-    >
+    <Box key={image.fileName} position="relative" w="100%">
       <Image
         src={`${CDN_URL}${SERVICES_DIR}${image.fileName}`}
         alt={`${image.alt} | ${image?.attr}`}

@@ -1,6 +1,5 @@
-import { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
+import type { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
 import type { Session } from 'next-auth';
-import type { PrismaClientType } from '../prisma';
 
 export interface WithUser extends Session {
   id?: string;

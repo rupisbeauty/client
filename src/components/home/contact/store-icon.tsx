@@ -1,13 +1,4 @@
-import {
-  Box,
-  Center,
-  chakra,
-  Container,
-  Divider,
-  HStack,
-  Stack,
-  VStack,
-} from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
 export const StoreIcon = () => (
   <Box

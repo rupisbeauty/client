@@ -1,11 +1,6 @@
-import { env } from '@/env/server.mjs';
-import { ONE_DAY } from '@/utils';
 import { type NextAuthOptions } from 'next-auth';
-import CredentialsProvider from 'next-auth/providers/credentials';
 import EmailProvider from 'next-auth/providers/email';
 import GoogleProvider from 'next-auth/providers/google';
-// import { LOGIN_URL } from '../spotify-web-api/index';
-// import { authorize } from './handlers';
 
 const GOOGLE = GoogleProvider({
   clientId: '',

@@ -12,12 +12,7 @@ const colors = [
   'gray',
 ];
 
-export const ResDebugger = ({
-  children,
-  ...props
-}: {
-  children: React.ReactNode;
-}) => {
+export const ResDebugger = ({ children }: { children: React.ReactNode }) => {
   const kids = React.Children.map(children, (child, i) => {
     if (React.isValidElement(child)) {
       return React.cloneElement(child as React.ReactElement<any>, {
