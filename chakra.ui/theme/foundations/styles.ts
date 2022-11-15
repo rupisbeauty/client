@@ -1,8 +1,8 @@
 import type { ChakraTheme } from '@chakra-ui/react';
-import { mode, type GlobalStyleProps } from '@chakra-ui/theme-tools';
+import { mode, type StyleFunctionProps } from '@chakra-ui/theme-tools';
 
 export const styles: ChakraTheme['styles'] = {
-  global: (props: GlobalStyleProps) => ({
+  global: (props: StyleFunctionProps) => ({
     '*': {
       border: 0,
       margin: 0,
@@ -36,9 +36,8 @@ export const styles: ChakraTheme['styles'] = {
       boxSizing: 'border-box',
       scrollBehavior: 'smooth',
       // using % here allows users to override default size in browser settings??
-      fontSize: '85.2%', // == 10px
+      fontSize: '100%', // == 16px
       fontFamily: 'default',
-      background: 'transparent',
       height: '100%',
     },
     body: {
@@ -51,7 +50,12 @@ export const styles: ChakraTheme['styles'] = {
       MozFontSmoothing: 'grayscale',
       overflowX: 'auto',
       maxW: 'full',
-      backgroundColor: mode('#FFF1E4', '#190C00')(props), // same as bodyBg token
+      background: 'bg',
+    },
+    '#__next, #root': {
+      display: 'flex',
+      flexDirection: 'column',
+      minH: '100%',
     },
     '*::placeholder': {
       color: 'placeholder',
@@ -72,6 +76,7 @@ export const styles: ChakraTheme['styles'] = {
       textDecoration: 'none',
       boxShadow: '0 0 0 1px rgba(0, 0, 0, 0) !important',
     },
+
     'a:hover': {
       textDecoration: 'underline',
     },
@@ -96,6 +101,12 @@ export const styles: ChakraTheme['styles'] = {
     },
     small: {
       textStyle: 'tiny',
+    },
+    ol: {
+      listStyleType: 'none',
+    },
+    ul: {
+      listStyleType: 'none',
     },
   }),
 };

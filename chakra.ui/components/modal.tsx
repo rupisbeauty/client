@@ -11,20 +11,20 @@ import {
 } from '@chakra-ui/react';
 
 type CustomModalProps = {
-  title: string;
+  title?: string;
   // children: React.ReactNode;
-  footer: React.ReactNode; // type props as: React.ComponentType<ComponentProps>
+  footer?: React.ReactNode; // type props as: React.ComponentType<ComponentProps>
   // isOpen: boolean;
   // onOpen: () => void;
   // onClose: () => void;
   hasSubmit: boolean;
   allowClose: boolean;
-  handler: {
+  handler?: {
     label: string;
     action: (event: React.MouseEventHandler<HTMLButtonElement>) => void;
   };
-  noOverlay: boolean;
-  bg: string;
+  noOverlay?: boolean;
+  bg?: string;
 };
 
 export const CHModal: React.FC<ModalProps & BoxProps & CustomModalProps> = ({
@@ -38,7 +38,7 @@ export const CHModal: React.FC<ModalProps & BoxProps & CustomModalProps> = ({
   allowClose = true,
   // handler,
   noOverlay = false,
-  // bg = 'brand.200',
+  bg = 'white',
   ...rest
 }) => {
   // const handleHandler = (event: React.MouseEventHandler<HTMLButtonElement>) => {
@@ -61,9 +61,7 @@ export const CHModal: React.FC<ModalProps & BoxProps & CustomModalProps> = ({
       {...rest}
     >
       {!noOverlay && <ModalOverlay />}
-      <ModalContent
-      // bg={color(bg)}
-      >
+      <ModalContent bg={bg}>
         <ModalHeader textTransform="capitalize">{title}</ModalHeader>
         {allowClose && <ModalCloseButton />}
         <ModalBody>{children}</ModalBody>

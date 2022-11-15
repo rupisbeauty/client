@@ -19,7 +19,7 @@ export const ScrollSlide: React.FC<ScrollSlideProps> = ({
 }) => {
   const scrollDirection: DirectionEnum = useScrollDirection();
   return (
-    <Slide direction={from} in={scrollDirection === dir}>
+    <Slide direction={from} in={scrollDirection !== dir}>
       {children}
     </Slide>
   );

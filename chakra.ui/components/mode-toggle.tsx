@@ -11,8 +11,6 @@ export const ModeToggle = () => {
       top={40}
       right="4"
       onClick={toggleColorMode}
-      border="1px solid"
-      borderColor="body"
       aria-label="toggle dark mode"
       icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
       zIndex="docked"

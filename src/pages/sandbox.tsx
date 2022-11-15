@@ -1,80 +1,66 @@
-import { Hero } from '@/components/home';
-import { ComingSoon } from '@/components/home/coming-soon';
-import { CDN_URL } from '@/utils';
-import { Box, chakra } from '@chakra-ui/react';
+import {
+  About,
+  ContactInfo,
+  CoreServices,
+  Hero,
+  ScrollSection,
+} from '@/components';
+import SectionTitle from '@/components/section-title';
+import { AspectRatio, Box, chakra, Stack } from '@chakra-ui/react';
 import { PageLayout } from 'chakra.ui';
-import { useReducedMotion } from 'framer-motion';
 import { type NextPage } from 'next';
-import { Parallax } from 'react-parallax';
-import { FramerParallax } from '../../chakra.ui/framer/parallax';
-import { isDev, LOCATIONS_DIR } from '../utils/constants';
-
-const insideStyles = {
-  background: 'white',
-  padding: 20,
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%,-50%)',
-  color: 'black',
-};
-
-function ParallaxItem() {
-  return (
-    <chakra.div height={500}>
-      <chakra.div sx={insideStyles}>Reverse direction</chakra.div>
-    </chakra.div>
-  );
-}
+import Image from 'next/image';
 
 const Sandbox: NextPage = () => {
-  const shouldReduceMotion = useReducedMotion();
   return (
-    <>
-      <PageLayout
-        title="Rupi Beauty Studio"
-        description="Eyebrows, facials, waxing & more"
-      >
-        <FramerParallax>
-          <Initial />
-        </FramerParallax>
-        {!shouldReduceMotion ? (
-          <Box
-            bg={`url(${CDN_URL}${LOCATIONS_DIR}/pearl-river-interior.jpeg)`}
-            backgroundRepeat="none"
-            backgroundSize="cover"
-            h="50vh"
+    <PageLayout
+      title="Rupi Beauty Studio"
+      description="Eyebrows, facials, waxing & more"
+    >
+      <Hero />
+      <ScrollSection>
+        <Box zIndex={1} height={500} display="flex" layerStyle="flex-center">
+          <Stack
+            direction="column"
+            justifyContent="center"
+            gap={6}
+            borderRadius="lg"
+            p={8}
+            bg="white"
+            shadow="md"
+            my={6}
           >
-            {/* <ParallaxItem /> */}
-          </Box>
-        ) : (
-          <Parallax
-            bgImage={`${CDN_URL}${LOCATIONS_DIR}/pearl-river-interior.jpeg`}
-            bgImageAlt="Rupi Pearl River, NY location interior"
-            strength={-200}
-          >
-            <ParallaxItem />
-          </Parallax>
-        )}
-      </PageLayout>
-    </>
+            <chakra.h2
+              color="secondary"
+              lineHeight="1"
+              textAlign="center"
+              textShadow=""
+            >
+              Come Visit Us At Our Newest Location
+            </chakra.h2>
+            <AspectRatio>
+              <Image
+                src="/map-image.png"
+                alt="address: 2A Franklin Ave, Pearl River, NY 10965"
+                width={257}
+                height={146}
+              />
+            </AspectRatio>
+          </Stack>
+        </Box>
+      </ScrollSection>
+      <About />
+
+      <Box id="reviews" bg="white" pt={16}>
+        <SectionTitle title="Our Reviews" />
+        <Box data-trustmary-widget="CIUJC3KSW" />
+      </Box>
+      <CoreServices />
+      <ContactInfo />
+    </PageLayout>
   );
 };
 
 // @link: https://codepen.io/silvandiepen/pen/NOboze
 
 export default Sandbox;
-
-export const Initial = () => {
-  return (
-    <>
-      {isDev ? (
-        <>
-          <Hero />
-        </>
-      ) : (
-        <ComingSoon />
-      )}
-    </>
-  );
-};

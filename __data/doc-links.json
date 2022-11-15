@@ -144,5 +144,18 @@
         "dashboard": "https://console.cloud.google.com/getting-started?pli=1"
       }
     ]
+  },
+  {
+    "name": "React Parallax",
+    "description": "React ready parallax components",
+    "links": [{ "git": "https://github.com/rrutsche/react-parallax" }]
+  },
+  {
+    "name": "Color2k",
+    "description": "React ready parallax components",
+    "links": [
+      { "git": "https://github.com/ricokahler/color2k" },
+      { "documentation": "https://color2k.com/#hsla" }
+    ]
   }
 ]

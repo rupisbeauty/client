@@ -1,13 +1,15 @@
-/* eslint-disable */
+// @link: https://blog.gilesperry.info/advanced-scroll-effects-in-framer
+
 import { useScroll, useTransform } from 'framer-motion';
-import type { ComponentType, FC, ReactNode } from 'react';
+import type { ComponentType, FC } from 'react';
 import { createRef } from 'react';
 
 // create a ref so we can attach it to the scroll container
 const ref = createRef<HTMLDivElement>();
 
 // apply this to the element being scrolled
-export function withScrollRef(Component: FC): ComponentType | null {
+export function withScrollRef(Component: FC): ComponentType {
+  // eslint-disable-next-line react/display-name
   return (props: any) => {
     return <Component {...props} ref={ref} />;
   };
@@ -16,6 +18,7 @@ export function withScrollRef(Component: FC): ComponentType | null {
 // apply this to the element with the scroll effect
 export function withElementParallax(Component: FC): ComponentType {
   const speed = 1 / 2;
+  // eslint-disable-next-line react/display-name
   return (props: any) => {
     const { scrollY } = useScroll({
       container: ref,

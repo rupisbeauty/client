@@ -4,10 +4,10 @@ import { type NextComponentTypeWithAuth } from '@/types';
 import { ErrorBoundary } from '@/utils';
 import { trpc } from '@/utils/trpc';
 import { ChakraWrapper, FullScreenLoader } from 'chakra.ui';
-import { isBrowser } from 'framer-motion';
 import { SessionProvider, useSession } from 'next-auth/react';
 import { type AppType } from 'next/app';
 import Head from 'next/head';
+import Script from 'next/script';
 
 const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
   Component,
@@ -24,6 +24,7 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
       </Head>
+      <Script src="https://widget.trustmary.com/CIUJC3KSW" async />
       <ErrorBoundary>
         <SessionProvider session={session}>
           <ChakraWrapper cookies={cookies}>

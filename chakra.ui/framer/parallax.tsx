@@ -30,8 +30,7 @@ export const FramerParallax = ({
   // end our animation when we've scrolled the offset specified
   const final = elementTop + offset;
 
-  // const y = useTransform(scrollY, [initial, final], [offset, -offset]);
-  const yRange = useTransform(scrollY, [initial, final], [offset, -offset]);
+  const yRange = useTransform(scrollY, [initial, final], [-offset, offset]);
   // apply a spring to ease the result
   const y = useSpring(yRange, { stiffness: 400, damping: 90 });
 
@@ -60,53 +59,8 @@ export const FramerParallax = ({
   }
 
   return (
-    <MotionBox ref={ref} style={{ y }}>
+    <MotionBox ref={ref} style={{ y }} m={0} p={0}>
       {children}
     </MotionBox>
   );
 };
-
-// type ParallaxProps = {
-//   children: ReactNode;
-// };
-
-// export const Parallax = ({ children }: ParallaxProps): JSX.Element => {
-//   const { scrollY } = useScroll();
-//   const y = useTransform(scrollY, [100, 200], [0, 500]);
-//   const { width: clientWidth, height: clientHeight } = useWindowSize();
-//   return (
-//     <>
-//       <p>{`The element width is ${clientWidth}px and height ${clientHeight}px`}</p>
-//       <MotionBox style={{ y }}>{children}</MotionBox>
-//     </>
-//   );
-// };
-
-// export const ParallaxElement = () => {
-//   const [isVisible, setIsVisible] = useState<boolean>(true);
-//   const [motionRef, { width: elWidth, height: elHeight }] = useElementSize();
-
-//   const toggleVisibility = () => setIsVisible((x) => !x);
-
-//   return (
-//     <>
-//       <p>{`The element width is ${elWidth}px and height ${elHeight}px`}</p>
-//       <p>Try, resize your window and-or click on the button.</p>
-//       <Button onClick={toggleVisibility}>
-//         {isVisible ? 'Hide' : 'Show'} square
-//       </Button>
-
-//       {isVisible && (
-//         <chakra.div
-//           ref={motionRef}
-//           style={{
-//             width: '50%',
-//             paddingTop: '50%',
-//             backgroundColor: 'aquamarine',
-//             margin: 'auto',
-//           }}
-//         />
-//       )}
-//     </>
-//   );
-// };

@@ -1,9 +1,9 @@
 import { SEOConfig } from '@/utils/seo/base';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import layout from '__data/layout.json';
 import { Sidebar } from '.';
-import { AvatarMenu, ModeToggle } from '../components';
+// import { AvatarMenu, ModeToggle } from '../components';
 import { transitionDown as variants } from '../framer';
 import { MotionBox } from '../framer/motion';
 import { Footer } from './footer';
@@ -22,19 +22,12 @@ export const PageLayout: React.FC<LayoutProps> = ({
   return (
     <>
       <NextSeo {...SEOConfig(title, subtitle, description)} />
-      <ModeToggle />
-      <AvatarMenu />
+      {/* <ModeToggle /> */}
+      {/* <AvatarMenu /> */}
       <Sidebar />
-      <Flex
-        id="page-layout"
-        position="relative"
-        flexDirection="column"
-        fontFamily="body"
-      >
-        {displayHeader && <Header />}
-        <Main>{children}</Main>
-        {displayFooter && <Footer />}
-      </Flex>
+      {displayHeader && <Header />}
+      <Main>{children}</Main>
+      {displayFooter && <Footer />}
     </>
   );
 };

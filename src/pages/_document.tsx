@@ -12,6 +12,7 @@ class Doc extends Document {
             src="https://polyfill.io/v3/polyfill.min.js?features=WeakRef,BigInt"
             async
           />
+
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
