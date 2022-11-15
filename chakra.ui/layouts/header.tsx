@@ -1,4 +1,4 @@
-import { NavMenu } from '@/components';
+import { MobileMenu, NavMenu } from '@/components';
 import { BRAND_DIR, CDN_URL } from '@/utils';
 import { Box } from '@chakra-ui/react';
 import { Bar, ChakraNextImage } from '../components';
@@ -6,7 +6,7 @@ import { ScrollSlide } from '../framer';
 
 export const Header = () => {
   return (
-    <Box zIndex="docked">
+    <Box zIndex="docked" mt={{ base: 32, xl: 0 }}>
       <ScrollSlide dir="down" from="top">
         <Bar as="header" top={0} bg="barBg" shadow="md">
           <Box position="relative" w="100px" h="172px" flex={1}>
@@ -20,6 +20,7 @@ export const Header = () => {
             />
           </Box>
           <NavMenu />
+          <MobileMenu />
         </Bar>
       </ScrollSlide>
     </Box>

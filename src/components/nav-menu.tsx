@@ -20,6 +20,7 @@ export const NavMenu = (props: ChakraProps) => {
       mr={20}
       fontSize={{ base: 'sm', md: 'lg', lg: 'xl' }}
       gap={3}
+      display={{ base: 'none', lg: 'flex' }}
       {...props}
     >
       {Object.keys(menu).length &&

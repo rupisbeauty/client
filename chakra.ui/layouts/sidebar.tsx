@@ -6,7 +6,7 @@ export const Sidebar = ({ children }: { children?: React.ReactNode }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <>
+    <Box as ="aside">
       <Box
         pos="absolute"
         left={0}
@@ -25,6 +25,6 @@ export const Sidebar = ({ children }: { children?: React.ReactNode }) => {
         </VStack>
         {children}
       </Drawer>
-    </>
+    </Box>
   );
 };
