@@ -1,17 +1,13 @@
 import { Badge, Box, chakra, Container, Stack, VStack } from '@chakra-ui/react';
 import Image from 'next/image';
+import SectionTitle from '../section-title';
 
 export const About = () => {
   return (
     <>
-      <VStack my={24}>
-        <chakra.h1 color="gray.600" lineHeight="1" mb="-1em">
-          About Us
-        </chakra.h1>
-        <Box w={453 / 2} h={242 / 2} transform="scale(0.6) rotate(23deg)">
-          <Image src="/leaves-stem.png" alt="" width="453" height="242" />
-        </Box>
-      </VStack>
+      <Box my={20}>
+        <SectionTitle title="About Us" />
+      </Box>
       <Container
         id="about"
         as="section"
@@ -61,7 +57,7 @@ export const About = () => {
         </Box>
         <chakra.h2
           fontSize={{ base: '4xl', xl: '6xl' }}
-          color="primary"
+          color="secondary"
           fontFamily="body"
           letterSpacing="wider"
           lineHeight={1.3}
@@ -79,9 +75,7 @@ export const About = () => {
           my={20}
           textAlign="center"
           letterSpacing="wide"
-          // bg="gray.200"
-          // shadow="md"
-          backgroundImage={`url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='27' ry='27' stroke='%23D3B734' stroke-width='5' stroke-dasharray='13%2c 20%2c 15%2c 21' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+          backgroundImage={`url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='27' ry='27' stroke='%23D3B734' strokeWidth='5' stroke-dasharray='13%2c 20%2c 15%2c 21' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
       border-radius: 27px;`}
         >
           <chakra.span color="green.600" fontWeight={700}>
