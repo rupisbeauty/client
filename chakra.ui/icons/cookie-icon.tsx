@@ -9,7 +9,7 @@ export const CookieIcon: FC<CookieIcon> = ({ color = 'white' }) => {
     <svg
       stroke={color}
       fill={color}
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 24 24"
       focusable="false"
       xmlns="http://www.w3.org/2000/svg"
