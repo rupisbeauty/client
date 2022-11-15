@@ -2,7 +2,7 @@ import type { ChakraTheme } from '@chakra-ui/react';
 import { borders } from './borders';
 import { breakpoints } from './breakpoints';
 import { colors } from './colors';
-import { config } from './config';
+// import { config } from './config';
 import { layerStyles } from './layerStyles';
 import { radii } from './radii';
 import { shadows } from './shadows';
@@ -18,7 +18,7 @@ export const foundations: Pick<
   ChakraTheme,
   | 'borders'
   | 'breakpoints'
-  | 'config'
+  // | 'config'
   | 'colors'
   | 'layerStyles'
   | 'radii'
@@ -34,7 +34,7 @@ export const foundations: Pick<
   borders,
   breakpoints,
   colors,
-  config,
+  // config,
   layerStyles,
   radii,
   semanticTokens,
