@@ -25,7 +25,7 @@ export const About = () => {
         bg="white"
         borderRadius="3xl"
         mb={24}
-        overflowX="hidden"
+        overflowX={{ base: 'hidden', lg: 'initial' }}
       >
         <Decorators />
         <chakra.h2
