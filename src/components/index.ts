@@ -1,4 +1,5 @@
 export * from './analytics';
+export * from './contact';
 // export * from './banner';
 export * from './home';
 export * from './map';

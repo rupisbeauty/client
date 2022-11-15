@@ -26,7 +26,11 @@ export const MoreBox = ({ onClick }: { onClick: () => void }) => {
         }}
         transition="all 1s"
       >
-        <chakra.h3 color="white" fontFamily="body" fontSize="4xl">
+        <chakra.h3
+          color="white"
+          fontFamily="body"
+          fontSize={{ base: 'xl', md: '4xl' }}
+        >
           View More Services
         </chakra.h3>
         <chakra.p

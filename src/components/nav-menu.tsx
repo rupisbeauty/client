@@ -6,8 +6,8 @@ const ChNextLink = chakra(Link);
 const menu = {
   about: '#about',
   services: '#services',
-  reviews: '/reviews',
-  contact: '/contact',
+  reviews: '#reviews',
+  contact: '#contact',
 };
 
 export const NavMenu = (props: ChakraProps) => {
