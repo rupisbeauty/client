@@ -1,5 +1,4 @@
 import {
-  Box,
   Drawer as ChDrawer,
   DrawerBody,
   DrawerCloseButton,
@@ -7,61 +6,55 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
+  type DrawerProps,
 } from '@chakra-ui/react';
 import { useRef } from 'react';
 
-type DrawerProps = {
-  isOpen: boolean;
-  onClose: () => void;
-  children: React.ReactNode;
-  onOpen?: () => void;
+type CustomDrawerProps = {
   Header?: React.ElementType; // throws an error with ReactNode
   Footer?: React.ElementType; // throws an error with ReactNode
-  placement?: 'left' | 'right' | 'bottom' | 'top';
   type?: 'default' | 'consent';
-};
+} & DrawerProps;
 
 export const Drawer = ({
   isOpen,
-  // onOpen, // open onClick should be handled from parent.
   onClose,
   Header,
   Footer,
   children,
+  size = 'lg',
   placement = 'left',
   type = 'default',
-}: DrawerProps) => {
+  ...props
+}: CustomDrawerProps) => {
   const btnRef = useRef<HTMLInputElement>(null);
   return (
-    <Box as="aside">
-      <ChDrawer
-        isOpen={isOpen}
-        placement={placement}
-        onClose={onClose}
-        finalFocusRef={btnRef}
-        size="lg"
-        preserveScrollBarGap
-        // size={placement !== 'bottom' ? 'md' : 'lg'}
-        // placement="bottom"
-      >
-        <DrawerOverlay>
-          <DrawerContent>
-            {type !== 'consent' && <DrawerCloseButton size="sm" />}
-            {Header && (
-              <DrawerHeader>
-                <Header />
-              </DrawerHeader>
-            )}
+    <ChDrawer
+      isOpen={isOpen}
+      placement={placement}
+      onClose={onClose}
+      finalFocusRef={btnRef}
+      size={size}
+      preserveScrollBarGap
+      {...props}
+    >
+      <DrawerOverlay>
+        <DrawerContent>
+          {type !== 'consent' && <DrawerCloseButton size="sm" />}
+          {Header && (
+            <DrawerHeader>
+              <Header />
+            </DrawerHeader>
+          )}
 
-            <DrawerBody>{children}</DrawerBody>
-            {Footer && (
-              <DrawerFooter>
-                <Footer />
-              </DrawerFooter>
-            )}
-          </DrawerContent>
-        </DrawerOverlay>
-      </ChDrawer>
-    </Box>
+          <DrawerBody>{children}</DrawerBody>
+          {Footer && (
+            <DrawerFooter>
+              <Footer />
+            </DrawerFooter>
+          )}
+        </DrawerContent>
+      </DrawerOverlay>
+    </ChDrawer>
   );
 };
