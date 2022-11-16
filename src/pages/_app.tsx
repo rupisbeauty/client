@@ -14,6 +14,7 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
   pageProps: { session, cookies, ...pageProps },
   router,
 }) => {
+
   const { auth } = Component as NextComponentTypeWithAuth;
 
   return (
@@ -24,7 +25,9 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
       </Head>
-      <Script src="https://widget.trustmary.com/CIUJC3KSW" async />
+      {!router.asPath.includes('policies') && (
+        <Script src="https://widget.trustmary.com/CIUJC3KSW" async />
+      )}
       <ErrorBoundary>
         <SessionProvider session={session}>
           <ChakraWrapper cookies={cookies}>
