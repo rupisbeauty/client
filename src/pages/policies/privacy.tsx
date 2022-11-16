@@ -1,11 +1,21 @@
 import { FullLogo } from '@/components';
 import { PrivacyPolicyBody } from '@/components/policies';
 import { CDN_URL, PEOPLE_DIR } from '@/utils/constants';
-import { Box, chakra, Container, Divider } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  chakra,
+  Container,
+  Divider,
+  Flex,
+} from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const Privacy: NextPage = () => {
+  const router = useRouter();
+
   return (
     <>
       <Box w="full" h="30vh" mx="auto" overflow="hidden">
@@ -19,6 +29,12 @@ const Privacy: NextPage = () => {
           />
         </Box>
       </Box>
+      <Flex pl={16}>
+        <Button
+          onClick={() => router.back()}
+          variant="unstyled"
+        >{`< Back`}</Button>
+      </Flex>
       <Container
         w="full"
         maxW="container.lg"
