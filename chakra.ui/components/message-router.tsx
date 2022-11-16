@@ -1,4 +1,4 @@
-import { debug, dev, isBrowser, ONE_SECOND } from '@/utils';
+import { debug, dev, isClient, ONE_SECOND } from '@/utils';
 import { useToast } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -20,7 +20,7 @@ export const MessageRouter = ({ asPath }: MessageRouterProps) => {
   const toast = useToast();
 
   useEffect(() => {
-    if (isBrowser) {
+    if (isClient) {
       const isError: boolean = asPath.includes('?error=');
       const isSecondaryError: boolean = asPath.includes('&error=');
       const isSuccess: boolean = asPath.includes('?success=');
