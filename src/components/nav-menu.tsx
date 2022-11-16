@@ -36,6 +36,7 @@ export const NavMenu = (props: ChakraProps) => {
               color: 'primary',
               textDecoration: 'none',
             }}
+            scroll={false}
           >
             {key.toUpperCase()}
           </ChNextLink>

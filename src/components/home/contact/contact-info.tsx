@@ -58,7 +58,7 @@ export const ContactInfo = () => {
                 rounded="full"
                 boxShadow="md"
               >
-                <StoreIcon />
+                <StoreIcon fill="gray.600" width={{ base: 8, md: 16 }} />
               </Center>
               <Box>
                 <chakra.p fontSize="2xl" lineHeight={1} fontWeight={600}>

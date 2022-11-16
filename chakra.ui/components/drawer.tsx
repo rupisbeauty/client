@@ -39,7 +39,7 @@ export const Drawer = ({
       {...props}
     >
       <DrawerOverlay>
-        <DrawerContent>
+        <DrawerContent bg="bg">
           {type !== 'consent' && <DrawerCloseButton size="sm" />}
           {Header && (
             <DrawerHeader>

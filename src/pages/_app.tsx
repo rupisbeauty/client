@@ -16,6 +16,14 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
 }) => {
   const { auth } = Component as NextComponentTypeWithAuth;
 
+  function appendScriptOnPage(pagesArray: string[]): boolean {
+    return !!pagesArray.filter((page) => {
+      console.log(page);
+      if (page === '/') return true;
+      return router.asPath.includes(page);
+    }).length;
+  }
+
   return (
     <>
       <Head>
@@ -24,7 +32,9 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
       </Head>
-      <Script src="https://widget.trustmary.com/CIUJC3KSW" async />
+      {appendScriptOnPage(['sandbox']) && (
+        <Script src="https://widget.trustmary.com/CIUJC3KSW" async />
+      )}
       <ErrorBoundary>
         <SessionProvider session={session}>
           <ChakraWrapper cookies={cookies}>

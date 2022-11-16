@@ -1,4 +1,4 @@
-import { isBrowser } from "./constants";
+import { isClient } from './constants';
 
 export const getBaseUrl = () => {
   if (typeof window !== 'undefined') return ''; // browser should use relative url
@@ -57,12 +57,12 @@ export function flattenObjects<T, U>(arr: T[], key = 'label') {
 }
 
 export function getAnonId() {
-  if (!isBrowser) return undefined;
+  if (!isClient) return undefined;
   return localStorage.getItem('__anon_id');
 }
 
 export function getConsent(): boolean {
-  if (!isBrowser) return false;
+  if (!isClient) return false;
   const consent = localStorage.getItem('rbs-consent');
   if (consent !== null) return JSON.parse(consent);
   localStorage.setItem('rbs-consent', 'false');

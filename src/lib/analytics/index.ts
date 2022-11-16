@@ -1,9 +1,9 @@
-import { isBrowser } from '@/utils';
+import { isClient } from '@/utils';
 import mixpanelPlugin from '@analytics/mixpanel';
 import Analytics from 'analytics';
 
 function getConsent(): boolean {
-  if (!isBrowser) return false;
+  if (!isClient) return false;
   const consent = localStorage.getItem('rbs-consent');
   if (consent !== null) return JSON.parse(consent);
   localStorage.setItem('rbs-consent', 'false');
