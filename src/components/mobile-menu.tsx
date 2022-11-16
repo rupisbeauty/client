@@ -5,18 +5,18 @@ import {
   Center,
   chakra,
   HStack,
-  Link,
   useDisclosure,
   VStack,
 } from '@chakra-ui/react';
 import { Drawer } from 'chakra.ui';
-import Router from 'next/router';
+import Link from 'next/link';
 import { MenuIcon } from '../../chakra.ui/icons/menu-icon';
 import { StoreIcon } from './home/contact';
 import { FullLogo } from './home/contact/full-logo';
 
 type MenuLink = Record<string, string>;
 const menu: MenuLink = {
+  home: '#welcome',
   about: '#about',
   services: '#services',
   reviews: '#reviews',
@@ -47,28 +47,18 @@ export const MobileMenu = () => {
         <Center w="100%" h="100%" p={24}>
           <VStack gap={4}>
             <FullLogo />
-            <chakra.h2 onClick={onClose}>
-              <Link textTransform="capitalize" href={'/'} color="primary">
-                Home
-              </Link>
-            </chakra.h2>
-            {Object.entries(menu).map(([key, value]) => {
-              const onClick = (href: string) => (e: React.MouseEvent) => {
-                e.preventDefault();
-                onClose();
-                Router.push(`/sandbox${href}`); // TODO: change when design is approved
-              };
-              return (
-                <chakra.h2
-                  textTransform="capitalize"
-                  key={key}
-                  onClick={onClick(value)}
-                  color="primary"
-                >
+            {Object.entries(menu).map(([key, value]) => (
+              <chakra.h2
+                key={key}
+                textTransform="capitalize"
+                color="primary"
+                cursor="pointer"
+              >
+                <Link href={value} onClick={onClose}>
                   {key}
-                </chakra.h2>
-              );
-            })}
+                </Link>
+              </chakra.h2>
+            ))}
             <HStack pt={8} color="gray.600">
               <Center
                 bg="bg"

@@ -6,6 +6,7 @@ import { CTABox } from './cta-box';
 export const Hero = () => {
   return (
     <Container
+      id="welcome"
       as="section"
       position="relative"
       w="full"
