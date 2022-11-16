@@ -1,9 +1,9 @@
 import { FullLogo } from '@/components';
+import { TermsAndConditionsBody } from '@/components/policies';
 import { CDN_URL, PEOPLE_DIR } from '@/utils/constants';
 import { Box, chakra, Container, Divider } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import { TermsAndConditionsBody } from './content/terms-and-conditions-body';
 
 const Terms: NextPage = () => {
   return (

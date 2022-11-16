@@ -1,9 +1,9 @@
 import { FullLogo } from '@/components';
+import { PrivacyPolicyBody } from '@/components/policies';
 import { CDN_URL, PEOPLE_DIR } from '@/utils/constants';
 import { Box, chakra, Container, Divider } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import { PrivacyPolicyBody } from './content/privacy-policy-body';
 
 const Privacy: NextPage = () => {
   return (
