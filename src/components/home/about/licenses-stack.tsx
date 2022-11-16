@@ -6,8 +6,6 @@ import { licenses } from '../services';
 export const LicensesStack = () => (
   <Box
     position="relative"
-    //     backgroundImage={`url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='28' ry='28' stroke='%23ff7a7a' strokeWidth='5' stroke-dasharray='6%2c 14' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
-    //  border-radius: 15px`}
     border="1px solid"
     borderColor="accent"
     rounded="2xl"
@@ -33,7 +31,7 @@ export const LicensesStack = () => (
     <Grid
       w="full"
       p={{ base: 4, lg: 9 }}
-      gap={{ base: 12, lg: 4 }}
+      gap={{ base: 12 }}
       alignItems="center"
       gridTemplateColumns={{
         base: 'auto',
@@ -46,7 +44,7 @@ export const LicensesStack = () => (
         <Box
           key={image.fileName}
           position="relative"
-          w="max(20vw, 100%)"
+          // w="max(20vw, 100%)"
           mx="auto"
         >
           <Image
