@@ -47,6 +47,7 @@ export const About = () => {
           w="full"
           direction={{ base: 'column', lg: 'row' }}
           alignItems="center"
+          mb={{ base: 3, md: 12 }}
         >
           <Image
             src={`${CDN_URL}${LOCATIONS_DIR}/pearl-river-interior.jpeg`}
@@ -59,10 +60,10 @@ export const About = () => {
             <LicenseInfo />
             <Box
               color="gray.600"
-              textAlign={{ base: 'justify', sm: 'center' }}
+              textAlign={{ base: 'justify' }}
               p={{ base: 2, md: 6 }}
             >
-              <chakra.p fontSize={{ base: 'xl', lg: '2xl' }} mb={9}>
+              <chakra.p fontSize={{ base: 'lg', lg: 'xl' }} mb={9}>
                 We are committed to helping you look and feel your best. Our
                 licensed estheticians provide best-in class threading, waxing,
                 tinting along with thoughtful skin and eyebrow care advice.

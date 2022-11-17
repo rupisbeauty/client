@@ -1,5 +1,5 @@
 import { CDN_URL, SERVICES_DIR } from '@/utils';
-import { Box, chakra, Grid } from '@chakra-ui/react';
+import { AspectRatio, Box, chakra, Grid } from '@chakra-ui/react';
 import Image from 'next/image';
 import { licenses } from '../services';
 
@@ -21,7 +21,7 @@ export const LicensesStack = () => (
       State & Local Certifications:
     </chakra.h2>
     <chakra.p
-      w={{ base: '100%', md: '60%' }}
+      w={{ base: '100%', md: '60%', lg: '70%' }}
       fontSize={{ base: 'xl', lg: '2xl' }}
       textAlign="center"
       mx="auto"
@@ -37,6 +37,7 @@ export const LicensesStack = () => (
         base: 'auto',
         md: 'auto auto',
         lg: 'auto auto auto',
+        xl: 'auto auto auto auto',
       }}
       justifyContent="center"
     >
@@ -45,25 +46,27 @@ export const LicensesStack = () => (
           key={image.fileName}
           position="relative"
           // w="max(20vw, 100%)"
+          // maxH={'300px'}
           mx="auto"
         >
-          <Image
-            src={`${CDN_URL}${SERVICES_DIR}${image.fileName}`}
-            alt={`${image.alt} | ${image?.attr}`}
-            height={image.height}
-            width={image.width}
-            style={{
-              borderRadius: '15px',
-              boxShadow:
-                '0px 0px 1px rgba(48, 49, 51, 0.05), 0px 4px 8px rgba(48, 49, 51, 0.1)',
-            }}
-          />
+          <AspectRatio ratio={4 / 3}>
+            <Image
+              src={`${CDN_URL}${SERVICES_DIR}${image.fileName}`}
+              alt={`${image.alt} | ${image?.attr}`}
+              height={image.height}
+              width={image.width}
+              style={{
+                borderRadius: '15px',
+                boxShadow:
+                  '0px 0px 1px rgba(48, 49, 51, 0.05), 0px 4px 8px rgba(48, 49, 51, 0.1)',
+              }}
+            />
+          </AspectRatio>
           <Box
             position="relative"
             w="200px"
             zIndex={2}
             mt={-16}
-            // border="1px"
             ml="auto"
             _after={{
               content: '""',
