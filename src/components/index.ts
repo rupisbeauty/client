@@ -7,3 +7,4 @@ export * from './mobile-menu';
 // export * from './consent';
 export * from './nav-menu';
 export * from './scroll-section';
+export * from './social';

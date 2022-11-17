@@ -8,17 +8,17 @@
   "locale": "en-US",
   "images": [
     {
-      "url": "assets/images/default_logo.png",
-      "width": 792,
-      "height": 792,
-      "alt": "Image by macrovector on Freepik",
+      "url": "https://cdn.jsdelivr.net/gh/rupistudio/assets@main/brand/rupi-new-logo-md.png",
+      "width": 300,
+      "height": 258,
+      "alt": "Rupi Beauty Studio Logo",
       "type": "image/png"
     }
   ],
   "additionalLinkTags": [
     {
       "rel": "icon",
-      "href": "/assets/images/default_logo.png"
+      "href": "https://cdn.jsdelivr.net/gh/rupistudio/assets@main/brand/rupi-new-logo-md.png"
     }
   ]
 }
