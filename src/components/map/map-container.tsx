@@ -1,9 +1,9 @@
 import { Map } from '@/components';
-import { Box } from '@chakra-ui/react';
+import { Center } from '@chakra-ui/react';
 
 export const MapContainer = () => {
   return (
-    <Box
+    <Center
       ml="auto"
       borderRadius="md"
       p={{ base: 0, md: 4, lg: 6 }}
@@ -13,6 +13,6 @@ export const MapContainer = () => {
       overflow="hidden"
     >
       <Map width={425} height={280} />
-    </Box>
+    </Center>
   );
 };
