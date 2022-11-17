@@ -19,7 +19,6 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
 
   function appendScriptOnPage(pagesArray: string[]): boolean {
     return !!pagesArray.filter((page) => {
-      console.log(page);
       if (page === '/') return true;
       return router.asPath.includes(page);
     }).length;

@@ -8,5 +8,3 @@ export const fonts: ChakraTheme['fonts'] = {
   default: `-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;`,
 };
-
-console.log(fonts.heading);
