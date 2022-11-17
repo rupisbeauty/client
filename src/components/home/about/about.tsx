@@ -22,7 +22,7 @@ export const About = () => {
         maxW="container.xl"
         minH="100vh"
         centerContent
-        p={16}
+        p={{ sm: 12, md: 16 }}
         bg="white"
         borderRadius="3xl"
         mb={24}
@@ -60,7 +60,7 @@ export const About = () => {
             <Box
               color="gray.600"
               textAlign={{ base: 'justify', sm: 'center' }}
-              p={6}
+              p={{ base: 2, md: 6 }}
             >
               <chakra.p fontSize={{ base: 'xl', lg: '2xl' }} mb={9}>
                 We are committed to helping you look and feel your best. Our
