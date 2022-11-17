@@ -1,16 +1,18 @@
 import { Map } from '@/components';
-import { AspectRatio, Box } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
 export const MapContainer = () => {
   return (
-    <Box ml="auto" borderRadius="md" p={4} boxShadow="md">
-      <AspectRatio
-        ratio={16 / 9}
-        w={{ base: 425 / 1.5 + 'px', md: '425px' }}
-        p={6}
-      >
-        <Map width={425} height={175} />
-      </AspectRatio>
+    <Box
+      ml="auto"
+      borderRadius="md"
+      p={{ base: 0, md: 4, lg: 6 }}
+      boxShadow="md"
+      minW="455px"
+      minHeight="300px"
+      overflow="hidden"
+    >
+      <Map width={425} height={280} />
     </Box>
   );
 };
