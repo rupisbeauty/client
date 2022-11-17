@@ -8,6 +8,7 @@ import { SessionProvider, useSession } from 'next-auth/react';
 import { type AppType } from 'next/app';
 import Head from 'next/head';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
   Component,
@@ -46,6 +47,7 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
               <Component {...pageProps} />
             )}
             <CookieConsent />
+            <Analytics />
           </ChakraWrapper>
         </SessionProvider>
       </ErrorBoundary>
