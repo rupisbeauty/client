@@ -38,7 +38,7 @@ export const CoreServices = () => {
         maxW="container.xl"
         minH="100vh"
         centerContent
-        p={16}
+        p={{ sm: 12, md: 16 }}
         pt={{ lg: 32 }}
         bgGradient={[
           'linear(to-r, #FDE4CC, #FFF1E4 )',
