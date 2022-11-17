@@ -1,9 +1,9 @@
+import { SocialShare } from '@/components';
 import { SEOConfig } from '@/utils/seo/base';
 import { Box } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import layout from '__data/layout.json';
 import { Sidebar } from '.';
-// import { AvatarMenu, ModeToggle } from '../components';
 import { transitionDown as variants } from '../framer';
 import { MotionBox } from '../framer/motion';
 import { Footer } from './footer';
@@ -22,8 +22,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
   return (
     <>
       <NextSeo {...SEOConfig(title, subtitle, description)} />
-      {/* <ModeToggle /> */}
-      {/* <AvatarMenu /> */}
+      <SocialShare twitter facebook pinterest />
       <Sidebar />
       {displayHeader && <Header />}
       <Main>{children}</Main>
