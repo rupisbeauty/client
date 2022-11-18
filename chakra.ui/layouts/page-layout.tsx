@@ -25,13 +25,19 @@ export const PageLayout: React.FC<LayoutProps> = ({
       <SocialShare twitter facebook pinterest />
       <Sidebar />
       {displayHeader && <Header />}
-      <Main>{children}</Main>
+      <Main displayHeader={displayHeader}>{children}</Main>
       {displayFooter && <Footer />}
     </>
   );
 };
 
-const Main = ({ children }: { children: React.ReactNode }) => {
+const Main = ({
+  children,
+  displayHeader,
+}: {
+  displayHeader: boolean;
+  children: React.ReactNode;
+}) => {
   return (
     <MotionBox
       as="main"
@@ -41,6 +47,8 @@ const Main = ({ children }: { children: React.ReactNode }) => {
       variants={variants}
       position="relative"
       w="full"
+      pt={displayHeader ? '10em' : 0}
+      pb={displayHeader ? '1em' : 0}
     >
       <Box position="relative" w="full">
         {children}
