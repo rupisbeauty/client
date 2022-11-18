@@ -1,9 +1,11 @@
 import SectionTitle from '@/components/section-title';
-import { body, ServiceCategory, services } from '@/components/services';
+import { ServiceCategory } from '@/components/services';
 import { PEOPLE_DIR } from '@/utils';
 import { Box, Container } from '@chakra-ui/react';
 import { PageLayout } from 'chakra.ui';
 import Image from 'next/image';
+import services from '__data/company/service-details.json';
+import body from '__data/company/waxing-service-details.json';
 import { CDN_URL } from '../../utils/constants';
 
 const ServiceListPage = () => {

@@ -2,10 +2,10 @@ import { bgOutline } from '@/utils';
 import { Container, Grid, useDisclosure } from '@chakra-ui/react';
 import { CHModal } from 'chakra.ui';
 import { useRouter } from 'next/router';
+import serviceImages from '__data/company/service-thumbnails.json';
 import SectionTitle from '../../section-title';
 import { MoreBox } from './more-box';
 import { ServiceBox } from './service-box';
-import { serviceImages } from './service-images';
 
 export const ServicesModal = ({
   isOpen,

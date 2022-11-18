@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import { CDN_URL, PLACEHOLDER_DIR } from '../../utils/constants';
-import type {Service} from "./data"
+import type { Service } from './types';
 
 export const ServiceCategory = ({
   service,

@@ -1,7 +1,7 @@
 import { CDN_URL, SERVICES_DIR } from '@/utils';
 import { AspectRatio, Box, chakra, Grid } from '@chakra-ui/react';
 import Image from 'next/image';
-import { licenses } from '../services';
+import licenses from '__data/company/service-licenses.json';
 
 export const LicensesStack = () => (
   <Box

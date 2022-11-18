@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Threading",
+    "description": "Our licensed Estheticians have the experience to help you with all of your threading needs",
+    "image": "placeholder-rect.jpeg",
+    "items": [
+      "Eyebrows",
+      "Lip",
+      "Lower Lip",
+      "Chin",
+      "Chin + Lower C",
+      "Sides",
+      "Neck",
+      "Full Face"
+    ]
+  },
+  {
+    "title": "Waxing",
+    "description": "Our licensed Estheticians have the experience to help you with all of your waxing needs",
+    "image": "placeholder-rect.jpeg",
+    "items": [
+      "Eyebrows",
+      "Lip",
+      "Lower Lip",
+      "Chin",
+      "Chin + Lower C",
+      "Sides",
+      "Neck",
+      "Full Face",
+      "Nose (Inside)",
+      "Nose (Outside)"
+    ]
+  },
+  {
+    "title": "Tinting",
+    "description": "Our licensed Estheticians have the experience to help you with all of your tinting needs",
+    "image": "placeholder-rect.jpeg",
+    "items": ["Brows + Tint", "Brow Tint", "Last Tint"],
+    "packages": [
+      "Lashlift + Tint",
+      "Brow Lamination + Shaping + Tinting",
+      "Lashlift + Brow Lamination"
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Soft Wax",
+    "description": "Soft waxing service",
+    "image": "placeholder-rect.jpeg",
+    "items": [
+      "Bikini",
+      "Brazilian",
+      "Butt",
+      "Underarm",
+      "Half Arm",
+      "Full Arm",
+      "Upper Legs",
+      "Lower Legs",
+      "Full Legs",
+      "Back",
+      "Stomach",
+      "Chest"
+    ]
+  },
+  {
+    "title": "Hard Wax",
+    "description": "Hard waxing service",
+    "image": "placeholder-rect.jpeg",
+    "items": [
+      "Bikini",
+      "Brazilian",
+      "Butt",
+      "Underarm",
+      "Half Arm",
+      "Full Arm",
+      "Upper Legs",
+      "Lower Legs",
+      "Full Legs",
+      "Back",
+      "Stomach",
+      "Chest"
+    ]
+  }
+]
