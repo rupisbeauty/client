@@ -1,12 +1,10 @@
 import { chakra } from '@chakra-ui/react';
-
-const companyName = 'Rupi Beauty Studio';
-const domain = 'https://www.rupibeautystudio.com';
+import { domain, name } from '__data/company/info.json';
 
 export const CookiePolicyBody = () => (
   <>
     <chakra.p pb={12} textAlign="center" color="gray.500">
-      {`This is the Cookie Policy for ${companyName}, accessible from
+      {`This is the Cookie Policy for ${name}, accessible from
       ${domain}/policies/cookie`}
     </chakra.p>
 

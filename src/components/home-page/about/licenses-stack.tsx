@@ -2,6 +2,7 @@ import { CDN_URL, SERVICES_DIR } from '@/utils';
 import { AspectRatio, Box, chakra, Grid } from '@chakra-ui/react';
 import Image from 'next/image';
 import licenses from '__data/company/service-licenses.json';
+import license from '__data/site/pages/home/licenses.json';
 
 export const LicensesStack = () => (
   <Box
@@ -18,7 +19,7 @@ export const LicensesStack = () => (
       color="gray.600"
       fontSize={{ base: '2xl', md: '3xl' }}
     >
-      State & Local Certifications:
+      {license.title}
     </chakra.h2>
     <chakra.p
       w={{ base: '100%', md: '60%', lg: '70%' }}
@@ -26,7 +27,7 @@ export const LicensesStack = () => (
       textAlign="center"
       mx="auto"
     >
-      Our estheticians are skilled and licensed in the following fields:
+      {license.subtitle}
     </chakra.p>
     <Grid
       w="full"

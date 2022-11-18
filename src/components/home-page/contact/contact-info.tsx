@@ -10,6 +10,7 @@ import {
   Stack,
   VStack,
 } from '@chakra-ui/react';
+import info from '__data/company/info.json';
 import { MapContainer } from '../../map';
 import SectionTitle from '../../section-title';
 import { FullLogo } from './full-logo';
@@ -71,13 +72,13 @@ export const ContactInfo = () => {
                   lineHeight={1}
                   fontWeight={600}
                 >
-                  2A Franklin Ave
+                  {info.address}
                 </chakra.p>
                 <chakra.p
                   fontSize={{ base: 'xl', lg: 'lg', xl: 'xl' }}
                   fontWeight={600}
                 >
-                  Pearl River, NY 10965
+                  {info.locality}
                 </chakra.p>
               </Box>
             </HStack>
@@ -100,7 +101,7 @@ export const ContactInfo = () => {
                 fontSize={{ base: '2xl', lg: 'xl', xl: '2xl' }}
                 fontWeight={600}
               >
-                (862) 571-7873
+                {info.phone}
               </chakra.p>
             </HStack>
           </VStack>

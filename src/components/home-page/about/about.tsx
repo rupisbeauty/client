@@ -1,6 +1,7 @@
 import { CDN_URL } from '@/utils';
 import { Box, chakra, Container, Divider, Stack } from '@chakra-ui/react';
 import Image from 'next/image';
+import about from '__data/site/pages/home/about.json';
 import { LOCATIONS_DIR } from '../../../utils/constants';
 import SectionTitle from '../../section-title';
 import { FullLogo } from '../contact';
@@ -41,7 +42,7 @@ export const About = () => {
           pb={12}
           textAlign="center"
         >
-          Your Neighboorhood Beauty Experts
+          {about.title}
         </chakra.h2>
         <Stack
           w="full"
@@ -57,16 +58,14 @@ export const About = () => {
             style={{ borderRadius: '15px' }}
           />
           <Box w="full" h="full">
-            <LicenseInfo />
+            <LicenseInfo/>
             <Box
               color="gray.600"
               textAlign={{ base: 'justify' }}
               p={{ base: 2, md: 6 }}
             >
               <chakra.p fontSize={{ base: 'lg', lg: 'xl' }} mb={9}>
-                We are committed to helping you look and feel your best. Our
-                licensed estheticians provide best-in class threading, waxing,
-                tinting along with thoughtful skin and eyebrow care advice.
+                {about.description}
               </chakra.p>
             </Box>
           </Box>
