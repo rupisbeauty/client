@@ -18,7 +18,7 @@ type MenuLink = Record<string, string>;
 const menu: MenuLink = {
   home: '#welcome',
   about: '#about',
-  services: '#services',
+  services: '/services',
   reviews: '#reviews',
   contact: '#contact',
 };
