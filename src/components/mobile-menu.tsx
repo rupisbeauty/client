@@ -54,7 +54,11 @@ export const MobileMenu = () => {
                 color="primary"
                 cursor="pointer"
               >
-                <Link href={value} onClick={onClose}>
+                <Link
+                  className="mobile-nav-link"
+                  href={value}
+                  onClick={onClose}
+                >
                   {key}
                 </Link>
               </chakra.h2>
