@@ -4,14 +4,8 @@ import { ChakraNextImage } from 'chakra.ui';
 
 export const ComingSoon = () => {
   return (
-    <Flex
-      flexDirection="column"
-      justify="center"
-      alignItems="center"
-      mt={72}
-      h="100vh"
-    >
-      <Box position="relative" flex={1} my="auto">
+    <Flex flexDirection="column" justify="center" alignItems="center" h="80vh">
+      <Box position="relative" mt={{ lg: -56 }}>
         <ChakraNextImage
           width="500"
           height="430"
@@ -21,7 +15,14 @@ export const ComingSoon = () => {
           priority
         />
       </Box>
-      <chakra.p fontSize="4xl">Coming Soon!</chakra.p>
+      <chakra.p
+        fontSize="4xl"
+        color="secondary"
+        textTransform="uppercase"
+        letterSpacing="widest"
+      >
+        Coming Soon
+      </chakra.p>
     </Flex>
   );
 };
