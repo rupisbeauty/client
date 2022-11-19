@@ -2,7 +2,7 @@
   {
     "title": "Threading",
     "description": "Our licensed Estheticians have the experience to help you with all of your threading needs",
-    "image": "placeholder-rect.jpeg",
+    "image": "service-eyebrow-threading2.jpg",
     "items": [
       "Eyebrows",
       "Lip",
@@ -17,7 +17,7 @@
   {
     "title": "Waxing",
     "description": "Our licensed Estheticians have the experience to help you with all of your waxing needs",
-    "image": "placeholder-rect.jpeg",
+    "image": "service-waxing-legs.jpg",
     "items": [
       "Eyebrows",
       "Lip",
@@ -34,7 +34,7 @@
   {
     "title": "Tinting",
     "description": "Our licensed Estheticians have the experience to help you with all of your tinting needs",
-    "image": "placeholder-rect.jpeg",
+
     "items": ["Brows + Tint", "Brow Tint", "Last Tint"],
     "packages": [
       "Lashlift + Tint",

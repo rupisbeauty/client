@@ -8,7 +8,7 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import { CDN_URL, PLACEHOLDER_DIR } from '../../utils/constants';
+import { CDN_URL, PLACEHOLDER_DIR, SERVICES_DIR } from '../../utils/constants';
 import type { Service } from './types';
 
 export const ServiceCategory = ({
@@ -29,7 +29,11 @@ export const ServiceCategory = ({
     <Stack direction={{ base: 'column', lg: flip ? 'row' : 'row-reverse' }}>
       <Center w="full" p={2} bg="gray.100" rounded="md">
         <Image
-          src={`${CDN_URL}${PLACEHOLDER_DIR}/${service?.image}`}
+          src={
+            service?.image
+              ? `${CDN_URL}${SERVICES_DIR}/${service?.image}`
+              : `${CDN_URL}${PLACEHOLDER_DIR}/placeholder-rect.jpeg`
+          }
           width={600}
           height={405}
           alt=""
