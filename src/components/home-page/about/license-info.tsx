@@ -1,4 +1,6 @@
+import { bgOutline } from '@/utils';
 import { Box, chakra } from '@chakra-ui/react';
+import about from '__data/site/pages/home/about.json';
 
 export const LicenseInfo = () => (
   <Box w="full" p={{ base: 0, lg: 16 }}>
@@ -8,18 +10,17 @@ export const LicenseInfo = () => (
       borderRadius="lg"
       px={12}
       py={4}
-      my={20}
+      my={{ base: 9, md: 0 }}
       textAlign="center"
       letterSpacing="wide"
-      backgroundImage={`url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='28' ry='28' stroke='%23ff7a7a' strokeWidth='5' stroke-dasharray='6%2c 14' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
-      border-radius: 15px`}
+      backgroundImage={bgOutline}
     >
       <chakra.span color="green.600" fontWeight={700}>
-        Over 15 Years
+        {about.subtitleEm}
       </chakra.span>{' '}
-      of Esthetic Industry Experience
+      {about.subtitle}
       <chakra.span display="block" color="gray.600">
-        Licensed in NY / NJ
+        {about.aux}
       </chakra.span>
     </chakra.p>
   </Box>

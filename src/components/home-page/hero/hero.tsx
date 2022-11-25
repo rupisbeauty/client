@@ -12,7 +12,7 @@ export const Hero = () => {
       w="full"
       maxW="container.xl"
       minH="70vh"
-      py={16}
+      pb={16}
       px={{ lg: 12 }}
       overflowX={['hidden', null, null, 'initial']}
     >

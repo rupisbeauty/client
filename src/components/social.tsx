@@ -13,7 +13,7 @@ import {
 const shareData = {
   url: 'https://www.rupibeautystudio.com',
   quote:
-    "You've have to checkout Rupi Beauty Studio's newlest location in Pearl River, NY! Great Staff that makes you look your best!",
+    "You've have to checkout Rupi Beauty Studio's newest location in Pearl River, NY! Great Staff that makes you look your best!",
   hashtag: 'rupibeauty',
 };
 

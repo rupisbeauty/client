@@ -1,9 +1,11 @@
+import { bgOutline } from '@/utils';
 import { Container, Grid, useDisclosure } from '@chakra-ui/react';
 import { CHModal } from 'chakra.ui';
+import { useRouter } from 'next/router';
+import serviceImages from '__data/company/service-thumbnails.json';
 import SectionTitle from '../../section-title';
 import { MoreBox } from './more-box';
 import { ServiceBox } from './service-box';
-import { serviceImages } from './service-images';
 
 export const ServicesModal = ({
   isOpen,
@@ -27,6 +29,7 @@ export const ServicesModal = ({
 
 export const CoreServices = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
   return (
     <>
       <ServicesModal isOpen={isOpen} onClose={onClose} />
@@ -38,7 +41,7 @@ export const CoreServices = () => {
         maxW="container.xl"
         minH="100vh"
         centerContent
-        p={16}
+        p={{ sm: 12, md: 16 }}
         pt={{ lg: 32 }}
         bgGradient={[
           'linear(to-r, #FDE4CC, #FFF1E4 )',
@@ -58,13 +61,12 @@ export const CoreServices = () => {
             lg: 'auto auto auto',
           }}
           justifyContent="center"
-          backgroundImage={`url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='28' ry='28' stroke='%23ff7a7a' strokeWidth='5' stroke-dasharray='6%2c 14' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
-          border-radius: 15px`}
+          backgroundImage={bgOutline}
         >
           {serviceImages.map((image) => (
             <ServiceBox key={image.fileName} image={image} />
           ))}
-          <MoreBox onClick={onOpen} />
+          <MoreBox onClick={() => router.push('/services')} />
         </Grid>
       </Container>
     </>

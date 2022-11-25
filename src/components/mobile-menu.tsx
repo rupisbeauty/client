@@ -11,14 +11,14 @@ import {
 import { Drawer } from 'chakra.ui';
 import Link from 'next/link';
 import { MenuIcon } from '../../chakra.ui/icons/menu-icon';
-import { StoreIcon } from './home/contact';
-import { FullLogo } from './home/contact/full-logo';
+import { StoreIcon } from './home-page/contact';
+import { FullLogo } from './home-page/contact/full-logo';
 
 type MenuLink = Record<string, string>;
 const menu: MenuLink = {
   home: '#welcome',
   about: '#about',
-  services: '#services',
+  services: '/services',
   reviews: '#reviews',
   contact: '#contact',
 };
@@ -54,7 +54,11 @@ export const MobileMenu = () => {
                 color="primary"
                 cursor="pointer"
               >
-                <Link href={value} onClick={onClose}>
+                <Link
+                  className="mobile-nav-link"
+                  href={value}
+                  onClick={onClose}
+                >
                   {key}
                 </Link>
               </chakra.h2>

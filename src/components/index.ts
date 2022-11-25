@@ -1,7 +1,7 @@
 export * from './analytics';
 // export * from './banner';
-export * from './home';
-export * from './home/contact';
+export * from './home-page';
+export * from './home-page/contact';
 export * from './map';
 export * from './mobile-menu';
 // export * from './consent';

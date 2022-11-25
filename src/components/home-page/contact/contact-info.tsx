@@ -3,12 +3,14 @@ import {
   Box,
   Center,
   chakra,
+  Circle,
   Container,
   Divider,
   HStack,
   Stack,
   VStack,
 } from '@chakra-ui/react';
+import info from '__data/company/info.json';
 import { MapContainer } from '../../map';
 import SectionTitle from '../../section-title';
 import { FullLogo } from './full-logo';
@@ -26,10 +28,10 @@ export const ContactInfo = () => {
         position="relative"
         maxW="container.xl"
         centerContent
-        p={16}
+        p={{ base: 1, md: 16 }}
         bg="white"
         borderRadius="3xl"
-        mb={36}
+        pb={20}
         overflowX="hidden"
       >
         <FullLogo />
@@ -44,55 +46,66 @@ export const ContactInfo = () => {
           borderColor="gray.300"
         >
           <VStack
-            w="full"
+            w={{ base: '50%', md: 'full' }}
+            minW="400px"
+            mx="auto"
             gap={9}
-            justify="flex-start"
-            px={24}
+            justify={'flex-start'}
+            px={{ base: 6, md: 24, lg: 16, xl: 16 }}
             mb={{ base: 24, lg: 0 }}
           >
-            <HStack gap={12} w="full" p={0}>
-              <Center
+            <HStack gap={12} w="full" p={0} flex={1}>
+              <Circle
                 bg="bg"
-                w={{ base: 12, md: 24 }}
-                h={{ base: 12, md: 24 }}
-                rounded="full"
+                size={{ base: 12, md: 24, lg: 16, xl: 24 }}
                 boxShadow="md"
               >
-                <StoreIcon fill="gray.600" width={{ base: 8, md: 16 }} />
-              </Center>
-              <Box>
-                <chakra.p fontSize="2xl" lineHeight={1} fontWeight={600}>
-                  2A Franklin Ave
+                <StoreIcon
+                  // p={2}
+                  fill="gray.600"
+                  width={{ base: 8, md: 16, lg: 8, xl: 16 }}
+                />
+              </Circle>
+              <Box w="full">
+                <chakra.p
+                  fontSize={{ base: '2xl', lg: 'xl', xl: '2xl' }}
+                  lineHeight={1}
+                  fontWeight={600}
+                >
+                  {info.address}
                 </chakra.p>
-                <chakra.p fontSize="xl" fontWeight={600}>
-                  Pearl River, NY 10965
+                <chakra.p
+                  fontSize={{ base: 'xl', lg: 'lg', xl: 'xl' }}
+                  fontWeight={600}
+                >
+                  {info.locality}
                 </chakra.p>
               </Box>
             </HStack>
             <Divider borderColor="gray.300" />
             <HStack gap={12} w="full" p={0}>
-              <Center
+              <Circle
                 bg="bg"
-                w={{ base: 12, md: 24 }}
-                h={{ base: 12, md: 24 }}
-                rounded="full"
+                size={{ base: 12, md: 24, lg: 16, xl: 24 }}
                 boxShadow="md"
               >
                 <PhoneIcon
-                  w={{ base: 6, md: 12 }}
-                  h={{ base: 6, md: 12 }}
+                  p={{ base: 1, md: 3 }}
+                  h={{ base: 8, md: 16, lg: 12, xl: 16 }}
+                  // h={{ base: 6, md: 12 }}
+                  w="full"
                   color="gray.600"
                 />
-              </Center>
-              <chakra.p fontSize="2xl" fontWeight={600}>
-                (862) 571-7873
+              </Circle>
+              <chakra.p
+                fontSize={{ base: '2xl', lg: 'xl', xl: '2xl' }}
+                fontWeight={600}
+              >
+                {info.phone}
               </chakra.p>
             </HStack>
           </VStack>
-          <Box
-            w={{ base: '180px', md: 'full' }}
-            alignSelf={{ base: 'flex-start', md: 'center' }}
-          >
+          <Box alignSelf={'center'}>
             <MapContainer />
           </Box>
         </Stack>

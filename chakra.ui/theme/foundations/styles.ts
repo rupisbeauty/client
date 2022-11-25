@@ -1,5 +1,6 @@
 import type { ChakraTheme } from '@chakra-ui/react';
 import { mode, type StyleFunctionProps } from '@chakra-ui/theme-tools';
+import { darken, lighten } from 'color2k';
 
 export const styles: ChakraTheme['styles'] = {
   global: (props: StyleFunctionProps) => ({
@@ -107,6 +108,18 @@ export const styles: ChakraTheme['styles'] = {
     },
     ul: {
       listStyleType: 'none',
+    },
+    '.mobile-nav-link:active, .mobile-nav-link:focused, .mobile-nav-link:visited, ':
+      {
+        color: lighten('#D3B734', 0.8),
+      },
+    '.mobile-nav-link:hover': {
+      color: darken('#D3B734', 0.2),
+      // color: 'blue',
+      textDecoration: 'none',
+    },
+    '.mobile-nav-link': {
+      color: 'primary',
     },
   }),
 };

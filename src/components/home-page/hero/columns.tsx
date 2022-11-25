@@ -1,6 +1,7 @@
 import { CDN_URL, PEOPLE_DIR } from '@/utils';
 import { Box, chakra } from '@chakra-ui/react';
 import Image from 'next/image';
+import column1 from '__data/site/pages/home/hero.json';
 
 export const Column1 = () => {
   return (
@@ -15,7 +16,7 @@ export const Column1 = () => {
         textTransform="uppercase"
         w="100%"
       >
-        Let Us Help You...
+        {column1.subtitle}
       </chakra.p>
       <Box position="relative">
         <chakra.h2
@@ -27,7 +28,7 @@ export const Column1 = () => {
           textShadow="0px 1px 1px #555"
           textAlign={['center', null, null, 'left']}
         >
-          {`Reveal Your Natural Beauty`}
+          {column1.title}
         </chakra.h2>
         <Box
           display={{ base: 'none', sm: 'block' }}

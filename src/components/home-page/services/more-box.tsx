@@ -29,7 +29,8 @@ export const MoreBox = ({ onClick }: { onClick: () => void }) => {
         <chakra.h3
           color="white"
           fontFamily="body"
-          fontSize={{ base: 'xl', md: '4xl' }}
+          fontSize={{ base: 'xl', md: '2xl', lg: '3xl', xl: '4xl' }}
+          textAlign="left"
         >
           View More Services
         </chakra.h3>
@@ -38,6 +39,7 @@ export const MoreBox = ({ onClick }: { onClick: () => void }) => {
           fontWeight={600}
           textAlign="left"
           lineHeight={1.4}
+          fontSize={{ base: 'sm', lg: 'base' }}
         >
           Dermaplaning, Tinting, <br /> Laser Hair Removal & more..
         </chakra.p>

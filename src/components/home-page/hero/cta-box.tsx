@@ -1,5 +1,6 @@
 import { Box, chakra, Divider, Flex, VStack } from '@chakra-ui/react';
 import { CustomIcon } from 'chakra.ui';
+import cta from '__data/site/pages/home/cta-call.json';
 
 export const CTABox = () => (
   <Box
@@ -27,11 +28,8 @@ export const CTABox = () => (
       </VStack>
       <Divider transform="rotate(90deg)" w="3em" borderColor="gray.600" />
       <Box textAlign="center" w="full" flex={1}>
-        <chakra.p
-          // lineHeight="1.5"
-          display={{ base: 'none', sm: 'block', md: 'block' }}
-        >
-          Book your first appointment today!
+        <chakra.p display={{ base: 'none', sm: 'block', md: 'block' }}>
+          {cta.subtitle}
         </chakra.p>
         <chakra.p
           fontSize={{ base: '2xl', md: '2xl', xl: '2xl' }}
@@ -44,7 +42,7 @@ export const CTABox = () => (
             cursor: 'pointer',
           }}
         >
-          (862) 571-7873
+          {cta.title}
         </chakra.p>
       </Box>
     </Flex>
