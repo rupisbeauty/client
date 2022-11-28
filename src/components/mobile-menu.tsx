@@ -16,11 +16,11 @@ import { FullLogo } from './home-page/contact/full-logo';
 
 type MenuLink = Record<string, string>;
 const menu: MenuLink = {
-  home: '#welcome',
-  about: '#about',
+  home: '/sandbox#welcome',
+  about: '/sandbox#about',
   services: '/services',
-  reviews: '#reviews',
-  contact: '#contact',
+  reviews: '/sandbox#reviews',
+  contact: '/sandbox#contact',
 };
 
 export const MobileMenu = () => {

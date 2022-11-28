@@ -22,7 +22,7 @@ const ServiceListPage = () => {
             src={`${CDN_URL}${PEOPLE_DIR}/beautiful-woman.jpg`}
             width={1600}
             height={1200}
-            alt="Beauiful woman | Image by valuavitaly on Freepik"
+            alt="Beautiful woman | Image by valuavitaly on Freepik"
           />
         </Box>
       </Container>

@@ -4,10 +4,10 @@ import Link from 'next/link';
 const ChNextLink = chakra(Link);
 
 const menu = {
-  about: '#about',
+  about: '/sandbox#about',
   services: '/services',
-  reviews: '#reviews',
-  contact: '#contact',
+  reviews: '/sandbox#reviews',
+  contact: '/sandbox#contact',
 };
 
 export const NavMenu = (props: ChakraProps) => {

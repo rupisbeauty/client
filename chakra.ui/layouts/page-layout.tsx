@@ -2,6 +2,7 @@ import { SocialShare } from '@/components';
 import { SEOConfig } from '@/utils/seo/base';
 import { Box } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 import layout from '__data/layout.json';
 import { Sidebar } from '.';
 import { transitionDown as variants } from '../framer';
@@ -16,8 +17,11 @@ export const PageLayout: React.FC<LayoutProps> = ({
   description = '',
   children,
 }) => {
-  const displayHeader = layout?.structure?.header.show !== 'false';
-  const displayFooter = layout?.structure?.footer.show !== 'false';
+  const router = useRouter();
+  const displayHeader =
+    layout?.structure?.header.show !== 'false' && router.asPath !== '/';
+  const displayFooter =
+    layout?.structure?.footer.show !== 'false' && router.asPath !== '/';
 
   return (
     <>
