@@ -1,7 +1,6 @@
 import { PhoneIcon } from '@chakra-ui/icons';
 import {
   Box,
-  Center,
   chakra,
   Circle,
   Container,

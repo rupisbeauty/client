@@ -28,7 +28,7 @@ export const ServicesModal = ({
 };
 
 export const CoreServices = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onClose } = useDisclosure();
   const router = useRouter();
   return (
     <>
