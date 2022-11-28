@@ -1,23 +1,23 @@
 import { chakra } from '@chakra-ui/react';
-import { domain, name, email } from '__data/company/info.json';
+import info from '__data/company/info.json';
 
 export const PrivacyPolicyBody = () => (
   <>
     <chakra.p py={4}>
-      {`At ${name}, accessible at ${domain},
+      {`At ${info.name}, accessible at ${info.domain},
       one of our main priorities is the privacy of our visitors. This Privacy
       Policy document contains types of information that is collected and
-      recorded by ${name} and how we use it.`}
+      recorded by ${info.name} and how we use it.`}
     </chakra.p>
 
     <chakra.h2 py={4} fontFamily="body">
-      <strong>{`Privacy Policy for ${name}`}</strong>
+      <strong>{`Privacy Policy for ${info.name}`}</strong>
     </chakra.h2>
 
     <chakra.p py={4}>
       {`If you have additional questions or require more information about our
       Privacy Policy, do not hesitate to contact us through email
-      at ${email}`}
+      at ${info.email}`}
     </chakra.p>
 
     <chakra.h3 py={4} fontFamily="body">
@@ -27,7 +27,7 @@ export const PrivacyPolicyBody = () => (
     <chakra.p py={4}>
       {`This privacy policy applies only to our online activities and is valid for
       visitors to our website with regards to the information that they shared
-      and/or collect in ${name}. This policy is not applicable to any
+      and/or collect in ${info.name}. This policy is not applicable to any
       information collected offline or via channels other than this website.`}
     </chakra.p>
 
@@ -86,7 +86,7 @@ export const PrivacyPolicyBody = () => (
     </chakra.h3>
 
     <chakra.p py={4}>
-      {`${name} follows a standard procedure of using log files. These
+      {`${info.name} follows a standard procedure of using log files. These
       files log visitors when they visit websites. All hosting companies do this
       and a part of hosting services' analytics. The information collected
       by log files include internet protocol (IP) addresses, browser type,
@@ -102,7 +102,7 @@ export const PrivacyPolicyBody = () => (
       <strong>Cookies and Web Beacons</strong>
     </chakra.h2>
     <chakra.p py={4}>
-      {`Like any other website, ${name} uses 'cookies'. These
+      {`Like any other website, ${info.name} uses 'cookies'. These
       cookies are used to store information including visitors'
       preferences, and the pages on the website that the visitor accessed or
       visited. The information is used to optimize the users' experience by
@@ -114,7 +114,7 @@ export const PrivacyPolicyBody = () => (
       <strong>Third-Party Privacy Policies</strong>
     </chakra.h3>
     <chakra.p py={4}>
-      {`${name}'s Privacy Policy does not apply to other
+      {`${info.name}'s Privacy Policy does not apply to other
       advertisers or websites. Thus, we are advising you to consult the
       respective Privacy Policies of these third-party ad servers for more
       detailed information. It may include their practices and instructions
@@ -196,7 +196,7 @@ export const PrivacyPolicyBody = () => (
       in, and/or monitor and guide their online activity.
     </chakra.p>
     <chakra.p py={4}>
-      {`${name} does not knowingly collect any Personal Identifiable
+      {`${info.name} does not knowingly collect any Personal Identifiable
       Information from children under the age of 13. If you think that your
       child provided this kind of information on our website, we strongly
       encourage you to contact us immediately and we will do our best efforts to

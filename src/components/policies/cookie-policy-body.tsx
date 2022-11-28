@@ -1,11 +1,11 @@
 import { chakra } from '@chakra-ui/react';
-import { domain, name } from '__data/company/info.json';
+import info from '__data/company/info.json';
 
 export const CookiePolicyBody = () => (
   <>
     <chakra.p pb={12} textAlign="center" color="gray.500">
-      {`This is the Cookie Policy for ${name}, accessible from
-      ${domain}/policies/cookie`}
+      {`This is the Cookie Policy for ${info.name}, accessible from
+      ${info.domain}/policies/cookie`}
     </chakra.p>
 
     <chakra.h2 py={4} fontFamily="body">

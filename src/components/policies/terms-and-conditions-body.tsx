@@ -1,6 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import Link from 'next/link';
-import { domain, name } from '__data/company/info.json';
+import info from '__data/company/info.json';
 
 // const name = 'Rupi Beauty Studio';
 // const domain = 'https://www.rupibeautystudio.com';
@@ -13,7 +13,7 @@ export const TermsAndConditionsBody = () => {
       </chakra.p>
       <chakra.p
         py={4}
-      >{`These terms and conditions outline the rules and regulations for the use of ${name}'s Website, located at ${domain}.`}</chakra.p>
+      >{`These terms and conditions outline the rules and regulations for the use of ${info.name}'s Website, located at ${info.domain}.`}</chakra.p>
       <chakra.p py={4}>
         By accessing this website we assume you accept these terms and
         conditions. Do not continue to use Rupi beauty Studio if you do not
@@ -42,7 +42,7 @@ export const TermsAndConditionsBody = () => {
       </chakra.h3>
       <chakra.p py={4}>
         {`We employ the use of cookies. By accessing Rupi beauty Studio, you
-        agreed to use cookies in agreement with the ${name}'s`}{' '}
+        agreed to use cookies in agreement with the ${info.name}'s`}{' '}
         <Link href={`/policies/privacy`}>Privacy Policy.</Link>
       </chakra.p>
       <chakra.p py={4}>
@@ -56,7 +56,7 @@ export const TermsAndConditionsBody = () => {
         <strong>License</strong>
       </chakra.h3>
       <chakra.p py={4}>
-        {`Unless otherwise stated, ${name} and/or its licensors own the intellectual property rights for all material on ${name}. All intellectual property rights are reserved. You may access this from Rupi beauty Studio for your own personal use subjected to restrictions set in these terms and conditions.`}
+        {`Unless otherwise stated, ${info.name} and/or its licensors own the intellectual property rights for all material on ${info.name}. All intellectual property rights are reserved. You may access this from Rupi beauty Studio for your own personal use subjected to restrictions set in these terms and conditions.`}
       </chakra.p>
       <chakra.p py={4}>You must not:</chakra.p>
       <chakra.ul listStyleType="initial" pl={8}>
@@ -79,18 +79,18 @@ export const TermsAndConditionsBody = () => {
       </chakra.p>
       <chakra.p py={4}>
         {`Parts of this website offer an opportunity for users to post and
-        exchange opinions and information in certain areas of the website. ${name} does not filter, edit, publish or review
+        exchange opinions and information in certain areas of the website. ${info.name} does not filter, edit, publish or review
         Comments prior to their presence on the website. Comments do not reflect
-        the views and opinions of ${name},its agents
+        the views and opinions of ${info.name},its agents
         and/or affiliates. Comments reflect the views and opinions of the person
         who post their views and opinions. To the extent permitted by applicable
-        laws, ${name} shall not be liable for the
+        laws, ${info.name} shall not be liable for the
         Comments or for any liability, damages or expenses caused and/or
         suffered as a result of any use of and/or posting of and/or appearance
         of the Comments on this website.`}
       </chakra.p>
       <chakra.p py={4}>
-        {`${name} reserves the right to monitor all
+        {`${info.name} reserves the right to monitor all
         Comments and to remove any Comments which can be considered
         inappropriate, offensive or causes breach of these Terms and Conditions.`}
       </chakra.p>
@@ -115,7 +115,7 @@ export const TermsAndConditionsBody = () => {
         </chakra.li>
       </chakra.ul>
       <chakra.p py={4}>
-        {`You hereby grant ${name} a non-exclusive
+        {`You hereby grant ${info.name} a non-exclusive
         license to use, reproduce, edit and authorize others to use, reproduce
         and edit any of your Comments in any and all forms, formats or media.`}
       </chakra.p>
@@ -184,7 +184,7 @@ export const TermsAndConditionsBody = () => {
       <chakra.p py={4}>
         {`If you are one of the organizations listed in paragraph 2 above and are
         interested in linking to our website, you must inform us by sending an
-        e-mail to ${name}. Please include your name,
+        e-mail to ${info.name}. Please include your name,
         your organization name, contact information as well as the URL of your
         site, a list of any URLs from which you intend to link to our Website,
         and a list of the URLs on our site to which you would like to link. Wait
@@ -205,7 +205,7 @@ export const TermsAndConditionsBody = () => {
         </chakra.li>
       </chakra.ul>
       <chakra.p py={4}>
-        {`No use of ${name}'s logo or other artwork will
+        {`No use of ${info.name}'s logo or other artwork will
         be allowed for linking absent a trademark license agreement.`}
       </chakra.p>
       <chakra.h3 py={4} fontFamily="body">
