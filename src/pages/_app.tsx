@@ -3,13 +3,13 @@ import type { SessionWithUser } from '@/lib/next-auth/types/index';
 import { type NextComponentTypeWithAuth } from '@/types';
 import { ErrorBoundary } from '@/utils';
 import { trpc } from '@/utils/trpc';
+import { SkipNavLink } from '@chakra-ui/skip-nav';
 import { Analytics } from '@vercel/analytics/react';
 import { ChakraWrapper, FullScreenLoader } from 'chakra.ui';
 import { SessionProvider, useSession } from 'next-auth/react';
 import { type AppType } from 'next/app';
 import Head from 'next/head';
 import Script from 'next/script';
-import { SkipNavLink } from '@chakra-ui/skip-nav'
 
 const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
   Component,
@@ -33,7 +33,9 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
       </Head>
-      <SkipNavLink>Skip to content</SkipNavLink>
+      <SkipNavLink mt={56} ml={4}>
+        Skip to content
+      </SkipNavLink>
       {appendScriptOnPage(['sandbox']) ? (
         <Script src="https://widget.trustmary.com/CIUJC3KSW" async />
       ) : null}
