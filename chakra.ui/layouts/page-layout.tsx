@@ -1,6 +1,7 @@
 import { SocialShare } from '@/components';
 import { SEOConfig } from '@/utils/seo/base';
 import { Box } from '@chakra-ui/react';
+import { SkipNavContent } from '@chakra-ui/skip-nav';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import layout from '__data/layout.json';
@@ -43,20 +44,23 @@ const Main = ({
   children: React.ReactNode;
 }) => {
   return (
-    <MotionBox
-      as="main"
-      initial="hidden"
-      animate="enter"
-      exit="exit"
-      variants={variants}
-      position="relative"
-      w="full"
-      pt={displayHeader ? '10em' : 0}
-      pb={displayHeader ? '1em' : 0}
-    >
-      <Box position="relative" w="full">
-        {children}
-      </Box>
-    </MotionBox>
+    <>
+      <SkipNavContent />
+      <MotionBox
+        as="main"
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        position="relative"
+        w="full"
+        pt={displayHeader ? '10em' : 0}
+        pb={displayHeader ? '1em' : 0}
+      >
+        <Box position="relative" w="full">
+          {children}
+        </Box>
+      </MotionBox>
+    </>
   );
 };
