@@ -1,36 +1,66 @@
-import { Hero } from '@/components/home-page';
-import { ComingSoon } from '@/components/home-page/coming-soon';
+import {
+  About,
+  ContactInfo,
+  CoreServices,
+  Hero,
+  ScrollSection,
+} from '@/components';
+import SectionTitle from '@/components/section-title';
+import { AspectRatio, Box, chakra, Stack } from '@chakra-ui/react';
 import { PageLayout } from 'chakra.ui';
 import { type NextPage } from 'next';
-import { isDev } from '../utils/constants';
+import Image from 'next/image';
 
-const Home: NextPage = () => {
+const Sandbox: NextPage = () => {
   return (
-    <>
-      <PageLayout
-        title="Rupi Beauty Studio"
-        description="Eyebrows, facials, waxing & more"
-      >
-        <ComingSoon />
-      </PageLayout>
-    </>
+    <PageLayout
+      title="Rupi Beauty Studio"
+      description="Eyebrows, facials, waxing & more"
+    >
+      <Hero />
+      <ScrollSection>
+        <Box zIndex={1} height={500} display="flex" layerStyle="flex-center">
+          <Stack
+            direction="column"
+            justifyContent="center"
+            gap={6}
+            borderRadius="lg"
+            p={8}
+            bg="white"
+            shadow="md"
+            my={6}
+          >
+            <chakra.h2
+              color="secondary"
+              lineHeight="1"
+              textAlign="center"
+              textShadow=""
+            >
+              Come Visit Us At Our Newest Location
+            </chakra.h2>
+            <AspectRatio>
+              <Image
+                src="/map-image.png"
+                alt="address: 2A Franklin Ave, Pearl River, NY 10965"
+                width={257}
+                height={146}
+              />
+            </AspectRatio>
+          </Stack>
+        </Box>
+      </ScrollSection>
+      <About />
+
+      <Box id="reviews" bg="white" pt={16}>
+        <SectionTitle title="Our Reviews" />
+        <Box data-trustmary-widget="CIUJC3KSW" />
+      </Box>
+      <CoreServices />
+      <ContactInfo />
+    </PageLayout>
   );
 };
 
 // @link: https://codepen.io/silvandiepen/pen/NOboze
 
-export default Home;
-
-export const Initial = () => {
-  return (
-    <>
-      {!isDev ? (
-        <>
-          <Hero />
-        </>
-      ) : (
-        <ComingSoon />
-      )}
-    </>
-  );
-};
+export default Sandbox;

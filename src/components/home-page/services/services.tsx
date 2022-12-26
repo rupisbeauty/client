@@ -1,45 +1,20 @@
 import { bgOutline } from '@/utils';
-import { Container, Grid, useDisclosure } from '@chakra-ui/react';
-import { CHModal } from 'chakra.ui';
+import { Container, Grid } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import serviceImages from '__data/company/service-thumbnails.json';
 import SectionTitle from '../../section-title';
 import { MoreBox } from './more-box';
 import { ServiceBox } from './service-box';
 
-export const ServicesModal = ({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-}) => {
-  return (
-    <CHModal
-      isOpen={isOpen}
-      onClose={onClose}
-      hasSubmit={false}
-      allowClose={true}
-      bg="bg"
-    >
-      Test
-    </CHModal>
-  );
-};
-
 export const CoreServices = () => {
-  const { isOpen, onClose } = useDisclosure();
   const router = useRouter();
   return (
     <>
-      <ServicesModal isOpen={isOpen} onClose={onClose} />
       <Container
         as="section"
         id="services"
         position="relative"
-        // w="max(20vw, 100%)"
         maxW="container.xl"
-        minH="100vh"
         centerContent
         p={{ sm: 12, md: 16 }}
         pt={{ lg: 32 }}

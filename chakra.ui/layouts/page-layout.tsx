@@ -19,10 +19,8 @@ export const PageLayout: React.FC<LayoutProps> = ({
   children,
 }) => {
   const router = useRouter();
-  const displayHeader =
-    layout?.structure?.header.show !== 'false' && router.asPath !== '/';
-  const displayFooter =
-    layout?.structure?.footer.show !== 'false' && router.asPath !== '/';
+  const displayHeader = layout?.structure?.header.show !== 'false';
+  const displayFooter = layout?.structure?.footer.show !== 'false';
 
   return (
     <>
@@ -54,7 +52,7 @@ const Main = ({
         variants={variants}
         position="relative"
         w="full"
-        pt={displayHeader ? '10em' : 0}
+        pt={displayHeader ? 6 : 0}
         pb={displayHeader ? '1em' : 0}
       >
         <Box position="relative" w="full">
