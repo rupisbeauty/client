@@ -26,6 +26,7 @@ export const LicensesStack = () => (
       fontSize={{ base: 'xl', lg: '2xl' }}
       textAlign="center"
       mx="auto"
+      px={2}
     >
       {license.subtitle}
     </chakra.p>
@@ -34,23 +35,22 @@ export const LicensesStack = () => (
       p={{ base: 4, lg: 9 }}
       gap={{ base: 12 }}
       alignItems="center"
+      justifyContent="center"
       gridTemplateColumns={{
         base: 'auto',
         md: 'auto auto',
         lg: 'auto auto auto',
         xl: 'auto auto auto auto',
       }}
-      justifyContent="center"
     >
       {licenses.map((image) => (
         <Box
           key={image.fileName}
           position="relative"
-          // w="max(20vw, 100%)"
-          // maxH={'300px'}
+          w="full"
           mx="auto"
         >
-          <AspectRatio ratio={4 / 3}>
+          <AspectRatio ratio={3 / 2} border="1px solid red">
             <Image
               src={`${CDN_URL}${SERVICES_DIR}${image.fileName}`}
               alt={`${image.alt} | ${image?.attr}`}
@@ -66,6 +66,7 @@ export const LicensesStack = () => (
           <Box
             position="relative"
             w="200px"
+            h={12}
             zIndex={2}
             mt={-16}
             ml="auto"

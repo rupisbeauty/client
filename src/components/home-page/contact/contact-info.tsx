@@ -27,10 +27,10 @@ export const ContactInfo = () => {
         position="relative"
         maxW="container.xl"
         centerContent
-        p={{ base: 1, md: 16 }}
+        p={{ base: 4, md: 16 }}
         bg="white"
         borderRadius="3xl"
-        pb={20}
+        mb={32}
         overflowX="hidden"
       >
         <FullLogo />

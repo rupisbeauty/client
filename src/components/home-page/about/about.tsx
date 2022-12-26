@@ -58,7 +58,7 @@ export const About = () => {
             style={{ borderRadius: '15px' }}
           />
           <Box w="full" h="full">
-            <LicenseInfo/>
+            <LicenseInfo />
             <Box
               color="gray.600"
               textAlign={{ base: 'justify' }}
@@ -70,7 +70,11 @@ export const About = () => {
             </Box>
           </Box>
         </Stack>
-        <Box position="relative" textAlign="center">
+        <Box
+          position="relative"
+          textAlign="center"
+          w={{ base: '80%', lg: 'full' }}
+        >
           <LicensesStack />
         </Box>
       </Container>
