@@ -11,7 +11,7 @@ export const Header = () => {
       <ScrollSlide dir="down" from="top">
         <Bar as="header" top={0} bg="barBg" shadow="md">
           <Box position="relative" w="100px" h="172px" flex={1}>
-            <Link href="#welcome">
+            <Link href="/">
               <ChakraNextImage
                 width="100"
                 height="172"

@@ -53,6 +53,7 @@ const Main = ({
         position="relative"
         w="full"
         pt={displayHeader ? 6 : 0}
+        mt={32}
         pb={displayHeader ? '1em' : 0}
       >
         <Box position="relative" w="full">
