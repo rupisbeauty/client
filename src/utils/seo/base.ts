@@ -14,6 +14,7 @@ export function SEOConfig(
   return {
     title: `${titleString} ${subtitleString}`,
     description: description || config?.description,
+    keywords: 'beauty, eye-brows, brows, eye brows, facial, facials, ny, nj, clifton, hudson valley',
     twitter: {
       cardType: 'summary_large_image',
       handle: config.twitterHandle,
