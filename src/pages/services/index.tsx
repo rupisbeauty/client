@@ -1,12 +1,13 @@
-import SectionTitle from '@/components/section-title';
-import { ServiceCategory } from '@/components/services';
-import { PEOPLE_DIR } from '@/utils';
 import { Box, Container } from '@chakra-ui/react';
 import { PageLayout } from 'chakra.ui';
 import Image from 'next/image';
-import services from '__data/company/service-details.json';
-import body from '__data/company/waxing-service-details.json';
-import { CDN_URL } from '../../utils/constants';
+
+import SectionTitle from '@/components/section-title';
+import { ServiceCategory } from '@/components/services';
+
+import { CDN_URL, PEOPLE_DIR } from '@/utils';
+
+import data from '__data/company';
 
 const ServiceListPage = () => {
   return (
@@ -26,7 +27,7 @@ const ServiceListPage = () => {
           />
         </Box>
       </Container>
-      {services.map((service, i) => (
+      {data.details.map((service, i) => (
         <ServiceCategory
           key={service.title}
           service={service}
@@ -34,7 +35,7 @@ const ServiceListPage = () => {
         />
       ))}
       <SectionTitle title="Body Waxing" />
-      {body?.map((service, i) => (
+      {data.waxingService?.map((service, i) => (
         <ServiceCategory
           key={service.title}
           service={service}
