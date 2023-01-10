@@ -5,7 +5,7 @@
 const NextSitemapConfig = {
   siteUrl: 'https://rupisbeautystudio.com',
   generateRobotsTxt: true,
-  exclude: '/sandbox/',
+  exclude: ['/sandbox', '/_splash', '/admin/*', '/api/*'],
 };
 
 module.exports = NextSitemapConfig;
