@@ -50,7 +50,7 @@ export const LicensesStack = () => (
           w="full"
           mx="auto"
         >
-          <AspectRatio ratio={3 / 2} border="1px solid red">
+          <AspectRatio ratio={3 / 2}>
             <Image
               src={`${CDN_URL}${SERVICES_DIR}${image.fileName}`}
               alt={`${image.alt} | ${image?.attr}`}
