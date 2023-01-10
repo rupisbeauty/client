@@ -37,7 +37,7 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
         Skip to content
       </SkipNavLink>
       {appendScriptOnPage(['/', '/services']) ? (
-        <Script src="https://widget.trustmary.com/CIUJC3KSW" async />
+        <Script src={process.env.NEXT_PUBLIC_TRUSTMARY} async />
       ) : null}
       <ErrorBoundary>
         <SessionProvider session={session}>

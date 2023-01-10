@@ -18,6 +18,7 @@ export const serverSchema = z.object({
   ),
   GOOGLE_CLIENT_ID: z.string(),
   GOOGLE_CLIENT_SECRET: z.string(),
+  // GOOGLE_API_KEY: z.string(),
 });
 
 /**
@@ -29,6 +30,7 @@ export const clientSchema = z.object({
   // NEXT_PUBLIC_BAR: z.string(),
   NEXT_PUBLIC_MIXPANEL_TOKEN: z.string(),
   NEXT_PUBLIC_CRISP_WEBSITE_ID: z.string(),
+  NEXT_PUBLIC_TRUSTMARY: z.string(),
 });
 
 /**
@@ -41,4 +43,5 @@ export const clientEnv = {
   // NEXT_PUBLIC_BAR: process.env.NEXT_PUBLIC_BAR,
   NEXT_PUBLIC_MIXPANEL_TOKEN: process.env.NEXT_PUBLIC_MIXPANEL_TOKEN,
   NEXT_PUBLIC_CRISP_WEBSITE_ID: process.env.NEXT_PUBLIC_CRISP_WEBSITE_ID,
+  NEXT_PUBLIC_TRUSTMARY: process.env.NEXT_PUBLIC_TRUSTMARY,
 };
