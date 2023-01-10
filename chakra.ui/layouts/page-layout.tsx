@@ -1,16 +1,17 @@
-import { SocialShare } from '@/components';
-import { SEOConfig } from '@/utils/seo/base';
 import { Box } from '@chakra-ui/react';
 import { SkipNavContent } from '@chakra-ui/skip-nav';
 import { NextSeo } from 'next-seo';
-import { useRouter } from 'next/router';
+
+import type { LayoutProps } from './types';
+
+import { SocialShare } from '@/components';
+import { SEOConfig } from '@/utils/seo/base';
 import layout from '__data/layout.json';
 import { Sidebar } from '.';
 import { transitionDown as variants } from '../framer';
 import { MotionBox } from '../framer/motion';
 import { Footer } from './footer';
 import { Header } from './header';
-import type { LayoutProps } from './types';
 
 export const PageLayout: React.FC<LayoutProps> = ({
   title = 'Site Title',
@@ -18,7 +19,6 @@ export const PageLayout: React.FC<LayoutProps> = ({
   description = '',
   children,
 }) => {
-  const router = useRouter();
   const displayHeader = layout?.structure?.header.show !== 'false';
   const displayFooter = layout?.structure?.footer.show !== 'false';
 
@@ -56,7 +56,7 @@ const Main = ({
         mt={32}
         pb={displayHeader ? '1em' : 0}
       >
-        <Box position="relative" w="full">
+        <Box position="relative" w="full" overflowX="hidden">
           {children}
         </Box>
       </MotionBox>
