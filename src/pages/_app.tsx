@@ -5,8 +5,8 @@ import { ErrorBoundary } from '@/utils';
 import { trpc } from '@/utils/trpc';
 import { SkipNavLink } from '@chakra-ui/skip-nav';
 import { Analytics } from '@vercel/analytics/react';
-import { ChakraWrapper,FullScreenLoader } from 'chakra.ui';
-import { SessionProvider,useSession } from 'next-auth/react';
+import { ChakraWrapper, FullScreenLoader } from 'chakra.ui';
+import { SessionProvider, useSession } from 'next-auth/react';
 import { type AppType } from 'next/app';
 import Head from 'next/head';
 import Script from 'next/script';
@@ -36,7 +36,7 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
       <SkipNavLink mt={56} ml={4}>
         Skip to content
       </SkipNavLink>
-      {appendScriptOnPage(['sandbox']) ? (
+      {appendScriptOnPage(['/', '/services']) ? (
         <Script src="https://widget.trustmary.com/CIUJC3KSW" async />
       ) : null}
       <ErrorBoundary>
