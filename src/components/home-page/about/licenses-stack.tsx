@@ -1,10 +1,13 @@
-import { CDN_URL, SERVICES_DIR } from '@/utils';
 import { AspectRatio, Box, chakra, Grid } from '@chakra-ui/react';
-import Image from 'next/image';
+
+import { ChImage } from 'chakra.ui';
+import type { NextPage } from 'next';
+
+import { CDN_URL, SERVICES_DIR } from '@/utils';
 import licenses from '__data/company/service-licenses.json';
 import license from '__data/site/pages/home/licenses.json';
 
-export const LicensesStack = () => (
+export const LicensesStack: NextPage = () => (
   <Box
     position="relative"
     border="1px solid"
@@ -44,23 +47,14 @@ export const LicensesStack = () => (
       }}
     >
       {licenses.map((image) => (
-        <Box
-          key={image.fileName}
-          position="relative"
-          w="full"
-          mx="auto"
-        >
+        <Box key={image.fileName} position="relative" w="full" mx="auto">
           <AspectRatio ratio={3 / 2}>
-            <Image
+            <ChImage
               src={`${CDN_URL}${SERVICES_DIR}${image.fileName}`}
               alt={`${image.alt} | ${image?.attr}`}
               height={image.height}
               width={image.width}
-              style={{
-                borderRadius: '15px',
-                boxShadow:
-                  '0px 0px 1px rgba(48, 49, 51, 0.05), 0px 4px 8px rgba(48, 49, 51, 0.1)',
-              }}
+              layerStyle="cardBox"
             />
           </AspectRatio>
           <Box
