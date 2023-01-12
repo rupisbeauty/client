@@ -56,15 +56,68 @@ export function flattenObjects<T, U>(arr: T[], key = 'label') {
   return object as U;
 }
 
+/**
+ *
+ *
+ * @export
+ * @return {*}
+ */
 export function getAnonId() {
   if (!isClient) return undefined;
   return localStorage.getItem('__anon_id');
 }
 
+/**
+ *
+ *
+ * @export
+ * @return {*}  {boolean}
+ */
 export function getConsent(): boolean {
   if (!isClient) return false;
   const consent = localStorage.getItem('rbs-consent');
   if (consent !== null) return JSON.parse(consent);
   localStorage.setItem('rbs-consent', 'false');
   return false;
+}
+
+/**
+ *
+ *
+ * @export
+ * @param {number} num
+ * @return {*}  {string}
+ */
+export function formatNumber(num: number): string {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+}
+
+/**
+ *
+ *
+ * @param {number} probability
+ * @param {{ truthy: any; falsy: any }} { truthy, falsy }
+ * @return {*}  {*}
+ */
+export const randomConditional = (
+  probability: number,
+  { truthy, falsy }: { truthy: any; falsy: any }
+): any => (Math.random() >= probability ? truthy : falsy);
+
+/**
+ * chunk a flat array into groups based in the provided value for n
+ *
+ * @export
+ * @param {any[]} arr
+ * @param {number} n
+ * @return {*}
+ */
+export function chunkArray(arr: any[], n: number) {
+  const chunkLength = Math.max(arr.length / n, 1);
+  const chunks = [];
+  for (let i = 0; i < n; i++) {
+    if (chunkLength * (i + 1) <= arr.length)
+      chunks.push(arr.slice(chunkLength * i, chunkLength * (i + 1)));
+  }
+  return chunks;
 }

@@ -39,3 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 /src/pages/sandbox.tsx
+/src/pages/sandbox/*
+/src/components/sandbox/*
