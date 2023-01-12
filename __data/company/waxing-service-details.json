@@ -17,24 +17,5 @@
       "Stomach",
       "Chest"
     ]
-  },
-  {
-    "title": "Hard Wax",
-    "description": "Hard waxing service",
-    "image": "service-mens-waxing.jpg",
-    "items": [
-      "Bikini",
-      "Brazilian",
-      "Butt",
-      "Underarm",
-      "Half Arm",
-      "Full Arm",
-      "Upper Legs",
-      "Lower Legs",
-      "Full Legs",
-      "Back",
-      "Stomach",
-      "Chest"
-    ]
   }
 ]
