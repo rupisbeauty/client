@@ -1,15 +1,18 @@
+import Image from 'next/image';
+import { AspectRatio,Box,chakra,Stack } from '@chakra-ui/react';
+
+import { type NextPage } from 'next';
+
 import {
   About,
   ContactInfo,
   CoreServices,
   Hero,
   ScrollSection,
+  SectionTitle,
 } from '@/components';
-import SectionTitle from '@/components/section-title';
-import { AspectRatio, Box, chakra, Stack } from '@chakra-ui/react';
 import { PageLayout } from 'chakra.ui';
-import { type NextPage } from 'next';
-import Image from 'next/image';
+
 
 const Sandbox: NextPage = () => {
   return (

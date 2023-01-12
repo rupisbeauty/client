@@ -1,10 +1,13 @@
-import { bgOutline } from '@/utils';
 import { Container, Grid } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import serviceImages from '__data/company/service-thumbnails.json';
-import SectionTitle from '../../section-title';
+
+import { SectionTitle } from '../../section-title';
 import { MoreBox } from './more-box';
 import { ServiceBox } from './service-box';
+
+import { bgOutline } from '@/utils';
+
+import serviceImages from '__data/company/service-thumbnails.json';
 
 export const CoreServices = () => {
   const router = useRouter();

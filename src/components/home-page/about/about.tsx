@@ -1,13 +1,15 @@
-import { CDN_URL } from '@/utils';
 import { Box, chakra, Container, Divider, Stack } from '@chakra-ui/react';
 import Image from 'next/image';
-import about from '__data/site/pages/home/about.json';
-import { LOCATIONS_DIR } from '../../../utils/constants';
-import SectionTitle from '../../section-title';
+
+import { SectionTitle } from '../../section-title';
 import { FullLogo } from '../contact';
 import { Decorators } from './decorators';
+
 import { LicenseInfo } from './license-info';
 import { LicensesStack } from './licenses-stack';
+
+import { CDN_URL, LOCATIONS_DIR } from '@/utils';
+import about from '__data/site/pages/home/about.json';
 
 export const About = () => {
   return (

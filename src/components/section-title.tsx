@@ -1,7 +1,7 @@
 import { Box, chakra, VStack } from '@chakra-ui/react';
 import Image from 'next/image';
 
-const SectionTitle = ({ title }: { title: string }) => {
+export const SectionTitle = ({ title }: { title: string }) => {
   return (
     <VStack>
       <chakra.h1
@@ -28,5 +28,3 @@ const SectionTitle = ({ title }: { title: string }) => {
     </VStack>
   );
 };
-
-export default SectionTitle;

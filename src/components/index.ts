@@ -1,10 +1,15 @@
 export * from './analytics';
 // export * from './banner';
+// export * from './consent';
+// export * from './if';
 export * from './home-page';
-export * from './home-page/contact';
+// export * from './layouts';
 export * from './map';
 export * from './mobile-menu';
-// export * from './consent';
 export * from './nav-menu';
+export * from './policies';
+// export * from './sandbox';
+export * from './services';
 export * from './scroll-section';
+export * from './section-title';
 export * from './social';

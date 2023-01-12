@@ -9,11 +9,13 @@ import {
   Stack,
   VStack,
 } from '@chakra-ui/react';
-import info from '__data/company/info.json';
+
 import { MapContainer } from '../../map';
-import SectionTitle from '../../section-title';
+import { SectionTitle } from '../../section-title';
 import { FullLogo } from './full-logo';
 import { StoreIcon } from './store-icon';
+
+import info from '__data/company/info.json';
 
 export const ContactInfo = () => {
   return (

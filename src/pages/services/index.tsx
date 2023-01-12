@@ -2,8 +2,7 @@ import { Box, Container } from '@chakra-ui/react';
 import { PageLayout } from 'chakra.ui';
 import Image from 'next/image';
 
-import SectionTitle from '@/components/section-title';
-import { ServiceCategory } from '@/components/services';
+import { SectionTitle, ServiceCategory } from '@/components';
 
 import { CDN_URL, PEOPLE_DIR } from '@/utils';
 
