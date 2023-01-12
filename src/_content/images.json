@@ -1,0 +1,42 @@
+[
+  {
+    "title": "State Licensed Logo",
+    "filename": "/rupi-license-logo.png",
+    "width": 900,
+    "height": 564,
+    "alt": "Licensed Esthetician in NY and NJ.",
+    "attr": "Rupi Beauty Studio"
+  },
+  {
+    "filename": "/service-eyebrow-threading2.jpg",
+    "title": "Threading",
+    "alt": "Eyebrow Threading",
+    "attr": "Image by diana.grytsku",
+    "width": 1200,
+    "height": 800
+  },
+  {
+    "filename": "/service-facial.jpg",
+    "title": "Facials",
+    "alt": "Facial mask treatment",
+    "attr": "Image by kroshka__nastya",
+    "width": 1200,
+    "height": 800
+  },
+  {
+    "filename": "/service-waxing-legs.jpg",
+    "title": "Waxing",
+    "alt": "Leg waxing treatment",
+    "attr": "Image by prostooleh",
+    "width": 1200,
+    "height": 700
+  },
+  {
+    "filename": "/service-microneedling.jpg",
+    "title": "Micro-needling",
+    "alt": "Microneedling treatment",
+    "attr": "Image by senivpetro",
+    "width": 1200,
+    "height": 800
+  }
+]
