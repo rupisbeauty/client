@@ -1,10 +1,10 @@
 // @NOTE: see the useage of @use-cookie-consent-react for insight
 // @link: https://github.com/use-cookie-consent/use-cookie-consent
-import { chakra } from '@chakra-ui/react';
+import { Box,chakra } from '@chakra-ui/react';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect,useState } from 'react';
 
-import { getConsent } from '@/utils';
+import { getConsent,isBrowser } from '@/utils';
 import { Banner } from './banner';
 
 const ChNextLink = chakra(Link);
@@ -23,8 +23,14 @@ export const CookieConsent = () => {
     localStorage.setItem('rbs-consent', 'true');
   }, [consent]);
 
+
+  const handleConsent = () => {
+    if (isBrowser) document.body.style.overflow = 'visible';
+    setConsent(true);
+  };
+
   return !consent ? (
-    <Banner btnLabel="I Understand" onClick={() => setConsent(true)}>
+    <Banner btnLabel="I Understand" handleConsent={handleConsent}>
       <chakra.p fontWeight="medium" lineHeight={1.4}>
         We use cookies to personalize content and provide you with a better
         browsing experience.

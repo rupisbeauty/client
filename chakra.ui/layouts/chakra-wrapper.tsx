@@ -10,6 +10,7 @@ import '@fontsource/rambla/700.css';
 import type { GetServerSidePropsContext } from 'next';
 import type { FC } from 'react';
 
+import { CookieConsent } from '@/components/consent';
 import { theme } from '../theme';
 
 type ChakraProps = {
@@ -30,6 +31,7 @@ export const ChakraWrapper: FC<ChakraProps> = ({ cookies, children }) => {
       theme={theme}
       // colorModeManager={colorModeManager} //
     >
+      <CookieConsent />
       {children}
     </ChakraProvider>
   );

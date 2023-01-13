@@ -1,4 +1,3 @@
-import { CookieConsent } from '@/components/consent';
 import type { SessionWithUser } from '@/lib/next-auth/types/index';
 import { type NextComponentTypeWithAuth } from '@/types';
 import { ErrorBoundary } from '@/utils';
@@ -49,7 +48,6 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
             ) : (
               <Component {...pageProps} />
             )}
-            <CookieConsent />
             <Analytics />
           </ChakraWrapper>
         </SessionProvider>
