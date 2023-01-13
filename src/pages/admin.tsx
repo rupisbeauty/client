@@ -1,5 +1,5 @@
+import { AdminLayout } from '@/components';
 import { type NextPageWithAuth } from '@/types';
-import { AdminLayout } from 'chakra.ui';
 
 // @TODO: build out admin dashboard
 

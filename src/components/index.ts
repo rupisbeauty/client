@@ -5,7 +5,7 @@ export * from './cta';
 // export * from './cta';
 // export * from './if';
 export * from './home-page';
-// export * from './layouts';
+export * from './layouts';
 export * from './map';
 export * from './mobile-menu';
 export * from './nav-menu';

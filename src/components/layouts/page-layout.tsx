@@ -2,16 +2,18 @@ import { Box } from '@chakra-ui/react';
 import { SkipNavContent } from '@chakra-ui/skip-nav';
 import { NextSeo } from 'next-seo';
 
+import type { LayoutProps } from 'chakra.ui/';
 import type { FC } from 'react';
-import type { LayoutProps } from './types';
-
-import { Sidebar } from '.';
-import { transitionDown as variants } from '../framer';
-import { MotionBox } from '../framer/motion';
-import { Footer } from './footer';
-import { Header } from './header';
 
 import { SocialShare } from '@/components';
+import {
+  Footer,
+  Header,
+  MotionBox,
+  Sidebar,
+  transitionDown as variants,
+} from 'chakra.ui';
+
 import { SEOConfig } from '@/utils/seo/base';
 import layout from '__data/layout.json';
 

@@ -1,4 +1,7 @@
-export * from './admin-layout';
+// export * from './admin-layout';
 export * from './chakra-wrapper';
-export * from './page-layout';
+export * from './footer';
+export * from './header';
+// export * from './page-layout';
 export * from './sidebar';
+export * from './types';

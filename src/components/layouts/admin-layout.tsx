@@ -2,15 +2,18 @@ import { SEOConfig } from '@/utils/seo/base';
 import { Flex } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
+import type { LayoutProps } from 'chakra.ui/layouts/types';
 import type { FC } from 'react';
-import type { LayoutProps } from './types';
 
-import { Sidebar } from '.';
-import { AvatarMenu, ModeToggle } from '../components';
-import { transitionDown as variants } from '../framer';
-import { MotionBox } from '../framer/motion';
-import { Footer } from './footer';
-import { Header } from './header';
+import {
+  AvatarMenu,
+  Footer,
+  Header,
+  ModeToggle,
+  MotionBox,
+  Sidebar,
+  transitionDown as variants,
+} from 'chakra.ui';
 
 import layout from '__data/layout.json';
 
