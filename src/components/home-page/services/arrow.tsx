@@ -1,4 +1,6 @@
-export const Arrow = () => {
+import type { FC } from 'react';
+
+export const Arrow: FC = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

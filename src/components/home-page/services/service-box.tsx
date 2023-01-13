@@ -1,9 +1,12 @@
-import { CDN_URL, SERVICES_DIR } from '@/utils';
 import { Box, chakra } from '@chakra-ui/react';
 import Image from 'next/image';
+
+import type { FC } from 'react';
 import { type NextJSImage } from './types';
 
-export const ServiceBox = ({ image }: { image: NextJSImage }) => {
+import { CDN_URL, SERVICES_DIR } from '@/utils';
+
+export const ServiceBox: FC<{ image: NextJSImage }> = ({ image }) => {
   return (
     <Box key={image.fileName} position="relative" w="100%">
       <Image

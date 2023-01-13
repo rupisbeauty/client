@@ -1,16 +1,20 @@
 import { SEOConfig } from '@/utils/seo/base';
 import { Flex } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
-import layout from '__data/layout.json';
+
+import type { FC } from 'react';
+import type { LayoutProps } from './types';
+
 import { Sidebar } from '.';
 import { AvatarMenu, ModeToggle } from '../components';
 import { transitionDown as variants } from '../framer';
 import { MotionBox } from '../framer/motion';
 import { Footer } from './footer';
 import { Header } from './header';
-import type { LayoutProps } from './types';
 
-export const AdminLayout: React.FC<LayoutProps> = ({
+import layout from '__data/layout.json';
+
+export const AdminLayout: FC<LayoutProps> = ({
   title = 'Site Title',
   subtitle = '',
   description = '',

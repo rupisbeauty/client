@@ -1,22 +1,25 @@
-import { BRAND_DIR, CDN_URL } from '@/utils';
 import { Box } from '@chakra-ui/react';
 import { useReducedMotion } from 'framer-motion';
-import { type ReactNode } from 'react';
 import { Parallax } from 'react-parallax';
 
-export function ScrollSection({
-  bgImage = `${CDN_URL}${BRAND_DIR}/tile_background.png`,
-  strength = -200,
-  children,
-}: {
+import type { FC, ReactNode } from 'react';
+
+import { BRAND_DIR, CDN_URL } from '@/utils';
+
+export const ScrollSection: FC<{
   bgImage?: string;
   strength?: number;
   children: ReactNode;
-}) {
+}> = ({
+  bgImage = `${CDN_URL}${BRAND_DIR}/tile_background.png`,
+  strength = -200,
+  children,
+}) => {
   const shouldReduceMotion = useReducedMotion();
 
   return shouldReduceMotion ? (
     <Box
+      as="section"
       position="relative"
       zIndex={1}
       minH="50vh"
@@ -49,4 +52,4 @@ export function ScrollSection({
       </Parallax>
     </>
   );
-}
+};

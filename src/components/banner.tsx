@@ -9,9 +9,11 @@ import {
   useBreakpointValue,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { CookieIcon } from 'chakra.ui';
-import type { FC, ReactNode } from 'react';
 import { useState } from 'react';
+
+import type { FC, ReactNode } from 'react';
+
+import { CookieIcon } from 'chakra.ui';
 
 interface BannerProps {
   children: ReactNode;

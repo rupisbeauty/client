@@ -1,5 +1,8 @@
-import { chakra, HStack, type ChakraProps } from '@chakra-ui/react';
+import { chakra, HStack } from '@chakra-ui/react';
 import Link from 'next/link';
+
+import type { ChakraProps } from '@chakra-ui/react';
+import type { FC } from 'react';
 
 const ChNextLink = chakra(Link);
 
@@ -10,7 +13,7 @@ const menu = {
   contact: '/#contact',
 };
 
-export const NavMenu = (props: ChakraProps) => {
+export const NavMenu: FC<ChakraProps> = (props) => {
   return (
     <HStack
       as="nav"

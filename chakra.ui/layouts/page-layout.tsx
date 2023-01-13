@@ -2,18 +2,20 @@ import { Box } from '@chakra-ui/react';
 import { SkipNavContent } from '@chakra-ui/skip-nav';
 import { NextSeo } from 'next-seo';
 
+import type { FC } from 'react';
 import type { LayoutProps } from './types';
 
-import { SocialShare } from '@/components';
-import { SEOConfig } from '@/utils/seo/base';
-import layout from '__data/layout.json';
 import { Sidebar } from '.';
 import { transitionDown as variants } from '../framer';
 import { MotionBox } from '../framer/motion';
 import { Footer } from './footer';
 import { Header } from './header';
 
-export const PageLayout: React.FC<LayoutProps> = ({
+import { SocialShare } from '@/components';
+import { SEOConfig } from '@/utils/seo/base';
+import layout from '__data/layout.json';
+
+export const PageLayout: FC<LayoutProps> = ({
   title = 'Site Title',
   subtitle = '',
   description = '',

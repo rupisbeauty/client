@@ -1,9 +1,11 @@
-import { CDN_URL, PEOPLE_DIR } from '@/utils';
 import { Box, chakra } from '@chakra-ui/react';
 import Image from 'next/image';
+import type { FC } from 'react';
+
+import { CDN_URL, PEOPLE_DIR } from '@/utils';
 import column1 from '__data/site/pages/home/hero.json';
 
-export const Column1 = () => {
+export const Column1: FC = () => {
   return (
     <Box>
       <chakra.p

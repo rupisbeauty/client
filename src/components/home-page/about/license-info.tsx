@@ -1,8 +1,11 @@
-import { bgOutline } from '@/utils';
 import { Box, chakra } from '@chakra-ui/react';
+
+import type { FC } from 'react';
+
+import { bgOutline } from '@/utils';
 import about from '__data/site/pages/home/about.json';
 
-export const LicenseInfo = () => (
+export const LicenseInfo: FC = () => (
   <Box w="full" p={{ base: 0, lg: 16 }}>
     <chakra.p
       fontSize={{ base: 'xl', md: '3xl' }}

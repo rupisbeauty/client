@@ -1,5 +1,8 @@
-import { Box, type BoxProps, type ChakraProps } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { paths } from './paths';
+
+import type { BoxProps, ChakraProps } from '@chakra-ui/react';
+import type { FC } from 'react';
 
 type CustomIconProps = {
   icon: string;
@@ -8,14 +11,14 @@ type CustomIconProps = {
   stroke?: string;
 } & BoxProps;
 
-export const CustomIcon: React.FC<CustomIconProps> = ({
+export const CustomIcon: FC<CustomIconProps> = ({
   icon = 'add',
   size = '1.25rem',
   color,
   stroke,
   ...rest
 }) => {
-  const Icon: React.FC<CustomIconProps & ChakraProps> = ({
+  const Icon: FC<CustomIconProps & ChakraProps> = ({
     color,
     size,
     icon,

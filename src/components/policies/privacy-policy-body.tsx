@@ -1,7 +1,10 @@
 import { chakra } from '@chakra-ui/react';
+
+import type { FC } from 'react';
+
 import info from '__data/company/info.json';
 
-export const PrivacyPolicyBody = () => (
+export const PrivacyPolicyBody: FC = () => (
   <>
     <chakra.p py={4}>
       {`At ${info.name}, accessible at ${info.domain},

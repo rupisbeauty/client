@@ -1,11 +1,14 @@
 import { chakra } from '@chakra-ui/react';
 import Link from 'next/link';
+
+import type { FC } from 'react';
+
 import info from '__data/company/info.json';
 
 // const name = 'Rupi Beauty Studio';
 // const domain = 'https://www.rupibeautystudio.com';
 
-export const TermsAndConditionsBody = () => {
+export const TermsAndConditionsBody: FC = () => {
   return (
     <>
       <chakra.p pb={12} textAlign="center" color="gray.500">

@@ -1,8 +1,8 @@
 import { Box, Container } from '@chakra-ui/react';
-import { PageLayout } from 'chakra.ui';
 import Image from 'next/image';
 
 import { SectionTitle, ServiceCategory } from '@/components';
+import { PageLayout } from 'chakra.ui';
 
 import { CDN_URL, PEOPLE_DIR } from '@/utils';
 
@@ -10,11 +10,7 @@ import data from '__data/company';
 
 const ServiceListPage = () => {
   return (
-    <PageLayout
-      title="Services"
-      subtitle="Test"
-      description="Rupi beauty studio proudly offers a multitude of services that will help you look and feel your best!"
-    >
+    <PageLayout title="Services" subtitle="Rupi Beauty Studio">
       <SectionTitle title="Rupi Signature Services" />
       <Container w="full" maxW="container.lg" p={0} my={12}>
         <Box w="full" maxH="36vh" overflow="hidden" borderRadius="md">

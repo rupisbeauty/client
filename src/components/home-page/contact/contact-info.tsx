@@ -10,6 +10,8 @@ import {
   VStack,
 } from '@chakra-ui/react';
 
+import type { FC } from 'react';
+
 import { MapContainer } from '../../map';
 import { SectionTitle } from '../../section-title';
 import { FullLogo } from './full-logo';
@@ -17,7 +19,7 @@ import { StoreIcon } from './store-icon';
 
 import info from '__data/company/info.json';
 
-export const ContactInfo = () => {
+export const ContactInfo: FC = () => {
   return (
     <>
       <Box my={20}>

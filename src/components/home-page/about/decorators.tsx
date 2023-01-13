@@ -1,7 +1,9 @@
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
 
-export const Decorators = () => {
+import type { FC } from 'react';
+
+export const Decorators: FC = () => {
   return (
     <>
       <Box

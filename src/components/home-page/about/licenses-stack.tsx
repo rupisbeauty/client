@@ -1,13 +1,13 @@
-import { AspectRatio, Box, chakra, Grid } from '@chakra-ui/react';
+import { AspectRatio,Box,chakra,Grid } from '@chakra-ui/react';
 
-import { ChImage } from 'chakra.ui';
-import type { NextPage } from 'next';
+import type { FC } from 'react';
 
 import { CDN_URL, SERVICES_DIR } from '@/utils';
+import { ChImage } from 'chakra.ui';
 import licenses from '__data/company/service-licenses.json';
 import license from '__data/site/pages/home/licenses.json';
 
-export const LicensesStack: NextPage = () => (
+export const LicensesStack: FC = () => (
   <Box
     position="relative"
     border="1px solid"

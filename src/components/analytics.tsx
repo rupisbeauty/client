@@ -1,8 +1,10 @@
 import { analytics } from '@/lib/analytics';
-import type { SessionWithUser } from '@/lib/next-auth/types/index';
-import { chakra } from '@chakra-ui/react';
-
 import { useEffect } from 'react';
+
+import type { SessionWithUser } from '@/lib/next-auth/types/index';
+import type { FC } from 'react';
+
+import { chakra } from '@chakra-ui/react';
 
 interface IAnalytics {
   asPath: string;
@@ -10,7 +12,7 @@ interface IAnalytics {
   children: React.ReactNode;
 }
 
-export const Analytics = ({ asPath, session, children }: IAnalytics) => {
+export const Analytics: FC<IAnalytics> = ({ asPath, session, children }) => {
   useEffect(() => {
     analytics.page();
   }, [asPath]);

@@ -1,8 +1,11 @@
 import { Box, chakra, Divider, Flex, VStack } from '@chakra-ui/react';
+
+import type { FC } from 'react';
+
 import { CustomIcon } from 'chakra.ui';
 import cta from '__data/site/pages/home/cta-call.json';
 
-export const CTABox = () => (
+export const CTABox: FC = () => (
   <Box
     position="absolute"
     bottom={{ base: 10, md: 24, lg: -4, xl: 12 }}

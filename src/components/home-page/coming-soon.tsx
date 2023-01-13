@@ -1,8 +1,11 @@
-import { BRAND_DIR, CDN_URL } from '@/utils';
 import { Box, chakra, Flex } from '@chakra-ui/react';
+
+import type { FC } from 'react';
+
+import { BRAND_DIR, CDN_URL } from '@/utils';
 import { ChakraNextImage } from 'chakra.ui';
 
-export const ComingSoon = () => {
+export const ComingSoon: FC = () => {
   return (
     <Flex flexDirection="column" justify="center" alignItems="center" h="80vh">
       <Box position="relative" mt={{ lg: -56 }}>

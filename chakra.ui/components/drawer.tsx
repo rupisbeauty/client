@@ -6,9 +6,11 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  type DrawerProps,
 } from '@chakra-ui/react';
 import { useRef } from 'react';
+
+import type { DrawerProps } from '@chakra-ui/react';
+import type { FC } from 'react';
 
 type CustomDrawerProps = {
   Header?: React.ElementType; // throws an error with ReactNode
@@ -16,7 +18,7 @@ type CustomDrawerProps = {
   type?: 'default' | 'consent';
 } & DrawerProps;
 
-export const Drawer = ({
+export const Drawer: FC<CustomDrawerProps> = ({
   isOpen,
   onClose,
   Header,
@@ -26,7 +28,7 @@ export const Drawer = ({
   placement = 'left',
   type = 'default',
   ...props
-}: CustomDrawerProps) => {
+}) => {
   const btnRef = useRef<HTMLInputElement>(null);
   return (
     <ChDrawer

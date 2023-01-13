@@ -1,7 +1,10 @@
-import { Map } from '@/components';
 import { Center } from '@chakra-ui/react';
 
-export const MapContainer = () => {
+import type { FC } from 'react';
+
+import { Map } from '@/components';
+
+export const MapContainer: FC = () => {
   return (
     <Center
       ml="auto"

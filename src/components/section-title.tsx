@@ -1,7 +1,9 @@
-import { Box, chakra, VStack } from '@chakra-ui/react';
+import { Box,chakra,VStack } from '@chakra-ui/react';
 import Image from 'next/image';
 
-export const SectionTitle = ({ title }: { title: string }) => {
+import type { FC } from 'react';
+
+export const SectionTitle: FC<{ title: string }> = ({ title }) => {
   return (
     <VStack>
       <chakra.h1

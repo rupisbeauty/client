@@ -1,18 +1,15 @@
 import { useReducedMotion, useScroll, useTransform } from 'framer-motion';
-import type { ReactNode } from 'react';
 import { createRef } from 'react';
 import { MotionBox } from './motion';
 
+import type { FC, ReactNode } from 'react';
+
 const ref = createRef<HTMLDivElement>();
 
-export const HorizontalParallax = ({
-  speed = 1 / 2,
-  children,
-  ...props
-}: {
+export const HorizontalParallax: FC<{
   speed?: number;
   children: ReactNode;
-}) => {
+}> = ({ speed = 1 / 2, children, ...props }) => {
   const prefersReducedMotion = useReducedMotion();
 
   const { scrollY } = useScroll({
@@ -27,6 +24,7 @@ export const HorizontalParallax = ({
   }
 
   return (
+    //  @TODO: @FIXMEL fix type issue
     <MotionBox style={{ x }} ref={ref} {...props}>
       {children}
     </MotionBox>

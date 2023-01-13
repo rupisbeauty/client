@@ -8,16 +8,16 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import { CDN_URL, PLACEHOLDER_DIR, SERVICES_DIR } from '../../utils/constants';
+
+import type { FC } from 'react';
 import type { Service } from './types';
 
-export const ServiceCategory = ({
-  service,
-  flip,
-}: {
+import { CDN_URL, PLACEHOLDER_DIR, SERVICES_DIR } from '../../utils/constants';
+
+export const ServiceCategory: FC<{
   service: Service | undefined;
   flip?: boolean;
-}) => (
+}> = ({ service, flip }) => (
   <Container
     w="full"
     maxW="container.lg"

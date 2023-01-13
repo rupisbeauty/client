@@ -1,10 +1,13 @@
+import { Box, HStack, Text } from '@chakra-ui/react';
+
+import type { FC } from 'react';
+
 import { NavMenu } from '@/components';
 import { BRAND_DIR, CDN_URL } from '@/utils';
-import { Box, HStack, Text } from '@chakra-ui/react';
 import { Bar, ChakraNextImage } from '../components';
 import { ScrollSlide } from '../framer';
 
-export const Footer = () => {
+export const Footer: FC = () => {
   return (
     <Box zIndex="docked" position="fixed">
       <ScrollSlide dir="up" from="bottom">

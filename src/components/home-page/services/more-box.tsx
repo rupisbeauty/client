@@ -1,7 +1,10 @@
 import { Box, Button, chakra } from '@chakra-ui/react';
+
+import type { FC } from 'react';
+
 import { Arrow } from './arrow';
 
-export const MoreBox = ({ onClick }: { onClick: () => void }) => {
+export const MoreBox: FC<{ onClick: () => void }> = ({ onClick }) => {
   return (
     <Button
       position="relative"
