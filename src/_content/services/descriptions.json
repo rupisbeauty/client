@@ -21,7 +21,7 @@
       ]
     }
   ],
-  "facial": [
+  "facials": [
     {
       "title": "Teen Facial",
       "description": [
@@ -116,51 +116,51 @@
   "waxing": [
     {
       "title": "Bikini Waxing",
-      "description": ""
+      "description": [""]
     },
     {
       "title": "Brazilian Waxing",
-      "description": ""
+      "description": [""]
     },
     {
       "title": "Butt Waxing",
-      "description": ""
+      "description": [""]
     },
     {
       "title": "Underarm Waxing",
-      "description": ""
+      "description": [""]
     },
     {
       "title": "Half Arm Waxing",
-      "description": ""
+      "description": [""]
     },
     {
       "title": "Full Arm Waxing",
-      "description": ""
+      "description": [""]
     },
     {
       "title": "Upper Legs Waxing",
-      "description": ""
+      "description": [""]
     },
     {
       "title": "Lower Legs Waxing",
-      "description": ""
+      "description": [""]
     },
     {
       "title": "Full Legs Waxing",
-      "description": ""
+      "description": [""]
     },
     {
       "title": "Back Waxing",
-      "description": ""
+      "description": [""]
     },
     {
       "title": "Stomach Waxing",
-      "description": ""
+      "description": [""]
     },
     {
       "title": "Chest Waxing",
-      "description": ""
+      "description": [""]
     }
   ],
   "more": [
