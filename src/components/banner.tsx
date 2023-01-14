@@ -19,22 +19,24 @@ import { CookieIcon } from 'chakra.ui';
 interface BannerProps {
   children: ReactNode;
   btnLabel: string;
+  consent: boolean;
   handleConsent: () => void;
 }
 
 export const Banner: FC<BannerProps> = ({
   children,
   btnLabel,
+  consent,
   handleConsent,
 }) => {
   const isMobile = useBreakpointValue({ base: true, md: false });
   const boxShadow = useColorModeValue('xl', 'xl-dark');
-  const [hide, setHide] = useState<boolean>(false);
+  const [hide, setHide] = useState<boolean>(consent);
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    if (isBrowser && !consent) document.body.style.overflow = 'hidden';
     () => {
-      document.body.style.overflow = 'visible';
+      if (isBrowser) document.body.style.overflow = 'visible';
     };
   }, []);
 
