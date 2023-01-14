@@ -10,12 +10,12 @@ import {
 import Image from 'next/image';
 
 import type { FC } from 'react';
-import type { Service } from './types';
+import type { LegacyService } from './types';
 
 import { CDN_URL, PLACEHOLDER_DIR, SERVICES_DIR } from '../../utils/constants';
 
 export const ServiceCategory: FC<{
-  service: Service | undefined;
+  service: LegacyService | undefined;
   flip?: boolean;
 }> = ({ service, flip }) => (
   <Container

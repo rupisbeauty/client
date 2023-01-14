@@ -1,4 +1,4 @@
-export interface Service {
+export interface LegacyService {
   title: string;
   description: string;
   items: string[];
