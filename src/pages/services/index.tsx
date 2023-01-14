@@ -1,8 +1,7 @@
 import { Box, Container } from '@chakra-ui/react';
 import Image from 'next/image';
 
-import { SectionTitle, ServiceCategory } from '@/components';
-import { PageLayout } from 'chakra.ui';
+import { PageLayout, SectionTitle, ServiceCategory } from '@/components';
 
 import { CDN_URL, PEOPLE_DIR } from '@/utils';
 
