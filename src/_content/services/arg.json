@@ -2,14 +2,6 @@
   "eyebrows": {
     "services": [
       {
-        "title": "Shaping of Eyebrows",
-        "description": [
-          "Eyebrow shaping can be done by waxing or threading technique to remove hair around the eyebrows and shape them to the face. Eyebrow tinting can be done to add a tint to the eyebrow to enhance the color of the eyebrows.  Eyebrow shaping, tinting, waxing or threading will emphasize your eyes, and enhance your facial features."
-        ],
-        "category": "eyebrows",
-        "slug": "shaping-of-eyebrows"
-      },
-      {
         "title": "Threading",
         "description": [
           "Remove facial hair by using cotton thread to quickly grab and pull hair by the roots. It is a great way to shape eyebrows and also be used to quickly remove any facials hairs like forehead, upper lip, chin, neck, sides, side burns, eyebrows."
@@ -26,6 +18,20 @@
         ],
         "category": "eyebrows",
         "slug": "waxing"
+      },
+      {
+        "title": "Tinting",
+        "description": ["Enhances the color of the eyebrows"],
+        "category": "eyebrows",
+        "slug": "tinting"
+      },
+      {
+        "title": "Brow lamination",
+        "description": [
+          "Brow lamination is almost like a perm for your eyebrows, it involves straightening and liftings of hair using a chemical solution which allows the hair fuller, thicker and feathery look."
+        ],
+        "category": "eyebrows",
+        "slug": "brow-lamination"
       }
     ],
     "options": [
@@ -299,14 +305,6 @@
         ],
         "category": "other",
         "slug": "chemical-peel"
-      },
-      {
-        "title": "Brow lamination",
-        "description": [
-          "Brow lamination is almost like a perm for your eyebrows, it involves straightening and liftings of hair using a chemical solution which allows the hair fuller, thicker and feathery look."
-        ],
-        "category": "other",
-        "slug": "brow-lamination"
       },
       {
         "title": "Lash Lift",

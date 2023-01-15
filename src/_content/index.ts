@@ -38,7 +38,7 @@ export type ServiceDetails = {
 
 export type Service = {
   services: ServiceDetails[];
-  options?: string[];
+  options: string[];
 };
 
 // export type Services = Record<string, Service>;
@@ -48,15 +48,4 @@ export type Services = {
   facials: Service;
   waxing: Service;
   other: Service;
-};
-
-export type AllServices = {
-  all: Services;
-};
-
-export type FinalAllService = {
-  title: string;
-  description: string[];
-  categories: string[];
-  slug: string;
 };

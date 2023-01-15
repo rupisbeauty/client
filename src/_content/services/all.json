@@ -2,14 +2,6 @@
   "all": {
     "services": [
       {
-        "title": "Shaping of Eyebrows",
-        "description": [
-          "Eyebrow shaping can be done by waxing or threading technique to remove hair around the eyebrows and shape them to the face. Eyebrow tinting can be done to add a tint to the eyebrow to enhance the color of the eyebrows.  Eyebrow shaping, tinting, waxing or threading will emphasize your eyes, and enhance your facial features."
-        ],
-        "category": "eyebrows",
-        "slug": "shaping-of-eyebrows"
-      },
-      {
         "title": "Threading",
         "description": [
           "Remove facial hair by using cotton thread to quickly grab and pull hair by the roots. It is a great way to shape eyebrows and also be used to quickly remove any facials hairs like forehead, upper lip, chin, neck, sides, side burns, eyebrows."
@@ -26,6 +18,20 @@
         ],
         "category": "eyebrows",
         "slug": "waxing"
+      },
+      {
+        "title": "Tinting",
+        "description": ["Enhances the color of the eyebrows"],
+        "category": "eyebrows",
+        "slug": "tinting"
+      },
+      {
+        "title": "Brow lamination",
+        "description": [
+          "Brow lamination is almost like a perm for your eyebrows, it involves straightening and liftings of hair using a chemical solution which allows the hair fuller, thicker and feathery look."
+        ],
+        "category": "eyebrows",
+        "slug": "brow-lamination"
       },
       {
         "title": "Teen Facial",
@@ -225,7 +231,7 @@
           "A procedure that uses tiny needles to treat scars, large pores and wrinkles. It helps with Acne, dark spots, hyper pigmentation, large pores reduce skin elasticity, sun damage, and fine lines and wrinkles."
         ],
         "category": "other",
-        "slug": "microneedling"
+        "slug": "micro-needling"
       },
       {
         "title": "Pro Cell Therapy",
@@ -244,14 +250,6 @@
         ],
         "category": "other",
         "slug": "chemical-peel"
-      },
-      {
-        "title": "Brow lamination",
-        "description": [
-          "Brow lamination is almost like a perm for your eyebrows, it involves straightening and liftings of hair using a chemical solution which allows the hair fuller, thicker and feathery look."
-        ],
-        "category": "other",
-        "slug": "brow-lamination"
       },
       {
         "title": "Lash Lift",
@@ -277,7 +275,8 @@
         "category": "other",
         "slug": "laser-hair-removal"
       }
-    ]
+    ],
+    "options": []
   },
   "eyebrows": {
     "services": [
@@ -285,13 +284,17 @@
         "title": "Shaping of Eyebrows",
         "description": [
           "Eyebrow shaping can be done by waxing or threading technique to remove hair around the eyebrows and shape them to the face. Eyebrow tinting can be done to add a tint to the eyebrow to enhance the color of the eyebrows.  Eyebrow shaping, tinting, waxing or threading will emphasize your eyes, and enhance your facial features."
-        ]
+        ],
+        "category": "eyebrows",
+        "slug": "shaping-of-eyebrows"
       },
       {
         "title": "Threading",
         "description": [
           "Remove facial hair by using cotton thread to quickly grab and pull hair by the roots. It is a great way to shape eyebrows and also be used to quickly remove any facials hairs like forehead, upper lip, chin, neck, sides, side burns, eyebrows."
-        ]
+        ],
+        "category": "eyebrows",
+        "slug": "threading"
       },
       {
         "title": "Waxing",
@@ -299,7 +302,23 @@
           "Waxing is a process of hair removal; that use strip wax or hard wax to effectively to remove the hair from the roots, to leave the skin smooth and even.  Waxing can be done on face which includes eyebrows, upper lip, chin, neck sideburns, forehead, nose, and inside nose and ears. It can be used on body as well, for bikini, Brazilian, feet, leg, arms, hands, underarms, buttocks, back, neck, chest, nipple.",
           "Men’s bikini and Brazilian can be done as well.",
           "Facial overall in skin cleaning process in which we exfoliate, apply steam treatment, remove blackheads, apply scrubs, mask to cleanse the skin to reduce acne, wrinkles, giving you an overall healthy skin to radiate the skin."
-        ]
+        ],
+        "category": "eyebrows",
+        "slug": "waxing"
+      },
+      {
+        "title": "Tinting",
+        "description": ["Enhances the color of the eyebrows"],
+        "category": "eyebrows",
+        "slug": "tinting"
+      },
+      {
+        "title": "Brow lamination",
+        "description": [
+          "Brow lamination is almost like a perm for your eyebrows, it involves straightening and liftings of hair using a chemical solution which allows the hair fuller, thicker and feathery look."
+        ],
+        "category": "eyebrows",
+        "slug": "brow-lamination"
       }
     ]
   },
@@ -309,91 +328,121 @@
         "title": "Teen Facial",
         "description": [
           "Facials geared to teens or teenagers to help cleanse blackheads, reduce Acne problems to improve the overall health of the skin."
-        ]
+        ],
+        "category": "facials",
+        "slug": "teen-facial"
       },
       {
         "title": "Express Facial",
         "description": [
           "Mini Facials where we apply steam, cleansing, removal of blackheads and apply mask to the skin ideal for clients that have a short amount of time for example lunch breaks."
-        ]
+        ],
+        "category": "facials",
+        "slug": "express-facial"
       },
       {
         "title": "Traditional Facial",
         "description": [
           "Basic facial to routinely maintain the skin cleansing, exfoliate, steam, removal of blackheads, massage and mask.  Benefit of facial is keeps skin clean, and reduce Acne."
-        ]
+        ],
+        "category": "facials",
+        "slug": "traditional-facials"
       },
       {
         "title": "Soothing back facial",
         "description": [
           "Facial geared to one’s back where we exfoliate, apply steam treatment, remove blackheads, apply scrubs, mask to cleanse the skin to reduce dead cells on the back."
-        ]
+        ],
+        "category": "facials",
+        "slug": "soothing-back-facials"
       },
       {
         "title": "Detoxifying Facial",
         "description": [
           "Great for to clean the pores, reduce Wrinkles, moisturize your face. (Need to look into Google to Add points)"
-        ]
+        ],
+        "category": "facials",
+        "slug": "detoxifying-facials"
       },
       {
         "title": "LED Light Facial",
         "description": [
           "Facial service that focuses on skin issues for skin cares, helps with anti-aging, reducing inflammations, increases amount of collagen in skin to reduce the amount of wrinkles on the skin. It helps with eczema, mild or moderate acne, rosacea, sun damage and other benefits."
-        ]
+        ],
+        "category": "facials",
+        "slug": "led-light-facials"
       },
       {
         "title": "Microdermabrasion",
         "description": [
           "Microdermabrasion is noninvasive procedure that exfoliates and remove the superficial layer of dry, dead skin cells. Helps fight sun damage, fine lines, wrinkles, scars, rough skin texture and large pores, ingrown hair, shaving rash."
-        ]
+        ],
+        "category": "facials",
+        "slug": "microderabrasion"
       },
       {
         "title": "Dermaplaning Facial",
         "description": [
           "Facial for all skin types, which is a non-invasive procedure where it helps to exfoliate the skin with fine hair (Peach Fuzz) removal. It helps penetrate the product deeper into skin  which helps rejunvate the skin to make the skin look nice and smooth. Great mechanical exfoliator which will remove the fine hairs from the face to improve the overall skin health."
-        ]
+        ],
+        "category": "facials",
+        "slug": "dermaplaning-facials"
       },
       {
         "title": "Micro Hydra Facial",
         "description": [
           "Facial that leverages hydradermabrsion treatment to the skin. The infusion of serums into the facial will improve the skin texture & appearance. Additional benefits including glowing of the skin."
-        ]
+        ],
+        "category": "facials",
+        "slug": "micro-hydra-facials"
       },
       {
         "title": "Vitamin C Facial",
         "description": [
           "Opens channels to penetrate deeper into the skin, to increase skin’s collagen production to tighten, give fuller skin, and reduce wrinkle appearance.  Vitamin C helps fight aging of the skin, repair the damage caused by UV rays and helps smoothen the skin."
-        ]
+        ],
+        "category": "facials",
+        "slug": "vitamin-c-facials"
       },
       {
         "title": "Gold Facial",
         "description": [
           "Gold facials consist of glittering 24 K gold leaf facials, there are 2 different gold facials (Gold collagen facial, and 24k Gold leaf facial), so here at here at Rupi Brows & Esthetics Studio we combine both to get the best benefits from both products to help in reduction of wrinkles and fines lines making your skin look youthful.  It helps with improving with blood circulation, brighten your face, help with dullness from sun damage and it provides your skin with oxygen to which makes you look less tired."
-        ]
+        ],
+        "category": "facials",
+        "slug": "gold-facials"
       },
       {
         "title": "Skin Brightening Facial",
         "description": [
           "Skin Brightening facial helps with hyper pigmentation, evens out skin the skin tone, leaves the skin nourished, reduces blemishes and gets rid of dead skin cells to leave the skin smoother and radiant."
-        ]
+        ],
+        "category": "facials",
+        "slug": "skin-brightening-facials"
       },
       {
         "title": "Acne Reduction Facial",
         "description": [
           "Acne facials reduce the symptoms of Acne breakouts by deep pore cleaning of blackheads, white heads which help with acne, minor blemishes with skin impurities, unclogging pores, and reducing of oil production and inflammation of the skin."
-        ]
+        ],
+        "category": "facials",
+        "slug": "acne-reduction-facials"
       },
       {
         "title": "Anti-Aging Facial",
         "description": [
           "Facials for the mature skin which helps reduce the appearance of wrinkles, helps to penetrate the skin surface, and works to lift up the skin to improve the skin’s elasticity for face and neck to make the skin tighter and youthful."
-        ]
+        ],
+        "category": "facials",
+        "slug": "anti-aging-facials"
       },
       {
         "title": "Oxygen Infusion Facial",
         "description": [
           "Oxygen Facial uses oxygen to the improve the overall appearance of the skin. Oxygen facials increase the collogen production by increasing the cell turnover. Due the nature of Oxygen having anti-inflammatory properties, it will help reduce the appearance of Acne or Blemishes.  Many benefits include Hydration of the skin, reduction of blemishes and Acne, stimulate collagen production, and improve overall skin texture."
-        ]
+        ],
+        "category": "facials",
+        "slug": "oxygen-infusion-facials"
       }
     ]
   },
@@ -401,51 +450,75 @@
     "services": [
       {
         "title": "Bikini Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "bikini-waxing"
       },
       {
         "title": "Brazilian Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "brazilian-waxing"
       },
       {
         "title": "Butt Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "butt-waxing"
       },
       {
         "title": "Underarm Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "underarm-waxing"
       },
       {
         "title": "Half Arm Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "half-arm-waxing"
       },
       {
         "title": "Full Arm Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "full-arm-waxing"
       },
       {
         "title": "Upper Legs Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "upper-legs-waxing"
       },
       {
         "title": "Lower Legs Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "lower-legs-waxing"
       },
       {
         "title": "Full Legs Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "full-leg-waxing"
       },
       {
         "title": "Back Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "back-waxing"
       },
       {
         "title": "Stomach Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "stomach-waxing"
       },
       {
         "title": "Chest Waxing",
-        "description": [""]
+        "description": [""],
+        "category": "waxing",
+        "slug": "chest-waxing"
       }
     ]
   },
@@ -455,13 +528,17 @@
         "title": "Micro Needling",
         "description": [
           "A procedure that uses tiny needles to treat scars, large pores and wrinkles. It helps with Acne, dark spots, hyper pigmentation, large pores reduce skin elasticity, sun damage, and fine lines and wrinkles."
-        ]
+        ],
+        "category": "other",
+        "slug": "micro-needling"
       },
       {
         "title": "Pro Cell Therapy",
         "description": [
           "A non-invasive skin rejuvenating procedure which helps improve the appearance of fine line hyper pigmentation, acne scarring, aging, congested skin, wrinkles and help with the complexion to look brighter."
-        ]
+        ],
+        "category": "other",
+        "slug": "pro-cell-therapy"
       },
       {
         "title": "Chemical Peel",
@@ -469,31 +546,33 @@
           "It is a type chemical exfoliating that dissolves the bond between dead skin cells allowing them easily wipe away to reveal smoother , younger , healthier looking skin.",
           "Concerns: Fine line, sun damage, blackheads, clogged pores, acne marks and scars, age spots, uneven skin tone and hyper pigmentation.",
           "Results: Smoothness, radiance, clean skin, tightness, lifted appearance, balanced tone, softness, firmer skin."
-        ]
-      },
-      {
-        "title": "Brow lamination",
-        "description": [
-          "Brow lamination is almost like a perm for your eyebrows, it involves straightening and liftings of hair using a chemical solution which allows the hair fuller, thicker and feathery look."
-        ]
+        ],
+        "category": "other",
+        "slug": "chemical-peel"
       },
       {
         "title": "Lash Lift",
         "description": [
           "Lash lift is essentially perm for your lashes which gives the appearance of fuller, thicker and healthier look without leave on chemicals. It helps with the growth of lashes and last up to 4 -6 weeks with proper care."
-        ]
+        ],
+        "category": "other",
+        "slug": "lash-lift"
       },
       {
         "title": "Intense Pulse Light (IPL) Therapy",
         "description": [
           "Intense Pulse Light (IPL) is a cosmetic skin treatment may use to reduce the sign of aging or remove unwanted hair."
-        ]
+        ],
+        "category": "other",
+        "slug": "ipl-therapy"
       },
       {
         "title": "Laser Hair Removal",
         "description": [
           "Laser hair removal effectively removes unwanted hair by mean of exposure to the pulse of laser light that destroys the hair follicle. The effect last for several months or it might last for year. When hair regrows, it is usually finer and lighter in color."
-        ]
+        ],
+        "category": "other",
+        "slug": "laser-hair-removal"
       }
     ],
     "options": []
