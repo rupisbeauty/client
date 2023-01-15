@@ -31,18 +31,32 @@ export default services;
 export type ServiceDetails = {
   title: string;
   description: string[];
+  category: string;
+  slug: string;
   points?: string[];
 };
 
 export type Service = {
   services: ServiceDetails[];
-  options: string[];
+  options?: string[];
 };
 
 // export type Services = Record<string, Service>;
 export type Services = {
+  all: Service;
   eyebrows: Service;
   facials: Service;
   waxing: Service;
   other: Service;
+};
+
+export type AllServices = {
+  all: Services;
+};
+
+export type FinalAllService = {
+  title: string;
+  description: string[];
+  categories: string[];
+  slug: string;
 };
