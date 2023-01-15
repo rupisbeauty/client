@@ -1,7 +1,7 @@
 import { Box, Container } from '@chakra-ui/react';
 import Image from 'next/image';
 
-import { PageLayout, SectionTitle, ServiceCategory } from '@/components';
+import { PageLayout, SectionTitle, LegacyServiceCategory } from '@/components';
 
 import { CDN_URL, PEOPLE_DIR } from '@/utils';
 
@@ -22,7 +22,7 @@ const ServiceListPage = () => {
         </Box>
       </Container>
       {data.details.map((service, i) => (
-        <ServiceCategory
+        <LegacyServiceCategory
           key={service.title}
           service={service}
           flip={i % 2 === 0}
@@ -30,7 +30,7 @@ const ServiceListPage = () => {
       ))}
       <SectionTitle title="Body Waxing" />
       {data.waxingService?.map((service, i) => (
-        <ServiceCategory
+        <LegacyServiceCategory
           key={service.title}
           service={service}
           flip={i % 2 === 0}
