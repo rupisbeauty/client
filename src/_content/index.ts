@@ -49,3 +49,5 @@ export type Services = {
   waxing: Service;
   other: Service;
 };
+
+export type ServiceContent = Omit<ServiceDetails, 'points'>
