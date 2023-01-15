@@ -10,11 +10,11 @@ import {
 import Image from 'next/image';
 
 import type { FC } from 'react';
-import type { LegacyService } from './types';
+import type { LegacyService } from './_types';
 
 import { CDN_URL, PLACEHOLDER_DIR, SERVICES_DIR } from '../../utils/constants';
 
-export const ServiceCategory: FC<{
+export const LegacyServiceCategory: FC<{
   service: LegacyService | undefined;
   flip?: boolean;
 }> = ({ service, flip }) => (
