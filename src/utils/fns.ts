@@ -45,7 +45,7 @@ export function getUsernameFromEmail(
  * @params {string} key - key to flatten on
  * @returns {array} - of objects
  */
-export function flattenObjects<T, U>(arr: T[], key = 'label') {
+export function flattenArrayOfObjects<T, U>(arr: T[], key = 'label') {
   if (!arr?.length) throw new Error(`cannot flatten ${JSON.stringify(arr)}`);
   const object = arr?.reduce(
     // @ts-expect-error: item[key] - @TODO: implicit any - how to type?
