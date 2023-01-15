@@ -121,3 +121,18 @@ export function chunkArray(arr: any[], n: number) {
   }
   return chunks;
 }
+
+/**
+ * works well for simple strings. No language support
+ *
+ * @param {string} str
+ * @return {*}
+ */
+export function slugify(str: string) {
+  return str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}

@@ -11,7 +11,7 @@ const ServiceListPage = () => {
   return (
     <PageLayout title="Services" subtitle="Rupi Beauty Studio">
       <SectionTitle title="Rupi Signature Services" />
-      <Container w="full" maxW="container.lg" p={0} my={12}>
+      <Container as="section" w="full" maxW="container.lg" p={0} my={12}>
         <Box w="full" maxH="36vh" overflow="hidden" borderRadius="md">
           <Image
             src={`${CDN_URL}${PEOPLE_DIR}/beautiful-woman.jpg`}
