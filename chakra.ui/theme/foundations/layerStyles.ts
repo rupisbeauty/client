@@ -11,7 +11,8 @@ export const layerStyles: ChakraTheme['layerStyles'] = {
   },
   container: {
     width: 'full',
-    maxW: 'container.lg',
-    my: 12,
+    maxWidth: 'container.xl',
+    marginTop: 12,
+    marginBottom: 12,
   },
 };

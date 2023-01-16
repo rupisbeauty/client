@@ -1,7 +1,7 @@
 import { Box, Container } from '@chakra-ui/react';
 import Image from 'next/image';
 
-import { PageLayout, SectionTitle, LegacyServiceCategory } from '@/components';
+import { LegacyServiceCategory, PageLayout, SectionTitle } from '@/components';
 
 import { CDN_URL, PEOPLE_DIR } from '@/utils';
 
@@ -11,7 +11,7 @@ const ServiceListPage = () => {
   return (
     <PageLayout title="Services" subtitle="Rupi Beauty Studio">
       <SectionTitle title="Rupi Signature Services" />
-      <Container as="section" w="full" maxW="container.lg" p={0} my={12}>
+      <Container as="section" layerStyle="container" p={0}>
         <Box w="full" maxH="36vh" overflow="hidden" borderRadius="md">
           <Image
             src={`${CDN_URL}${PEOPLE_DIR}/beautiful-woman.jpg`}
