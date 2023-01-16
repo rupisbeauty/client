@@ -9,4 +9,9 @@ export const layerStyles: ChakraTheme['layerStyles'] = {
   border: {
     border: '1px solid red',
   },
+  container: {
+    width: 'full',
+    maxW: 'container.lg',
+    my: 12,
+  },
 };

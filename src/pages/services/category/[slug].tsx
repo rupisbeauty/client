@@ -4,21 +4,16 @@ import Image from 'next/image';
 import type {
   ServiceContent,
   ServiceDetails,
+  ServiceImages,
   Services,
-} from '@/_content/index';
+} from '@/_content';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 import { LicensedEmailCTA, PageLayout, SectionTitle } from '@/components';
 import { CustomIcon } from 'chakra.ui';
 
-import { CDN_URL, PEOPLE_DIR, slugify } from '@/utils';
-
-const container = {
-  w: 'full',
-  maxW: 'container.lg',
-  my: 12,
-  centerContent: true,
-};
+import { slugify } from '@/utils';
+import { getImages } from '@/_content';
 
 const ServiceCategory: NextPage<{
   services: ServiceDetails[];
@@ -26,20 +21,23 @@ const ServiceCategory: NextPage<{
   content: ServiceContent;
 }> = ({ services, category, content }) => {
   const icon = category === 'other' ? 'add' : category;
+
+  const { cover, accents } = getImages(category as keyof ServiceImages);
+
   return (
     <PageLayout title={category} subtitle="Rupi Beauty Studio">
       <SectionTitle title={content.title} />
-      <Container as="section" w="full" maxW="container.lg" p={0} my={12}>
+      <Container as="section" layerStyle="container" p={0}>
         <Box w="full" maxH="36vh" overflow="hidden" borderRadius="md">
           <Image
-            src={`${CDN_URL}${PEOPLE_DIR}/beautiful-woman.jpg`}
-            width={1600}
-            height={1200}
+            src={cover.src}
+            width={cover.width}
+            height={cover.height}
             alt="Beautiful woman | Image by valuavitaly on Freepik"
           />
         </Box>
       </Container>
-      <Container as="section" {...container}>
+      <Container as="section" layerStyle="container" centerContent>
         <HStack>
           <Box
             w="36"

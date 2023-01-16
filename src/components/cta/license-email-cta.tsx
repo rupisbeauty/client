@@ -17,13 +17,6 @@ import { ChImage, CustomIcon } from 'chakra.ui';
 import { bgOutline, BRAND_DIR, CDN_URL } from '@/utils';
 import images from '@/_content/images.json';
 
-const container = {
-  w: 'full',
-  maxW: 'container.lg',
-  my: 12,
-  centerContent: true,
-};
-
 const licenseImage = images.find(
   (img) => img.title.toLowerCase() === 'state licensed logo'
 );
@@ -41,7 +34,7 @@ const content = {
 export const LicensedEmailCTA: React.FC = () => {
   return (
     <Box as="section" my={24} bg="white" w="full" p={3} textAlign="center">
-      <Container {...container}>
+      <Container layerStyle="container" centerContent>
         <Heading as="h2" color="red.400" lineHeight={1.4} pt={6}>
           {content.title}
         </Heading>
