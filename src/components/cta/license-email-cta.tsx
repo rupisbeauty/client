@@ -10,6 +10,7 @@ import {
   InputGroup,
   InputLeftElement,
   InputRightAddon,
+  Stack,
   Text,
 } from '@chakra-ui/react';
 import { ChImage, CustomIcon } from 'chakra.ui';
@@ -42,7 +43,13 @@ export const LicensedEmailCTA: React.FC = () => {
           {content.subtitle}
         </Text>
 
-        <HStack w="full" backgroundImage={bgOutline} p={6} gap={12}>
+        <Stack
+          w="full"
+          direction={['column', null, 'row']}
+          backgroundImage={bgOutline}
+          p={[3, null, 6]}
+          gap={[6, null, 12]}
+        >
           <Box w="full" p={4}>
             <Heading
               as="h3"
@@ -82,7 +89,7 @@ export const LicensedEmailCTA: React.FC = () => {
               objectFit="contain"
             />
           </HStack>
-        </HStack>
+        </Stack>
       </Container>
     </Box>
   );

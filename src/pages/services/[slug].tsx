@@ -37,12 +37,7 @@ const ServiceCategory: NextPage<{
           />
         </Box>
       </Container>
-      <Container
-        as="section"
-        layerStyle="container"
-        // maxW="container.xl"
-        centerContent
-      >
+      <Container as="section" layerStyle="container" centerContent>
         <HStack>
           <Box
             w="36"
@@ -88,7 +83,6 @@ const ServiceCategory: NextPage<{
           );
         })}
       </Container>
-      <LicensedEmailCTA />
     </PageLayout>
   );
 };
