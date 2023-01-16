@@ -43,14 +43,13 @@ export const LicensedEmailCTA: React.FC = () => {
         </Text>
 
         <HStack w="full" backgroundImage={bgOutline} p={6} gap={12}>
-          <Box w="50%" p={4}>
+          <Box w="full" p={4}>
             <Heading
               as="h3"
               fontSize="2xl"
               lineHeight={2}
               py={3}
               color="red.400"
-              // textShadow="1px 3px 2px rgba(0,0,0,0.2)"
             >
               {content.cta.title}
             </Heading>
@@ -74,13 +73,15 @@ export const LicensedEmailCTA: React.FC = () => {
               </InputGroup>
             </FormControl>
           </Box>
-          <ChImage
-            src={`${CDN_URL}${BRAND_DIR}${licenseImage?.filename}`}
-            alt={`${licenseImage?.alt} | ${licenseImage?.attr}`}
-            width={300}
-            height={300}
-            objectFit="contain"
-          />
+          <HStack w="full" mx="auto" justify="center">
+            <ChImage
+              src={`${CDN_URL}${BRAND_DIR}${licenseImage?.filename}`}
+              alt={`${licenseImage?.alt} | ${licenseImage?.attr}`}
+              width={360}
+              height={360}
+              objectFit="contain"
+            />
+          </HStack>
         </HStack>
       </Container>
     </Box>
