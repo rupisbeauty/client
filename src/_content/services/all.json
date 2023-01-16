@@ -155,73 +155,97 @@
       },
       {
         "title": "Bikini Waxing",
-        "description": [""],
+        "description": [
+          "Our bikini waxing service is a quick and effective way to remove unwanted hair from the bikini area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "bikini-waxing"
       },
       {
         "title": "Brazilian Waxing",
-        "description": [""],
+        "description": [
+          "Our Brazilian waxing service is a quick and effective way to remove unwanted hair from the bikini area, including your more sensitive areas. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "brazilian-waxing"
       },
       {
         "title": "Butt Waxing",
-        "description": [""],
+        "description": [
+          "Our butt waxing service is a quick and effective way to remove unwanted hair from the buttocks area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks. "
+        ],
         "category": "waxing",
         "slug": "butt-waxing"
       },
       {
         "title": "Underarm Waxing",
-        "description": [""],
+        "description": [
+          "Our underarm waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "underarm-waxing"
       },
       {
         "title": "Half Arm Waxing",
-        "description": [""],
+        "description": [
+          "Our half arm waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "half-arm-waxing"
       },
       {
         "title": "Full Arm Waxing",
-        "description": [""],
+        "description": [
+          "Our full arm waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "full-arm-waxing"
       },
       {
         "title": "Upper Legs Waxing",
-        "description": [""],
+        "description": [
+          "Our upper-leg waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "upper-legs-waxing"
       },
       {
         "title": "Lower Legs Waxing",
-        "description": [""],
+        "description": [
+          "Our lower leg waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "lower-legs-waxing"
       },
       {
         "title": "Full Legs Waxing",
-        "description": [""],
+        "description": [
+          "Our full leg waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "full-leg-waxing"
       },
       {
         "title": "Back Waxing",
-        "description": [""],
+        "description": [
+          "Our back waxing service is a quick and effective way to remove unwanted hair from the back area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "back-waxing"
       },
       {
         "title": "Stomach Waxing",
-        "description": [""],
+        "description": [
+          "Our stomach waxing service is a quick and effective way to remove unwanted hair from the stomach area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "stomach-waxing"
       },
       {
         "title": "Chest Waxing",
-        "description": [""],
+        "description": [
+          "Our chest waxing service is a quick and effective way to remove unwanted hair from the stomach area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "chest-waxing"
       },
@@ -280,14 +304,6 @@
   },
   "eyebrows": {
     "services": [
-      {
-        "title": "Shaping of Eyebrows",
-        "description": [
-          "Eyebrow shaping can be done by waxing or threading technique to remove hair around the eyebrows and shape them to the face. Eyebrow tinting can be done to add a tint to the eyebrow to enhance the color of the eyebrows.  Eyebrow shaping, tinting, waxing or threading will emphasize your eyes, and enhance your facial features."
-        ],
-        "category": "eyebrows",
-        "slug": "shaping-of-eyebrows"
-      },
       {
         "title": "Threading",
         "description": [
@@ -450,73 +466,97 @@
     "services": [
       {
         "title": "Bikini Waxing",
-        "description": [""],
+        "description": [
+          "Our bikini waxing service is a quick and effective way to remove unwanted hair from the bikini area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "bikini-waxing"
       },
       {
         "title": "Brazilian Waxing",
-        "description": [""],
+        "description": [
+          "Our Brazilian waxing service is a quick and effective way to remove unwanted hair from the bikini area, including your more sensitive areas. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
-        "slug": "brazilian-waxing"
+        "slug": "bikini-waxing"
       },
       {
         "title": "Butt Waxing",
-        "description": [""],
+        "description": [
+          "Our butt waxing service is a quick and effective way to remove unwanted hair from the buttocks area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks. "
+        ],
         "category": "waxing",
         "slug": "butt-waxing"
       },
       {
         "title": "Underarm Waxing",
-        "description": [""],
+        "description": [
+          "Our underarm waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "underarm-waxing"
       },
       {
         "title": "Half Arm Waxing",
-        "description": [""],
+        "description": [
+          "Our half arm waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "half-arm-waxing"
       },
       {
         "title": "Full Arm Waxing",
-        "description": [""],
+        "description": [
+          "Our full arm waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "full-arm-waxing"
       },
       {
         "title": "Upper Legs Waxing",
-        "description": [""],
+        "description": [
+          "Our upper-leg waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "upper-legs-waxing"
       },
       {
         "title": "Lower Legs Waxing",
-        "description": [""],
+        "description": [
+          "Our lower leg waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "lower-legs-waxing"
       },
       {
         "title": "Full Legs Waxing",
-        "description": [""],
+        "description": [
+          "Our full leg waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
-        "slug": "full-leg-waxing"
+        "slug": "full-legs-waxing"
       },
       {
         "title": "Back Waxing",
-        "description": [""],
+        "description": [
+          "Our back waxing service is a quick and effective way to remove unwanted hair from the back area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "back-waxing"
       },
       {
         "title": "Stomach Waxing",
-        "description": [""],
+        "description": [
+          "Our stomach waxing service is a quick and effective way to remove unwanted hair from the stomach area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "stomach-waxing"
       },
       {
         "title": "Chest Waxing",
-        "description": [""],
+        "description": [
+          "Our chest waxing service is a quick and effective way to remove unwanted hair from the stomach area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+        ],
         "category": "waxing",
         "slug": "chest-waxing"
       }

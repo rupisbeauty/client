@@ -9,19 +9,28 @@
   },
   "facials": {
     "title": "Facials and Skin Care",
-    "description": [""],
+    "description": [
+      "Facials are a luxurious and relaxing way to care for your skin. Our estheticians will customize a facial to suit your individual needs, whether that's addressing specific skin concerns like acne or aging, or simply indulging in some well-deserved pampering."
+    ],
     "category": "facials",
     "slug": "facials-content"
   },
   "waxing": {
     "title": "Body Waxing",
-    "description": [""],
+    "description": [
+      "Waxing is a quick and effective way to remove unwanted hair from the face and body. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+    ],
+    "info": [
+      "It's recommended to exfoliate the area before the appointment and to avoid any kind of physical activity that may cause irritation after the service."
+    ],
     "category": "waxing",
     "slug": "waxing-content"
   },
   "other": {
     "title": "Extended Services",
-    "description": [""],
+    "description": [
+      "We also provide other cutting edge services that are great for everything from skin care to hair removal. Choose from one of our offerings or speak to our experts for a more personalized experience."
+    ],
     "category": "other",
     "slug": "other-content"
   }
