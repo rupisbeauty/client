@@ -21,4 +21,4 @@ export type NextComponentTypeWithAuth = NextComponentType & { auth?: boolean };
 export type Maybe = {
   string: string | null | undefined;
   number: string | null | undefined;
-}
+};
