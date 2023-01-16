@@ -50,4 +50,6 @@ export type Services = {
   other: Service;
 };
 
-export type ServiceContent = Omit<ServiceDetails, 'points'>
+export type ServiceContent = Omit<ServiceDetails, 'points'> & {
+  info?: string[];
+};
