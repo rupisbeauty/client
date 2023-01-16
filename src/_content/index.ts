@@ -53,3 +53,38 @@ export type Services = {
 export type ServiceContent = Omit<ServiceDetails, 'points'> & {
   info?: string[];
 };
+
+export type CDNImage = {
+  filename: string;
+  src: string;
+  alt: string;
+  attr: string;
+  width: number;
+  height: number;
+};
+
+export type ServiceImages = {
+  eyebrows: {
+    cover: CDNImage;
+    accents: CDNImage[];
+  };
+  facials: {
+    cover: CDNImage;
+    accents: CDNImage[];
+  };
+  waxing: {
+    cover: CDNImage;
+    accents: CDNImage[];
+  };
+  other: {
+    cover: CDNImage;
+    accents: CDNImage[];
+  };
+};
+
+export type DefaultServiceImages = {
+  cover: CDNImage;
+  accents: CDNImage[];
+}
+
+export * from './services/image-map';
