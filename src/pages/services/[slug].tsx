@@ -9,7 +9,7 @@ import type {
 } from '@/_content';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
-import { LicensedEmailCTA, PageLayout, SectionTitle } from '@/components';
+import { PageLayout, SectionTitle } from '@/components';
 import { CustomIcon } from 'chakra.ui';
 
 import { slugify } from '@/utils';
@@ -25,7 +25,7 @@ const ServiceCategory: NextPage<{
   const { cover, accents } = getImages(category as keyof ServiceImages);
 
   return (
-    <PageLayout title={category} subtitle="Rupi Beauty Studio">
+    <PageLayout title={category} subtitle="Rupi Beauty Studio" showCta>
       <SectionTitle title={content.title} />
       <Container as="section" layerStyle="container" p={0}>
         <Box w="full" maxH="36vh" overflow="hidden" borderRadius="md">
@@ -37,7 +37,12 @@ const ServiceCategory: NextPage<{
           />
         </Box>
       </Container>
-      <Container as="section" layerStyle="container" centerContent>
+      <Container
+        as="section"
+        layerStyle="container"
+        // maxW="container.xl"
+        centerContent
+      >
         <HStack>
           <Box
             w="36"
@@ -90,12 +95,15 @@ const ServiceCategory: NextPage<{
 export default ServiceCategory;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const serviceList = await import('@/_content/services/arg.json');
+  const serviceList = await (
+    await import('@/_content/services/arg.json')
+  ).default;
   const paths = Object.keys(serviceList).map((key) => {
     return {
       params: { slug: key },
     };
   });
+
   return {
     paths,
     fallback: false,
@@ -103,9 +111,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const serviceList = await import('@/_content/services/arg.json');
-  const content = await import('@/_content/services/intros.json');
-  console.log('cat', ctx.params?.slug);
+  const serviceList = await (
+    await import('@/_content/services/arg.json')
+  ).default;
+  const content = await (
+    await import('@/_content/services/intros.json')
+  ).default;
+
   return {
     props: {
       services:

@@ -136,3 +136,14 @@ export function slugify(str: string) {
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+
+/**
+ *
+ *
+ * @export
+ * @param {string} str
+ * @return {*}
+ */
+export function capitalize(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
