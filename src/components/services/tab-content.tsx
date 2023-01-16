@@ -7,7 +7,6 @@ import {
   TabPanel,
   Text,
 } from '@chakra-ui/react';
-import Link from 'next/link';
 
 import type { ServiceDetails, Services } from '@/_content/index';
 
@@ -50,7 +49,13 @@ export const TabPanelContent = ({
 }) => {
   return (
     <Collapse in={true} key={serviceKey}>
-      <TabPanel as={SimpleGrid} columns={3} maxH={'550px'} overflowY="scroll">
+      <TabPanel
+        as={SimpleGrid}
+        columns={[1, 2, 3]}
+        maxH={'550px'}
+        overflowY="scroll"
+        gap={3}
+      >
         {services.map((service) => {
           const currentServiceKey =
             serviceKey === 'all'
@@ -66,12 +71,11 @@ export const TabPanelContent = ({
               height="full"
               cursor="pointer"
             >
-              <Link href="#">
-                <NeonCard
-                  title={String(service.title)}
-                  category={currentServiceKey}
-                />
-              </Link>
+              <NeonCard
+                title={String(service.title)}
+                category={currentServiceKey}
+                slug={service.slug}
+              />
             </Box>
           );
         })}
