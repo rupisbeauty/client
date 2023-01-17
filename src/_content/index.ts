@@ -95,4 +95,5 @@ export type DefaultServiceImages = {
   accents: CDNImage[];
 };
 
+export * from './services/card-image-map';
 export * from './services/image-map';
