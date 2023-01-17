@@ -1,23 +1,19 @@
 import {
-  Badge,
-  Box,
-  Center,
-  Heading,
-  HStack,
-  Image,
-  Stack,
-  Text,
-  useColorModeValue,
+Badge,
+Box,
+Center,
+Heading,
+HStack,
+Image,
+useColorModeValue
 } from '@chakra-ui/react';
 import Link from 'next/link';
 
-import type { Services } from '@/_content';
+import type { ServiceCategories,Services } from '@/_content';
 import type { FC } from 'react';
 
+import { getCardImages } from '@/_content';
 import { MotionBox } from 'chakra.ui';
-
-const IMAGE =
-  'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80';
 
 const categoryScheme: Record<keyof Services, string> = {
   all: 'purple',
@@ -29,9 +25,11 @@ const categoryScheme: Record<keyof Services, string> = {
 
 export const NeonCard: FC<{
   title: string;
-  category: keyof Services;
+  category: keyof ServiceCategories;
   slug: string;
 }> = ({ title, category, slug }) => {
+  const cardImage = getCardImages(category, slug);
+
   return (
     <Center as={MotionBox} py={12} cursor="pointer" whileHover={{ scale: 1.1 }}>
       <Box
@@ -59,7 +57,7 @@ export const NeonCard: FC<{
               pos: 'absolute',
               top: 5,
               left: 0,
-              backgroundImage: `url(${IMAGE})`,
+              backgroundImage: `url(${cardImage})`,
               filter: 'blur(15px)',
               zIndex: -1,
             }}
@@ -75,7 +73,7 @@ export const NeonCard: FC<{
               height={115}
               width={282}
               objectFit={'cover'}
-              src={IMAGE}
+              src={cardImage}
             />
           </Box>
           <Heading

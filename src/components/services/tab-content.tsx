@@ -8,7 +8,12 @@ import {
   Text,
 } from '@chakra-ui/react';
 
-import type { ServiceDetails, Services } from '@/_content/index';
+import type {
+  ServiceCategories,
+  ServiceDetails,
+  ServiceImages,
+  Services,
+} from '@/_content';
 
 import { NeonCard } from '@/components';
 import { CustomIcon } from 'chakra.ui';
@@ -44,11 +49,11 @@ export const TabPanelContent = ({
   serviceKey,
   services,
 }: {
-  serviceKey: keyof Services;
+  serviceKey: keyof Services | keyof ServiceImages;
   services: ServiceDetails[];
 }) => {
   return (
-    <Collapse in={true} key={serviceKey}>
+    <Collapse in={true} key={String(serviceKey)}>
       <TabPanel
         as={SimpleGrid}
         columns={[1, 2, 3]}
@@ -59,8 +64,8 @@ export const TabPanelContent = ({
         {services.map((service) => {
           const currentServiceKey =
             serviceKey === 'all'
-              ? (service.category as keyof Services)
-              : (serviceKey as keyof Services);
+              ? (service.category as keyof ServiceCategories | keyof ServiceImages)
+              : (serviceKey as keyof ServiceCategories);
           return (
             <Box
               key={service.title}
