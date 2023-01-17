@@ -97,3 +97,4 @@ export type DefaultServiceImages = {
 
 export * from './services/card-image-map';
 export * from './services/image-map';
+export * from "./services/category-color-scheme"

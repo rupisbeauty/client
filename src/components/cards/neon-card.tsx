@@ -1,27 +1,19 @@
 import {
-Badge,
-Box,
-Center,
-Heading,
-HStack,
-Image,
-useColorModeValue
+  Badge,
+  Box,
+  Center,
+  Heading,
+  HStack,
+  Image,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 
-import type { ServiceCategories,Services } from '@/_content';
+import type { ServiceCategories } from '@/_content';
 import type { FC } from 'react';
 
-import { getCardImages } from '@/_content';
+import { categoryColorScheme, getCardImages } from '@/_content';
 import { MotionBox } from 'chakra.ui';
-
-const categoryScheme: Record<keyof Services, string> = {
-  all: 'purple',
-  eyebrows: 'teal',
-  facials: 'blue',
-  waxing: 'green',
-  other: 'red',
-};
 
 export const NeonCard: FC<{
   title: string;
@@ -93,7 +85,7 @@ export const NeonCard: FC<{
           pt={6}
           href={`/services/${category}`}
         >
-          <Badge colorScheme={String(categoryScheme[category])}>
+          <Badge colorScheme={String(categoryColorScheme[category])}>
             {category}
           </Badge>
         </HStack>
