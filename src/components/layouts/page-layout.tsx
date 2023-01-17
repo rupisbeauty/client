@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo';
 import type { LayoutProps } from 'chakra.ui/';
 import type { FC } from 'react';
 
-import { LicensedEmailCTA, SocialShare } from '@/components';
+import { LicensedEmailCTA, SectionTitle, SocialShare } from '@/components';
 import {
   Footer,
   Header,
@@ -22,6 +22,7 @@ export const PageLayout: FC<LayoutProps> = ({
   subtitle = '',
   description = '',
   showCta = false,
+  showReviews = false,
   children,
 }) => {
   const displayHeader = layout?.structure?.header.show !== 'false';
@@ -33,10 +34,13 @@ export const PageLayout: FC<LayoutProps> = ({
       <SocialShare twitter facebook pinterest />
       <Sidebar />
       {displayHeader && <Header />}
-      <Main displayHeader={displayHeader}>
-        {children}
-        {showCta ? <LicensedEmailCTA /> : null}
-      </Main>
+      <Main displayHeader={displayHeader}>{children}</Main>
+      {showCta ? <LicensedEmailCTA /> : null}
+      {showReviews ? (
+        <Box id="reviews" pt={16}>
+          <SectionTitle title="Our Reviews" />
+        </Box>
+      ) : null}
       {displayFooter && <Footer />}
     </>
   );

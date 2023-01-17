@@ -34,7 +34,7 @@ const content = {
 
 export const LicensedEmailCTA: React.FC = () => {
   return (
-    <Box as="section" my={24} bg="white" w="full" p={3} textAlign="center">
+    <Box as="section" mt={24} bg="white" w="full" p={3} textAlign="center">
       <Container layerStyle="container" centerContent>
         <Heading as="h2" color="red.400" lineHeight={1.4} pt={6}>
           {content.title}

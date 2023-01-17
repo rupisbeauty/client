@@ -3,5 +3,6 @@ export type LayoutProps = {
   subtitle?: string;
   description?: string;
   showCta?: boolean;
+  showReviews?: boolean;
   children: React.ReactNode;
 };

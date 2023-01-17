@@ -1,5 +1,3 @@
-import { Box } from '@chakra-ui/react';
-
 import type { NextPage } from 'next';
 
 import {
@@ -8,23 +6,18 @@ import {
   CoreServices,
   Hero,
   PageLayout,
-  SectionTitle,
   VisitLocationCTA,
 } from '@/components';
 
 const Sandbox: NextPage = () => {
   return (
-    <PageLayout title="Rupi Beauty Studio">
+    <PageLayout title="Rupi Beauty Studio" showCta showReviews>
       <Hero />
       <VisitLocationCTA title="Come Visit Us At Our Newest Location" />
       <About />
 
       <CoreServices />
       <ContactInfo />
-      <Box id="reviews" bg="white" pt={16}>
-        <SectionTitle title="Our Reviews" />
-        {/* <Box data-trustmary-widget="CIUJC3KSW" /> */}
-      </Box>
     </PageLayout>
   );
 };
