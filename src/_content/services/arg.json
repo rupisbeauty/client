@@ -13,17 +13,10 @@
         "title": "Waxing",
         "description": [
           "Waxing is a process of hair removal; that use strip wax or hard wax to effectively to remove the hair from the roots, to leave the skin smooth and even.  Waxing can be done on face which includes eyebrows, upper lip, chin, neck sideburns, forehead, nose, and inside nose and ears. It can be used on body as well, for bikini, Brazilian, feet, leg, arms, hands, underarms, buttocks, back, neck, chest, nipple.",
-          "Men’s bikini and Brazilian can be done as well.",
-          "Facial overall in skin cleaning process in which we exfoliate, apply steam treatment, remove blackheads, apply scrubs, mask to cleanse the skin to reduce acne, wrinkles, giving you an overall healthy skin to radiate the skin."
+          "Men’s bikini and Brazilian can be done as well."
         ],
         "category": "eyebrows",
         "slug": "waxing"
-      },
-      {
-        "title": "Tinting",
-        "description": ["Enhances the color of the eyebrows"],
-        "category": "eyebrows",
-        "slug": "tinting"
       },
       {
         "title": "Brow lamination",
@@ -32,6 +25,12 @@
         ],
         "category": "eyebrows",
         "slug": "brow-lamination"
+      },
+      {
+        "title": "Tinting",
+        "description": ["Enhances the color of the eyebrows"],
+        "category": "eyebrows",
+        "slug": "tinting"
       }
     ],
     "options": [

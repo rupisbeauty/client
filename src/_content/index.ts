@@ -1,3 +1,4 @@
+import type { ImageProps } from '@chakra-ui/react';
 import serviceDescriptions from './services/descriptions.json';
 import servicesList from './services/list.json';
 
@@ -63,6 +64,11 @@ export type CDNImage = {
   attr: string;
   width: number;
   height: number;
+  dimensions?: {
+    width: number;
+    height: number;
+  };
+  styles?: Pick<ImageProps, 'objectFit' | 'objectPosition' | 'transform'>;
 };
 
 export type ServiceImages = {
@@ -87,6 +93,6 @@ export type ServiceImages = {
 export type DefaultServiceImages = {
   cover: CDNImage;
   accents: CDNImage[];
-}
+};
 
 export * from './services/image-map';
