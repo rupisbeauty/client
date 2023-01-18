@@ -1,6 +1,4 @@
-import { Hero } from '@/components/home-page';
-import { ComingSoon } from '@/components/home-page/coming-soon';
-import { PageLayout } from 'chakra.ui';
+import { ComingSoon, Hero, PageLayout } from '@/components';
 import { type NextPage } from 'next';
 import { isDev } from '../utils/constants';
 
