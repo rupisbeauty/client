@@ -32,18 +32,6 @@
         "category": "eyebrows",
         "slug": "tinting"
       }
-    ],
-    "options": [
-      "Eyebrows",
-      "Lip",
-      "Lower-Lip",
-      "Chin",
-      "Chin + Lower C",
-      "Sides",
-      "Neck",
-      "Full Face",
-      "Nose(Inside)",
-      "Nose(Outside)"
     ]
   },
   "facials": {
@@ -168,23 +156,6 @@
         "category": "facials",
         "slug": "oxygen-infusion-facial"
       }
-    ],
-    "options": [
-      "Teen",
-      "Express",
-      "Traditional",
-      "Back",
-      "Detoxifying",
-      "LED Light",
-      "Microdermabrasion",
-      "Dermaplaning",
-      "Micro Hydra",
-      "Vitamin C",
-      "Gold",
-      "Skin Brightening",
-      "Acne Reduction",
-      "Anti-Aging",
-      "Oxygen Infused"
     ]
   },
   "waxing": {
@@ -285,20 +256,6 @@
         "category": "waxing",
         "slug": "chest-waxing"
       }
-    ],
-    "options": [
-      "Bikini",
-      "Brazilian",
-      "Butt",
-      "Underarm",
-      "Half Arm",
-      "Full Arm",
-      "Upper Legs",
-      "Lower Legs",
-      "Full Legs",
-      "Back",
-      "Stomach",
-      "Chest"
     ]
   },
   "other": {

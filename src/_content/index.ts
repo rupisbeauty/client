@@ -2,30 +2,6 @@ import type { ImageProps } from '@chakra-ui/react';
 import serviceDescriptions from './services/descriptions.json';
 import servicesList from './services/list.json';
 
-export type ServicesList = {
-  title: string;
-  options: string[];
-  other?: string[];
-};
-
-export type Description = {
-  title: string;
-  description: string[];
-  points?: string[];
-  other?: string[];
-};
-
-export type ServiceDescriptions = Record<string, Description[]>;
-
-export type Image = {
-  title: string;
-  filename: string;
-  width: number;
-  height: number;
-  alt: string;
-  attr: string;
-};
-
 const services = { servicesList, serviceDescriptions };
 export default services;
 
@@ -39,7 +15,6 @@ export type ServiceDetails = {
 
 export type Service = {
   services: ServiceDetails[];
-  options: string[];
 };
 
 // export type Services = Record<string, Service>;
@@ -95,6 +70,6 @@ export type DefaultServiceImages = {
 };
 
 export * from './services/card-image-map';
+export * from './services/category-color-scheme';
 export * from './services/image-map';
 export * from './services/images';
-export * from "./services/category-color-scheme"

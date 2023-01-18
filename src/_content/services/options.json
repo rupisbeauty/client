@@ -1,0 +1,28 @@
+{
+  "eyebrows": [
+    "Eyebrows",
+    "Lip",
+    "Lower-Lip",
+    "Chin",
+    "Chin + Lower C",
+    "Sides",
+    "Neck",
+    "Full Face",
+    "Nose(Inside)"
+  ],
+  "facials": [],
+  "waxing": [
+    "Bikini",
+    "Brazilian",
+    "Butt",
+    "Underarm",
+    "Half Arm",
+    "Full Arm",
+    "Upper Legs",
+    "Lower Legs",
+    "Full Legs",
+    "Back",
+    "Stomach",
+    "Chest"
+  ]
+}
