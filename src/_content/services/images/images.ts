@@ -1,11 +1,13 @@
-import type { CDNImage, ServiceCategories } from '..';
+import type { CDNImage, ServiceCategories } from '../../index';
 
 import { CDN_URL, PEOPLE_DIR, SERVICES_DIR } from '@/utils';
 
-export const allImagesMap: Record<
+export type AllImagesMap = Record<
   keyof ServiceCategories,
   Record<string, CDNImage>
-> = {
+>;
+
+export const allImagesMap: AllImagesMap = {
   eyebrows: {
     'eyebrow-threading': {
       src: `${CDN_URL}/${SERVICES_DIR}/eyebrow-threading.webp`,
@@ -141,7 +143,7 @@ export const allImagesMap: Record<
         height: 1280,
       },
     },
-    "dermaplaning-facial": {
+    'dermaplaning-facial': {
       src: `${CDN_URL}/${SERVICES_DIR}/dermaplaning.webp`,
       alt: 'Professional dermaplaning services',
       attr: '',
@@ -476,4 +478,11 @@ export const allImagesMap: Record<
       },
     },
   },
+};
+
+export type ImageTitleKeys = {
+  eyebrows: keyof AllImagesMap['eyebrows'];
+  facials: keyof AllImagesMap['facials'];
+  waxing: keyof AllImagesMap['waxing'];
+  other: keyof AllImagesMap['other'];
 };

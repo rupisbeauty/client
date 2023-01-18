@@ -16,7 +16,7 @@ import {
 import { ChImage, CustomIcon } from 'chakra.ui';
 
 import { BRAND_DIR, CDN_URL } from '@/utils';
-import images from '@/_content/images.json';
+import images from '@/_content/services/images/images.json';
 
 const licenseImage = images.find(
   (img) => img.title.toLowerCase() === 'state licensed logo'

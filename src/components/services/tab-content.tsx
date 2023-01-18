@@ -15,7 +15,7 @@ import type {
   Services,
 } from '@/_content';
 
-import { NeonCard } from '@/components';
+import { ServiceListingCard } from '@/components';
 import { CustomIcon } from 'chakra.ui';
 
 export const TabMenu: React.FC<{ items: string[] }> = ({ items }) => {
@@ -76,7 +76,7 @@ export const TabPanelContent = ({
               height="full"
               cursor="pointer"
             >
-              <NeonCard
+              <ServiceListingCard
                 title={String(service.title)}
                 category={currentServiceKey}
                 slug={service.slug}

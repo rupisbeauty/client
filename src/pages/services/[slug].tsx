@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   Heading,
   HStack,
@@ -22,7 +23,7 @@ import { PageLayout, SectionTitle, ServicesCoverImage } from '@/components';
 import { ChImage, CircleBgIcon } from 'chakra.ui';
 
 import { capitalize, chunkArray, slugify } from '@/utils';
-import { getImages, ServiceCategories } from '@/_content';
+import { getImages } from '@/_content';
 
 const SeperatorImage: React.FC<{ image: CDNImage | undefined }> = ({
   image,
@@ -40,25 +41,34 @@ const SeperatorImage: React.FC<{ image: CDNImage | undefined }> = ({
   );
 };
 
+/**
+ * @NOTE: this is mainly used by '/services/[category]/[slug]' page
+ *  used renders a service card for each service in the specific category
+ *
+ */
 const ServiceCategoryCard: React.FC<{
   service: ServiceDetails;
   category: keyof Services;
 }> = ({ service, category }) => {
   return (
     <Link href={`/services/${category}/${service.slug}`}>
-      <Box w="full" p={6} bg="white" rounded="lg" gap={3}>
+      <Box w="full" p={6} bg="white" rounded="lg" gap={3} shadow="base">
         <Heading as="h2" my={6} textTransform="capitalize">
           {service.title}
         </Heading>
         <Text
           key={slugify(String(service?.description[0]?.substring(0, 8)))}
-          py={2}
+          pt={2}
           fontSize="lg"
           fontWeight="normal"
           lineHeight={1.6}
+          noOfLines={3}
         >
           {service.description[0]}
         </Text>
+        <HStack justify="flex-end" mt={6}>
+          <Button>View Details</Button>
+        </HStack>
       </Box>
     </Link>
   );

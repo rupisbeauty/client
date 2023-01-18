@@ -1,4 +1,4 @@
-import type { DefaultServiceImages, ServiceImages } from '..';
+import type { DefaultServiceImages, ServiceImages } from '../..';
 
 import { CDN_URL, PEOPLE_DIR, SERVICES_DIR } from '@/utils';
 

@@ -1,1 +1,1 @@
-export * from "./neon-card"
+export * from "./service-listing-card"

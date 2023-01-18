@@ -1,5 +1,3 @@
-import { PageLayout } from '@/components';
-import { capitalize } from '@/utils';
 import type { ServiceCategories } from '@/_content';
 import type {
   GetStaticPaths,
@@ -9,14 +7,23 @@ import type {
   NextPage,
 } from 'next';
 
+import { PageLayout, SectionTitle, ServicesCoverImage } from '@/components';
+
+import { capitalize } from '@/utils';
+import { getCardImages } from '@/_content';
+
 type ServiceDetailsPageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 const ServiceDetailPage: NextPage = ({
   service,
   path,
 }: ServiceDetailsPageProps) => {
+  const image = getCardImages(path[0] as keyof ServiceCategories, service.slug);
+
   return (
-    <PageLayout title={capitalize(path[1])}>
+    <PageLayout title={capitalize(path[1])} description={service.description}>
+      <SectionTitle title={capitalize(path[1])} />
+      <ServicesCoverImage cover={image} />
       {JSON.stringify(service)}: {JSON.stringify(path)}
     </PageLayout>
   );

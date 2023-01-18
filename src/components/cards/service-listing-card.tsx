@@ -4,7 +4,6 @@ import {
   Center,
   Heading,
   HStack,
-  Image,
   useColorModeValue,
 } from '@chakra-ui/react';
 import Link from 'next/link';
@@ -13,13 +12,15 @@ import type { ServiceCategories } from '@/_content';
 import type { FC } from 'react';
 
 import { categoryColorScheme, getCardImages } from '@/_content';
-import { MotionBox } from 'chakra.ui';
+import { ChImage, MotionBox } from 'chakra.ui';
 
-export const NeonCard: FC<{
+export const ServiceListingCard: FC<{
   title: string;
   category: keyof ServiceCategories;
   slug: string;
 }> = ({ title, category, slug }) => {
+  const image = getCardImages(category, slug);
+  // console.log('🚀 | file: service-listing-card.tsx:23 | image', image);
   return (
     <Center as={MotionBox} py={12} cursor="pointer" whileHover={{ scale: 1.1 }}>
       <Box
@@ -47,23 +48,23 @@ export const NeonCard: FC<{
               pos: 'absolute',
               top: 5,
               left: 0,
-              backgroundImage: `url(${getCardImages(category, slug).src})`,
+              backgroundImage: `url(${image.src})`,
               filter: 'blur(15px)',
               zIndex: -1,
             }}
             _groupHover={{
               _after: {
-                filter: 'blur(20px)',
+                filter: 'blur(10px)',
               },
             }}
           >
-            <Image
+            <ChImage
               alt=""
               rounded={'lg'}
               height={115}
               width={282}
               objectFit={'cover'}
-              src={getCardImages(category, slug).src}
+              src={image.src}
             />
           </Box>
           <Heading
@@ -72,6 +73,7 @@ export const NeonCard: FC<{
             fontSize={'2xl'}
             fontFamily={'body'}
             fontWeight={500}
+            noOfLines={1}
           >
             {title}
           </Heading>

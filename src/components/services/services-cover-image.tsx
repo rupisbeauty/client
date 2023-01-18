@@ -13,6 +13,7 @@ export const ServicesCoverImage: React.FC<{ cover: CDNImage }> = ({ cover }) => 
           height={cover.height}
           alt={cover.alt + ' | ' + cover.attr}
           {...cover.styles}
+          priority
         />
       </Box>
     </Container>
