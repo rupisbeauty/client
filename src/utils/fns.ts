@@ -57,6 +57,27 @@ export function flattenArrayOfObjects<T, U>(arr: T[], key = 'label') {
 }
 
 /**
+ * chunk a flat array into groups based in the provided value for n
+ *
+ * @export
+ * @param {any[]} arr
+ * @param {number} n
+ * @param {number} [min=1]
+ * @return {*}
+ */
+export function chunkArray(arr: any[], n: number, min = 1) {
+  if (arr.length < min) return arr;
+  const chunkLength = Math.max(arr.length / n, 1);
+  const chunks = [];
+  for (let i = 0; i < n; i++) {
+    if (chunkLength * (i + 1) <= arr.length)
+      chunks.push(arr.slice(chunkLength * i, chunkLength * (i + 1)));
+  }
+  return chunks;
+}
+
+
+/**
  *
  *
  * @export
@@ -103,24 +124,6 @@ export const randomConditional = (
   probability: number,
   { truthy, falsy }: { truthy: any; falsy: any }
 ): any => (Math.random() >= probability ? truthy : falsy);
-
-/**
- * chunk a flat array into groups based in the provided value for n
- *
- * @export
- * @param {any[]} arr
- * @param {number} n
- * @return {*}
- */
-export function chunkArray(arr: any[], n: number) {
-  const chunkLength = Math.max(arr.length / n, 1);
-  const chunks = [];
-  for (let i = 0; i < n; i++) {
-    if (chunkLength * (i + 1) <= arr.length)
-      chunks.push(arr.slice(chunkLength * i, chunkLength * (i + 1)));
-  }
-  return chunks;
-}
 
 /**
  * works well for simple strings. No language support
