@@ -2,7 +2,7 @@
   "eyebrows": {
     "services": [
       {
-        "title": "Threading",
+        "title": "Brow Threading",
         "description": [
           "Remove facial hair by using cotton thread to quickly grab and pull hair by the roots. It is a great way to shape eyebrows and also be used to quickly remove any facials hairs like forehead, upper lip, chin, neck, sides, side burns, eyebrows."
         ],
@@ -10,7 +10,7 @@
         "slug": "threading"
       },
       {
-        "title": "Waxing",
+        "title": "Brow Waxing",
         "description": [
           "Waxing is a process of hair removal; that use strip wax or hard wax to effectively to remove the hair from the roots, to leave the skin smooth and even.  Waxing can be done on face which includes eyebrows, upper lip, chin, neck sideburns, forehead, nose, and inside nose and ears. It can be used on body as well, for bikini, Brazilian, feet, leg, arms, hands, underarms, buttocks, back, neck, chest, nipple.",
           "Men’s bikini and Brazilian can be done as well."
@@ -27,7 +27,7 @@
         "slug": "brow-lamination"
       },
       {
-        "title": "Tinting",
+        "title": "Brow Tinting",
         "description": ["Enhances the color of the eyebrows"],
         "category": "eyebrows",
         "slug": "tinting"
