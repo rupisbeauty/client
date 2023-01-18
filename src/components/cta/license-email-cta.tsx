@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { ChImage, CustomIcon } from 'chakra.ui';
 
-import { bgOutline, BRAND_DIR, CDN_URL } from '@/utils';
+import { BRAND_DIR, CDN_URL } from '@/utils';
 import images from '@/_content/images.json';
 
 const licenseImage = images.find(
@@ -46,9 +46,12 @@ export const LicensedEmailCTA: React.FC = () => {
         <Stack
           w="full"
           direction={['column', null, 'row']}
-          backgroundImage={bgOutline}
+          mt={12}
           p={[3, null, 6]}
           gap={[6, null, 12]}
+          border="6px dashed"
+          borderColor="red.200"
+          borderRadius="10px"
         >
           <Box w="full" p={4}>
             <Heading
@@ -65,7 +68,7 @@ export const LicensedEmailCTA: React.FC = () => {
             </Text>
             <FormControl>
               <FormLabel htmlFor="email" color="gray.600">
-                Email
+                Enter Your Email
               </FormLabel>
               <InputGroup>
                 <InputLeftElement mt={1}>
@@ -74,6 +77,7 @@ export const LicensedEmailCTA: React.FC = () => {
                 <Input type="email" placeholder="you@youremail.com" />
                 <InputRightAddon p={0} borderRadius="lg">
                   <Button type="submit" w="full" colorScheme="green">
+                    {/* @TODO: add onclick handler */}
                     Submit
                   </Button>
                 </InputRightAddon>

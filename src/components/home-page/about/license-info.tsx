@@ -2,7 +2,6 @@ import { Box, chakra } from '@chakra-ui/react';
 
 import type { FC } from 'react';
 
-import { bgOutline } from '@/utils';
 import about from '__data/site/pages/home/about.json';
 
 export const LicenseInfo: FC = () => (
@@ -10,13 +9,14 @@ export const LicenseInfo: FC = () => (
     <chakra.p
       fontSize={{ base: 'xl', md: '3xl' }}
       fontWeight="bold"
-      borderRadius="lg"
       px={12}
       py={4}
       my={{ base: 9, md: 0 }}
       textAlign="center"
       letterSpacing="wide"
-      backgroundImage={bgOutline}
+      border="6px dashed"
+      borderColor="red.200"
+      borderRadius="10px"
     >
       <chakra.span color="green.600" fontWeight={700}>
         {about.subtitleEm}

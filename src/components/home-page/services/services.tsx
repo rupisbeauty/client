@@ -1,9 +1,8 @@
-import { Container, Grid } from '@chakra-ui/react';
+import { Container,Grid } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 
 import type { FC } from 'react';
 
-import { bgOutline } from '@/utils';
 import { SectionTitle } from '../../section-title';
 import { MoreBox } from './more-box';
 import { ServiceBox } from './service-box';
@@ -40,7 +39,9 @@ export const CoreServices: FC = () => {
             lg: 'auto auto auto',
           }}
           justifyContent="center"
-          backgroundImage={bgOutline}
+          border="6px dashed"
+          borderColor="red.200"
+          borderRadius="10px"
         >
           {serviceImages.map((image) => (
             <ServiceBox key={image.fileName} image={image} />
