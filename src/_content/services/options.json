@@ -8,8 +8,17 @@
     "Sides",
     "Neck",
     "Full Face",
-    "Nose(Inside)"
+    "Nose(Inside)",
+    "Nose(Outside)"
   ],
+  "tinting": {
+    "options": ["Eyebrows + Tint", "Brow Tint", "Lash Tint"],
+    "packages": [
+      "Lash Lift + Tint",
+      "Brow Lamination + Shaping + Tinting",
+      "Lash Lift + Brow Lamination"
+    ]
+  },
   "facials": [],
   "waxing": [
     "Bikini",
