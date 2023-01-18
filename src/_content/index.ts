@@ -58,7 +58,6 @@ export type ServiceContent = Omit<ServiceDetails, 'points'> & {
 };
 
 export type CDNImage = {
-  filename: string;
   src: string;
   alt: string;
   attr: string;
@@ -97,4 +96,5 @@ export type DefaultServiceImages = {
 
 export * from './services/card-image-map';
 export * from './services/image-map';
+export * from './services/images';
 export * from "./services/category-color-scheme"

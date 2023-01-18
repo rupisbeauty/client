@@ -20,8 +20,6 @@ export const NeonCard: FC<{
   category: keyof ServiceCategories;
   slug: string;
 }> = ({ title, category, slug }) => {
-  const cardImage = getCardImages(category, slug);
-
   return (
     <Center as={MotionBox} py={12} cursor="pointer" whileHover={{ scale: 1.1 }}>
       <Box
@@ -49,7 +47,7 @@ export const NeonCard: FC<{
               pos: 'absolute',
               top: 5,
               left: 0,
-              backgroundImage: `url(${cardImage})`,
+              backgroundImage: `url(${getCardImages(category, slug).src})`,
               filter: 'blur(15px)',
               zIndex: -1,
             }}
@@ -65,7 +63,7 @@ export const NeonCard: FC<{
               height={115}
               width={282}
               objectFit={'cover'}
-              src={cardImage}
+              src={getCardImages(category, slug).src}
             />
           </Box>
           <Heading

@@ -1,56 +1,61 @@
+import type { CDNImage, ServiceCategories, ServiceImages } from '..';
+
 import { CDN_URL, PEOPLE_DIR, SERVICES_DIR } from '@/utils';
 import { getImages } from '@/_content';
-import type { ServiceCategories, ServiceImages } from '..';
+import { allImagesMap } from '@/_content/services/images';
 
 // create a type for this image map
 export type CategoryCardImages = Record<
   keyof ServiceCategories,
-  Record<string, string>
+  Record<string, CDNImage | undefined>
 >;
+
 export const serviceCardImageMap: CategoryCardImages = {
   eyebrows: {
-    threading: `${CDN_URL}/${SERVICES_DIR}/eyebrow-threading.webp`,
-    waxing: `${CDN_URL}/${SERVICES_DIR}/eyebrow-waxing.webp`,
-    'brow-lamination': `${CDN_URL}/${SERVICES_DIR}/brow-lamination.webp`,
-    tinting: `${CDN_URL}/${SERVICES_DIR}/brow-tinting.webp`,
+    threading: allImagesMap?.eyebrows['eyebrow-threading'],
+    waxing: allImagesMap?.eyebrows['eyebrow-waxing'],
+    'brow-lamination': allImagesMap?.eyebrows['brow-lamination'],
+    tinting: allImagesMap?.eyebrows['brow-tinting'],
   },
   facials: {
-    'teen-facial': `${CDN_URL}/${PEOPLE_DIR}/woman-touching-face.webp`,
-    // "express-facial": `${CDN_URL}/${SERVICES_DIR}/facial2.webp`,
-    // "traditional-facial": `${CDN_URL}/${SERVICES_DIR}/facial.webp`,
-    'soothing-facial': `${CDN_URL}/${SERVICES_DIR}/woman-looking-back.webp`,
-    // "detoxifying-facial": `${CDN_URL}/${SERVICES_DIR}/facial.webp`,
-    'led-light-facial': `${CDN_URL}/${SERVICES_DIR}/micro-needling.webp`,
-    microdermabrasion: `${CDN_URL}/${SERVICES_DIR}/micro-needling.webp`,
-    'dermaplaning-facial': `${CDN_URL}/${SERVICES_DIR}/dermaplaning.webp`,
-    'micro-hydra-facial': `${CDN_URL}/${SERVICES_DIR}/micro-needling.webp`,
-    // "vitamin-c-facial": `${CDN_URL}/${SERVICES_DIR}/facial.webp`,
-    'gold-facial': `${CDN_URL}/${SERVICES_DIR}/gold-facial.webp`,
-    // "skin-brightening-facial": `${CDN_URL}/${SERVICES_DIR}/facial.webp`,
-    'acne-reduction-facial': `${CDN_URL}/${PEOPLE_DIR}/woman-touching-face.webp`,
-    'anti-aging-facial': `${CDN_URL}/${PEOPLE_DIR}/older-woman-anti-aging.webp`,
-    'oxygen-infusion-facial': `${CDN_URL}/${SERVICES_DIR}/oxygen-infusion-facial.webp`,
+    'teen-facial': allImagesMap?.facials['woman-touching-face'],
+    'express-facial': allImagesMap?.facials['facial2'],
+    'traditional-facial': allImagesMap?.facials['facial'],
+    'soothing-back-facial': allImagesMap?.facials['woman-looking-back'],
+    'detoxifying-facial': allImagesMap?.facials['facial'],
+    'led-light-facial': allImagesMap?.facials['micro-needling'],
+    microdermabrasion: allImagesMap?.facials['micro-needling'],
+    'dermaplaning-facial': allImagesMap?.facials['dermaplaning'],
+    'micro-hydra-facial': allImagesMap?.facials['micro-needling'],
+    'vitamin-c-facial': allImagesMap?.facials['facial2'],
+    'gold-facial': allImagesMap?.facials['gold-facial'],
+    'skin-brightening-facial': allImagesMap?.facials['facial'],
+    'acne-reduction-facial': allImagesMap?.facials['facial2'],
+    'anti-aging-facial': allImagesMap?.facials['older-woman-anti-aging'],
+    'oxygen-infusion-facial': allImagesMap?.facials['oxygen-infused-facial'],
+    'chemical-peel': allImagesMap?.facials['chemical-peel'],
   },
   waxing: {
-    'bikini-waxing': `${CDN_URL}/${PEOPLE_DIR}/woman-bikini-bottom.webp`,
-    'brazilian-waxing': `${CDN_URL}/${PEOPLE_DIR}/woman-bikini-bottom.webp`,
-    'butt-waxing': `${CDN_URL}/${PEOPLE_DIR}/woman-holding-buttocks.webp`,
-    'underarm-waxing': `${CDN_URL}/${SERVICES_DIR}/underarm-waxing.webp`,
-    'half-arm-waxing': `${CDN_URL}/${SERVICES_DIR}/arm-waxing.webp`,
-    'full-arm-waxing': `${CDN_URL}/${SERVICES_DIR}/arm-waxing.webp`,
-    'upper-legs-waxing': `${CDN_URL}/${SERVICES_DIR}/upper-legs-waxing.webp`,
-    'lower-legs-waxing': `${CDN_URL}/${SERVICES_DIR}/lower-legs-waxing.webp`,
-    'full-legs-waxing': `${CDN_URL}/${PEOPLE_DIR}/smooth-waxed-legs-in-air.webp`,
-    'back-waxing': `${CDN_URL}/${PEOPLE_DIR}/woman-looking-back.webp`,
-    'stomach-waxing': `${CDN_URL}/${SERVICES_DIR}/wax-sheet.webp`,
-    'chest-waxing': `${CDN_URL}/${SERVICES_DIR}/chest-waxing.webp`,
+    'bikini-waxing': allImagesMap?.waxing['woman-bikini-bottom'],
+    'brazilian-waxing': allImagesMap?.waxing['woman-bikini-bottom'],
+    'butt-waxing': allImagesMap?.waxing['woman-holding-buttocks'],
+    'underarm-waxing': allImagesMap?.waxing['underarm-waxing'],
+    'half-arm-waxing': allImagesMap?.waxing['arm-waxing'],
+    'full-arm-waxing': allImagesMap?.waxing['arm-waxing'],
+    'upper-legs-waxing': allImagesMap?.waxing['upper-legs-waxing'],
+    'lower-legs-waxing': allImagesMap?.waxing['lower-legs-waxing'],
+    'full-legs-waxing': allImagesMap?.waxing['smooth-waxed-legs-in-air'],
+    'back-waxing': allImagesMap?.facials['woman-looking-back'],
+    'stomach-waxing': allImagesMap?.waxing['wax-sheet'],
+    'chest-waxing': allImagesMap?.waxing['chest-waxing'],
   },
   other: {
-    'micro-needling': `${CDN_URL}/${SERVICES_DIR}/micro-needling.webp`,
-    'pro-cell-therapy': `${CDN_URL}/${SERVICES_DIR}/micro-needling.webp`,
-    'chemical-peel': `${CDN_URL}/${SERVICES_DIR}/chemical-peel.webp`,
-    'lash-lift': `${CDN_URL}/${SERVICES_DIR}/lash-lift.jpg`, // @FIXME: change extension to webp
-    'ipl-therapy': `${CDN_URL}/${SERVICES_DIR}/ipl-therapy.webp`,
+    'micro-needling': allImagesMap?.facials['micro-needling'],
+    'pro-cell-therapy': allImagesMap?.other['pro-cell-therapy'],
+    'chemical-peel': allImagesMap?.facials['chemical-peel'],
+    'lash-lift': allImagesMap?.other['lash-lift'],
+    'ipl-therapy': allImagesMap?.other['ipl-therapy'],
+    'laser-hair-removal': allImagesMap?.other['laser-hair-removal'],
   },
 };
 
@@ -58,7 +63,6 @@ export const getCardImages = (
   category: keyof ServiceImages,
   service: string
 ) => {
-  const fallback = getImages(category).cover.src;
-
+  const fallback = getImages(category).cover;
   return serviceCardImageMap[category][service] ?? fallback;
 };
