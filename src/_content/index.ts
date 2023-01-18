@@ -31,5 +31,14 @@ export type ServiceContent = Omit<ServiceDetails, 'points'> & {
   info?: string[];
 };
 
+export type ServiceOptionKeys = keyof ServiceOptions;
+export type ServiceOptions = Record<
+  keyof ServiceCategories,
+  {
+    options: string[];
+    addons?: Record<string, { options: string[]; packages?: string[] }>;
+  }
+>;
+
 export * from './services/category-color-scheme';
 export * from './services/images';

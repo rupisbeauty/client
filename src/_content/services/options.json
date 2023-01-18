@@ -1,37 +1,48 @@
 {
-  "eyebrows": [
-    "Eyebrows",
-    "Lip",
-    "Lower-Lip",
-    "Chin",
-    "Chin + Lower C",
-    "Sides",
-    "Neck",
-    "Full Face",
-    "Nose(Inside)",
-    "Nose(Outside)"
-  ],
-  "tinting": {
-    "options": ["Eyebrows + Tint", "Brow Tint", "Lash Tint"],
-    "packages": [
-      "Lash Lift + Tint",
-      "Brow Lamination + Shaping + Tinting",
-      "Lash Lift + Brow Lamination"
+  "eyebrows": {
+    "options": [
+      "Eyebrows",
+      "Lip",
+      "Lower-Lip",
+      "Chin",
+      "Chin + Lower C",
+      "Sides",
+      "Neck",
+      "Full Face",
+      "Nose(Inside)",
+      "Nose(Outside)"
+    ],
+    "addons": {
+      "tinting": {
+        "options": ["Eyebrows + Tint", "Brow Tint", "Lash Tint"],
+        "packages": [
+          "Lash Lift + Tint",
+          "Brow Lamination + Shaping + Tinting",
+          "Lash Lift + Brow Lamination"
+        ]
+      }
+    }
+  },
+  "facials": {
+    "options": ["Full Face"]
+  },
+  "waxing": {
+    "options": [
+      "Bikini",
+      "Brazilian",
+      "Butt",
+      "Underarm",
+      "Half Arm",
+      "Full Arm",
+      "Upper Legs",
+      "Lower Legs",
+      "Full Legs",
+      "Back",
+      "Stomach",
+      "Chest"
     ]
   },
-  "facials": [],
-  "waxing": [
-    "Bikini",
-    "Brazilian",
-    "Butt",
-    "Underarm",
-    "Half Arm",
-    "Full Arm",
-    "Upper Legs",
-    "Lower Legs",
-    "Full Legs",
-    "Back",
-    "Stomach",
-    "Chest"
-  ]
+  "other": {
+    "options": []
+  }
 }
