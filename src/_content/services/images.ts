@@ -141,7 +141,7 @@ export const allImagesMap: Record<
         height: 1280,
       },
     },
-    dermaplaning: {
+    "dermaplaning-facial": {
       src: `${CDN_URL}/${SERVICES_DIR}/dermaplaning.webp`,
       alt: 'Professional dermaplaning services',
       attr: '',
