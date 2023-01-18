@@ -18,44 +18,49 @@ import type {
 } from '@/_content';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
-import { PageLayout, SectionTitle } from '@/components';
-import { ChImage, CustomIcon } from 'chakra.ui';
+import { PageLayout, SectionTitle, ServicesCoverImage } from '@/components';
+import { ChImage, CircleBgIcon } from 'chakra.ui';
 
 import { capitalize, chunkArray, slugify } from '@/utils';
-import { getImages } from '@/_content';
+import { getImages, ServiceCategories } from '@/_content';
 
-const CoverImage: React.FC<{ cover: CDNImage }> = ({ cover }) => {
+const SeperatorImage: React.FC<{ image: CDNImage | undefined }> = ({
+  image,
+}) => {
   return (
-    <Container as="section" layerStyle="container" p={0}>
-      <Box w="full" maxH="36vh" overflow="hidden" borderRadius="md">
-        <ChImage
-          src={cover.src}
-          width={cover.width}
-          height={cover.height}
-          alt={cover.alt + ' | ' + cover.attr}
-          {...cover.styles}
-        />
-      </Box>
-    </Container>
+    <Box w="full" maxH="28vh" my={12} overflow="hidden" borderRadius="md">
+      <ChImage
+        src={String(image?.src)}
+        alt={`${image?.alt} | ${image?.attr}`}
+        width={image?.width}
+        height={image?.height}
+        {...image?.styles}
+      />
+    </Box>
   );
 };
 
-const CircleBgIcon: React.FC<{ icon: string; bg: string }> = ({ icon, bg }) => {
+const ServiceCategoryCard: React.FC<{
+  service: ServiceDetails;
+  category: keyof Services;
+}> = ({ service, category }) => {
   return (
-    <Box
-      w="36"
-      _before={{
-        content: '""',
-        w: '32',
-        h: '32',
-        bg,
-        position: 'absolute',
-        zIndex: -1,
-        borderRadius: 'full',
-      }}
-    >
-      <CustomIcon icon={icon} size={24} m={4} fill="gray.600" p={2} />
-    </Box>
+    <Link href={`/services/${category}/${service.slug}`}>
+      <Box w="full" p={6} bg="white" rounded="lg" gap={3}>
+        <Heading as="h2" my={6} textTransform="capitalize">
+          {service.title}
+        </Heading>
+        <Text
+          key={slugify(String(service?.description[0]?.substring(0, 8)))}
+          py={2}
+          fontSize="lg"
+          fontWeight="normal"
+          lineHeight={1.6}
+        >
+          {service.description[0]}
+        </Text>
+      </Box>
+    </Link>
   );
 };
 
@@ -81,7 +86,7 @@ const ServiceCategory: NextPage<{
       showReviews
     >
       <SectionTitle title={content.title} />
-      <CoverImage cover={cover} />
+      <ServicesCoverImage cover={cover} />
       <Container as="section" layerStyle="container" centerContent>
         <Box>
           <HStack>
@@ -103,21 +108,7 @@ const ServiceCategory: NextPage<{
           chunkedServices.length &&
           !Array.isArray(chunkedServices[0]) ? (
             <VStack>
-              <Box
-                w="full"
-                maxH="28vh"
-                my={12}
-                overflow="hidden"
-                borderRadius="md"
-              >
-                <ChImage
-                  src={String(accents[0]?.src)}
-                  alt={`${accents[0]?.alt} | ${accents[0]?.attr}`}
-                  width={accents[0]?.width}
-                  height={accents[0]?.height}
-                  {...accents[0]?.styles}
-                />
-              </Box>
+              <SeperatorImage image={accents[0]} />
               <SimpleGrid
                 w="full"
                 overflow="hidden"
@@ -126,25 +117,11 @@ const ServiceCategory: NextPage<{
               >
                 {chunkedServices.map((service) => {
                   return (
-                    <Link
+                    <ServiceCategoryCard
                       key={service.title}
-                      href={`/services/${category}/${service.slug}`}
-                    >
-                      <Box w="full" p={6} bg="white" rounded="lg" gap={3}>
-                        <Heading as="h2" my={6} textTransform="capitalize">
-                          {service.title}
-                        </Heading>
-                        <Text
-                          key={slugify(service.description[0].substring(0, 8))}
-                          py={2}
-                          fontSize="lg"
-                          fontWeight="normal"
-                          lineHeight={1.6}
-                        >
-                          {service.description[0]}
-                        </Text>
-                      </Box>
-                    </Link>
+                      service={service}
+                      category={category}
+                    />
                   );
                 })}
               </SimpleGrid>
@@ -153,21 +130,7 @@ const ServiceCategory: NextPage<{
             chunkedServices.map((chunk, i) => {
               return (
                 <VStack key={`chunk-${i}`}>
-                  <Box
-                    w="full"
-                    maxH="28vh"
-                    my={12}
-                    overflow="hidden"
-                    borderRadius="md"
-                  >
-                    <ChImage
-                      src={String(accents[i]?.src)}
-                      alt={`${accents[i]?.alt} | ${accents[i]?.attr}`}
-                      width={accents[i]?.width}
-                      height={accents[i]?.height}
-                      {...accents[i]?.styles}
-                    />
-                  </Box>
+                  <SeperatorImage image={accents[i]} />
                   <SimpleGrid
                     w="full"
                     overflow="hidden"
@@ -178,7 +141,8 @@ const ServiceCategory: NextPage<{
                       return (
                         <Link
                           key={service.title}
-                          href={`/${category}/${service.slug}`}
+                          href={`/services/${category}/${service.slug}`}
+                          color="gray.900"
                         >
                           <Box w="full" p={6} bg="white" rounded="lg" gap={3}>
                             <Heading as="h2" my={6} textTransform="capitalize">
