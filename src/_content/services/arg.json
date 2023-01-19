@@ -4,7 +4,9 @@
       {
         "title": "Brow Threading",
         "description": [
-          "Remove facial hair by using cotton thread to quickly grab and pull hair by the roots. It is a great way to shape eyebrows and also be used to quickly remove any facials hairs like forehead, upper lip, chin, neck, sides, side burns, eyebrows."
+          "Brow threading is a procedure in which a thin cotton thread is used to remove unwanted hair from the eyebrows. Our trained Estheticians will use a thin cotton thread to twist and pull the hair out at the roots. Carefully ensuring that the skin is not pulled or damaged. The Esthetician will then use tweezers and scissors to trim and shape the eyebrows to the desired look. ",
+          "Some of the benefits of brow threading include: creating a more defined and shapely eyebrow, removing unwanted hair, and saving time each morning by eliminating the need for daily brow grooming since threading results last longer than simply using tweezers. ",
+          "In some cases, where the skin is very sensitive, the procedure may cause some redness and irritation around the skin of the eyebrows."
         ],
         "category": "eyebrows",
         "slug": "threading"
@@ -12,8 +14,9 @@
       {
         "title": "Brow Waxing",
         "description": [
-          "Waxing is a process of hair removal; that use strip wax or hard wax to effectively to remove the hair from the roots, to leave the skin smooth and even.  Waxing can be done on face which includes eyebrows, upper lip, chin, neck sideburns, forehead, nose, and inside nose and ears. It can be used on body as well, for bikini, Brazilian, feet, leg, arms, hands, underarms, buttocks, back, neck, chest, nipple.",
-          "Men’s bikini and Brazilian can be done as well."
+          "Waxing is a process of hair removal; that uses hot wax to effectively remove unwanted hair from the roots, leaving the skin smooth and even. Our trained Estheticians will carefully apply a thin layer of wax around only the area where hair removal is desired and quickly remove it by pulling in the opposite direction of hair growth. Men’s bikini area and Brazilian can be treated as well. ",
+          "Some benefits of eyebrow waxing include: creating a more defined and shapely eyebrow, removing unwanted hair, and saving time each morning by eliminating the need for daily brow grooming.",
+          "In some cases, the wax used for the procedure may cause an allergic reaction or result in redness and irritation around the skin of the eyebrows."
         ],
         "category": "eyebrows",
         "slug": "waxing"
@@ -21,14 +24,20 @@
       {
         "title": "Brow lamination",
         "description": [
-          "Brow lamination is almost like a perm for your eyebrows, it involves straightening and liftings of hair using a chemical solution which allows the hair fuller, thicker and feathery look."
+          "Brow lamination is a cosmetic procedure in which a solution is applied to the eyebrows to straighten and set them in a desired shape leaving you will a fuller and cleaner look. Our professional Estheticians will apply a solution to the eyebrows to soften the hair, followed by a neutralizer to set them in the desired shape. Afterward, the brows are then trimmed and shaped accordingly to complete the look.",
+          "Some of the benefits of eyebrow lamination include: creating a more defined and shapely eyebrow and straightening unruly brows. Making the brows look fuller and finally saving time in the morning by eliminating the need for daily brow grooming.",
+          "In some cases, allergic reactions to the solution may occur. There may also be some irritation and redness around the skin of the eyebrows if your skin is very sensitive."
         ],
         "category": "eyebrows",
         "slug": "brow-lamination"
       },
       {
         "title": "Brow Tinting",
-        "description": ["Enhances the color of the eyebrows"],
+        "description": [
+          "Brow tinting is a cosmetic procedure in which a dye is applied to the eyebrows to enhance their color and shape. Our professional estheticians are trained to help you select the best color/shade for your look.",
+          "Some of the benefits of eyebrow tinting include enhancing the overall appearance of the face, creating a more defined and shapely eyebrow, and saving time each morning by eliminating the need for daily brow filling.",
+          "In some cases the dye used for the procedure may cause allergic reactions. Feel free to ask for a 'patch test' of the dye before the treatment to ensure no allergic reactions or other issues occur."
+        ],
         "category": "eyebrows",
         "slug": "tinting"
       }
@@ -39,7 +48,9 @@
       {
         "title": "Teen Facial",
         "description": [
-          "Facials geared to teens or teenagers to help cleanse blackheads, reduce Acne problems to improve the overall health of the skin."
+          "Facials geared to teens or teenagers to help cleanse blackheads, and reduce Acne problems to improve the overall health of the skin. A facial is a cosmetic procedure in which the skin on the face is cleaned, exfoliated, and moisturized. For the procedure, our trained Estheticians will then cleanse your skin and possibly use a gentle exfoliant to remove dead skin cells. They may use steaming or hot towels to open up pores for extractions (removal of blackheads or whiteheads). Then apply a mask or treatment that is suitable for the skin type. After the mask, the esthetician will apply a moisturizer or sunscreen to protect the skin.",
+          "Some of the benefits of a facial include cleansing the skin, reducing acne, and improving the overall health of the skin. For teens, getting a facial helps teach proper skin care techniques.",
+          "In some cases, facials may cause redness and irritation around the skin of the face. If your skin is very sensitive, please discuss this with one of our estheticians to find the best option for your skin care needs."
         ],
         "category": "facials",
         "slug": "teen-facial"
@@ -47,7 +58,9 @@
       {
         "title": "Express Facial",
         "description": [
-          "Mini Facials where we apply steam, cleansing, removal of blackheads and apply mask to the skin ideal for clients that have a short amount of time for example lunch breaks."
+          "Express Facials are like quick mini facials where we apply steam, cleanse, remove blackheads and apply a mask to the skin, ideal for people that have a short amount of time for example during lunch breaks. A facial is a cosmetic procedure in which the skin on the face is cleaned, exfoliated, and moisturized. For the procedure, our trained Estheticians will then cleanse your skin and possibly use a gentle exfoliant to remove dead skin cells. They may use steaming or hot towels to open up pores for extractions (removal of blackheads or whiteheads). Then apply a mask or treatment that is suitable for the skin type. After the mask, the esthetician will apply a moisturizer or sunscreen to protect the skin.",
+          "Some of the benefits of a facial include cleansing the skin, reducing acne, and improving the overall health of the skin.",
+          "In some cases, facials may cause redness and irritation around the skin of the face. If your skin is very sensitive, please discuss this with one of our estheticians to find the best option for your skin care needs."
         ],
         "category": "facials",
         "slug": "express-facial"
@@ -55,7 +68,9 @@
       {
         "title": "Traditional Facial",
         "description": [
-          "Basic facial to routinely maintain the skin cleansing, exfoliate, steam, removal of blackheads, massage and mask.  Benefit of facial is keeps skin clean, and reduce Acne."
+          "Basic facial to routinely maintain the skin cleansing, exfoliating, steam, removal of blackheads, massage, and mask. A facial is a cosmetic procedure in which the skin on the face is cleaned, exfoliated, and moisturized. For the procedure, our trained Estheticians will then cleanse your skin and possibly use a gentle exfoliant to remove dead skin cells. They may use steaming or hot towels to open up pores for extractions (removal of blackheads or whiteheads). Then apply a mask or treatment that is suitable for the skin type. After the mask, the esthetician will apply a moisturizer or sunscreen to protect the skin.",
+          "Some of the benefits of a facial include cleansing the skin, reducing acne, and improving the overall health of the skin.",
+          "In some cases, facials may cause redness and irritation around the skin of the face. If your skin is very sensitive, please discuss this with one of our estheticians to find the best option for your skin care needs."
         ],
         "category": "facials",
         "slug": "traditional-facial"
@@ -63,7 +78,9 @@
       {
         "title": "Soothing back facial",
         "description": [
-          "Facial geared to one’s back where we exfoliate, apply steam treatment, remove blackheads, apply scrubs, mask to cleanse the skin to reduce dead cells on the back."
+          "Facial geared to one’s back where we exfoliate, apply steam treatment, remove blackheads, apply scrubs, and a mask to cleanse the skin and reduce dead cells on the back. A facial is a cosmetic procedure in which the skin on the face is cleaned, exfoliated, and moisturized. For the procedure, our trained Estheticians will then cleanse your skin and possibly use a gentle exfoliant to remove dead skin cells. They may use steaming or hot towels to open up pores for extractions (removal of blackheads or whiteheads). Then apply a mask or treatment that is suitable for the skin type. After the mask, the esthetician will apply a moisturizer or sunscreen to protect the skin.",
+          "The benefits of a facial include cleansing the skin, reducing acne, and improving the overall health of the skin.",
+          "In some cases, facials may cause redness and irritation around the skin of the face. If your skin is very sensitive, please discuss this with one of our estheticians to find the best option for your skin care needs."
         ],
         "category": "facials",
         "slug": "soothing-back-facial"
@@ -71,7 +88,8 @@
       {
         "title": "Detoxifying Facial",
         "description": [
-          "Great for to clean the pores, reduce Wrinkles, moisturize your face. (Need to look into Google to Add points)"
+          "A detoxifying facial is a type of facial that focuses on deep cleaning and purifying the skin. It typically includes a series of steps that help to remove impurities and toxins from the skin, leaving it looking and feeling refreshed. Our professional estheticians will then cleanse your skin and possibly use a gentle exfoliant to remove dead skin cells. They may use steaming or hot towels to open up pores for extractions (removal of blackheads or whiteheads). Then apply a mask or treatment that is designed to detoxify the skin, such as clay, charcoal, or mud mask. After the mask, the esthetician will apply a moisturizer or sunscreen to protect the skin.",
+          "Some of the benefits of a detoxifying facial include deeply cleansing the skin and removing impurities and toxins while also moisturizing your face. It can also help to reduce the appearance of acne, wrinkles, blemishes, and pores, as well as improve the overall health of the skin."
         ],
         "category": "facials",
         "slug": "detoxifying-facial"
@@ -79,7 +97,7 @@
       {
         "title": "LED Light Facial",
         "description": [
-          "Facial service that focuses on skin issues for skin cares, helps with anti-aging, reducing inflammations, increases amount of collagen in skin to reduce the amount of wrinkles on the skin. It helps with eczema, mild or moderate acne, rosacea, sun damage and other benefits."
+          "An LED light facial is a cosmetic procedure that uses specific wavelengths of light to target various skin concerns including anti-aging, reducing inflammation, and increasing the amount of collagen in the skin to reduce the number of wrinkles on the skin. The procedure is also known to help with eczema, mild or moderate acne, rosacea, sun damage, and other benefits. Our professional estheticians will then cleanse your skin and apply a serum to the treatment area. Then we'll use a device that emits LED light at specific wavelengths to target specific skin concerns. Red light is used for reducing inflammation, blue light is used for treating acne, and yellow light is used for reducing redness."
         ],
         "category": "facials",
         "slug": "led-light-facial"
@@ -87,7 +105,9 @@
       {
         "title": "Microdermabrasion",
         "description": [
-          "Microdermabrasion is noninvasive procedure that exfoliates and remove the superficial layer of dry, dead skin cells. Helps fight sun damage, fine lines, wrinkles, scars, rough skin texture and large pores, ingrown hair, shaving rash."
+          "A microdermabrasion facial is a cosmetic procedure that uses a diamond-tipped wand or fine crystals to gently exfoliate the top layer of skin. The procedure is non-invasive and is used to exfoliate the skin and remove superficial layers of dry, dead skin cells. This also helps fight sun damage, fine lines, wrinkles, scars, rough skin texture and large pores, ingrown hair, and shaving rash. The procedure involves our professional esthetician who will then cleanse your skin and use a microdermabrasion wand to gently abrade the surface of the skin, removing dead skin cells and revealing smoother, brighter skin underneath.",
+          "Some of the benefits of microdermabrasion include reducing the appearance of fine lines and wrinkles, improving the appearance of scars, and reducing the appearance of sun damage. It can also help to reduce the appearance of acne, blemishes, and pores, as well as improve the overall health of the skin.",
+          "In some cases, irritation or redness of the skin may occur in those with more sensitive skin."
         ],
         "category": "facials",
         "slug": "microdermabrasion"
@@ -95,7 +115,9 @@
       {
         "title": "Dermaplaning Facial",
         "description": [
-          "Facial for all skin types, which is a non-invasive procedure where it helps to exfoliate the skin with fine hair (Peach Fuzz) removal. It helps penetrate the product deeper into skin  which helps rejunvate the skin to make the skin look nice and smooth. Great mechanical exfoliator which will remove the fine hairs from the face to improve the overall skin health."
+          "Dermaplaning is a cosmetic procedure that uses a surgical scalpel to gently scrape off the top layer of dead skin cells and fine facial hair. Our trained esthetician will then cleanse your skin and use the scalpel at a 45-degree angle to gently scrape the surface of the skin, removing dead skin cells and fine facial hair. Some of the benefits of a dermaplaning facial include reducing the appearance of fine lines and wrinkles, improving the appearance of scars, and reducing the appearance of sun damage. Dermaplaning is also known to help reduce the appearance of hyperpigmentation, improving skin tone and texture. It can also help to reduce the appearance of acne, blemishes, and pores, as well as improve the overall health of the skin. Facial for all skin types, which is a non-invasive procedure where it helps to exfoliate the skin with fine hair (Peach Fuzz) removal. It helps penetrate the product deeper into the skin which helps rejuvenate the skin to make the skin look nice and smooth.",
+          "Some of the benefits of a dermaplaning facial include reducing the appearance of fine lines and wrinkles, improving the appearance of scars, and reducing the appearance of sun damage. Dermaplaning is also known to help reduce the appearance of hyperpigmentation, improving skin tone and texture. It can also help to reduce the appearance of acne, blemishes, and pores, as well as improve the overall health of the skin.",
+          "In some cases, there may be some redness or irritation of the skin. If your skin is very sensitive, please discuss this with one of our estheticians to find the best option for your skin care needs."
         ],
         "category": "facials",
         "slug": "dermaplaning-facial"
@@ -103,7 +125,9 @@
       {
         "title": "Micro Hydra Facial",
         "description": [
-          "Facial that leverages hydradermabrsion treatment to the skin. The infusion of serums into the facial will improve the skin texture & appearance. Additional benefits including glowing of the skin."
+          "Microhydrafacial is a cosmetic procedure that combines the use of gentle microdermabrasion, chemical exfoliation, and hydration to improve the overall appearance and health of the skin. Our professional esthetician will then cleanse your skin, use a diamond tip wand to gently exfoliate the skin, apply a chemical exfoliant such as an alpha hydroxy acid or beta hydroxy acid, and infuse the skin with a hydrating serum or moisturizer.",
+          "Some of the benefits associated with Microhydrafacials include providing hydration to the skin, reducing the appearance of fine lines and wrinkles, reducing the appearance of hyperpigmentation, helping skincare products penetrate deeper into the skin, and improving the overall health of the skin and leaving you with glowing skin.",
+          "In some cases, allergic reactions or irritation or redness of the skin may occur in those with more sensitive skin."
         ],
         "category": "facials",
         "slug": "micro-hydra-facial"
@@ -111,7 +135,9 @@
       {
         "title": "Vitamin C Facial",
         "description": [
-          "Opens channels to penetrate deeper into the skin, to increase skin’s collagen production to tighten, give fuller skin, and reduce wrinkle appearance.  Vitamin C helps fight aging of the skin, repair the damage caused by UV rays and helps smoothen the skin."
+          "A Vitamin C facial is a cosmetic procedure that uses products containing Vitamin C to brighten and rejuvenate the skin. This opens up channels to penetrate deeper into the skin, to increase skin’s collagen production to tighten, give fuller skin, and reduce wrinkle appearance. Vitamin C helps fight the aging of the skin, repair the damage caused by UV rays, and helps smoothen the skin. Our professional estheticians will then cleanse your skin and apply a Vitamin C serum or other products containing Vitamin C to the skin. The esthetician may also use a variety of other treatments such as gentle exfoliation, light therapy, a mask, or a gentle massage to boost the effectiveness of Vitamin C products.",
+          "Some of the benefits of a vitamin c facial include reducing the appearance of fine lines and wrinkles, brightening skin tone and reducing the appearance of dark spots and blemishes, stimulating collagen production, providing antioxidant protection against environmental stressors and UV rays as well as improving the overall health of the skin.",
+          "In some cases, there may be some redness or irritation of the skin. If your skin is very sensitive, please discuss this with one of our estheticians to find the best option for your skin care needs."
         ],
         "category": "facials",
         "slug": "vitamin-c-facial"
@@ -119,7 +145,9 @@
       {
         "title": "Gold Facial",
         "description": [
-          "Gold facials consist of glittering 24 K gold leaf facials, there are 2 different gold facials (Gold collagen facial, and 24k Gold leaf facial), so here at here at Rupi Brows & Esthetics Studio we combine both to get the best benefits from both products to help in reduction of wrinkles and fines lines making your skin look youthful.  It helps with improving with blood circulation, brighten your face, help with dullness from sun damage and it provides your skin with oxygen to which makes you look less tired."
+          "A Gold facial is a type of cosmetic procedure that uses products containing gold to improve the overall appearance and health of the skin. Generally, there are 2 different types of gold facials. Gold Collagen facial and 24k Gold leaf facial. We combine both options to get the best benefits from both products to help in the reduction of wrinkles and fine lines making your skin look youthful. Our trained esthetician will then cleanse your skin and apply products that contain gold such as a gold leaf, gold serum, or gold mask. The treatment may include other steps such as gentle exfoliation, light therapy, or massage to enhance the effectiveness of the gold products.",
+          "Some of the benefits of a gold facial include helping with improving blood circulation, brightening your face, helping with dullness from sun damage and it provides your skin with oxygen which makes you look less tired. It also is known to help stimulate collagen production, reduce the appearance of fine lines and wrinkles, provide antioxidant protection against environmental stressors and improve the overall health of the skin.",
+          "In some cases, allergic reactions to the solution may occur. There may also be some irritation and redness around the skin of the eyebrows if your skin is very sensitive. Please feel free to consult with our estheticians to find the best option for your skin care needs."
         ],
         "category": "facials",
         "slug": "gold-facial"
@@ -127,7 +155,9 @@
       {
         "title": "Skin Brightening Facial",
         "description": [
-          "Skin Brightening facial helps with hyper pigmentation, evens out skin the skin tone, leaves the skin nourished, reduces blemishes and gets rid of dead skin cells to leave the skin smoother and radiant."
+          "A Skin Brightening facial is a type of cosmetic procedure that uses products and techniques to even out skin tone, reduce hyperpigmentation and improve overall skin radiance. Our professional esthetician will then cleanse your skin and apply products such as exfoliants, serums, and masks that contain ingredients such as Vitamin C, glycolic acid, kojic acid, and arbutin to brighten and even out the skin tone.",
+          "Some of the benefits of a skin brightening facial include brightening the skin tone, reducing hyperpigmentation blemishes, and dark spots as well as improving the overall health of the skin, and giving your skin a natural radiance.",
+          "In some cases, allergic reactions or irritation or redness of the skin may occur in those with more sensitive skin. If your skin is very sensitive, please discuss this with one of our estheticians to find the best option for your skin care needs."
         ],
         "category": "facials",
         "slug": "skin-brightening-facial"
@@ -135,7 +165,9 @@
       {
         "title": "Acne Reduction Facial",
         "description": [
-          "Acne facials reduce the symptoms of Acne breakouts by deep pore cleaning of blackheads, white heads which help with acne, minor blemishes with skin impurities, unclogging pores, and reducing of oil production and inflammation of the skin."
+          "Acne facials reduce the symptoms of Acne breakouts by deep pore cleaning of blackheads and white heads. Our professional esthetician will then cleanse your skin and apply products such as exfoliants, serums, and masks that contain ingredients such as salicylic acid, benzoyl peroxide, and retinoids.",
+          "Some of the benefits of an acne reduction facial include reducing the appearance of acne, blackheads, whiteheads, and blemishes, unclogging pores, reducing oil production, and reducing inflammation of the skin.",
+          "In some cases, allergic reactions to the solution may occur. There may also be some irritation and redness around the skin of the eyebrows if your skin is very sensitive. Please feel free to consult with our estheticians to find the best option for your skin care needs."
         ],
         "category": "facials",
         "slug": "acne-reduction-facial"
@@ -143,7 +175,9 @@
       {
         "title": "Anti-Aging Facial",
         "description": [
-          "Facials for the mature skin which helps reduce the appearance of wrinkles, helps to penetrate the skin surface, and works to lift up the skin to improve the skin’s elasticity for face and neck to make the skin tighter and youthful."
+          "An Anti-Aging Facial is a type of cosmetic procedure that uses products and techniques to reduce the appearance of fine lines, wrinkles, and other signs of aging by penetrating the skin surface and working to lift the skin to improve the skin’s elasticity for the face and neck to make the skin tighter and youthful. Our professional esthetician will then cleanse your skin and apply products such as serums, masks, and creams that contain ingredients such as retinoids, antioxidants, and hyaluronic acid.",
+          "Some of the benefits of anti-aging facials include reducing the appearance of fine lines and wrinkles, improving skin texture, stimulating collagen reproduction, reducing the appearance of dark spots and blemishes, providing antioxidant protection against environmental stressors and UV rays as well as improving the overall health of the skin.",
+          "In some cases, allergic reactions to the solution may occur. There may also be some irritation and redness around the skin of the eyebrows if your skin is very sensitive. Please feel free to consult with our estheticians to find the best option for your skin care needs."
         ],
         "category": "facials",
         "slug": "anti-aging-facial"
@@ -151,7 +185,9 @@
       {
         "title": "Oxygen Infusion Facial",
         "description": [
-          "Oxygen Facial uses oxygen to the improve the overall appearance of the skin. Oxygen facials increase the collogen production by increasing the cell turnover. Due the nature of Oxygen having anti-inflammatory properties, it will help reduce the appearance of Acne or Blemishes.  Many benefits include Hydration of the skin, reduction of blemishes and Acne, stimulate collagen production, and improve overall skin texture."
+          "An Oxygen Infusion Facial is a type of cosmetic procedure that uses an oxygen machine and specialized products to infuse oxygen into the skin giving you skin the benefits of its anti-inflammatory properties. Oxygen facials increase collagen production by increasing cell turnover. Our professional esthetician will then cleanse your skin and apply a serum that contains active ingredients such as antioxidants and vitamins to the skin. The esthetician will then use the oxygen machine to infuse the serum into the skin, which can be done by spraying the serum or using a wand to deliver the oxygen.",
+          "Some of the benefits of an oxygen infusion facial include brightening skin tone, stimulating collagen reproduction, providing antioxidant protection against environmental stressors and UV rays as well as improving the overall health of the skin.",
+          "In some cases, people may experience some irritation and redness around the skin of the eyebrows if your skin is very sensitive. If this applies to you, please feel free to consult with our estheticians to find the best option for your skin care needs."
         ],
         "category": "facials",
         "slug": "oxygen-infusion-facial"
@@ -177,12 +213,12 @@
         "slug": "brazilian-waxing"
       },
       {
-        "title": "Butt Waxing",
+        "title": "Buttocks Waxing",
         "description": [
-          "Our butt waxing service is a quick and effective way to remove unwanted hair from the buttocks area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks. "
+          "Our buttocks waxing service is a quick and effective way to remove unwanted hair from the buttocks area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
         ],
         "category": "waxing",
-        "slug": "butt-waxing"
+        "slug": "buttocks-waxing"
       },
       {
         "title": "Underarm Waxing",
@@ -195,7 +231,7 @@
       {
         "title": "Half Arm Waxing",
         "description": [
-          "Our half arm waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+          "Our half-arm waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
         ],
         "category": "waxing",
         "slug": "half-arm-waxing"
@@ -219,7 +255,7 @@
       {
         "title": "Lower Legs Waxing",
         "description": [
-          "Our lower leg waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+          "Our lower-leg waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
         ],
         "category": "waxing",
         "slug": "lower-legs-waxing"
@@ -227,7 +263,7 @@
       {
         "title": "Full Legs Waxing",
         "description": [
-          "Our full leg waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
+          "Our full-leg waxing service is a quick and effective way to remove unwanted hair from the underarm area. Our estheticians use high-quality wax and techniques to ensure minimal discomfort and maximum results, leaving you with smooth, hair-free skin for weeks."
         ],
         "category": "waxing",
         "slug": "full-legs-waxing"
@@ -261,9 +297,11 @@
   "other": {
     "services": [
       {
-        "title": "Micro Needling",
+        "title": "Micro-Needling",
         "description": [
-          "A procedure that uses tiny needles to treat scars, large pores and wrinkles. It helps with Acne, dark spots, hyper pigmentation, large pores reduce skin elasticity, sun damage, and fine lines and wrinkles."
+          "A procedure that uses a device with tiny needles to treat scars, large pores, and wrinkles. It helps with Acne, dark spots, hyperpigmentation, large pores and reduces skin elasticity, sun damage, and fine lines, and wrinkles.",
+          "Some of the benefits of a micro-needling procedure include stimulating collagen production, reducing acne, fine lines, wrinkles, and scars as well as reducing the appearance of fine lines, wrinkles, and hyperpigmentation.",
+          "In some cases, irritation or redness of the skin may occur in those with more sensitive skin."
         ],
         "category": "other",
         "slug": "micro-needling"
@@ -271,7 +309,9 @@
       {
         "title": "Pro Cell Therapy",
         "description": [
-          "A non-invasive skin rejuvenating procedure which helps improve the appearance of fine line hyper pigmentation, acne scarring, aging, congested skin, wrinkles and help with the complexion to look brighter."
+          "Pro-cell therapy is a non-invasive skin rejuvenating procedure that uses adult stem cells to revitalize the skin. Our estheticians will apply a serum that contains adult stem cells to the skin.",
+          "Some of the benefits of Pro Cell Therapy include stimulating collagen reproduction, improving the skin texture and tone, reducing the appearance of fine lines and wrinkles, and reducing the appearance of hyperpigmentation while improving the overall health of the skin.",
+          "In some cases, irritation or redness of the skin may occur in those with more sensitive skin."
         ],
         "category": "other",
         "slug": "pro-cell-therapy"
@@ -279,9 +319,10 @@
       {
         "title": "Chemical Peel",
         "description": [
-          "It is a type chemical exfoliating that dissolves the bond between dead skin cells allowing them easily wipe away to reveal smoother , younger , healthier looking skin.",
-          "Concerns: Fine line, sun damage, blackheads, clogged pores, acne marks and scars, age spots, uneven skin tone and hyper pigmentation.",
-          "Results: Smoothness, radiance, clean skin, tightness, lifted appearance, balanced tone, softness, firmer skin."
+          "A Chemical Peel is a type of cosmetic procedure that uses a chemical solution to remove the damaged outer layers of the skin. It is a type of chemical exfoliating that dissolves the bond between dead skin cells allowing them to easily wipe away to reveal smoother, younger, healthier-looking skin. Our trained esthetician will then cleanse your skin and apply the chemical solution to the skin. The solution is left on the skin for a specific amount of time, depending on the type of peel and the desired depth of the peel. After the solution is removed, the skin will be neutralized and moisturized.",
+          "Some of the benefits of a chemical peel are reducing the appearance of fine lines and wrinkles, reducing blackheads, clogged pores, acne marks, and age spots, reducing the appearance of hyperpigmentation, improving the skin texture and tone, and reducing the appearance of sun damage.",
+          "In some cases, allergic reactions to the solution may occur. There may also be some irritation and redness around the skin of the eyebrows if your skin is very sensitive. Chemical peels are not recommended for people with certain skin conditions, such as eczema, rosacea, or lupus. People with darker skin should not have chemical peels. Please let your esthetician know if you have any sensitive areas or are taking any medications that might affect the skin.",
+          ""
         ],
         "category": "other",
         "slug": "chemical-peel"
@@ -289,7 +330,9 @@
       {
         "title": "Lash Lift",
         "description": [
-          "Lash lift is essentially perm for your lashes which gives the appearance of fuller, thicker and healthier look without leave on chemicals. It helps with the growth of lashes and last up to 4 -6 weeks with proper care."
+          "A Lash Lift is a cosmetic procedure that uses a solution and a silicone rod to lift and curl the natural lashes which gives the appearance of a fuller, thicker and healthier look without relying on chemicals. Some of the benefits include enhancing natural lashes making them appear longer and more curled as well as increasing the growth of lashes. The treatment will last up to 4-8 on average.",
+          "Some of the benefits include enhancing natural lashes making them appear longer and more curled as well as increasing the growth of lashes. The treatment will last up to 4-8 on average.",
+          "In some cases, allergic reactions to the solution may occur. There may also be some irritation and redness around the skin of the eyebrows if your skin is very sensitive. Please let your esthetician know if you have any sensitive areas or are taking any medications that might affect the skin."
         ],
         "category": "other",
         "slug": "lash-lift"
@@ -297,12 +340,14 @@
       {
         "title": "Intense Pulse Light (IPL) Therapy",
         "description": [
-          "Intense Pulse Light (IPL) is a cosmetic skin treatment may use to reduce the sign of aging or remove unwanted hair."
+          "Intense Pulse Light (IPL) is a cosmetic skin treatment that may use to reduce the sign of aging or remove unwanted hair. Intense Pulse Light (IPL) therapy uses a broad-spectrum light source to target various skin concerns such as sun damage, pigmentation, redness, and fine lines. Our trained estheticians will use a hand-held device that emits a broad-spectrum light to target the treatment areas. The light is absorbed by the skin and converted into heat energy that destroys the targeted skin cells.",
+          "The heat energy from the Intense Pulse Light treatment also stimulates the production of collagen and elastin, which helps to improve the skin’s texture and tone as well as reduce the appearance of fine lines, wrinkles, and other damaging signs of aging. The treatment itself is generally short and fuss-free, and some of the results may even provide permanent results.",
+          "In some cases, irritation or redness of the skin may occur in those with more sensitive skin. Please let your esthetician know if you have any sensitive areas or are taking any medications that might affect the skin."
         ],
         "category": "other",
         "slug": "ipl-therapy",
         "points": [
-          "Treatment is short and fuzz free",
+          "Treatment is short and fuss-free",
           "Shorter treatment time compared to other techniques",
           "Permanently prevents ingrown hair",
           "Better value of money",
@@ -314,7 +359,10 @@
       {
         "title": "Laser Hair Removal",
         "description": [
-          "Laser hair removal effectively removes unwanted hair by mean of exposure to the pulse of laser light that destroys the hair follicle. The effect last for several months or it might last for year. When hair regrows, it is usually finer and lighter in color."
+          "Laser hair removal effectively removes unwanted hair through exposure to the pulse of laser light that destroys the hair follicle. The effect lasts for several months or it might last for a year. When hair regrows, it is usually finer and lighter in color. Our trained estheticians will cleanse the area to be treated and apply a cooling gel to the skin. The laser will then be passed over the skin to target the hair follicles. The laser will emit a pulse of light that is absorbed by the pigment in the hair follicle. The heat energy from the laser will then destroy the hair follicle and prevent it from growing back.",
+          "Some of the benefits of Laser Hair Removal treatments include permanent hair reduction, minimal side effects, and minimal maintenance. The treatment itself is generally short and fuss-free, and some of the results may even provide semi-permanent results.",
+          "In some cases, allergic reactions to the solution may occur. There may also be some irritation and redness around the skin of the eyebrows if your skin is very sensitive. Please let your esthetician know if you have any sensitive areas or are taking any medications that might affect the skin. If you have certain conditions, such as a history of keloid scarring, you may not be a suitable candidate for laser hair removal. If these warnings apply to you please consult with your doctor before booking a treatment.",
+          "NOTE: There is an additional charge of a minimum of $25 if we are required to shave any area prior to service."
         ],
         "category": "other",
         "slug": "laser-hair-removal",
@@ -325,6 +373,24 @@
           "Minimal side effects",
           "Less painful",
           "Promotes beautiful skin"
+        ]
+      },
+      {
+        "title": "Intense Pulse Light (IPL) Hair Removal",
+        "description": [
+          "Intense Pulse Light (IPL) Hair Removal technology provides a non-invasive treatment option that uses a broad spectrum of light to effectively remove hair from the body. The light is absorbed by the pigment in the hair follicle, which is then destroyed. IPL is a safe and effective treatment for hair removal, and is suitable for most skin types.",
+          "IPL may not be an effective method of hair removal for people with darker skin tones. This is because darker skin tones have more melanin, which absorbs the light. If this impacts you, feel free to ask us about our other hair removal options. IPL is also not recommended for people with a history of skin cancer.",
+          "NOTE: There is an additional charge of a minimum of $25 if we are required to shave any area prior to service."
+        ],
+        "category": "other",
+        "slug": "ipl-hair-removal"
+      },
+      {
+        "title": "Lipo Cavitation",
+        "description": [
+          "Lipo cavitation is a noninvasive procedure that uses ultrasound to break down fat cells. The fat cells are then naturally eliminated by the body. The procedure is painless and has no downtime. It is a great alternative to liposuction and is a great way to get rid of stubborn fat. During the treatment, a trained esthetician uses a handheld device emitting ultrasonic waves that is applied to the area of the body being treated. The waves penetrate the skin and disrupt the fat cells, causing them to release their contents and be naturally eliminated by the body.",
+          "Some of the benefits of Lipo Cavitation include the ability to target specific areas of the body, reduce the appearance of cellulite and can improve the overall appearance of the treated areas.",
+          "In some cases, minor swelling, skin irritation or redness can be expected in people who have overly sensitive skin."
         ]
       }
     ],

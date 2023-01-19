@@ -8,13 +8,13 @@
   "offers": [
     {
       "title": "Save on multiple sessions",
-      "service": "Laser Hair Removal",
-      "description": "Buy 6 treatments and Get 1 Free",
+      "service": "laser-hair-removal",
+      "description": "Buy 6 treatments and Get 1 Free"
     },
     {
       "title": "Save even more on more sessions",
-      "service": "Laser Hair Removal",
-      "description": "Buy 9 treatments and Get 2 Free",
+      "service": "laser-hair-removal",
+      "description": "Buy 9 treatments and Get 2 Free"
     }
   ],
   "services": [
