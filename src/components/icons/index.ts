@@ -3,7 +3,6 @@ export * from './eyebrows';
 export * from './lip';
 export * from './lower-chin';
 export * from './lower-lip';
-export * from './upper-lip';
 export * from './neck';
 export * from './side';
 export * from './face';

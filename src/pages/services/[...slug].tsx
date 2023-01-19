@@ -1,4 +1,12 @@
-import type { ServiceCategories } from '@/_content';
+import {
+  Box,
+  chakra,
+  Container,
+  SimpleGrid,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
+
 import type {
   GetStaticPaths,
   GetStaticProps,
@@ -7,13 +15,63 @@ import type {
   NextPage,
 } from 'next';
 
+import type { ServiceCategories, ServiceOptionKeys } from '@/_content';
+
 import { PageLayout, SectionTitle, ServicesCoverImage } from '@/components';
 
+import * as Face from '@/components/icons';
 import { capitalize } from '@/utils';
 import { getCardImages } from '@/_content';
+import options from '@/_content/services/options.json';
+
+const faceOptionsMap = {
+  Eyebrows: Face.Eyebrows,
+  Lip: Face.Lip,
+  Nose: Face.Nose,
+  'Lower-Lip': Face.LowerLip,
+  Chin: Face.Chin,
+  'Chin + Lower C': Face.LowerChin,
+  Sides: Face.Side,
+  Neck: Face.Neck,
+  'Full Face': Face.Full,
+  'Nose(Inside)': Face.Nose,
+  'Nose(Outside)': Face.Nose,
+};
+
+export const ServiceOptions: React.FC<{ path: string[] }> = ({ path }) => {
+  const [category, service] = path;
+  const categoryOptions = options[category as ServiceOptionKeys];
+  return (
+    <Container as="section" layerStyle="container">
+      <SimpleGrid columns={[1, 3, 5, 10]} columnGap={8}>
+        {categoryOptions.options.map((option) => {
+          const Icon = faceOptionsMap[option as keyof typeof faceOptionsMap];
+          return (
+            <VStack key={option} justify="space-between">
+              <Box
+                p={6}
+                bg="white"
+                rounded="full"
+                shadow="md"
+                h={28}
+                w={28}
+                overflow="hidden"
+                border="2px solid lightpink"
+              >
+                <Icon />
+              </Box>
+              <Text wordBreak="break-word" fontWeight="medium">
+                {option}
+              </Text>
+            </VStack>
+          );
+        })}
+      </SimpleGrid>
+    </Container>
+  );
+};
 
 type ServiceDetailsPageProps = InferGetStaticPropsType<typeof getStaticProps>;
-
 const ServiceDetailPage: NextPage = ({
   service,
   path,
@@ -21,10 +79,16 @@ const ServiceDetailPage: NextPage = ({
   const image = getCardImages(path[0] as keyof ServiceCategories, service.slug);
 
   return (
-    <PageLayout title={capitalize(path[1])} description={service.description}>
+    <PageLayout
+      title={capitalize(path[1])}
+      description={service.description}
+      showCta
+      showReviews
+    >
       <SectionTitle title={capitalize(path[1])} />
       <ServicesCoverImage cover={image} />
       {JSON.stringify(service)}: {JSON.stringify(path)}
+      <ServiceOptions path={path} />
     </PageLayout>
   );
 };
