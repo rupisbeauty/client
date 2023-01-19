@@ -1,0 +1,82 @@
+{
+  "title": "Addons",
+  "slug": "addons",
+  "description": [
+    "We offer several addons that make the perferct addition to your experience. "
+  ],
+  "disclaimer": [""],
+  "offers": [
+    {
+      "title": "Save on multiple sessions",
+      "service": "Laser Hair Removal",
+      "description": "Buy 6 treatments and Get 1 Free",
+    },
+    {
+      "title": "Save even more on more sessions",
+      "service": "Laser Hair Removal",
+      "description": "Buy 9 treatments and Get 2 Free",
+    }
+  ],
+  "services": [
+    {
+      "title": "Microdermabrasion",
+      "slug": "addon-microdermabrasion",
+      "description": "Microdermabrasion is a non-invasive procedure that uses a diamond tip wand to gently exfoliate the skin. This procedure is great for those who are looking to improve the appearance of fine lines, wrinkles, acne scarring, hyperpigmentation, and sun damage. Microdermabrasion is also a great way to improve the overall texture and tone of the skin.",
+      "price": 55
+    },
+    {
+      "title": "Dermaplaning",
+      "slug": "addon-dermaplaning",
+      "description": "Dermaplaning is a non-invasive procedure that uses a scalpel to gently exfoliate the skin. This procedure is great for those who are looking to improve the appearance of fine lines, wrinkles, acne scarring, hyperpigmentation, and sun damage. Dermaplaning is also a great way to improve the overall texture and tone of the skin.",
+      "price": 65
+    },
+    {
+      "title": "LED Light Therapy",
+      "slug": "addon-led-light-therapy",
+      "description": "LED light therapy is a non-invasive procedure that uses light to stimulate collagen production and kill bacteria. This procedure is great for those who are looking to improve the appearance of fine lines, wrinkles, acne scarring, hyperpigmentation, and sun damage. LED light therapy is also a great way to improve the overall texture and tone of the skin.",
+      "price": 20
+    },
+    {
+      "title": "Paraffin Mask",
+      "slug": "addon-paraffin-mask",
+      "description": "Paraffin masks are a great way to hydrate the skin. This procedure is great for those who are looking to improve the appearance of fine lines, wrinkles, acne scarring, hyperpigmentation, and sun damage. Paraffin masks are also a great way to improve the overall texture and tone of the skin.",
+      "price": 20
+    },
+    {
+      "title": "Paraffin Hand",
+      "slug": "addon-paraffin-hand",
+      "description": "Paraffin masks are a great way to hydrate the skin. This procedure is great for those who are looking to improve the appearance of fine lines, wrinkles, acne scarring, hyperpigmentation, and sun damage. Paraffin masks are also a great way to improve the overall texture and tone of the skin.",
+      "price": 15
+    },
+    {
+      "title": "Paraffin Body Wrap",
+      "slug": "addon-paraffin-body-wrap",
+      "description": "Paraffin masks are a great way to hydrate the skin. This procedure is great for those who are looking to improve the appearance of fine lines, wrinkles, acne scarring, hyperpigmentation, and sun damage. Paraffin masks are also a great way to improve the overall texture and tone of the skin.",
+      "price": 75
+    },
+    {
+      "title": "Lash Lift",
+      "slug": "addon-lash-lift",
+      "description": "Lash lifts are a great way to enhance the appearance of your natural lashes. This procedure is great for those who are looking to improve the appearance of fine lines, wrinkles, acne scarring, hyperpigmentation, and sun damage. Lash lifts are also a great way to improve the overall texture and tone of the skin.",
+      "price": 90
+    },
+    {
+      "title": "Brow Lamination",
+      "slug": "addon-brow-lamination",
+      "description": "Brow lamination is a great way to enhance the appearance of your natural brows. This procedure is great for those who are looking to improve the appearance of fine lines, wrinkles, acne scarring, hyperpigmentation, and sun damage. Brow lamination is also a great way to improve the overall texture and tone of the skin.",
+      "price": 100
+    },
+    {
+      "title": "Lash Lift + Brow Lamination",
+      "slug": "addon-lash-lift_brow-lamination",
+      "description": "Lash lifts are a great way to enhance the appearance of your natural lashes. This procedure is great for those who are looking to improve the appearance of fine lines, wrinkles, acne scarring, hyperpigmentation, and sun damage. Lash lifts are also a great way to improve the overall texture and tone of the skin.",
+      "price": 175
+    },
+    {
+      "title": "Skin Resurfacing",
+      "slug": "addon-skin-resurfacing",
+      "description": "Skin resurfacing is a great way to enhance the appearance of your natural skin. This procedure is great for those who are looking to improve the appearance of fine lines, wrinkles, acne scarring, hyperpigmentation, and sun damage. Skin resurfacing is also a great way to improve the overall texture and tone of the skin.",
+      "price": 250
+    }
+  ]
+}

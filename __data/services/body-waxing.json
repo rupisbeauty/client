@@ -1,0 +1,85 @@
+{
+  "title": "Body Waxing",
+  "slug": "body-waxing",
+  "description": [
+    "Waxing is a great way to remove unwanted hair from the underarm area. It is a quick and easy way to remove hair and can last up to 4 weeks. Waxing is a great alternative to shaving and tweezing. It is a more permanent solution to unwanted hair. Waxing is a great way to remove unwanted hair from the underarm area. It is a quick and easy way to remove hair and can last up to 4 weeks. Waxing is a great alternative to shaving and tweezing. It is a more permanent solution to unwanted hair."
+  ],
+  "disclaimers": [
+    "Waxing is not recommended for people who have diabetes, circulatory or skin disorders, or who are taking medications that affect the skin. Waxing is not recommended for people who have diabetes, circulatory or skin disorders, or who are taking medications that affect the skin.",
+    "If you fall into this category, please feel free to ask us about our other hair removal options."
+  ],
+  "services": [
+    {
+      "title": "Bikini Wax",
+      "slug": "bikini-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 20
+    },
+    {
+      "title": "Brazilian Wax",
+      "slug": "brazilian-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 55
+    },
+    {
+      "title": "Buttocks Wax",
+      "slug": "buttocks-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 25
+    },
+    {
+      "title": "Underarm Wax",
+      "slug": "underarm-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 15
+    },
+    {
+      "title": "Half Arm Wax",
+      "slug": "half-arm-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 20
+    },
+    {
+      "title": "Full Arm Wax",
+      "slug": "full-arm-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 30
+    },
+    {
+      "title": "Upper Leg Wax",
+      "slug": "upper-leg-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 40
+    },
+    {
+      "title": "Lower Leg Wax",
+      "slug": "lower-leg-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 40
+    },
+    {
+      "title": "Full Legs Wax",
+      "slug": "full-legs-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 65
+    },
+    {
+      "title": "Back Wax",
+      "slug": "back-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 50
+    },
+    {
+      "title": "Chest Wax",
+      "slug": "chest-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 50
+    },
+    {
+      "title": "Full Body Wax",
+      "slug": "full-body-wax",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "price": 150
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "title": "Threading",
+  "slug": "threading",
+  "description": ["Threading is a method of hair removal that originated in India. It is a form of hair removal that uses a twisted thread to remove unwanted hair from the face. Threading is a method of hair removal that originated in India. It is a form of hair removal that uses a twisted thread to remove unwanted hair from the face."],
+  "disclaimers": [""],
+  "services": [
+    {
+      "title": "Eyebrow Threading",
+      "slug": "eyebrow-threading",
+      "description": "We use a twisted thread to remove unwanted hair from the eyebrow region of the face. ",
+      "price": 14
+    },
+    {
+      "title": "Lip Threading",
+      "slug": "lip-threading",
+      "description": "We use a twisted thread to remove unwanted hair from the upper lip region of the face.",
+      "price": 6
+    },
+    {
+      "title": "Lower Lip Threading",
+      "slug": "lower-lip-threading",
+      "description": "We use a twisted thread to remove unwanted hair from the lower lip region of the face.",
+      "price": 4
+    },
+    {
+      "title": "Forehead Threading",
+      "slug": "forehead-threading",
+      "description": "We use a twisted thread to remove unwanted hair from the forehead region of the face.",
+      "price": 5
+    },
+    {
+      "title": "Chin Threading",
+      "slug": "chin-threading",
+      "description": "We use a twisted thread to remove unwanted hair from the chin region of the face.",
+      "price": 9
+    },
+    {
+      "title": "Chin + Lower Chin Threading",
+      "slug": "chin_lower-chin-threading",
+      "description": "We use a twisted thread to remove unwanted hair from the chin and lower chin region of the face.",
+      "price": 15
+    },
+    {
+      "title": "Sides Threading",
+      "slug": "sides-threading",
+      "description": "We use a twisted thread to remove unwanted hair from the sides of the face.",
+      "price": 15
+    },
+    {
+      "title": "Neck Threading",
+      "slug": "neck-threading",
+      "description": "We use a twisted thread to remove unwanted hair from the neck region of the face.",
+      "price": 20
+    },
+    {
+      "title": "Full Face Threading",
+      "slug": "full-face-threading",
+      "description": "We use a twisted thread to remove unwanted hair from the full face.",
+      "price": 50
+    },
+    {
+      "title": "Full Face + Lower Chin Threading",
+      "slug": "full-face_lower-chin-threading",
+      "description": "We use a twisted thread to remove unwanted hair from the full face and the lower chin region of the face.",
+      "price": 60
+    },
+    {
+      "title": "Full Face + Neck Threading",
+      "slug": "full-face_neck-threading",
+      "description": "We use a twisted thread to remove unwanted hair from the full face and neck.",
+      "price": 65
+    }
+  ]
+}

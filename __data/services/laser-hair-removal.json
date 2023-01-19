@@ -1,0 +1,211 @@
+{
+  "title": "Laser Hair Removal",
+  "slug": "ipl-therapy",
+  "description": [
+    "Laser Hair Removal is is a safe and effective treatment option for the removal of unwanted hair from all over the body. We use the latest technology to ensure that you get the best results possible. Our laser hair removal treatments are safe and effective for all skin types and hair colours. We use the latest technology to ensure that you get the best results possible"
+  ],
+  "disclaimer": [
+    "If you have certain conditions, such as a history of keloid scarring, you may not be a suitable candidate for laser hair removal. Please consult with your doctor before booking a treatment.",
+    "There is an additional charge of a minimum of $25 if we are required to shave any area prior to service."
+  ],
+  "services": [
+    {
+      "title": "Forehead Laser Hair Removal",
+      "slug": "laser-forehead-hair-removal",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the forehead.",
+      "price": 50
+    },
+    {
+      "title": "Upper Lip Laser Hair Removal",
+      "slug": "laser-upper-lip",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the upper lip region.",
+      "price": 45
+    },
+    {
+      "title": "Lower Lip Laser Hair Removal",
+      "slug": "laser-lower-lip",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the lower lip region.",
+      "price": 50
+    },
+    {
+      "title": "Chin Laser Hair Removal",
+      "slug": "laser-chin",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the from the upper chin region.",
+      "price": 75
+    },
+    {
+      "title": "Chin + Lower Chin Laser Hair Removal",
+      "slug": "chin_lower-chin",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the entire chin region.",
+      "price": 90
+    },
+    {
+      "title": "Sides Laser Hair Removal",
+      "slug": "laser-sides",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the sides of the face.",
+      "price": 65
+    },
+    {
+      "title": "Cheeks + Sides Laser Hair Removal",
+      "slug": "laser-cheeks_sides",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the cheeks and sides of the face.",
+      "price": 100
+    },
+    {
+      "title": "Full Face Laser Hair Removal",
+      "slug": "laser-full-face",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the full face.",
+      "price": 175
+    },
+    {
+      "title": "Nose Laser Hair Removal",
+      "slug": "laser-nose",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the nose.",
+      "price": 45
+    },
+    {
+      "title": "Ears Laser Hair Removal",
+      "slug": "laser-ears",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the ears.",
+      "price": 55
+    },
+    {
+      "title": "Full Neck Laser Hair Removal",
+      "slug": "laser-full-neck",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the full neck.",
+      "price": 100
+    },
+    {
+      "title": "Back of Neck Laser Hair Removal",
+      "slug": "laser-back-neck",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the back of the neck.",
+      "price": 100
+    },
+    {
+      "title": "Underarm Laser Hair Removal",
+      "slug": "laser-underarm",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the underarm.",
+      "price": 80
+    },
+    {
+      "title": "Half Arms Laser Hair Removal",
+      "slug": "laser-half-arms",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the a of half the arms.",
+      "price": 90
+    },
+    {
+      "title": "Full Arms Laser Hair Removal",
+      "slug": "laser-full-arms",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the full arm area.",
+      "price": 120
+    },
+    {
+      "title": "Knuckles Laser Hair Removal",
+      "slug": "laser-knuckles",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the knuckles.",
+      "price": 50
+    },
+    {
+      "title": "Upper Legs Laser Hair Removal",
+      "slug": "laser-upper-leg",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the upper leg area.",
+      "price": 175
+    },
+    {
+      "title": "Lower Legs Laser Hair Removal",
+      "slug": "laser-lower-leg",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the lower leg area.",
+      "price": 120
+    },
+    {
+      "title": "Full Legs Laser Hair Removal",
+      "slug": "laser-full-leg",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the full leg area.",
+      "price": 300
+    },
+    {
+      "title": "Feet Laser Hair Removal",
+      "slug": "laser-feet",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the feet.",
+      "price": 50
+    },
+    {
+      "title": "Stomach Laser Hair Removal",
+      "slug": "laser-stomach",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the stomach area.",
+      "price": 100
+    },
+    {
+      "title": "Full Chest Laser Hair Removal",
+      "slug": "laser-full-chest",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the full chest area.",
+      "price": 200
+    },
+    {
+      "title": "Lower Back Laser Hair Removal",
+      "slug": "laser-lower-back",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the lower back area.",
+      "price": 100
+    },
+    {
+      "title": "Full Back Laser Hair Removal",
+      "slug": "laser-full-back",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the full back area.",
+      "price": 200
+    },
+    {
+      "title": "Shoulders Laser Hair Removal",
+      "slug": "laser-shoulders",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the shoulders.",
+      "price": 100
+    },
+    {
+      "title": "Bikini Line Laser Hair Removal",
+      "slug": "laser-bikini-line",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the bikini line area.",
+      "price": 75
+    },
+    {
+      "title": "Butt Line Laser Hair Removal",
+      "slug": "laser-butt-line",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the butt line area.",
+      "price": 75
+    },
+    {
+      "title": "Buttocks Laser Hair Removal",
+      "slug": "laser-buttocks",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the buttocks area.",
+      "price": 150
+    },
+    {
+      "title": "Brazilian Laser Hair Removal",
+      "slug": "laser-brazilian",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the treatment area.",
+      "price": 225
+    },
+    {
+      "title": "Manakini Laser Hair Removal",
+      "slug": "laser-manakini",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the bikini area for men",
+      "price": 120
+    },
+    {
+      "title": "Manazilian Laser Hair Removal",
+      "slug": "laser-manazilian",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the treatment area.",
+      "price": 225
+    },
+    {
+      "title": "Women's Full Body Laser Hair Removal",
+      "slug": "laser-womens-full-body",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the entire body for women.",
+      "price": 900
+    },
+    {
+      "title": "Men's Full Body",
+      "slug": "laser-mens-full-body",
+      "description": "Laser hair removal technology provides a safe and effective way to remove unwanted hair from the entire body for women.",
+      "price": 950
+    }
+  ]
+}

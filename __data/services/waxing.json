@@ -1,0 +1,91 @@
+{
+  "title": "Face Waxing",
+  "slug": "face-waxing",
+  "description": [
+    "Waxing is a great way to remove unwanted hair from the underarm area. It is a quick and easy way to remove hair and can last up to 4 weeks. Waxing is a great alternative to shaving and tweezing. It is a more permanent solution to unwanted hair. Waxing is a great way to remove unwanted hair from the underarm area. It is a quick and easy way to remove hair and can last up to 4 weeks. Waxing is a great alternative to shaving and tweezing. It is a more permanent solution to unwanted hair."
+  ],
+  "disclaimers": [
+    "Waxing is not recommended for people who have diabetes, circulatory or skin disorders, or who are taking medications that affect the skin. Waxing is not recommended for people who have diabetes, circulatory or skin disorders, or who are taking medications that affect the skin.",
+    "If you fall into this category, please feel free to ask us about our other hair removal options."
+  ],
+  "services": [
+    {
+      "title": "Eyebrow Waxing",
+      "slug": "eyebrow-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your eyebrows looking neat and tidy.",
+      "price": 16
+    },
+    {
+      "title": "Lip Waxing",
+      "slug": "lip-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your lips looking clean and beautiful.",
+      "price": 8
+    },
+    {
+      "title": "Lower Lip Waxing",
+      "slug": "lower-lip-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your lips looking clean and beautiful.",
+      "price": 5
+    },
+    {
+      "title": "Forehead Waxing",
+      "slug": "forehead-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your forehead nice and clean.",
+      "price": 6
+    },
+    {
+      "title": "Chin Waxing",
+      "slug": "chin-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your chin looking neat and tidy.",
+      "price": 12
+    },
+    {
+      "title": "Chin + Lower Chin Waxing",
+      "slug": "chin_lower-chin",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your entire chin looking neat and tidy.",
+      "price": 18
+    },
+    {
+      "title": "Sides Waxing",
+      "slug": "sides-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep the sides of your face looking their best.",
+      "price": 20
+    },
+    {
+      "title": "Neck Waxing",
+      "slug": "neck-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your neck looking neat and tidy.",
+      "price": 20
+    },
+    {
+      "title": "Full Face Waxing",
+      "slug": "full-face-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your entire face looking neat and tidy.",
+      "price": 55
+    },
+    {
+      "title": "Full Face + Lower Chin Waxing",
+      "slug": "full-face_lower-chin-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your entire face and chin looking neat and tidy.",
+      "price": 60
+    },
+    {
+      "title": "Full Face + Neck Waxing",
+      "slug": "full-face_neck-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your entire face and neck looking neat and tidy.",
+      "price": 70
+    },
+    {
+      "title": "Nose (Inside) Waxing",
+      "slug": "nose-inside-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your nose looking neat and tidy.",
+      "price": 10
+    },
+    {
+      "title": "Nose (Outside) Waxing",
+      "slug": "nose-outside-waxing",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root. This is a great way to keep your nose looking neat and tidy.",
+      "price": 10
+    }
+  ]
+}
