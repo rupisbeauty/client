@@ -70,7 +70,7 @@ export const LicensedEmailCTA: React.FC = () => {
               <FormLabel htmlFor="email" color="gray.600">
                 Enter Your Email
               </FormLabel>
-              <InputGroup>
+              <InputGroup size="lg">
                 <InputLeftElement mt={1}>
                   <CustomIcon icon="plane" size={'1.25rem'} />
                 </InputLeftElement>
