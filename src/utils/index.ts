@@ -1,6 +1,7 @@
 export * from './constants';
 export * from './conversions';
 export * from './debounce';
+export * from './error';
 export * from './fns';
 export * from './form';
 export * from './lodash';
