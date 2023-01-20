@@ -391,9 +391,10 @@
           "Lipo cavitation is a noninvasive procedure that uses ultrasound to break down fat cells. The fat cells are then naturally eliminated by the body. The procedure is painless and has no downtime. It is a great alternative to liposuction and is a great way to get rid of stubborn fat. During the treatment, a trained esthetician uses a handheld device emitting ultrasonic waves that is applied to the area of the body being treated. The waves penetrate the skin and disrupt the fat cells, causing them to release their contents and be naturally eliminated by the body.",
           "Some of the benefits of Lipo Cavitation include the ability to target specific areas of the body, reduce the appearance of cellulite and can improve the overall appearance of the treated areas.",
           "In some cases, minor swelling, skin irritation or redness can be expected in people who have overly sensitive skin."
-        ]
+        ],
+        "category": "other",
+        "slug": "lipo-cavitation"
       }
-    ],
-    "options": []
+    ]
   }
 }
