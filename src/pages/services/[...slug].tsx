@@ -119,12 +119,12 @@ const ServiceDetailPage: NextPage = ({
               );
             })
           : null}
-        {/* {JSON.stringify(service)}: {JSON.stringify(path)} */}
         <ChLink href={`/services/${path[0]}`} pt={12} fontWeight={600}>
           View More {capitalize(unplauralize(path[0]))} Services
         </ChLink>
       </Container>
-      <ServiceOptions path={path} />
+      {/* @TODO: add options back in */}
+      {/* <ServiceOptions path={path} /> */}
     </PageLayout>
   );
 };
