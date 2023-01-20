@@ -1,4 +1,4 @@
-import type { CDNImage,ServiceCategories,ServiceImages } from '../../index';
+import type { CDNImage, ServiceCategories, ServiceImages } from '../../index';
 
 import { getImages } from '@/_content';
 import { allImagesMap } from './images';
@@ -22,7 +22,7 @@ export const serviceCardImageMap: CategoryCardImages = {
     'traditional-facial': allImagesMap.facials['facial'],
     'soothing-back-facial': allImagesMap.facials['woman-looking-back'],
     'detoxifying-facial': allImagesMap.facials['facial'],
-    'led-light-facial': allImagesMap.other['micro-needling'],
+    'led-light-facial': allImagesMap.other['micro-needling'], // @TODO: led-facial.webp
     microdermabrasion: allImagesMap.other['micro-needling'],
     'dermaplaning-facial': allImagesMap.facials['dermaplaning-facial'],
     'micro-hydra-facial': allImagesMap.other['micro-needling'],
@@ -57,7 +57,6 @@ export const serviceCardImageMap: CategoryCardImages = {
     'laser-hair-removal': allImagesMap.other['laser-hair-removal'],
   },
 };
-
 
 export const getCardImages = (
   category: keyof ServiceImages,
