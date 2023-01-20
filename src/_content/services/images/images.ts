@@ -31,6 +31,17 @@ export const allImagesMap: AllImagesMap = {
         height: 800,
       },
     },
+    'eyebrow-threading3': {
+      src: `${CDN_URL}/${SERVICES_DIR}/eyebrow-threading3.webp`,
+      alt: 'Professional eyebrow threading services',
+      attr: '*',
+      width: 1372,
+      height: 1371,
+      dimensions: {
+        width: 1372,
+        height: 1371,
+      },
+    },
     'eyebrow-waxing': {
       src: `${CDN_URL}/${SERVICES_DIR}/eyebrow-waxing.webp`,
       alt: 'Professional eyebrow waxing services',
@@ -121,6 +132,28 @@ export const allImagesMap: AllImagesMap = {
         height: 1280,
       },
     },
+    'traditional-facial': {
+      src: `${CDN_URL}/${SERVICES_DIR}/traditional-facial.webp`,
+      alt: 'Professional facial treatments with gold',
+      attr: '',
+      width: 1505,
+      height: 1002,
+      dimensions: {
+        width: 1505,
+        height: 1002,
+      },
+    },
+    'led-light-facial': {
+      src: `${CDN_URL}/${SERVICES_DIR}/led-facial.webp`,
+      alt: 'Professional facial treatments with gold',
+      attr: '',
+      width: 799,
+      height: 799,
+      dimensions: {
+        width: 799,
+        height: 799,
+      },
+    },
     'oxygen-infusion-facial': {
       src: `${CDN_URL}/${SERVICES_DIR}/oxygen-infusion-facial.webp`,
       alt: 'Professional oxygen infused facial treatments',
@@ -130,6 +163,17 @@ export const allImagesMap: AllImagesMap = {
       dimensions: {
         width: 1920,
         height: 1280,
+      },
+    },
+    'micro-needling2': {
+      src: `${CDN_URL}/${SERVICES_DIR}/micro-needling2.webp`,
+      alt: 'Professional oxygen infused facial treatments',
+      attr: '',
+      width: 667,
+      height: 1007,
+      dimensions: {
+        width: 667,
+        height: 1007,
       },
     },
     'chemical-peel': {
@@ -310,6 +354,17 @@ export const allImagesMap: AllImagesMap = {
         height: 1280,
       },
     },
+    'woman-bikini-bottom': {
+      src: `${CDN_URL}/${PEOPLE_DIR}/woman-bikini-bottom.webp`,
+      alt: 'Professional buttocks waxing treatments',
+      attr: 'Image by master1305 on Freepik',
+      width: 1442,
+      height: 1920,
+      dimensions: {
+        width: 1442,
+        height: 1920,
+      },
+    },
     'underarm-waxing': {
       src: `${CDN_URL}/${SERVICES_DIR}/underarm-waxing.webp`,
       alt: 'Professional underarm waxing services',
@@ -352,6 +407,17 @@ export const allImagesMap: AllImagesMap = {
       dimensions: {
         width: 1920,
         height: 1080,
+      },
+    },
+    'lower-legs-waxing2': {
+      src: `${CDN_URL}/${SERVICES_DIR}/lower-legs-waxing2.webp`,
+      alt: 'Professional lower leg waxing services',
+      attr: '',
+      width: 1510,
+      height: 1003,
+      dimensions: {
+        width: 1510,
+        height: 1003,
       },
     },
     'chest-waxing': {
@@ -420,6 +486,17 @@ export const allImagesMap: AllImagesMap = {
       dimensions: {
         width: 1920,
         height: 1920,
+      },
+    },
+    'lash-lift-result': {
+      src: `${CDN_URL}/${SERVICES_DIR}/lash-lift-result.webp`,
+      alt: 'Professional lash lift services',
+      attr: '',
+      width: 995,
+      height: 995,
+      dimensions: {
+        width: 995,
+        height: 995,
       },
     },
     massage: {
