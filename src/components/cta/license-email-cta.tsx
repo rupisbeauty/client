@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  chakra,
   Container,
   FormControl,
   FormLabel,
@@ -12,10 +13,14 @@ import {
   InputRightAddon,
   Stack,
   Text,
+  useToast,
 } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
+
 import { ChImage, CustomIcon } from 'chakra.ui';
 
 import { BRAND_DIR, CDN_URL } from '@/utils';
+import { trpc } from '@/utils/trpc';
 import images from '@/_content/services/images/images.json';
 
 const licenseImage = images.find(
@@ -33,6 +38,52 @@ const content = {
 };
 
 export const LicensedEmailCTA: React.FC = () => {
+  const [subscribed, setSubscribed] = useState<boolean>(false);
+  const toast = useToast();
+  const mutation = trpc.subs.subscribe.useMutation();
+
+  useEffect(() => {
+    const _sub = localStorage.getItem('subscribed');
+
+    if (_sub === 'true') {
+      setSubscribed(true);
+    }
+  }, []);
+
+  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const email = e.currentTarget.email.value;
+    mutation.mutate(
+      { email },
+      {
+        onSuccess: (data) => {
+          console.log('success', data);
+          toast({
+            status: 'success',
+            title: 'Success!',
+            description: 'You have been subscribed to our mailing list.',
+            duration: 5000,
+            isClosable: true,
+            position: 'top-right',
+          });
+          setSubscribed(true);
+          localStorage.setItem('subscribed', 'true');
+        },
+        onError: (error) => {
+          console.error('error', error);
+          toast({
+            status: 'error',
+            title: 'Error signing up for our mailing list.',
+            description: "Please ensure you've provided a valid email address.",
+            duration: 5000,
+            isClosable: true,
+            position: 'top-right',
+          });
+        },
+      }
+    );
+  };
+
   return (
     <Box as="section" mt={24} bg="white" w="full" p={3} textAlign="center">
       <Container layerStyle="container" centerContent>
@@ -53,7 +104,7 @@ export const LicensedEmailCTA: React.FC = () => {
           borderColor="red.200"
           borderRadius="10px"
         >
-          <Box w="full" p={4}>
+          <chakra.form w="full" p={4} onSubmit={handleSubscribe}>
             <Heading
               as="h3"
               fontSize="2xl"
@@ -66,24 +117,42 @@ export const LicensedEmailCTA: React.FC = () => {
             <Text py={6} textAlign="left">
               {content.cta.subtitle}
             </Text>
-            <FormControl>
-              <FormLabel htmlFor="email" color="gray.600">
-                Enter Your Email
-              </FormLabel>
-              <InputGroup size="lg">
-                <InputLeftElement mt={1}>
-                  <CustomIcon icon="plane" size={'1.25rem'} />
-                </InputLeftElement>
-                <Input type="email" placeholder="you@youremail.com" />
-                <InputRightAddon p={0} borderRadius="lg">
-                  <Button type="submit" w="full" colorScheme="green">
-                    {/* @TODO: add onclick handler */}
-                    Submit
-                  </Button>
-                </InputRightAddon>
-              </InputGroup>
-            </FormControl>
-          </Box>
+            {!subscribed ? (
+              <FormControl>
+                <FormLabel htmlFor="email" color="gray.600">
+                  Enter Your Email
+                </FormLabel>
+                <InputGroup size="lg">
+                  <InputLeftElement mt={1}>
+                    <CustomIcon icon="plane" size={'1.25rem'} />
+                  </InputLeftElement>
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="you@youremail.com"
+                  />
+                  <InputRightAddon p={0} borderRadius="lg">
+                    <Button type="submit" w="full" colorScheme="green">
+                      Submit
+                    </Button>
+                  </InputRightAddon>
+                </InputGroup>
+              </FormControl>
+            ) : (
+              <Box>
+                <Text
+                  fontSize={['xl', null, 's3xl']}
+                  fontWeight={600}
+                  color="red.400"
+                  textAlign="center"
+                  my={3}
+                >
+                  Thanks you for being a valued subscriber to our mailing list.
+                </Text>
+                <Text fontSize="md"></Text>
+              </Box>
+            )}
+          </chakra.form>
           <HStack w="full" mx="auto" justify="center">
             <ChImage
               src={`${CDN_URL}${BRAND_DIR}${licenseImage?.filename}`}
