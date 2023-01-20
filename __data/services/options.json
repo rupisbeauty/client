@@ -32,7 +32,7 @@
     ]
   },
   "tinting": {
-    "options": ["brows_tint", "brow-tint", "lash-tint"]
+    "options": ["eyebrows", "eyelashes"]
   },
   "facials": {
     "options": ["Full Face"]

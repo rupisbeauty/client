@@ -65,26 +65,29 @@ export type ServiceOptions = Record<
 >;
 
 const exports = {
-  services: {
-    hairRemoval: {
+  categories: {
+    'hair-removal': {
       threading: threading as DefaultDataWithDescriptions,
-      iplHairRemoval: iplHairRemoval as DefaultDataWithDescriptions,
-      laserHairRemoval: laserHairRemoval as DefaultDataWithDescriptions,
+      'ipl-hair-removal': iplHairRemoval as DefaultDataWithDescriptions,
+      'laser-hair-removal': laserHairRemoval as DefaultDataWithDescriptions,
     },
     facials: facials as DefaultDataWithDescriptions,
     tinting: tinting as DefaultDataWithDescriptions,
     waxing: {
-      faceWaxing: waxing as DefaultDataWithDescriptions,
-      bodyWaxing: bodyWaxing as DefaultDataWithDescriptions,
-      mensWaxing: MensWaxing as DefaultDataWithDescriptions,
+      'face-waxing': waxing as DefaultDataWithDescriptions,
+      'body-waxing': bodyWaxing as DefaultDataWithDescriptions,
+      'mens-waxing': MensWaxing as DefaultDataWithDescriptions,
     },
     other: {
-      chemicalPeels: chemicalPeels as DefaultDataWithDescriptions,
+      'chemical-peels': chemicalPeels as DefaultDataWithDescriptions,
       lipo: lipo as DataWithExtendedPricing,
-    }
+    },
   },
   addons: addons as AddonsDetails,
   options: options as ServiceOptions,
 };
+
+export type ServicesExport = typeof exports;
+export type ServicesExportKeys = keyof ServicesExport;
 
 export default exports;
