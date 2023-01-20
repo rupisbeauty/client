@@ -35,38 +35,41 @@ export const ServiceListingCard: FC<{
         zIndex={1}
       >
         <Link href={`/services/${category}/${slug}`}>
-          <Box
-            rounded={'lg'}
-            mt={-12}
-            pos={'relative'}
-            height={'115px'}
-            _after={{
-              transition: 'all .3s ease',
-              content: '""',
-              w: 'full',
-              h: 'full',
-              pos: 'absolute',
-              top: 5,
-              left: 0,
-              backgroundImage: `url(${image.src})`,
-              filter: 'blur(15px)',
-              zIndex: -1,
-            }}
-            _groupHover={{
-              _after: {
-                filter: 'blur(10px)',
-              },
-            }}
-          >
-            <ChImage
-              alt=""
+          {image ? (
+            <Box
               rounded={'lg'}
-              height={115}
-              width={282}
-              objectFit={'cover'}
-              src={image.src}
-            />
-          </Box>
+              mt={-12}
+              pos={'relative'}
+              height={'115px'}
+              _after={{
+                transition: 'all .3s ease',
+                content: '""',
+                w: 'full',
+                h: 'full',
+                pos: 'absolute',
+                top: 5,
+                left: 0,
+                backgroundImage: `url(${image.src})`,
+                filter: 'blur(15px)',
+                zIndex: -1,
+              }}
+              _groupHover={{
+                _after: {
+                  filter: 'blur(10px)',
+                },
+              }}
+            >
+              <ChImage
+                alt=""
+                rounded={'lg'}
+                height={115}
+                width={282}
+                objectFit={'cover'}
+                src={image.src}
+              />
+            </Box>
+          ) : null}
+
           <Heading
             pt={10}
             textAlign="center"

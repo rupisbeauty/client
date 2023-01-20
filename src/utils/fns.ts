@@ -76,7 +76,6 @@ export function chunkArray(arr: any[], n: number, min = 1) {
   return chunks;
 }
 
-
 /**
  *
  *
@@ -149,6 +148,18 @@ export function slugify(str: string) {
  */
 export function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+/**
+ *
+ *
+ * @param {string} word
+ * @return {*}
+ */
+export function unplauralize(word: string) {
+  if (word.endsWith('ies')) return word.slice(0, -3) + 'y';
+  if (word.endsWith('s')) return word.slice(0, -1);
+  return word;
 }
 
 export function isEven(n: number) {

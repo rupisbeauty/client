@@ -2,10 +2,12 @@ import {
   Box,
   chakra,
   Container,
+  Heading,
   SimpleGrid,
   Text,
   VStack,
 } from '@chakra-ui/react';
+import Link from 'next/link';
 
 import type {
   GetStaticPaths,
@@ -18,47 +20,47 @@ import type {
 import type { ServiceCategories, ServiceOptionKeys } from '@/_content';
 
 import { PageLayout, SectionTitle, ServicesCoverImage } from '@/components';
+import { ChImage } from 'chakra.ui';
 
-import * as Face from '@/components/icons';
-import { capitalize } from '@/utils';
-import { getCardImages } from '@/_content';
+// import * as Face from '@/components/icons';
+import { capitalize, CDN_URL, unplauralize } from '@/utils';
+import { getCardImages, optionsImagesMap } from '@/_content';
 import options from '@/_content/services/options.json';
 
-const faceOptionsMap = {
-  Eyebrows: Face.Eyebrows,
-  Lip: Face.Lip,
-  Nose: Face.Nose,
-  'Lower-Lip': Face.LowerLip,
-  Chin: Face.Chin,
-  'Chin + Lower C': Face.LowerChin,
-  Sides: Face.Side,
-  Neck: Face.Neck,
-  'Full Face': Face.Full,
-  'Nose(Inside)': Face.Nose,
-  'Nose(Outside)': Face.Nose,
-};
+const prefixUrl = `${CDN_URL}/images/options`;
 
 export const ServiceOptions: React.FC<{ path: string[] }> = ({ path }) => {
   const [category, service] = path;
   const categoryOptions = options[category as ServiceOptionKeys];
+
   return (
     <Container as="section" layerStyle="container">
-      <SimpleGrid columns={[1, 3, 5, 10]} columnGap={8}>
-        {categoryOptions.options.map((option) => {
-          const Icon = faceOptionsMap[option as keyof typeof faceOptionsMap];
+      <SimpleGrid columns={[2, 3, 5]} gap={8}>
+        {categoryOptions?.options.map((option) => {
+          const image = `${prefixUrl}/${
+            optionsImagesMap[option as keyof typeof optionsImagesMap]
+          }`;
           return (
             <VStack key={option} justify="space-between">
               <Box
-                p={6}
+                p={2}
                 bg="white"
                 rounded="full"
                 shadow="md"
                 h={28}
                 w={28}
                 overflow="hidden"
-                border="2px solid lightpink"
+                border="4px solid"
+                borderColor="gray.300"
               >
-                <Icon />
+                <ChImage
+                  src={image}
+                  alt={option}
+                  width={100}
+                  height={100}
+                  objectFit="cover"
+                  objectPosition="center"
+                />
               </Box>
               <Text wordBreak="break-word" fontWeight="medium">
                 {option}
@@ -70,6 +72,8 @@ export const ServiceOptions: React.FC<{ path: string[] }> = ({ path }) => {
     </Container>
   );
 };
+
+const ChLink = chakra(Link);
 
 type ServiceDetailsPageProps = InferGetStaticPropsType<typeof getStaticProps>;
 const ServiceDetailPage: NextPage = ({
@@ -87,21 +91,45 @@ const ServiceDetailPage: NextPage = ({
     >
       <SectionTitle title={capitalize(path[1])} />
       <ServicesCoverImage cover={image} />
-      {JSON.stringify(service)}: {JSON.stringify(path)}
+
+      <Container
+        layerStyle="container"
+        py={16}
+        bg="white"
+        rounded="md"
+        shadow="md"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+      >
+        <SectionTitle title={service.title} />
+        {service.description.length
+          ? service.description.map((item: string) => {
+              return (
+                <Text
+                  key={item}
+                  py={4}
+                  px={[6, 12, 32]}
+                  textAlign="left"
+                  w="full"
+                  fontSize={['md', 'lg', 'xl']}
+                >
+                  {item}
+                </Text>
+              );
+            })
+          : null}
+        {/* {JSON.stringify(service)}: {JSON.stringify(path)} */}
+        <ChLink href={`/services/${path[0]}`} pt={12} fontWeight={600}>
+          View More {capitalize(unplauralize(path[0]))} Services
+        </ChLink>
+      </Container>
       <ServiceOptions path={path} />
     </PageLayout>
   );
 };
 
 export default ServiceDetailPage;
-
-export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: await getServicePaths(),
-  fallback: false,
-});
-
-export const getStaticProps: GetStaticProps = async (ctx) =>
-  await getServiceDetails(ctx);
 
 async function getServicePaths() {
   try {
@@ -120,7 +148,6 @@ async function getServicePaths() {
         });
       })
       .flat();
-
     return paths;
   } catch (error) {
     console.error(error);
@@ -133,7 +160,6 @@ async function getServiceDetails(ctx: GetStaticPropsContext) {
     const serviceList = await (
       await import('@/_content/services/arg.json')
     ).default;
-    // const content = await import('@/_content/services/intros.json');
     const params = ctx.params?.slug;
     if (!params?.length) return { props: { service: {}, slug: '' } };
 
@@ -151,3 +177,11 @@ async function getServiceDetails(ctx: GetStaticPropsContext) {
     return { props: { service: {}, path: [] } };
   }
 }
+
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: await getServicePaths(),
+  fallback: false,
+});
+
+export const getStaticProps: GetStaticProps = async (ctx) =>
+  await getServiceDetails(ctx);

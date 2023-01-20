@@ -44,3 +44,4 @@ export const allServiceImages = { ...images };
 export * from './card-image-map';
 export * from './image-map';
 export * from './images';
+export * from './options-image.map';

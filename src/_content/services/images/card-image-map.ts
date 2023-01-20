@@ -1,4 +1,4 @@
-import type { CDNImage, ServiceCategories, ServiceImages } from '../../index';
+import type { CDNImage,ServiceCategories,ServiceImages } from '../../index';
 
 import { getImages } from '@/_content';
 import { allImagesMap } from './images';
@@ -58,10 +58,22 @@ export const serviceCardImageMap: CategoryCardImages = {
   },
 };
 
+
 export const getCardImages = (
   category: keyof ServiceImages,
   service: string
 ) => {
+  checkExists({ category, service });
   const fallback = getImages(category).cover;
   return serviceCardImageMap[category][service] ?? fallback;
+};
+
+const checkExists = (items: Record<string, any>) => {
+  const keys = Object.keys(items);
+  keys.forEach((key) => {
+    const value = items[key];
+    if (!value) {
+      throw new Error(`Missing ${key} value`);
+    }
+  });
 };
