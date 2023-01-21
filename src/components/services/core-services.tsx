@@ -1,13 +1,14 @@
-import { Container,Grid } from '@chakra-ui/react';
+import { AspectRatio, Container, SimpleGrid } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 
+import type { ServiceImages } from '@/_content';
 import type { FC } from 'react';
 
-import { SectionTitle } from '../../section-title';
-import { MoreBox } from './more-box';
+import { SectionTitle } from '../section-title';
+import { MoreBox } from './more-services-box';
 import { ServiceBox } from './service-box';
 
-import serviceImages from '__data/company/service-thumbnails.json';
+import { imageMap } from '@/_content';
 
 export const CoreServices: FC = () => {
   const router = useRouter();
@@ -27,27 +28,29 @@ export const CoreServices: FC = () => {
         ]}
       >
         <SectionTitle title="Core Services" />
-        <Grid
+        <SimpleGrid
           w="full"
           my={16}
           p={{ base: 4, lg: 12 }}
           gap={9}
           alignItems="center"
-          gridTemplateColumns={{
-            base: 'auto',
-            md: 'auto auto',
-            lg: 'auto auto auto',
-          }}
+          columns={[1, 2, 3]}
           justifyContent="center"
           border="6px dashed"
           borderColor="red.200"
           borderRadius="10px"
         >
-          {serviceImages.map((image) => (
-            <ServiceBox key={image.fileName} image={image} />
+          {Object.keys(imageMap).map((serviceKey) => (
+            <ServiceBox
+              key={imageMap[serviceKey as keyof ServiceImages].cover.src}
+              image={imageMap[serviceKey as keyof ServiceImages].cover}
+              category={serviceKey}
+            />
           ))}
-          <MoreBox onClick={() => router.push('/services')} />
-        </Grid>
+          <AspectRatio ratio={16 / 9}>
+            <MoreBox onClick={() => router.push('/services')} />
+          </AspectRatio>
+        </SimpleGrid>
       </Container>
     </>
   );
