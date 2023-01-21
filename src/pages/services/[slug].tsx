@@ -118,7 +118,7 @@ const ServiceCategory: NextPage<{
           chunkedServices.length &&
           !Array.isArray(chunkedServices[0]) ? (
             <VStack>
-              <SeparatorImage image={accents[0]} />
+              {accents.length ? <SeparatorImage image={accents[0]} /> : null}
               <SimpleGrid
                 w="full"
                 overflow="hidden"
@@ -140,7 +140,9 @@ const ServiceCategory: NextPage<{
             chunkedServices.map((chunk, i) => {
               return (
                 <VStack key={`chunk-${i}`}>
-                  <SeparatorImage image={accents[i]} />
+                  {accents.length ? (
+                    <SeparatorImage image={accents[i]} />
+                  ) : null}
                   <SimpleGrid
                     w="full"
                     overflow="hidden"
