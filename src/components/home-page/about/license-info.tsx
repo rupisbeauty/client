@@ -22,7 +22,7 @@ export const LicenseInfo: FC = () => {
       mx="auto"
       my={[12, null, null, 0]}
     >
-      <chakra.p
+      <Box
         fontSize={{ base: 'xl', md: '3xl' }}
         fontWeight="bold"
         px={12}
@@ -54,7 +54,7 @@ export const LicenseInfo: FC = () => {
               />
             ))}
         </HStack>
-      </chakra.p>
+      </Box>
     </Box>
   );
 };
