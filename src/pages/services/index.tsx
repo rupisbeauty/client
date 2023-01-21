@@ -33,7 +33,7 @@ const Sandbox: NextPage = () => {
   const tabMenuItems = Object.keys(allServices);
 
   return (
-    <PageLayout title="sandbox" showCta showReviews>
+    <PageLayout title="Services" subtitle="Rupi Beauty Studio" showCta showReviews>
       <SectionTitle title="Rupi Signature Services" />
       <Container as="section" layerStyle="container" centerContent maxW="">
         <Box w="full" maxH="36vh" overflow="hidden" borderRadius="md">
