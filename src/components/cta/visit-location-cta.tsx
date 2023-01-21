@@ -1,9 +1,8 @@
-import { AspectRatio, Box, chakra, Stack } from '@chakra-ui/react';
-import Image from 'next/image';
+import { Box, chakra, Stack } from '@chakra-ui/react';
 
 import type { FC } from 'react';
 
-import { ScrollSection } from '@/components';
+import { MapContainer, ScrollSection } from '@/components';
 
 export const VisitLocationCTA: FC<{ title: string }> = ({ title }) => (
   <ScrollSection>
@@ -15,25 +14,21 @@ export const VisitLocationCTA: FC<{ title: string }> = ({ title }) => (
         borderRadius="lg"
         p={8}
         bg="white"
-        shadow="md"
+        shadow="lg"
         my={6}
       >
         <chakra.h2
-          color="secondary"
+          color="gray.500"
           lineHeight="1"
           textAlign="center"
-          textShadow=""
+          textShadow="0px 1px 1px #555"
+          fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
         >
           {title}
         </chakra.h2>
-        <AspectRatio>
-          <Image
-            src="/map-image.png"
-            alt="address: 2A Franklin Ave, Pearl River, NY 10965"
-            width={257}
-            height={146}
-          />
-        </AspectRatio>
+        <Box alignSelf={'center'}>
+          <MapContainer />
+        </Box>
       </Stack>
     </Box>
   </ScrollSection>

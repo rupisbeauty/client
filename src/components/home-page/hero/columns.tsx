@@ -17,6 +17,7 @@ export const Column1: FC = () => {
         textShadow="0px 1px 1px #555"
         textTransform="uppercase"
         w="100%"
+        mb={6}
       >
         {column1.subtitle}
       </chakra.p>

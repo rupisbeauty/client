@@ -15,7 +15,7 @@ export const MapContainer: FC = () => {
       minHeight="300px"
       overflow="hidden"
     >
-      <Map width={425} height={280} />
+      <Map width={[300, 425]} height={[200, 280]} />
     </Center>
   );
 };
