@@ -1,6 +1,7 @@
-// @NOTE: see the useage of @use-cookie-consent-react for insight
+// @NOTE: see the usage of @use-cookie-consent-react for insight
 // @link: https://github.com/use-cookie-consent/use-cookie-consent
-import { Box, chakra } from '@chakra-ui/react';
+
+import { chakra } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -11,11 +12,16 @@ const ChNextLink = chakra(Link);
 
 export const CookieConsent = () => {
   const [consent, setConsent] = useState<boolean>(false);
+  const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
     const localConsent = getConsent();
     if (localConsent) document.body.style.overflow = 'visible';
     setConsent(localConsent);
+    setMounted(true);
+    return () => {
+      setMounted(false);
+    };
   }, []);
 
   useEffect(() => {
@@ -28,7 +34,7 @@ export const CookieConsent = () => {
     setConsent(true);
   };
 
-  return !consent ? (
+  return mounted && !consent ? (
     <Banner
       btnLabel="I Understand"
       handleConsent={handleConsent}

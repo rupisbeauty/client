@@ -38,6 +38,7 @@ export const Banner: FC<BannerProps> = ({
     () => {
       if (isBrowser) document.body.style.overflow = 'visible';
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return !hide ? (
