@@ -1,34 +1,16 @@
-import {
-  Box,
-  Button,
-  chakra,
-  Container,
-  FormControl,
-  FormLabel,
-  Heading,
-  HStack,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  InputRightAddon,
-  Stack,
-  Text,
-  useToast,
-} from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
+import { Box, Container, Heading, HStack, Stack, Text } from '@chakra-ui/react';
 
-import { ChImage, CustomIcon } from 'chakra.ui';
+import { ChImage } from 'chakra.ui';
+import { EmailSubscriptionForm } from '../forms/email-subscription-form';
+import { SectionTitle } from '../section-title';
 
 import { BRAND_DIR, CDN_URL } from '@/utils';
-import { trpc } from '@/utils/trpc';
 import images from '@/_content/services/images/images.json';
-import { SectionTitle } from '../section-title';
 
 const licenseImages = images.filter(
   (img) =>
     img.title.toLowerCase().includes('ny') ||
     img.title.toLowerCase().includes('nj')
-  // (img) => ['ny', 'nj'].includes(img.title.toLowerCase())
 );
 
 const content = {
@@ -42,52 +24,6 @@ const content = {
 };
 
 export const LicensedEmailCTA: React.FC = () => {
-  const [subscribed, setSubscribed] = useState<boolean>(false);
-  const toast = useToast();
-  const mutation = trpc.subs.subscribe.useMutation();
-
-  useEffect(() => {
-    const _sub = localStorage.getItem('subscribed');
-
-    if (_sub === 'true') {
-      setSubscribed(true);
-    }
-  }, []);
-
-  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const email = e.currentTarget.email.value;
-    mutation.mutate(
-      { email },
-      {
-        onSuccess: (data) => {
-          console.log('success', data);
-          toast({
-            status: 'success',
-            title: 'Success!',
-            description: 'You have been subscribed to our mailing list.',
-            duration: 5000,
-            isClosable: true,
-            position: 'top-right',
-          });
-          setSubscribed(true);
-          localStorage.setItem('subscribed', 'true');
-        },
-        onError: (error) => {
-          console.error('error', error);
-          toast({
-            status: 'error',
-            title: 'Error signing up for our mailing list.',
-            description: "Please ensure you've provided a valid email address.",
-            duration: 5000,
-            isClosable: true,
-            position: 'top-right',
-          });
-        },
-      }
-    );
-  };
-
   return (
     <Box as="section" mt={24} bg="white" w="full" p={3} textAlign="center">
       <Container layerStyle="container" centerContent>
@@ -130,50 +66,7 @@ export const LicensedEmailCTA: React.FC = () => {
             gap={[6, null, 12]}
             p={12}
           >
-            <chakra.form w="full" p={9} onSubmit={handleSubscribe}>
-              {!subscribed ? (
-                <FormControl>
-                  <FormLabel htmlFor="email" color="gray.600">
-                    Enter Your Email
-                  </FormLabel>
-                  <InputGroup size="lg" bg="bg">
-                    <InputLeftElement mt={1}>
-                      <CustomIcon icon="plane" size={'1.25rem'} />
-                    </InputLeftElement>
-                    <Input
-                      type="email"
-                      name="email"
-                      placeholder="you@youremail.com"
-                    />
-                    <InputRightAddon p={0} borderRadius="lg">
-                      <Button type="submit" w="full" colorScheme="green">
-                        Submit
-                      </Button>
-                    </InputRightAddon>
-                  </InputGroup>
-                </FormControl>
-              ) : (
-                <Box
-                  border="1px solid"
-                  borderColor="gray.400"
-                  rounded="md"
-                  shadow="md"
-                >
-                  <Heading color="red.400" mt={4}>
-                    You Are Already Subscribed
-                  </Heading>
-                  <Text
-                    fontSize={['xl', null, 's3xl']}
-                    fontWeight={500}
-                    textAlign="center"
-                    my={3}
-                  >
-                    Thank you for being a valued subscriber to our mailing list.
-                  </Text>
-                  <Text fontSize="md"></Text>
-                </Box>
-              )}
-            </chakra.form>
+            <EmailSubscriptionForm />
             <HStack w="full" mx="auto" justify="flex-end" gap={2}>
               {licenseImages.length &&
                 licenseImages.map((img) => (

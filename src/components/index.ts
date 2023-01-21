@@ -5,6 +5,7 @@ export * from './cta';
 // export * from './consent';
 // export * from './cta';
 // export * from './if';
+export * from './forms';
 export * from './home-page';
 export * from './layouts';
 export * from './map';
