@@ -34,13 +34,15 @@ export const PageLayout: FC<LayoutProps> = ({
       <SocialShare twitter facebook pinterest />
       <Sidebar />
       {displayHeader && <Header />}
-      <Main displayHeader={displayHeader}>{children}</Main>
-      {showCta ? <EmailCTA /> : null}
-      {showReviews ? (
-        <Box id="reviews" pt={16}>
-          <SectionTitle title="Our Reviews" />
-        </Box>
-      ) : null}
+      <Main displayHeader={displayHeader}>
+        {children}
+        {showCta ? <EmailCTA /> : null}
+        {showReviews ? (
+          <Box id="reviews" pt={16}>
+            <SectionTitle title="Our Reviews" />
+          </Box>
+        ) : null}
+      </Main>
       {displayFooter && <Footer />}
     </>
   );
