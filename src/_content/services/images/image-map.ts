@@ -5,7 +5,7 @@ import { CDN_URL, PEOPLE_DIR, SERVICES_DIR } from '@/utils';
 export const imageMap: ServiceImages = {
   eyebrows: {
     cover: {
-      src: `${CDN_URL}/${PEOPLE_DIR}/woman-eyes-covering-face.webp`,
+      src: `${CDN_URL}/${SERVICES_DIR}/eyebrow-threading.webp`,
       alt: 'woman with the perfect eyebrows covering her face',
       attr: 'Photo by Alexandru Zdrobău on Unsplash',
       dimensions: {
