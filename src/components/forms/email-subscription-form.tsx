@@ -70,21 +70,21 @@ export const EmailSubscriptionForm = () => {
           <FormLabel htmlFor="email" color="gray.600">
             Enter Your Email
           </FormLabel>
-          <InputGroup size="md" bg="bg">
+          <InputGroup size="lg" bg="bg">
             <InputLeftElement mt={1}>
               <CustomIcon icon="plane" size={'1.25rem'} />
             </InputLeftElement>
             <Input type="email" name="email" placeholder="you@youremail.com" />
             <InputRightAddon p={0} m={0} borderRadius="lg" bg="transparent">
-              <Button type="submit" w="full" colorScheme="green">
-                Submit
+              <Button type="submit" w="full" colorScheme="pink">
+                Subscribe
               </Button>
             </InputRightAddon>
           </InputGroup>
         </FormControl>
       ) : (
-        <Box border="1px solid" borderColor="gray.400" rounded="md" shadow="md">
-          <Heading color="red.400" mt={4}>
+        <Box border="2px solid" borderColor="red.600" rounded="md" shadow="lg">
+          <Heading color="gray.600" mt={4} textAlign="center">
             You Are Already Subscribed
           </Heading>
           <Text
