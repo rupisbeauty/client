@@ -22,9 +22,13 @@ import { ChImage, CustomIcon } from 'chakra.ui';
 import { BRAND_DIR, CDN_URL } from '@/utils';
 import { trpc } from '@/utils/trpc';
 import images from '@/_content/services/images/images.json';
+import { SectionTitle } from '../section-title';
 
-const licenseImage = images.find(
-  (img) => img.title.toLowerCase() === 'state licensed logo'
+const licenseImages = images.filter(
+  (img) =>
+    img.title.toLowerCase().includes('ny') ||
+    img.title.toLowerCase().includes('nj')
+  // (img) => ['ny', 'nj'].includes(img.title.toLowerCase())
 );
 
 const content = {
@@ -87,82 +91,104 @@ export const LicensedEmailCTA: React.FC = () => {
   return (
     <Box as="section" mt={24} bg="white" w="full" p={3} textAlign="center">
       <Container layerStyle="container" centerContent>
-        <Heading as="h2" color="red.400" lineHeight={1.4} pt={6}>
-          {content.title}
-        </Heading>
+        <SectionTitle title={content.title} />
         <Text color="gray.600" fontSize="2xl" lineHeight={2}>
           {content.subtitle}
         </Text>
-
-        <Stack
+        <Box
           w="full"
-          direction={['column', null, 'row']}
           mt={12}
           p={[3, null, 6]}
-          gap={[6, null, 12]}
+          textAlign="center"
           border="6px dashed"
           borderColor="red.200"
           borderRadius="10px"
+          bg="#FDE4CC"
         >
-          <chakra.form w="full" p={4} onSubmit={handleSubscribe}>
-            <Heading
-              as="h3"
-              fontSize="2xl"
-              lineHeight={2}
-              py={3}
-              color="red.400"
-            >
-              {content.cta.title}
-            </Heading>
-            <Text py={6} textAlign="left">
-              {content.cta.subtitle}
-            </Text>
-            {!subscribed ? (
-              <FormControl>
-                <FormLabel htmlFor="email" color="gray.600">
-                  Enter Your Email
-                </FormLabel>
-                <InputGroup size="lg">
-                  <InputLeftElement mt={1}>
-                    <CustomIcon icon="plane" size={'1.25rem'} />
-                  </InputLeftElement>
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="you@youremail.com"
-                  />
-                  <InputRightAddon p={0} borderRadius="lg">
-                    <Button type="submit" w="full" colorScheme="green">
-                      Submit
-                    </Button>
-                  </InputRightAddon>
-                </InputGroup>
-              </FormControl>
-            ) : (
-              <Box>
-                <Text
-                  fontSize={['xl', null, 's3xl']}
-                  fontWeight={600}
-                  color="red.400"
-                  textAlign="center"
-                  my={3}
+          <Heading
+            as="h3"
+            fontSize="3xl"
+            lineHeight={2}
+            py={3}
+            color="gray.600"
+          >
+            {content.cta.title}
+          </Heading>
+          <Text
+            py={[6, null, 3]}
+            px={9}
+            w="50%"
+            mx="auto"
+            color="gray.600"
+            fontSize={{ lg: 'lg' }}
+          >
+            {content.cta.subtitle}
+          </Text>
+          <Stack
+            w="full"
+            direction={['column', null, 'row']}
+            gap={[6, null, 12]}
+            p={12}
+          >
+            <chakra.form w="full" p={9} onSubmit={handleSubscribe}>
+              {!subscribed ? (
+                <FormControl>
+                  <FormLabel htmlFor="email" color="gray.600">
+                    Enter Your Email
+                  </FormLabel>
+                  <InputGroup size="lg" bg="bg">
+                    <InputLeftElement mt={1}>
+                      <CustomIcon icon="plane" size={'1.25rem'} />
+                    </InputLeftElement>
+                    <Input
+                      type="email"
+                      name="email"
+                      placeholder="you@youremail.com"
+                    />
+                    <InputRightAddon p={0} borderRadius="lg">
+                      <Button type="submit" w="full" colorScheme="green">
+                        Submit
+                      </Button>
+                    </InputRightAddon>
+                  </InputGroup>
+                </FormControl>
+              ) : (
+                <Box
+                  border="1px solid"
+                  borderColor="gray.400"
+                  rounded="md"
+                  shadow="md"
                 >
-                  Thanks you for being a valued subscriber to our mailing list.
-                </Text>
-                <Text fontSize="md"></Text>
-              </Box>
-            )}
-          </chakra.form>
-          <HStack w="full" mx="auto" justify="center">
-            <ChImage
-              src={`${CDN_URL}${BRAND_DIR}${licenseImage?.filename}`}
-              alt={`${licenseImage?.alt} | ${licenseImage?.attr}`}
-              width={360}
-              height={360}
-              objectFit="contain"
-            />
-          </HStack>
-        </Stack>
+                  <Heading color="red.400" mt={4}>
+                    You Are Already Subscribed
+                  </Heading>
+                  <Text
+                    fontSize={['xl', null, 's3xl']}
+                    fontWeight={500}
+                    textAlign="center"
+                    my={3}
+                  >
+                    Thank you for being a valued subscriber to our mailing list.
+                  </Text>
+                  <Text fontSize="md"></Text>
+                </Box>
+              )}
+            </chakra.form>
+            <HStack w="full" mx="auto" justify="flex-end" gap={2}>
+              {licenseImages.length &&
+                licenseImages.map((img) => (
+                  <ChImage
+                    key={img?.filename}
+                    src={`${CDN_URL}${BRAND_DIR}${img?.filename}`}
+                    alt={`${img?.alt} | ${img?.attr}`}
+                    width={360 / 2.5}
+                    height={360 / 2.5}
+                    objectFit="contain"
+                  />
+                ))}
+            </HStack>
+          </Stack>
+        </Box>
       </Container>
     </Box>
   );

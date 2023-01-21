@@ -8,6 +8,22 @@
     "attr": "Rupi Beauty Studio"
   },
   {
+    "title": "NY State Certified",
+    "filename": "/ny-cert.webp",
+    "width": 622,
+    "height": 630,
+    "alt": "Licensed Esthetician in NY.",
+    "attr": "Rupi Beauty Studio"
+  },
+  {
+    "title": "NJ State Certified",
+    "filename": "/nj-cert.webp",
+    "width": 622,
+    "height": 630,
+    "alt": "Licensed Esthetician in NJ.",
+    "attr": "Rupi Beauty Studio"
+  },
+  {
     "filename": "/service-eyebrow-threading2.jpg",
     "title": "Threading",
     "alt": "Eyebrow Threading",
