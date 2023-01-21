@@ -7,3 +7,4 @@ export * from './loaders';
 export * from './message-router';
 export * from './modal';
 export * from './mode-toggle';
+export * from './static-scroll-bg';
