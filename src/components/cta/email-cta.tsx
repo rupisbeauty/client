@@ -6,7 +6,7 @@ import { EmailSubscriptionForm } from '../forms';
 
 export const EmailCTA = () => {
   return (
-    <Box w="full" my={12}>
+    <Box w="full" my={12} sx={{ perspective: '3px' }}>
       <StaticScrollBackground bgImage="url(/girl-holding-money-pink-bg.webp)">
         <Box
           my={72}
