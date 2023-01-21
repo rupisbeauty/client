@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo';
 import type { LayoutProps } from 'chakra.ui/';
 import type { FC } from 'react';
 
-import { LicensedEmailCTA, SectionTitle, SocialShare } from '@/components';
+import { EmailCTA, SectionTitle, SocialShare } from '@/components';
 import {
   Footer,
   Header,
@@ -35,7 +35,7 @@ export const PageLayout: FC<LayoutProps> = ({
       <Sidebar />
       {displayHeader && <Header />}
       <Main displayHeader={displayHeader}>{children}</Main>
-      {showCta ? <LicensedEmailCTA /> : null}
+      {showCta ? <EmailCTA /> : null}
       {showReviews ? (
         <Box id="reviews" pt={16}>
           <SectionTitle title="Our Reviews" />
