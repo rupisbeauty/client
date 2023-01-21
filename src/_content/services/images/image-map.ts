@@ -50,7 +50,7 @@ export const imageMap: ServiceImages = {
   },
   facials: {
     cover: {
-      src: `${CDN_URL}/${SERVICES_DIR}/service-facial.webp`,
+      src: `${CDN_URL}/${SERVICES_DIR}/facial.webp`,
       alt: 'woman receiving facial treatment from licensed professional esthetician',
       attr: 'Image by Racool_studio on Freepik',
       width: 1200,

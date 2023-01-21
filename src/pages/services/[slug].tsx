@@ -25,7 +25,7 @@ import { ChImage, CircleBgIcon } from 'chakra.ui';
 import { capitalize, chunkArray, slugify } from '@/utils';
 import { getImages } from '@/_content';
 
-const SeperatorImage: React.FC<{ image: CDNImage | undefined }> = ({
+const SeparatorImage: React.FC<{ image: CDNImage | undefined }> = ({
   image,
 }) => {
   return (
@@ -118,7 +118,7 @@ const ServiceCategory: NextPage<{
           chunkedServices.length &&
           !Array.isArray(chunkedServices[0]) ? (
             <VStack>
-              <SeperatorImage image={accents[0]} />
+              <SeparatorImage image={accents[0]} />
               <SimpleGrid
                 w="full"
                 overflow="hidden"
@@ -140,7 +140,7 @@ const ServiceCategory: NextPage<{
             chunkedServices.map((chunk, i) => {
               return (
                 <VStack key={`chunk-${i}`}>
-                  <SeperatorImage image={accents[i]} />
+                  <SeparatorImage image={accents[i]} />
                   <SimpleGrid
                     w="full"
                     overflow="hidden"
