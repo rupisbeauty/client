@@ -455,9 +455,9 @@ export const allImagesMap: AllImagesMap = {
     },
   },
   other: {
-    'hylauron-pen': {
-      src: `${CDN_URL}/${SERVICES_DIR}/hylauron-pen.webp`,
-      alt: 'Professional hylauron pen services',
+    'hyaluron-pen': {
+      src: `${CDN_URL}/${SERVICES_DIR}/hyaluron-pen.webp`,
+      alt: 'Professional hyaluron pen services',
       attr: '',
       width: 626,
       height: 417,
