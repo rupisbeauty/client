@@ -1,10 +1,10 @@
+// @FIXME: This isn't clickable anymore in the UI
 import { Box, Text, useDisclosure, VStack } from '@chakra-ui/react';
 
 import type { FC } from 'react';
 
 import docLinks from '__data/doc-links.json';
 import { Drawer, mapDocs } from '../components';
-
 export const Sidebar: FC<{ children?: React.ReactNode }> = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
