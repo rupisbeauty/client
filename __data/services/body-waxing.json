@@ -12,73 +12,73 @@
     {
       "title": "Bikini Wax",
       "slug": "bikini-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root around the bikini area.",
       "price": 20
     },
     {
       "title": "Brazilian Wax",
       "slug": "brazilian-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root around the treatment area.",
       "price": 55
     },
     {
       "title": "Buttocks Wax",
       "slug": "buttocks-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root around the buttocks region.",
       "price": 25
     },
     {
       "title": "Underarm Wax",
       "slug": "underarm-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root around the underarm region.",
       "price": 15
     },
     {
       "title": "Half Arm Wax",
       "slug": "half-arm-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root over half of the arm.",
       "price": 20
     },
     {
       "title": "Full Arm Wax",
       "slug": "full-arm-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root over the entire arm.",
       "price": 30
     },
     {
       "title": "Upper Leg Wax",
       "slug": "upper-leg-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root over upper leg area.",
       "price": 40
     },
     {
       "title": "Lower Leg Wax",
       "slug": "lower-leg-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root over the lower leg area.",
       "price": 40
     },
     {
       "title": "Full Legs Wax",
       "slug": "full-legs-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root over the entire leg.",
       "price": 65
     },
     {
       "title": "Back Wax",
       "slug": "back-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root on the back.",
       "price": 50
     },
     {
       "title": "Chest Wax",
       "slug": "chest-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root on the chest.",
       "price": 50
     },
     {
       "title": "Full Body Wax",
       "slug": "full-body-wax",
-      "description": "We use a special wax that is gentle on the skin and removes hair from the root.",
+      "description": "We use a special wax that is gentle on the skin and removes hair from the root on the entire body.",
       "price": 150
     }
   ]

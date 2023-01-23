@@ -11,8 +11,8 @@
   ],
   "services": [
     {
-      "title": "Forehead Hair Removal",
-      "slug": "ipl-forehead-hair-removal",
+      "title": "Forehead (IPL) Hair Removal",
+      "slug": "ipl-forehead",
       "description": "IPL technology provides a safe and effective way to remove unwanted hair from the forehead.",
       "price": 25
     },
@@ -36,7 +36,7 @@
     },
     {
       "title": "Chin + Lower Chin (IPL) Hair Removal",
-      "slug": "chin_lower-chin",
+      "slug": "ipl-chin_lower-chin",
       "description": "IPL technology provides a safe and effective way to remove unwanted hair from the entire chin region.",
       "price": 60
     },
@@ -181,7 +181,7 @@
     {
       "title": "Manakini (IPL) Hair Removal",
       "slug": "ipl-manakini",
-      "description": "IPL technology provides a safe and effective way to remove unwanted hair from the bikini area for men",
+      "description": "IPL technology provides a safe and effective way to remove unwanted hair from the bikini area for men.",
       "price": 65
     },
     {
