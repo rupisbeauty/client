@@ -1,5 +1,5 @@
 ---
-title: Lash Lift + Brow lamination
+title: Lash Lift + Brow Lamination
 slug: lash-lift_brow-lamination
 price: 175
 ---

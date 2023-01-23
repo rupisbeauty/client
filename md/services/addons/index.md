@@ -1,7 +1,7 @@
 ---
 title: Add-ons
 slug: addons
-description: We offer several addons that make the perferct addition to your experience.
+description: We offer several addons that make the perfect addition to your experience.
 options:
   - microdermabrasion
   - dermaplaning

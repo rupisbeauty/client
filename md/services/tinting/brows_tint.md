@@ -1,5 +1,5 @@
 ---
-title: Brows + Ting
+title: Brows + Tint
 slug: brows_tint
 price: 35
 ---

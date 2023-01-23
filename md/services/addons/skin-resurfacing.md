@@ -1,5 +1,5 @@
 ---
-title: Skin resurfacing
+title: Skin Resurfacing
 slug: skin-resurfacing
 price: 250
 ---

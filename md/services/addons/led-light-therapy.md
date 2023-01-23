@@ -1,5 +1,5 @@
 ---
-title: LED Light therapy
+title: LED Light Therapy
 slug: led-light-therapy
 price: 20
 ---

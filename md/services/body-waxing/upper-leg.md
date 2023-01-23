@@ -1,6 +1,6 @@
 ---
-title: Upper Leg
-slug: upper-leg
+title: Upper Legs
+slug: upper-legs
 price: 40
 ---
 

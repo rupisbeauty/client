@@ -1,5 +1,5 @@
 ---
-title: Brow lamination
+title: Brow Lamination
 slug: brow-lamination
 price: 100
 ---

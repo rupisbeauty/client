@@ -1,6 +1,6 @@
 ---
-title: Bikini
-slug: bikini
+title: Brazilian
+slug: brazilian
 price: 85
 ---
 

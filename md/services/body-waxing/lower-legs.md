@@ -1,6 +1,6 @@
 ---
-title: Lower Leg
-slug: lower-leg
+title: Lower Legs
+slug: lower-legs
 price: 40
 ---
 

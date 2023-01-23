@@ -1,5 +1,5 @@
 ---
-title: facials
+title: Facials
 slug: facials
 description:
   - 'A facial is a great way to keep your skin looking it's best. We offer a variety of facials to suit your needs. We also offer a variety of add-ons to enhance your facial experience.'
