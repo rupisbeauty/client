@@ -6,17 +6,17 @@ description:
 disclaimer:
   - 'In some cases, depending on the sensitivity of your skin, you may experience redness or irritation. This is normal and will subside within a few hours.'
 services:
-  - chin_loser-chin-threading
-  - chin-threading
-  - eyebrow-threading
-  - forehead-threading
-  - full-face_lower-chin-threading
-  - full-face_neck-threading
-  - full-face-threading
-  - lip-threading
-  - lower-lip-threading
-  - neck-threading
-  - sides-threading
+  - chin_loser-chin
+  - chin
+  - eyebrow
+  - forehead
+  - full-face_lower-chin
+  - full-face_neck
+  - full-face
+  - lip
+  - lower-lip
+  - neck
+  - sides
 category: hair-removal
 tags:
   - service
