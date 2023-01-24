@@ -1,7 +1,11 @@
 // THIS FILE HAS BEEN GENERATED WITH THE TINA CLI.
 // This is a demo file once you have tina setup feel free to delete this file
 
-import type { GetStaticPaths, GetStaticProps } from 'next';
+import type {
+  GetStaticPaths,
+  GetStaticPathsResult,
+  GetStaticProps,
+} from 'next';
 
 import Head from 'next/head';
 import { useTina } from 'tinacms/dist/react';
@@ -84,7 +88,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const postsListData = await client.queries.postConnection();
 
   return {
