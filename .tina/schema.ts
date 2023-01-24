@@ -8,14 +8,23 @@ export const schema = defineSchema({
       label: 'Pages Sections',
       path: 'content/pages',
       format: 'json',
-      fields: [
-        {
-          type: 'string',
-          label: 'Title',
-          name: 'title',
-          isTitle: true,
-          required: true,
+      ui: {
+        // global: true,
+        router: ({ document }) => {
+          if (document._sys.filename === 'home') {
+            return `/sandbox/tina`;
+          }
+          return undefined;
         },
+      },
+      fields: [
+        // {
+        //   type: 'string',
+        //   label: 'Title',
+        //   name: 'title',
+        //   isTitle: true,
+        //   required: true,
+        // },
         {
           type: 'object',
           label: 'SEO',
@@ -25,6 +34,7 @@ export const schema = defineSchema({
               type: 'string',
               label: 'Title',
               name: 'title',
+              isTitle: true,
               required: true,
             },
             {
@@ -32,6 +42,9 @@ export const schema = defineSchema({
               label: 'Description',
               name: 'description',
               required: true,
+              ui: {
+                component: 'textarea',
+              },
             },
           ],
         },
@@ -46,15 +59,6 @@ export const schema = defineSchema({
           templates: [heroBlock] as Template[],
         },
       ],
-      ui: {
-        global: true,
-        router: ({ document }) => {
-          if (document._sys.filename === 'home') {
-            return `/sandbox/tina`;
-          }
-          return undefined;
-        },
-      },
     },
 
     {
@@ -62,6 +66,10 @@ export const schema = defineSchema({
       label: 'Posts',
       path: 'content/posts',
       format: 'md',
+      ui: {
+        // This is an DEMO router. You can remove this to fit your site
+        router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+      },
       fields: [
         {
           type: 'string',
@@ -77,10 +85,6 @@ export const schema = defineSchema({
           isBody: true,
         },
       ],
-      ui: {
-        // This is an DEMO router. You can remove this to fit your site
-        router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-      },
     },
   ],
 });
