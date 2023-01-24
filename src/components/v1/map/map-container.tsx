@@ -2,7 +2,7 @@ import { Center } from '@chakra-ui/react';
 
 import type { FC } from 'react';
 
-import { Map } from '@/components';
+import { Map } from '@/components/v1';
 
 export const MapContainer: FC = () => {
   return (

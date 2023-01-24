@@ -19,7 +19,7 @@ import type {
 } from '@/_content';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
-import { PageLayout, SectionTitle, ServicesCoverImage } from '@/components';
+import { PageLayout, SectionTitle, ServicesCoverImage } from '@/components/v1';
 import { ChImage, CircleBgIcon } from 'chakra.ui';
 
 import { capitalize, chunkArray, slugify } from '@/utils';

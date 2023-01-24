@@ -2,7 +2,7 @@ import { Box, chakra, Stack } from '@chakra-ui/react';
 
 import type { FC } from 'react';
 
-import { MapContainer, ScrollSection } from '@/components';
+import { MapContainer, ScrollSection } from '@/components/v1';
 
 export const VisitLocationCTA: FC<{ title: string }> = ({ title }) => (
   <ScrollSection>

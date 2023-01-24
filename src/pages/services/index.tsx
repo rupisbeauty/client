@@ -21,7 +21,7 @@ import {
   SectionTitle,
   TabMenu,
   TabPanelContent,
-} from '@/components';
+} from '@/components/v1';
 
 import { CDN_URL, PEOPLE_DIR } from '@/utils';
 import { allServices } from '@/_content/services';

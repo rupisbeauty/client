@@ -7,7 +7,7 @@ import {
   Hero,
   PageLayout,
   VisitLocationCTA,
-} from '@/components';
+} from '@/components/v1';
 
 const Sandbox: NextPage = () => {
   return (

@@ -11,7 +11,7 @@ import {
 import Link from 'next/link';
 
 import { Drawer } from 'chakra.ui';
-import { MenuIcon } from '../../chakra.ui/icons/menu-icon';
+import { MenuIcon } from 'chakra.ui/icons/menu-icon';
 import { StoreIcon } from './home-page/contact';
 import { FullLogo } from './home-page/contact/full-logo';
 

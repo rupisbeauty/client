@@ -1,4 +1,4 @@
-import { AdminLayout } from '@/components';
+import { AdminLayout } from '@/components/v1';
 import { type NextPageWithAuth } from '@/types';
 
 // @TODO: build out admin dashboard

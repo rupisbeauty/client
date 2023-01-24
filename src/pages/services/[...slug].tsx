@@ -19,10 +19,10 @@ import type {
 
 import type { ServiceCategories, ServiceOptionKeys } from '@/_content';
 
-import { PageLayout, SectionTitle, ServicesCoverImage } from '@/components';
+import { PageLayout, SectionTitle, ServicesCoverImage } from '@/components/v1';
 import { ChImage } from 'chakra.ui';
 
-// import * as Face from '@/components/icons';
+// import * as Face from '@/components/v1/icons';
 import { capitalize, CDN_URL, unplauralize } from '@/utils';
 import { getCardImages, optionsImagesMap } from '@/_content';
 import options from '@/_content/services/options.json';

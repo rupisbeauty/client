@@ -1,5 +1,5 @@
-import { FullLogo } from '@/components';
-import { CookiePolicyBody } from '@/components/policies';
+import { FullLogo } from '@/components/v1';
+import { CookiePolicyBody } from '@/components/v1/policies';
 import { CDN_URL, PEOPLE_DIR } from '@/utils/constants';
 import {
   Box,

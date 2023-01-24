@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo';
 import type { LayoutProps } from 'chakra.ui/';
 import type { FC } from 'react';
 
-import { EmailCTA, SectionTitle, SocialShare } from '@/components';
+import { EmailCTA, SectionTitle, SocialShare } from '@/components/v1';
 import {
   Footer,
   Header,
