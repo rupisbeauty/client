@@ -5,6 +5,7 @@ import type {
   GetStaticPaths,
   GetStaticPathsResult,
   GetStaticProps,
+  InferGetStaticPropsType,
 } from 'next';
 
 import Head from 'next/head';
@@ -13,13 +14,9 @@ import { useTina } from 'tinacms/dist/react';
 import client from '.tina/__generated__/client';
 import { TinaMarkdown, type TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
-type BlogPageProps = {
-  variables: any;
-  data: any;
-  query: string;
-};
-
-const BlogPage: React.FC<BlogPageProps> = (props) => {
+const BlogPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = (
+  props
+) => {
   const { data } = useTina({
     query: props.query,
     variables: props.variables,
@@ -88,13 +85,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const postsListData = await client.queries.postConnection();
 
   return {
-    paths: postsListData?.data?.postConnection?.edges?.map((post) => ({
-      params: { filename: String(post?.node?._sys.filename) },
-    })),
+    paths:
+      postsListData.data.postConnection.edges?.map((post) => ({
+        params: { filename: String(post?.node?._sys?.filename) ?? '' },
+      })) ?? [],
     fallback: false,
   };
 };
