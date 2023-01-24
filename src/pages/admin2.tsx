@@ -12,4 +12,4 @@ const AdminDashboard: NextPageWithAuth & { auth: boolean } = () => {
 };
 
 export default AdminDashboard;
-AdminDashboard.auth = true;
+AdminDashboard.auth = false; // @FIXME: testing .tina admin panel routing
