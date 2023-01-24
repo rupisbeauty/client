@@ -23,7 +23,7 @@ export async function middleware(req: NextRequest) {
 
   //redirect them to login if they don't have token and are
   //requesting a protected route
-  const protectedRoutes: string[] = ['/admin'];
+  const protectedRoutes: string[] = ['/admin2'];
 
   const isProtectedRoute = protectedRoutes.every((path) => path === pathname);
 
