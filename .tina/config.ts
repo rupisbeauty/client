@@ -1,7 +1,5 @@
 import { defineConfig, defineSchema, Template } from 'tinacms';
-import {schema} from "./schema"
-
-
+import { schema } from './schema';
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =

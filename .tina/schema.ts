@@ -1,5 +1,5 @@
 import { defineSchema, type Template } from 'tinacms';
-import { heroBlock } from './blocks/hero';
+import { heroBlock, pagesTemplate } from './blocks';
 
 export const schema = defineSchema({
   collections: [
@@ -18,36 +18,6 @@ export const schema = defineSchema({
         },
       },
       fields: [
-        // {
-        //   type: 'string',
-        //   label: 'Title',
-        //   name: 'title',
-        //   isTitle: true,
-        //   required: true,
-        // },
-        {
-          type: 'object',
-          label: 'SEO',
-          name: 'seo',
-          fields: [
-            {
-              type: 'string',
-              label: 'Title',
-              name: 'title',
-              isTitle: true,
-              required: true,
-            },
-            {
-              type: 'string',
-              label: 'Description',
-              name: 'description',
-              required: true,
-              ui: {
-                component: 'textarea',
-              },
-            },
-          ],
-        },
         {
           type: 'object',
           list: true,
@@ -56,7 +26,7 @@ export const schema = defineSchema({
           ui: {
             visualSelector: true,
           },
-          templates: [heroBlock] as Template[],
+          templates: [pagesTemplate, heroBlock] as Template[],
         },
       ],
     },

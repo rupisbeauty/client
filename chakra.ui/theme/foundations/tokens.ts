@@ -1,5 +1,5 @@
 import type { ChakraTheme } from '@chakra-ui/react';
-import { darken, lighten } from 'color2k'; // https://color2k.com/
+import { darken,lighten } from 'color2k'; // https://color2k.com/
 
 export const semanticTokens: ChakraTheme['semanticTokens'] = {
   colors: {
@@ -45,12 +45,12 @@ export const semanticTokens: ChakraTheme['semanticTokens'] = {
       _dark: lighten('#D3B734', 0.2),
     },
     placeholder: {
-      default: 'gray.400',
-      _dark: 'whiteAlpha.300',
+      default: "gray.400",
+      _dark: "whiteAlpha.300",
     },
     rootBorder: {
-      default: 'gray.500',
-      _dark: 'gray.700',
+      default: "gray.500",
+      _dark: "gray.700"
     },
   },
 };

@@ -2,7 +2,7 @@ import React from 'react';
 
 import type { Maybe, Page_Sections, Page_SectionsBlocks } from '.tina';
 
-import { ChImage } from 'chakra.ui';
+import { Hero } from '@/components';
 
 export type BlocksProps = Omit<Page_Sections, 'id' | '_sys' | '_values'>;
 export const Blocks = (props: BlocksProps) => {
@@ -14,14 +14,7 @@ export const Blocks = (props: BlocksProps) => {
             const tinaField = `blocks.${i}`;
             return (
               <div data-tinafield={tinaField} key={tinaField}>
-                <h1>{block?.heading}</h1>
-                <p>{block?.subheading}</p>
-                <ChImage
-                  src={String(block?.image?.src)}
-                  alt={String(block?.image?.alt)}
-                  width={Number(block?.image?.width)}
-                  height={Number(block?.image?.height)}
-                />
+                <Hero data={block} />
               </div>
             );
           default:
