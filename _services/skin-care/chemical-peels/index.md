@@ -1,6 +1,6 @@
 ---
-title: Chemical Peel
-slug: chemical-peel
+title: Chemical Peels
+slug: chemical-peels
 description:
   - 'A Chemical Peel is a procedure that uses a chemical solution to remove the top layers of skin. This procedure is used to treat a variety of skin conditions, including acne, wrinkles, and uneven skin tone. Chemical peels are also used to treat precancerous skin growths and skin damage caused by the sun. Chemical peels are available in a variety of strengths and formulations. The type of peel used depends on the condition being treated and the depth of the peel.'
 disclaimer:

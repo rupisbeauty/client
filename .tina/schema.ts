@@ -9,7 +9,7 @@ export const schema = defineSchema({
     {
       name: 'post',
       label: 'Posts',
-      path: 'content/posts',
+      path: '_content/posts',
       format: 'md',
       ui: {
         // This is an DEMO router. You can remove this to fit your site
@@ -20,7 +20,7 @@ export const schema = defineSchema({
     {
       name: 'pages',
       label: 'Pages',
-      path: 'content/pages',
+      path: '_content/pages',
       format: 'md',
       ui: {
         defaultItem: {

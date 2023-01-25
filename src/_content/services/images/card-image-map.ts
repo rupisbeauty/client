@@ -32,7 +32,7 @@ export const serviceCardImageMap: CategoryCardImages = {
     'acne-reduction-facial': allImagesMap.facials['facial2'],
     'anti-aging-facial': allImagesMap.facials['older-woman-anti-aging'],
     'oxygen-infusion-facial': allImagesMap.facials['oxygen-infusion-facial'],
-    'chemical-peel': allImagesMap.facials['chemical-peel'],
+    'chemical-peels': allImagesMap.facials['chemical-peels'],
   },
   waxing: {
     'bikini-waxing': allImagesMap.waxing['woman-bikini-bottom'],
@@ -51,7 +51,7 @@ export const serviceCardImageMap: CategoryCardImages = {
   other: {
     'micro-needling': allImagesMap.other['micro-needling2'],
     'pro-cell-therapy': allImagesMap.other['ipl-therapy'],
-    'chemical-peel': allImagesMap.facials['chemical-peel'],
+    'chemical-peels': allImagesMap.facials['chemical-peels'],
     'lash-lift': allImagesMap.other['lash-lift-result'],
     'ipl-therapy': allImagesMap.other['ipl-therapy'],
     'laser-hair-removal': allImagesMap.other['laser-hair-removal'],

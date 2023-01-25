@@ -40,4 +40,11 @@ options:
   - manazilian
   - womens-full-body
   - mens-full-body
+offers:
+  - title: Save on multiple sessions
+    service: Laser Hair Removal
+    slug: laser-hair-6-1
+  - title: Save even more with more sessions
+    service: Laser Hair Removal
+    slug: laser-hair-9-2
 ---

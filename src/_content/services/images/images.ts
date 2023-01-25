@@ -177,7 +177,7 @@ export const allImagesMap: AllImagesMap = {
       },
     },
     'chemical-peel': {
-      src: `${CDN_URL}/${SERVICES_DIR}/chemical-peel.webp`,
+      src: `${CDN_URL}/${SERVICES_DIR}/chemical-peels.webp`,
       alt: 'Professional chemical peel services',
       attr: 'Image by senivpetro on Freepik',
       width: 1920,
