@@ -52,5 +52,9 @@ export const semanticTokens: ChakraTheme['semanticTokens'] = {
       default: "gray.500",
       _dark: "gray.700"
     },
+    text: {
+      default: "gray.700",
+      _dark: "gray.300"
+    }
   },
 };

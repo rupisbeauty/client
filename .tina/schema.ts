@@ -1,36 +1,11 @@
-import { defineSchema, type Template } from 'tinacms';
-import { heroBlock, pagesTemplate } from './blocks';
+import { defineSchema, Schema, type Template } from 'tinacms';
+import { slugify } from '../src/utils/fns';
+import { heroBlock } from './blocks';
+
+import { pages, posts } from './collections';
 
 export const schema = defineSchema({
   collections: [
-    {
-      name: 'page_sections',
-      label: 'Pages Sections',
-      path: 'content/pages',
-      format: 'json',
-      ui: {
-        // global: true,
-        router: ({ document }) => {
-          if (document._sys.filename === 'home') {
-            return `/sandbox/tina`;
-          }
-          return undefined;
-        },
-      },
-      fields: [
-        {
-          type: 'object',
-          list: true,
-          name: 'blocks',
-          label: 'Blocks',
-          ui: {
-            visualSelector: true,
-          },
-          templates: [pagesTemplate, heroBlock] as Template[],
-        },
-      ],
-    },
-
     {
       name: 'post',
       label: 'Posts',
@@ -40,21 +15,31 @@ export const schema = defineSchema({
         // This is an DEMO router. You can remove this to fit your site
         router: ({ document }) => `/demo/blog/${document._sys.filename}`,
       },
-      fields: [
-        {
-          type: 'string',
-          name: 'title',
-          label: 'Title',
-          isTitle: true,
-          required: true,
+      ...posts,
+    },
+    {
+      name: 'pages',
+      label: 'Pages',
+      path: 'content/pages',
+      format: 'md',
+      ui: {
+        defaultItem: {
+          title: 'This is the title of your page',
+          description: 'This is the description of your page',
+          backgroundColor: '#FFF1E4',
+          color: '#4A5568',
+          slug: 'Test Page',
+          path: '/',
         },
-        {
-          type: 'rich-text',
-          name: 'body',
-          label: 'Body',
-          isBody: true,
+        // global: true,
+        router: ({ document }) => {
+          if (document._sys.filename === 'home') {
+            return `/sandbox/tina`;
+          }
+          return undefined;
         },
-      ],
+      },
+      ...pages,
     },
   ],
 });

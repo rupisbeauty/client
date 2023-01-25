@@ -34,8 +34,7 @@ export const Hero: FC<{
         direction={['column', null, null, 'row']}
         gap={[20, null, null, 16]}
       >
-
-          <ColumnLeft heading={data.heading} subheading={data.subheading} />
+        <ColumnLeft heading={data.heading} subheading={data.subheading} />
         <VStack w="full" h="100%" justifyContent="center" alignItems="center">
           <ColumnRight image={data.image} />
           <CTABox />
@@ -52,8 +51,7 @@ export const ColumnLeft: FC<{ heading: string; subheading: string }> = ({
   return (
     <VStack h="100%" layerStyle="flex-center">
       <chakra.p
-        data-tinafield="heading"
-        color="gray.600"
+        data-tinafield="subheading"
         fontSize={{ base: '2xl', md: '4xl', lg: '2xl' }}
         fontWeight={600}
         letterSpacing={1.1}
@@ -63,12 +61,12 @@ export const ColumnLeft: FC<{ heading: string; subheading: string }> = ({
         w="100%"
         mb={6}
       >
-        {heading}
+        {subheading}
       </chakra.p>
       <Box position="relative">
         <chakra.h2
           as="h1"
-          data-tinafield="subheading"
+          data-tinafield="heading"
           color="primary"
           fontSize={{ base: '6xl', sm: '7xl', md: '8Fxl', lg: '7xl' }}
           fontWeight={400}
@@ -76,7 +74,7 @@ export const ColumnLeft: FC<{ heading: string; subheading: string }> = ({
           textShadow="0px 1px 1px #555"
           textAlign={['center', null, null, 'left']}
         >
-          {subheading}
+          {heading}
         </chakra.h2>
         <Box
           display={{ base: 'none', sm: 'block' }}

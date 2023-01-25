@@ -1,16 +1,18 @@
 import React from 'react';
 
-import type { Maybe, Page_Sections, Page_SectionsBlocks } from '.tina';
+import type { Maybe } from '../__generated__/types';
 
-import { Hero } from '@/components';
+import { tinaSchema } from '@/schema';
+import { z } from 'zod';
+import { Hero } from '../../src/components';
 
-export type BlocksProps = Omit<Page_Sections, 'id' | '_sys' | '_values'>;
-export const Blocks = (props: BlocksProps) => {
+export type BlocksProps = z.TypeOf<typeof tinaSchema.pages.blocks>;
+export const Blocks: React.FC<BlocksProps> = ({ blocks }) => {
   return (
     <>
-      {props.blocks?.map((block: Maybe<Page_SectionsBlocks>, i: number) => {
+      {blocks?.map((block: Maybe<BlocksProps>, i: number) => {
         switch (true) {
-          case block?.__typename?.includes('Page_sectionsBlocksHero'):
+          case block?.__typename?.includes('PagesBlocksHero'):
             const tinaField = `blocks.${i}`;
             return (
               <div data-tinafield={tinaField} key={tinaField}>

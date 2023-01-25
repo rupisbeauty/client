@@ -2,20 +2,28 @@ import { SEOConfig } from '@/utils/seo/base';
 import { Flex } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
-import type { LayoutProps } from 'chakra.ui/layouts/types';
 import type { FC } from 'react';
 
 import {
-  AvatarMenu,
-  Footer,
-  Header,
-  ModeToggle,
-  MotionBox,
-  Sidebar,
-  transitionDown as variants,
+AvatarMenu,
+Footer,
+Header,
+ModeToggle,
+MotionBox,
+Sidebar,
+transitionDown as variants
 } from 'chakra.ui';
 
 import layout from '__data/layout.json';
+
+export type LayoutProps = {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  showCta?: boolean;
+  showReviews?: boolean;
+  children: React.ReactNode;
+};
 
 export const AdminLayout: FC<LayoutProps> = ({
   title = 'Site Title',

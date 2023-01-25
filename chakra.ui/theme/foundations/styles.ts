@@ -51,7 +51,6 @@ export const styles: ChakraTheme['styles'] = {
       MozFontSmoothing: 'grayscale',
       overflowX: 'auto',
       maxW: 'full',
-      background: 'bg',
     },
     '#__next, #root': {
       display: 'flex',

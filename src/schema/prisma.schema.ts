@@ -1,7 +1,7 @@
 import { errorMessages, typeErrorMessage } from '@/utils';
 import { z } from 'zod';
 
-// NOTE: all inferred ts types can be found at: "@/types/zod/prisma.ts"
+// NOTE: all inferred ts types can be found at: "./types/zod/prisma.ts"
 
 export const accountSchema = z.object({
   id: z.string(errorMessages('id', 'string')),

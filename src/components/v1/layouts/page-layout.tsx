@@ -1,21 +1,31 @@
-import { Box } from '@chakra-ui/react';
+import { Box,chakra } from '@chakra-ui/react';
 import { SkipNavContent } from '@chakra-ui/skip-nav';
 import { NextSeo } from 'next-seo';
 
-import type { LayoutProps } from 'chakra.ui/';
 import type { FC } from 'react';
 
-import { EmailCTA, SectionTitle, SocialShare } from '@/components/v1';
+import { EmailCTA,SectionTitle,SocialShare } from '@/components/v1';
 import {
-  Footer,
-  Header,
-  MotionBox,
-  Sidebar,
-  transitionDown as variants,
+Footer,
+Header,
+MotionBox,
+Sidebar,
+transitionDown as variants
 } from 'chakra.ui';
 
 import { SEOConfig } from '@/utils/seo/base';
 import layout from '__data/layout.json';
+
+export type LayoutProps = {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  showCta?: boolean;
+  showReviews?: boolean;
+  backgroundColor?: string;
+  color?: string;
+  children: React.ReactNode;
+};
 
 export const PageLayout: FC<LayoutProps> = ({
   title = 'Site Title',
@@ -23,8 +33,11 @@ export const PageLayout: FC<LayoutProps> = ({
   description = '',
   showCta = false,
   showReviews = false,
+  backgroundColor = 'bg',
+  color = 'text',
   children,
 }) => {
+
   const displayHeader = layout?.structure?.header.show !== 'false';
   const displayFooter = layout?.structure?.footer.show !== 'false';
 
@@ -34,7 +47,11 @@ export const PageLayout: FC<LayoutProps> = ({
       <SocialShare twitter facebook pinterest />
       <Sidebar />
       {displayHeader && <Header />}
-      <Main displayHeader={displayHeader}>
+      <Main
+        displayHeader={displayHeader}
+        backgroundColor={backgroundColor}
+        color={color}
+      >
         {children}
         {showCta ? <EmailCTA /> : null}
         {showReviews ? (
@@ -48,18 +65,23 @@ export const PageLayout: FC<LayoutProps> = ({
   );
 };
 
-const Main = ({
-  children,
-  displayHeader,
-}: {
+type MainProps = {
+  backgroundColor: string;
+  color: string;
   displayHeader: boolean;
   children: React.ReactNode;
+};
+
+const Main: FC<MainProps> = ({
+  backgroundColor,
+  color,
+  displayHeader,
+  children,
 }) => {
   return (
-    <>
+    <chakra.main bg={backgroundColor}>
       <SkipNavContent />
       <MotionBox
-        as="main"
         initial="hidden"
         animate="enter"
         exit="exit"
@@ -67,13 +89,14 @@ const Main = ({
         position="relative"
         w="full"
         pt={displayHeader ? 6 : 0}
-        mt={displayHeader ? 32 : 0}
+        mt={displayHeader ? 36 : 0}
         pb={displayHeader ? '1em' : 0}
+        minH="100vh"
       >
-        <Box position="relative" w="full" overflowX="hidden">
+        <Box position="relative" w="full" overflowX="hidden" color={color}>
           {children}
         </Box>
       </MotionBox>
-    </>
+    </chakra.main>
   );
 };
