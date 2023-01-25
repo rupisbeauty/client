@@ -13,8 +13,8 @@ const Sandbox: NextPage = () => {
   return (
     <PageLayout title="Rupi Beauty Studio" showCta showReviews>
       <Hero />
-      <VisitLocationCTA title="Come Visit Us At Our Newest Location" />
       <About />
+      <VisitLocationCTA title="Come Visit Us At Our Newest Location" />
 
       <CoreServices />
       <ContactInfo />

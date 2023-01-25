@@ -14,7 +14,7 @@ import about from '__data/site/pages/home/about.json';
 
 export const About: FC = () => {
   return (
-    <>
+    <Box w="full" bg="pink.50" py={24}>
       <Box my={20}>
         <SectionTitle title="About Us" />
       </Box>
@@ -81,6 +81,6 @@ export const About: FC = () => {
           <LicensesStack />
         </Box>
       </Container>
-    </>
+    </Box>
   );
 };
