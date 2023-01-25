@@ -1,4 +1,4 @@
-import { Template } from "tinacms";
+import { Template } from 'tinacms';
 
 export const heroBlock: Template = {
   label: 'Hero',
@@ -14,6 +14,8 @@ export const heroBlock: Template = {
         width: 1920,
         height: 1080,
       },
+      cta: 'Book your first appointment today!',
+      phone: '(862) 571-7873',
     },
   },
   fields: [
@@ -53,6 +55,16 @@ export const heroBlock: Template = {
           name: 'height',
         },
       ],
+    },
+    {
+      type: 'string',
+      label: 'Phone Call-Out-Action',
+      name: 'cta'
+    },
+    {
+      type: 'string',
+      label: 'Phone Number "(000) 000-0000"',
+      name: 'phone'
     },
   ],
 };

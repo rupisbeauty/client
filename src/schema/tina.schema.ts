@@ -20,6 +20,8 @@ const heroSchema = z.object({
     width: z.number(),
     height: z.number(),
   }),
+  cta: z.string().nullish(),
+  phone: z.string().min(13),
 });
 
 const blocksSchema = z.union([heroSchema, z.any()]);
