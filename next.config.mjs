@@ -14,7 +14,7 @@ const config = {
     defaultLocale: 'en',
   },
   images: {
-    domains: ['cdn.jsdelivr.net'],
+    domains: ['cdn.jsdelivr.net', 'raw.githubusercontent.com'],
   },
   // @NOTE: use partytown to enable workers
   // yarn add -D @builder.io/partytown

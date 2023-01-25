@@ -77,6 +77,16 @@ export const pages: { fields: SchemaField[] } = {
       },
     },
     {
+      type: 'boolean',
+      name: 'showCta',
+      label: 'Show Email Signup CTA?',
+    },
+    {
+      type: 'boolean',
+      name: 'showReviews',
+      label: 'Show Reviews Footer Title?',
+    },
+    {
       type: 'object',
       list: true,
       name: 'blocks',

@@ -7,7 +7,11 @@ const layoutSchema = z.object({
   slug: z.string().min(1),
   backgroundColor: z.string().min(1),
   color: z.string().min(1),
+  showCta: z.boolean(),
+  showReviews: z.boolean(),
 });
+
+
 
 const heroSchema = z.object({
   __typename: z.string(),

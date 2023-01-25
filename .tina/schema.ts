@@ -30,6 +30,8 @@ export const schema = defineSchema({
           color: '#4A5568',
           slug: 'Test Page',
           path: '/',
+          showCta: true,
+          showReviews: true,
         },
         // global: true,
         router: ({ document }) => {

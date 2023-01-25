@@ -1,16 +1,16 @@
-import { Box,chakra } from '@chakra-ui/react';
+import { Box, chakra } from '@chakra-ui/react';
 import { SkipNavContent } from '@chakra-ui/skip-nav';
 import { NextSeo } from 'next-seo';
 
 import type { FC } from 'react';
 
-import { EmailCTA,SectionTitle,SocialShare } from '@/components/v1';
+import { EmailCTA, SectionTitle, SocialShare } from '@/components/v1';
 import {
-Footer,
-Header,
-MotionBox,
-Sidebar,
-transitionDown as variants
+  Footer,
+  Header,
+  MotionBox,
+  Sidebar,
+  transitionDown as variants,
 } from 'chakra.ui';
 
 import { SEOConfig } from '@/utils/seo/base';
@@ -37,7 +37,7 @@ export const PageLayout: FC<LayoutProps> = ({
   color = 'text',
   children,
 }) => {
-
+  console.log(showCta, showReviews);
   const displayHeader = layout?.structure?.header.show !== 'false';
   const displayFooter = layout?.structure?.footer.show !== 'false';
 
