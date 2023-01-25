@@ -3,7 +3,6 @@
 
 import type {
   GetStaticPaths,
-  GetStaticPathsResult,
   GetStaticProps,
   InferGetStaticPropsType,
 } from 'next';
@@ -91,7 +90,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths:
       postsListData.data.postConnection.edges?.map((post) => ({
-        params: { filename: String(post?.node?._sys?.filename) ?? '' },
+        params: { filename: String(post?.node?._sys.filename) },
       })) ?? [],
     fallback: false,
   };
