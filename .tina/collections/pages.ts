@@ -32,8 +32,9 @@ export const pages: { fields: SchemaField[] } = {
       },
     },
     {
+      // @FIXME: remove 4bcb7daf9dd3d160
       type: 'string',
-      label: 'Page Slug',
+      label: 'Page Slug @TODO: REMOVE FROM COLLECTION',
       name: 'slug',
       required: true,
       ui: {
@@ -47,8 +48,9 @@ export const pages: { fields: SchemaField[] } = {
       },
     },
     {
+      // @FIXME: remove 4bcb7daf9dd3d160
       type: 'string',
-      label: 'Page Path',
+      label: 'Page Path - @TODO: REMOVE FROM COLLECTION',
       name: 'path',
       required: true,
     },

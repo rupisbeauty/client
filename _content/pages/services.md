@@ -1,8 +1,8 @@
 ---
-title: Rupi Beauty Studio
+title: Services
 description: Rupi Beauty Studio proudly offers
-slug: home # @FIXME: remove 4bcb7daf9dd3d160
-path: /  # @FIXME: remove 4bcb7daf9dd3d160
+slug: services # @FIXME: remove 4bcb7daf9dd3d160
+path: / # @FIXME: remove 4bcb7daf9dd3d160
 backgroundColor: '#FFF1E4'
 color: '#4A5568'
 blocks:

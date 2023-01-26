@@ -3,8 +3,8 @@ import { z } from 'zod';
 const layoutSchema = z.object({
   title: z.string().min(1).max(70),
   description: z.string().min(1).max(160),
-  path: z.string().min(1),
-  slug: z.string().min(1),
+  path: z.string().min(1), // @FIXME: remove 4bcb7daf9dd3d160
+  slug: z.string().min(1), // @FIXME: remove 4bcb7daf9dd3d160
   backgroundColor: z.string().min(1),
   color: z.string().min(1),
   showCta: z.boolean(),
