@@ -11,13 +11,9 @@ const layoutSchema = z.object({
   showReviews: z.boolean(),
 });
 
-const sectionTitleSchema = z
-  .object({
-    __typename: z.string(),
-    title: z.string(),
-  })
-  .nullable();
-
+const sectionTitleSchema = z.object({
+  title: z.string(),
+});
 const imageSchema = z.object({
   src: z.string().url(),
   alt: z.string(),
@@ -33,15 +29,27 @@ const heroSchema = z.object({
   phone: z.string().min(13),
 });
 
-const blocksSchema = z.union([heroSchema, sectionTitleSchema, z.any()]);
+// const TinaMD = x.Type
+export const aboutSchema = z.object({
+  title: z.string().min(1),
+  heading: z.string().min(1),
+  subheading: z.string().min(1),
+  caption: z.string().min(1),
+  description: z.string().min(1),
+  image: imageSchema,
+  showLicenses: z.boolean(),
+  body: z.string().min(1),
+});
 
-export const pageSchema = layoutSchema.extend({ blocks: blocksSchema });
+// const blocksSchema = z.union([heroSchema, sectionTitleSchema, z.any()]);
+// export const pageSchema = layoutSchema.extend({ blocks: blocksSchema });
 
 export const tinaSchema = {
   pages: {
-    blocks: blocksSchema,
+    // blocks: blocksSchema,
     hero: heroSchema,
     layout: layoutSchema,
     image: imageSchema,
+    about: aboutSchema,
   },
 };
