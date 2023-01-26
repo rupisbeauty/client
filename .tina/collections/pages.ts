@@ -1,9 +1,11 @@
-import type { SchemaField,Template } from 'tinacms';
+import type { SchemaField, Template } from 'tinacms';
 
 import {
-aboutBlock,contactBlock,heroBlock,
-locationCTABlock,
-sectionTitleBlock
+  aboutBlock,
+  contactBlock,
+  heroBlock,
+  locationCTABlock,
+  sectionTitleBlock,
 } from '../blocks';
 
 export const pages: { fields: SchemaField[] } = {
