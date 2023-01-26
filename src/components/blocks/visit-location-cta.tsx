@@ -1,10 +1,14 @@
-import { Box,chakra,Stack } from '@chakra-ui/react';
+import { Box, chakra, Stack } from '@chakra-ui/react';
 
 import type { FC } from 'react';
 
-import { MapContainer, ScrollSection } from '@/components/v1';
+import { MapContainer } from './map';
+import { ScrollSection } from './scroll-section';
 
-export const VisitLocationCTA: FC<{ title: string }> = ({ title }) => (
+export const VisitLocationCTA: FC<{ cta: string; address?: string }> = ({
+  cta,
+  address,
+}) => (
   <ScrollSection>
     <Box zIndex={1} height={500} display="flex" layerStyle="flex-center">
       <Stack
@@ -24,10 +28,10 @@ export const VisitLocationCTA: FC<{ title: string }> = ({ title }) => (
           textShadow="0px 1px 1px #555"
           fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
         >
-          {title}
+          {cta}
         </chakra.h2>
         <Box alignSelf={'center'}>
-          <MapContainer />
+          <MapContainer address={address} />
         </Box>
       </Stack>
     </Box>
