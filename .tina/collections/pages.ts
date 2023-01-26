@@ -1,7 +1,6 @@
 import type { SchemaField, Template } from 'tinacms';
 
-import { slugify } from '../../src/utils/fns';
-import { heroBlock, pagesTemplate } from '../blocks';
+import { heroBlock } from '../blocks';
 
 export const pages: { fields: SchemaField[] } = {
   fields: [
@@ -35,24 +34,16 @@ export const pages: { fields: SchemaField[] } = {
       type: 'string',
       label: 'backgroundColor',
       name: 'backgroundColor',
-      //   list: true,
-      //   required: true,
-      //   options: colorOptions,
       ui: {
         component: 'color',
-        // component: 'select',
       },
     },
     {
       type: 'string',
       label: 'color',
       name: 'color',
-      //   list: true,
-      //   required: true,
-      //   options: colorOptions,
       ui: {
         component: 'color',
-        // component: 'select',
       },
     },
     {
@@ -66,15 +57,29 @@ export const pages: { fields: SchemaField[] } = {
       label: 'Show Reviews Footer Title?',
     },
     {
-      type: 'object',
-      list: true,
-      name: 'blocks',
-      label: 'Blocks',
-      ui: {
-        visualSelector: true,
-        // itemProps: (item) => ({ label: item?.name }),
-      },
-      templates: [heroBlock] as Template[],
+      type: 'rich-text',
+      name: 'body',
+      label: 'body',
+      isBody: true,
+      templates: [
+        heroBlock,
+        {
+          label: 'Section Title',
+          name: 'sectionTitle',
+          ui: {
+            defaultItem: {
+              title: 'This is a Section Title',
+            },
+          },
+          fields: [
+            {
+              type: 'string',
+              label: 'Section Title',
+              name: 'title',
+            },
+          ],
+        },
+      ] as Template[],
     },
   ],
 };

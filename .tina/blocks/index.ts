@@ -1,2 +1,2 @@
 export * from "./hero"
-export * from "./pages"
+export * from "./section-title"

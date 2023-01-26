@@ -21,7 +21,7 @@ export const schema = defineSchema({
       name: 'pages',
       label: 'Pages',
       path: '_content/pages',
-      format: 'md',
+      format: 'mdx',
       ui: {
         defaultItem: {
           title: 'This is the title of your page',
@@ -36,7 +36,7 @@ export const schema = defineSchema({
         // global: true,
         router: ({ document }) => {
           if (document._sys.filename === 'home') {
-            return `/sandbox`;
+            return `/sandbox/home`;
           }
           const crumbs = document?._sys?.breadcrumbs;
           return `/sandbox/${crumbs.join('/')}`;

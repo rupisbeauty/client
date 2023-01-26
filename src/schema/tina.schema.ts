@@ -9,24 +9,29 @@ const layoutSchema = z.object({
   showReviews: z.boolean(),
 });
 
-const heroSchema = z
+const sectionTitleSchema = z
   .object({
     __typename: z.string(),
-    heading: z.string().min(1),
-    subheading: z.string().nullish(),
-    image: z.object({
-      __typename: z.string(),
-      src: z.string().url(),
-      alt: z.string().nullish(),
-      width: z.number(),
-      height: z.number(),
-    }),
-    cta: z.string().nullish(),
-    phone: z.string().min(13),
+    title: z.string(),
   })
   .nullable();
 
-const blocksSchema = z.union([heroSchema, z.any()]);
+const imageSchema = z.object({
+  src: z.string().url(),
+  alt: z.string(),
+  width: z.number(),
+  height: z.number(),
+});
+
+const heroSchema = z.object({
+  heading: z.string().min(1),
+  subheading: z.string().nullish(),
+  image: imageSchema,
+  cta: z.string().nullish(),
+  phone: z.string().min(13),
+});
+
+const blocksSchema = z.union([heroSchema, sectionTitleSchema, z.any()]);
 
 export const pageSchema = layoutSchema.extend({ blocks: blocksSchema });
 
@@ -35,5 +40,6 @@ export const tinaSchema = {
     blocks: blocksSchema,
     hero: heroSchema,
     layout: layoutSchema,
+    image: imageSchema,
   },
 };

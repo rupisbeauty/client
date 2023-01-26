@@ -1,20 +1,18 @@
 import { Container, Stack, VStack } from '@chakra-ui/react';
 import React from 'react';
 
-import type { tinaSchema } from '@/schema';
+import type { PagesBodyHeroFilter } from '.tina';
 import type { FC } from 'react';
-import type { z } from 'zod';
 
+import { tinaSchema } from '@/schema';
 import { ColumnLeft, ColumnRight } from './columns';
 import { CTABox } from './cta-box';
 
-export const Hero: FC<{
-  data: z.TypeOf<typeof tinaSchema.pages.blocks>;
-}> = ({ data }) => {
+export const Hero: FC = (props: PagesBodyHeroFilter) => {
+  const data = tinaSchema.pages.hero.parse(props);
+  const image = tinaSchema.pages.image.parse(props.image);
   return (
     <Container
-      data-tinafield={data.__typename}
-      id={data.__typename}
       as="section"
       position="relative"
       w="full"
@@ -33,10 +31,17 @@ export const Hero: FC<{
         direction={['column', null, null, 'row']}
         gap={[20, null, null, 16]}
       >
-        <ColumnLeft heading={data.heading} subheading={data.subheading} />
+        {data ? (
+          <ColumnLeft
+            heading={data?.heading}
+            subheading={String(data?.subheading)}
+          />
+        ) : null}
         <VStack w="full" h="100%" justifyContent="center" alignItems="center">
-          <ColumnRight image={data.image} />
-          <CTABox cta={{ title: data.cta, subtitle: data.phone }} />
+          {image ? <ColumnRight image={image} /> : null}
+          {data ? (
+            <CTABox cta={{ title: String(data?.cta), subtitle: data?.phone }} />
+          ) : null}
         </VStack>
       </Stack>
     </Container>
