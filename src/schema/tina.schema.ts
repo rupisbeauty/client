@@ -5,6 +5,8 @@ const layoutSchema = z.object({
   description: z.string().min(1).max(160),
   backgroundColor: z.string().min(1),
   color: z.string().min(1),
+  showHeader: z.boolean(),
+  showFooter: z.boolean(),
   showCta: z.boolean(),
   showReviews: z.boolean(),
 });

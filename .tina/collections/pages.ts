@@ -5,6 +5,32 @@ import { heroBlock } from '../blocks';
 export const pages: { fields: SchemaField[] } = {
   fields: [
     {
+      type: 'rich-text',
+      name: 'body',
+      label: 'body',
+      isBody: true,
+      ui: {},
+      templates: [
+        heroBlock,
+        {
+          label: 'Section Title',
+          name: 'sectionTitle',
+          ui: {
+            defaultItem: {
+              title: 'This is a Section Title',
+            },
+          },
+          fields: [
+            {
+              type: 'string',
+              label: 'Section Title',
+              name: 'title',
+            },
+          ],
+        },
+      ] as Template[],
+    },
+    {
       type: 'string',
       label: 'Page Title (SEO, Search results) 50-70 chars.',
       name: 'title',
@@ -48,6 +74,16 @@ export const pages: { fields: SchemaField[] } = {
     },
     {
       type: 'boolean',
+      name: 'showHeader',
+      label: 'Show Header?',
+    },
+    {
+      type: 'boolean',
+      name: 'showFooter',
+      label: 'Show Footer',
+    },
+    {
+      type: 'boolean',
       name: 'showCta',
       label: 'Show Email Signup CTA?',
     },
@@ -55,31 +91,6 @@ export const pages: { fields: SchemaField[] } = {
       type: 'boolean',
       name: 'showReviews',
       label: 'Show Reviews Footer Title?',
-    },
-    {
-      type: 'rich-text',
-      name: 'body',
-      label: 'body',
-      isBody: true,
-      templates: [
-        heroBlock,
-        {
-          label: 'Section Title',
-          name: 'sectionTitle',
-          ui: {
-            defaultItem: {
-              title: 'This is a Section Title',
-            },
-          },
-          fields: [
-            {
-              type: 'string',
-              label: 'Section Title',
-              name: 'title',
-            },
-          ],
-        },
-      ] as Template[],
     },
   ],
 };
