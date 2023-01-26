@@ -32,29 +32,6 @@ export const pages: { fields: SchemaField[] } = {
       },
     },
     {
-      // @FIXME: remove 4bcb7daf9dd3d160
-      type: 'string',
-      label: 'Page Slug @TODO: REMOVE FROM COLLECTION',
-      name: 'slug',
-      required: true,
-      ui: {
-        validate: (value) => {
-          if (value === 'new-page') {
-            return 'Please change the slug to something other than "new-page"';
-          }
-        },
-        format: (value) => slugify(value),
-        parse: (value) => slugify(value),
-      },
-    },
-    {
-      // @FIXME: remove 4bcb7daf9dd3d160
-      type: 'string',
-      label: 'Page Path - @TODO: REMOVE FROM COLLECTION',
-      name: 'path',
-      required: true,
-    },
-    {
       type: 'string',
       label: 'backgroundColor',
       name: 'backgroundColor',
