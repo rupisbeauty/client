@@ -1,6 +1,11 @@
 import type { SchemaField, Template } from 'tinacms';
 
-import { heroBlock } from '../blocks';
+import {
+  aboutBlock,
+  heroBlock,
+  locationCTABlock,
+  sectionTitleBlock,
+} from '../blocks';
 
 export const pages: { fields: SchemaField[] } = {
   fields: [
@@ -12,71 +17,9 @@ export const pages: { fields: SchemaField[] } = {
       ui: {},
       templates: [
         heroBlock,
-        {
-          label: 'Section Title',
-          name: 'sectionTitle',
-          ui: {
-            defaultItem: {
-              title: 'This is a Section Title',
-            },
-          },
-          fields: [
-            {
-              type: 'string',
-              label: 'Section Title',
-              name: 'title',
-            },
-          ],
-        },
-        {
-          label: 'About Section',
-          name: 'about',
-          ui: {
-            defaultItem: {
-              title: 'About',
-              heading: 'Your Neighborhood Beauty Experts',
-              subheading: 'This is a subheading',
-              caption: 'This is a caption',
-              description: 'This a a full description',
-              showLicenses: false,
-            },
-          },
-          fields: [
-            {
-              type: 'string',
-              label: 'Title',
-              name: 'title',
-            },
-            {
-              type: 'string',
-              label: 'Heading',
-              name: 'heading',
-            },
-            {
-              type: 'string',
-              label: 'Subheading',
-              name: 'subheading',
-            },
-            {
-              type: 'string',
-              label: 'Caption',
-              name: 'caption',
-            },
-            {
-              type: 'string',
-              label: 'Description',
-              name: 'description',
-              ui: {
-                component: 'textarea',
-              },
-            },
-            {
-              type: 'boolean',
-              label: 'Show Licenses?',
-              name: 'licenses',
-            },
-          ],
-        },
+        sectionTitleBlock,
+        aboutBlock,
+        locationCTABlock,
       ] as Template[],
     },
     {
