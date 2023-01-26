@@ -36,9 +36,13 @@ export const schema = defineSchema({
         // global: true,
         router: ({ document }) => {
           if (document._sys.filename === 'home') {
-            return `/sandbox/tina`;
+            return `/sandbox/home`;
           }
-          return undefined;
+          const crumbs = document?._sys?.breadcrumbs;
+          if (document._sys.filename === 'index') {
+            return `/sandbox/${crumbs.splice(0, crumbs.length - 1).join('/')}/index`;
+          }
+          return `/sandbox/${crumbs.join('/')}`;
         },
       },
       ...pages,

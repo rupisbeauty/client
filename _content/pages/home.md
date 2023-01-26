@@ -19,7 +19,6 @@ blocks:
     cta: Book your first Appointment Today!
     phone: (862) 571-7873
     _template: hero
-showCta: true
-showReviews: true
+showCta: false
+showReviews: false
 ---
-
