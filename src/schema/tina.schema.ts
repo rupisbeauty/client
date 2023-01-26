@@ -46,6 +46,12 @@ export const locationCTASchema = z.object({
   // address: z.string().min(1),
 });
 
+export const contactSchema = z.object({
+  address: z.string().min(1),
+  locality: z.string().min(1),
+  phoneNumbers: z.string().min(1),
+});
+
 // const blocksSchema = z.union([heroSchema, sectionTitleSchema, z.any()]);
 // export const pageSchema = layoutSchema.extend({ blocks: blocksSchema });
 
@@ -57,5 +63,6 @@ export const tinaSchema = {
     image: imageSchema,
     about: aboutSchema,
     locationCTA: locationCTASchema,
+    contact: contactSchema,
   },
 };
