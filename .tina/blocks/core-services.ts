@@ -6,7 +6,6 @@ export const coreServicesBlock: Template = {
   ui: {
     defaultItem: {
       title: 'Core Services',
-      // address: '2A Franklin Ave Pearl River, NY 10965',
     },
   },
   fields: [
@@ -18,32 +17,23 @@ export const coreServicesBlock: Template = {
       isTitle: true,
     },
     {
-      label: 'Products',
-      name: 'categories',
       type: 'object',
       list: true,
+      name: 'core-services',
+      label: 'Core Services',
       fields: [
         {
-          label: 'Product Select',
-          name: 'product',
           type: 'reference',
-          collections: ['products'],
+          label: 'Service',
+          name: 'service',
+          collections: ['services'],
         },
       ],
+      ui: {
+        itemProps(item) {
+          return { label: item['core-services'] };
+        },
+      },
     },
-    // {
-    //   type: 'object',
-    //   list: true,
-    //   name: 'core-services-list',
-    //   label: 'Core Services List',
-    //   fields: [
-    //     {
-    //       type: 'reference',
-    //       label: 'Product',
-    //       name: 'product',
-    //       collections: ['products'],
-    //     }
-    //   ]
-    // }
   ],
 };

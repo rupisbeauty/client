@@ -1,6 +1,6 @@
 import { defineSchema } from 'tinacms';
 
-import { categories, media, pages, posts, products, tags } from './collections';
+import { categories, media, pages, posts, services, tags } from './collections';
 
 export const schema = defineSchema({
   collections: [
@@ -24,10 +24,12 @@ export const schema = defineSchema({
         defaultItem: {
           title: 'This is the title of your page',
           description: 'This is the description of your page',
-          backgroundColor: '#FFF1E4',
-          color: '#4A5568',
           showCta: true,
           showReviews: true,
+          showHeader: true,
+          showFooter: true,
+          backgroundColor: '#FFF1E4',
+          color: '#4A5568',
         },
 
         router: ({ document }) => {
@@ -59,19 +61,25 @@ export const schema = defineSchema({
       // @TODO: add allowedActions to restrict create, edit and delete
     },
     {
-      name: 'products',
-      label: 'Products',
-      path: '_content/products',
+      name: 'services',
+      label: 'Services',
+      path: '_content/services',
       format: 'mdx',
       ui: {
         defaultItem: {
-          title: 'Product Title',
+          title: 'Service Title',
+          description:
+            'This is the product description should be between 150-160 characters.',
           price: 0,
-          slug: 'test-product',
+          slug: 'service-title',
+          showCta: true,
+          showReviews: true,
+          showHeader: true,
+          showFooter: true,
         },
         router: ({ document }) => `/sandbox/products/${document._sys.filename}`,
       },
-      ...products,
+      ...services,
     },
     {
       name: 'media',

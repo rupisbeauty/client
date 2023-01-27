@@ -23,7 +23,7 @@ export const pages: { fields: SchemaField[] } = {
         aboutBlock,
         locationCTABlock,
         contactBlock,
-        coreServicesBlock,
+        // coreServicesBlock,
       ] as Template[],
     },
     {
@@ -34,7 +34,7 @@ export const pages: { fields: SchemaField[] } = {
       required: true,
       ui: {
         validate: (value) => {
-          if (value.length > 70)
+          if (value?.length && value.length > 70)
             return `-${Number(value.length) - 70} chars remaining / 70`;
         },
       },
@@ -47,7 +47,7 @@ export const pages: { fields: SchemaField[] } = {
       ui: {
         component: 'textarea',
         validate: (value) => {
-          if (value.length > 160)
+          if (value?.length && value.length > 160)
             return `-${Number(value.length) - 160} chars remaining / 160`;
         },
       },
