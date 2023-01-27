@@ -1,7 +1,7 @@
 import { defineSchema } from 'tinacms';
 
 import { categories, media, pages, posts, services, tags } from './collections';
-import defaultItems from './collections/defaults.json';
+import defaultItems from './collections/_defaults.json';
 
 const routers = {
   posts: ({ document }) => `/demo/blog/${document._sys.filename}`,
