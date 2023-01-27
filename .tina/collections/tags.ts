@@ -15,6 +15,7 @@ export const tags: { fields: SchemaField[] } = {
         { label: 'Exterior Shots', value: 'location' },
         { label: 'Accent', value: 'accent' },
         { label: 'Vector', value: 'vector' },
+        { label: 'Untagged', value: 'untagged' },
       ],
     },
   ],

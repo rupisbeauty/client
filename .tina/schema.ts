@@ -68,9 +68,9 @@ export const schema = defineSchema({
       label: 'Category',
       path: '_content/categories',
       format: 'md',
+      ui: { global: true, allowedActions: { create: true, delete: false } },
       ...categories,
-      ui: { global: true },
-      // @TODO: add allowedActions to restrict create, edit and delete
+
       // @TODO: add default item as 'uncategorized'
     },
     {
@@ -78,9 +78,8 @@ export const schema = defineSchema({
       label: 'Tags',
       path: '_content/tags',
       format: 'md',
+      ui: { global: true, allowedActions: { create: false, delete: false } },
       ...tags,
-      ui: { global: true },
-      // @TODO: add allowedActions to restrict create, edit and delete
       // @TODO: add default item as 'untagged'
     },
   ],

@@ -1,3 +1,4 @@
 ---
-name: accent
+name:
+  - accent
 ---

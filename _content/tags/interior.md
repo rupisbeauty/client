@@ -1,3 +1,4 @@
 ---
-name: interior
+name:
+  - interior
 ---

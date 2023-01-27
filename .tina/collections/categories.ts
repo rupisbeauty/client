@@ -13,6 +13,7 @@ export const categories: { fields: SchemaField[] } = {
         { label: 'Hair Removal', value: 'hair-removal' },
         { label: 'Skin Care', value: 'skin-care' },
         { label: 'Other', value: 'other' },
+        { label: 'Uncategorized', value: 'uncategorized' },
       ],
     },
   ],

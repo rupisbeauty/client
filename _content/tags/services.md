@@ -1,3 +1,4 @@
 ---
-name: service
+name:
+  - service
 ---

@@ -18,7 +18,9 @@
     "showCta": true,
     "showReviews": true,
     "showHeader": true,
-    "showFooter": true
+    "showFooter": true,
+    "categories": [{ "category": "uncategorized" }],
+    "tags": [{ "tag": "untagged" }]
   },
   "media": {
     "title": "file-name",
@@ -27,7 +29,9 @@
     "width": 200,
     "height": 200,
     "attr": "Add Image Attribution or Keep Blank",
-    "caption": "Include a caption or keep blank"
+    "caption": "Include a caption or keep blank",
+    "categories": [{ "category": "uncategorized" }],
+    "tags": [{ "tag": "untagged" }]
   },
   "tags": {},
   "categories": {}
