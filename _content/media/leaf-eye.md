@@ -8,6 +8,8 @@ attr: Photo by Drew Dizzy Graham
 caption: A beautiful eye peeking out from behind large leaves | Rupi Beauty Studio
 imageTags:
   - tags: _content/tags/accent.md
+imageCategories:
+  - category: {}
 ---
 
 ![leaf-eye](https://unsplash.com/photos/cTKGZJTMJQU "")

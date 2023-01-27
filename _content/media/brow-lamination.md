@@ -10,7 +10,7 @@ caption: Brow Lamination Procedure | Rupi Beauty Studio
 imageTags:
   - tags: _content/tags/services.md
 imageCategories:
-  - category: _content/categories/other.md
+  - category: _content/categories/eyebrows.md
 ---
 
 ![brow-lamination](https://cdn.jsdelivr.net/gh/rupistudio/assets@main/images/services/brow-lamination.webp "")

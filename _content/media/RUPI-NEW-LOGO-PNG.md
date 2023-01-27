@@ -8,6 +8,8 @@ attr: ''
 caption: Rupi Beauty Studio Logo Full
 imageTags:
   - tags: _content/tags/brand.md
+imageCategories:
+  - {}
 ---
 
 ![Rupi Beauty Studio Logo Full](https://cdn.jsdelivr.net/gh/rupistudio/assets@main/brand/RUPI-NEW-LOGO-PNG.png "Rupi Beauty Studio Logo Full")

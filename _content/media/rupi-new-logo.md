@@ -8,6 +8,8 @@ attr: ''
 caption: Rupi Logo
 imageTags:
   - tags: _content/tags/brand.md
+imageCategories:
+  - {}
 ---
 
 ![rupi-new-logo](https://cdn.jsdelivr.net/gh/rupistudio/assets@main/brand/rupi-new-logo.png "")
