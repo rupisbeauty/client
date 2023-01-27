@@ -30,10 +30,15 @@ export const services: { fields: SchemaField[] } = {
       },
     },
     {
+      // @TODO: add advanced session pricing via template block
       name: 'price',
       label: 'Price',
       type: 'number',
-      required: true,
+    },
+    {
+      name: 'duration',
+      label: 'Duration',
+      type: 'number',
     },
     {
       name: 'slug',
@@ -43,7 +48,7 @@ export const services: { fields: SchemaField[] } = {
       isTitle: true,
       ui: {
         // format: (val) => val && slugify(val.toLowerCase()), // updates display
-        parse: (val) => val && slugify(val?.toLowerCase()), // updates value in storage
+        // parse: (val) => val && slugify(val?.toLowerCase()), // updates value in storage
       },
     },
     {
