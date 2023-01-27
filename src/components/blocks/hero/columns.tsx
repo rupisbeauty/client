@@ -64,7 +64,7 @@ export const ColumnLeft: FC<{ heading: string; subheading: string }> = ({
 };
 
 export const ColumnRight: React.FC<{
-  image: z.TypeOf<typeof tinaSchema.pages.image>;
+  image: z.TypeOf<typeof tinaSchema.image>;
 }> = ({ image }) => {
   return (
     <Box

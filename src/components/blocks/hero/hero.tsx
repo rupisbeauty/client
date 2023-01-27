@@ -9,8 +9,8 @@ import { ColumnLeft, ColumnRight } from './columns';
 import { CTABox } from './cta-box';
 
 export const Hero: FC = (props: PagesBodyHeroFilter) => {
-  const data = tinaSchema.pages.hero.parse(props);
-  const image = tinaSchema.pages.image.parse(props.image);
+  const data = tinaSchema.hero.parse(props);
+  const image = tinaSchema.image.parse(props.image);
   return (
     <Container
       as="section"

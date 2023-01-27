@@ -15,7 +15,7 @@ import { LicensesStack } from './licenses-stack';
 import { CDN_URL, LOCATIONS_DIR } from '@/utils';
 // import about from '__data/site/pages/home/about.json';
 
-export const About: FC<z.TypeOf<typeof tinaSchema.pages.about>> = ({
+export const About: FC<z.TypeOf<typeof tinaSchema.about>> = ({
   title = 'About Us',
   heading,
   subheading,

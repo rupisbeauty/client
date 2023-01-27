@@ -17,7 +17,7 @@ transitionDown as variants
 
 import { SEOConfig } from '@/utils/seo/base';
 
-export type LayoutProps = z.TypeOf<typeof tinaSchema.pages.layout> & {
+export type LayoutProps = z.TypeOf<typeof tinaSchema.layout> & {
   subtitle?: string;
   children: React.ReactNode;
 };
