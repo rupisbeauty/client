@@ -1,4 +1,4 @@
-import { Box,chakra } from '@chakra-ui/react';
+import { Box, chakra } from '@chakra-ui/react';
 import { SkipNavContent } from '@chakra-ui/skip-nav';
 import { NextSeo } from 'next-seo';
 
@@ -6,20 +6,20 @@ import type { tinaSchema } from '@/schema';
 import type { FC } from 'react';
 import type { z } from 'zod';
 
-import { EmailCTA,SectionTitle,SocialShare } from '@/components/v1';
+import { EmailCTA, SectionTitle, SocialShare } from '@/components/v1';
 import {
-Footer,
-Header,
-MotionBox,
-Sidebar,
-transitionDown as variants
+  Footer,
+  Header,
+  MotionBox,
+  Sidebar,
+  transitionDown as variants,
 } from 'chakra.ui';
 
 import { SEOConfig } from '@/utils/seo/base';
 
 export type LayoutProps = z.TypeOf<typeof tinaSchema.layout> & {
   subtitle?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export const PageLayout: FC<LayoutProps> = ({
