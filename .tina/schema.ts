@@ -1,6 +1,22 @@
 import { defineSchema } from 'tinacms';
 
 import { categories, media, pages, posts, services, tags } from './collections';
+import defaultItems from './collections/defaults.json';
+
+const routers = {
+  posts: ({ document }) => `/demo/blog/${document._sys.filename}`,
+  pages: ({ document }) => {
+    if (document._sys.filename === 'home') {
+      return `/sandbox/home`;
+    }
+    const crumbs = document?._sys?.breadcrumbs;
+    return `/sandbox/${crumbs.join('/')}`;
+  },
+  services: ({ document }) => {
+    const crumbs = document?._sys?.breadcrumbs;
+    return `/sandbox/services/${crumbs.join('/')}`;
+  },
+};
 
 export const schema = defineSchema({
   collections: [
@@ -11,7 +27,7 @@ export const schema = defineSchema({
       format: 'md',
       ui: {
         // This is an DEMO router. You can remove this to fit your site
-        router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+        router: routers.posts,
       },
       ...posts,
     },
@@ -21,44 +37,10 @@ export const schema = defineSchema({
       path: '_content/pages',
       format: 'mdx',
       ui: {
-        defaultItem: {
-          title: 'This is the title of your page',
-          description: 'This is the description of your page',
-          showCta: true,
-          showReviews: true,
-          showHeader: true,
-          showFooter: true,
-          backgroundColor: '#FFF1E4',
-          color: '#4A5568',
-        },
-
-        router: ({ document }) => {
-          if (document._sys.filename === 'home') {
-            return `/sandbox/home`;
-          }
-          const crumbs = document?._sys?.breadcrumbs;
-          return `/sandbox/${crumbs.join('/')}`;
-        },
+        defaultItem: defaultItems.pages,
+        router: routers.pages,
       },
       ...pages,
-    },
-    {
-      name: 'categories',
-      label: 'Category',
-      path: '_content/categories',
-      format: 'md',
-      ...categories,
-      ui: { global: true },
-      // @TODO: add allowedActions to restrict create, edit and delete
-    },
-    {
-      name: 'tags',
-      label: 'Tags',
-      path: '_content/tags',
-      format: 'md',
-      ...tags,
-      ui: { global: true },
-      // @TODO: add allowedActions to restrict create, edit and delete
     },
     {
       name: 'services',
@@ -66,21 +48,8 @@ export const schema = defineSchema({
       path: '_content/services',
       format: 'mdx',
       ui: {
-        defaultItem: {
-          title: 'Service Title',
-          description:
-            'This is the product description should be between 150-160 characters.',
-          price: 0,
-          slug: 'service-title',
-          showCta: true,
-          showReviews: true,
-          showHeader: true,
-          showFooter: true,
-        },
-        router: ({ document }) => {
-          const crumbs = document?._sys?.breadcrumbs;
-          return `/sandbox/services/${crumbs.join('/')}`;
-        },
+        defaultItem: defaultItems.services,
+        router: routers.services,
       },
       ...services,
     },
@@ -90,17 +59,29 @@ export const schema = defineSchema({
       path: '_content/media',
       format: 'md',
       ui: {
-        defaultItem: {
-          title: 'file-name',
-          src: 'https://picsum.photos/200',
-          alt: 'Image Alt Text',
-          width: 200,
-          height: 200,
-          attr: 'Add Image Attribution or Keep Blank',
-          caption: 'Include a caption or keep blank',
-        },
+        defaultItem: defaultItems.media,
       },
       ...media,
+    },
+    {
+      name: 'categories',
+      label: 'Category',
+      path: '_content/categories',
+      format: 'md',
+      ...categories,
+      ui: { global: true },
+      // @TODO: add allowedActions to restrict create, edit and delete
+      // @TODO: add default item as 'uncategorized'
+    },
+    {
+      name: 'tags',
+      label: 'Tags',
+      path: '_content/tags',
+      format: 'md',
+      ...tags,
+      ui: { global: true },
+      // @TODO: add allowedActions to restrict create, edit and delete
+      // @TODO: add default item as 'untagged'
     },
   ],
 });

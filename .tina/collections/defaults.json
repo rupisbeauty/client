@@ -1,0 +1,34 @@
+{
+  "posts": {},
+  "pages": {
+    "title": "This is the title of your page",
+    "description": "This is the description of your page",
+    "showCta": true,
+    "showReviews": true,
+    "showHeader": true,
+    "showFooter": true,
+    "backgroundColor": "#FFF1E4",
+    "color": "#4A5568"
+  },
+  "services": {
+    "title": "Service Title",
+    "description": "This is the product description should be between 150-160 characters.",
+    "price": 0,
+    "slug": "service-title",
+    "showCta": true,
+    "showReviews": true,
+    "showHeader": true,
+    "showFooter": true
+  },
+  "media": {
+    "title": "file-name",
+    "src": "https://picsum.photos/200",
+    "alt": "Image Alt Text",
+    "width": 200,
+    "height": 200,
+    "attr": "Add Image Attribution or Keep Blank",
+    "caption": "Include a caption or keep blank"
+  },
+  "tags": {},
+  "categories": {}
+}
