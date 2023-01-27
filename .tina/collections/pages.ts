@@ -23,7 +23,7 @@ export const pages: { fields: SchemaField[] } = {
         aboutBlock,
         locationCTABlock,
         contactBlock,
-        // coreServicesBlock,
+        coreServicesBlock,
       ] as Template[],
     },
     {

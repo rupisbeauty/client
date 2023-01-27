@@ -19,7 +19,7 @@ export const coreServicesBlock: Template = {
     {
       type: 'object',
       list: true,
-      name: 'core-services',
+      name: 'coreServices',
       label: 'Core Services',
       fields: [
         {
@@ -31,7 +31,7 @@ export const coreServicesBlock: Template = {
       ],
       ui: {
         itemProps(item) {
-          return { label: item['core-services'] };
+          return { label: item.coreServices };
         },
       },
     },

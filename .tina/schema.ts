@@ -77,7 +77,10 @@ export const schema = defineSchema({
           showHeader: true,
           showFooter: true,
         },
-        router: ({ document }) => `/sandbox/products/${document._sys.filename}`,
+        router: ({ document }) => {
+          const crumbs = document?._sys?.breadcrumbs;
+          return `/sandbox/services/${crumbs.join('/')}`;
+        },
       },
       ...services,
     },

@@ -1,10 +1,12 @@
 import { z } from 'zod';
 
 const layoutSchema = z.object({
-  title: z.string().min(1).max(70),
-  description: z.string().min(1).max(160),
-  backgroundColor: z.string().min(1),
-  color: z.string().min(1),
+  title: z.string().min(1),
+  // title: z.string().min(1).max(70),
+  description: z.string().min(1),
+  // description: z.string().min(1).max(160),
+  backgroundColor: z.string().optional(),
+  color: z.string().optional(),
   showHeader: z.boolean(),
   showFooter: z.boolean(),
   showCta: z.boolean(),
@@ -56,13 +58,11 @@ export const contactSchema = z.object({
 // export const pageSchema = layoutSchema.extend({ blocks: blocksSchema });
 
 export const tinaSchema = {
-  pages: {
-    // blocks: blocksSchema,
-    hero: heroSchema,
-    layout: layoutSchema,
-    image: imageSchema,
-    about: aboutSchema,
-    locationCTA: locationCTASchema,
-    contact: contactSchema,
-  },
+  // blocks: blocksSchema,
+  hero: heroSchema,
+  layout: layoutSchema,
+  image: imageSchema,
+  about: aboutSchema,
+  locationCTA: locationCTASchema,
+  contact: contactSchema,
 };

@@ -42,21 +42,16 @@ export const services: { fields: SchemaField[] } = {
     },
     {
       name: 'slug',
-      label: 'Product Slug',
+      label: 'Service Slug',
       type: 'string',
       required: true,
       isTitle: true,
-      ui: {
-        // format: (val) => val && slugify(val.toLowerCase()), // updates display
-        // parse: (val) => val && slugify(val?.toLowerCase()), // updates value in storage
-      },
     },
     {
       type: 'rich-text',
       name: 'body',
       label: 'body',
       isBody: true,
-      // ui: {},
       // templates: [] as Template[], // @TODO: flesh out services templates
     },
     {
