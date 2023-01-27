@@ -54,33 +54,33 @@ export const schema = defineSchema({
       ...services,
     },
     {
-      name: 'media',
-      label: 'Media',
-      path: '_content/media',
-      format: 'md',
-      ui: {
-        defaultItem: defaultItems.media,
-      },
-      ...media,
-    },
-    {
       name: 'categories',
-      label: 'Category',
+      label: 'Categories',
       path: '_content/categories',
       format: 'md',
       ui: { global: true, allowedActions: { create: true, delete: false } },
       ...categories,
-
-      // @TODO: add default item as 'uncategorized'
     },
-    {
-      name: 'tags',
-      label: 'Tags',
-      path: '_content/tags',
-      format: 'md',
-      ui: { global: true, allowedActions: { create: false, delete: false } },
-      ...tags,
-      // @TODO: add default item as 'untagged'
-    },
+    // {
+    //   // 7bj31Y9RiJCRrrkMFHH3cg  @TODO: Remove media
+    //   name: 'media',
+    //   label: 'Media',
+    //   path: '_content/media',
+    //   format: 'md',
+    //   ui: {
+    //     defaultItem: defaultItems.media,
+    //   },
+    //   ...media,
+    // },
+    // {
+    //   // kyDLunJrQmQNjqY9Pw  @TODO: Remove tags
+    //   name: 'tags',
+    //   label: 'Tags',
+    //   path: '_content/tags',
+    //   format: 'md',
+    //   ui: { global: true, allowedActions: { create: false, delete: false } },
+    //   ...tags,
+    //   // @TODO: add default item as 'untagged'
+    // },
   ],
 });

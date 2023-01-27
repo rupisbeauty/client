@@ -54,34 +54,36 @@ export const services: { fields: SchemaField[] } = {
       isBody: true,
       // templates: [] as Template[], // @TODO: flesh out services templates
     },
-    {
-      name: 'image',
-      label: 'Image',
-      type: 'reference',
-      collections: ['media'],
-    },
-    {
-      name: 'gallery',
-      label: 'Gallery',
-      type: 'object',
-      list: true,
-      fields: [
-        {
-          name: 'image',
-          label: 'Image',
-          type: 'reference',
-          collections: ['media'],
-        },
-      ],
-      ui: {
-        itemProps(item) {
-          return {
-            label: item.image,
-            key: `${item.image}-image`,
-          };
-        },
-      },
-    },
+    // {
+    //   // 7bj31Y9RiJCRrrkMFHH3cg  @TODO: Replace with reference to tina media
+    //   name: 'image',
+    //   label: 'Image',
+    //   type: 'reference',
+    //   collections: ['media'],
+    // },
+    // {
+    //   // 7bj31Y9RiJCRrrkMFHH3cg  @TODO: Replace with template of tina media
+    //   name: 'gallery',
+    //   label: 'Gallery',
+    //   type: 'object',
+    //   list: true,
+    //   fields: [
+    //     {
+    //       name: 'image',
+    //       label: 'Image',
+    //       type: 'reference',
+    //       collections: ['media'],
+    //     },
+    //   ],
+    //   ui: {
+    //     itemProps(item) {
+    //       return {
+    //         label: item.image,
+    //         key: `${item.image}-image`,
+    //       };
+    //     },
+    //   },
+    // },
     {
       name: 'categories',
       label: 'Categories',

@@ -1,5 +1,6 @@
 import type { SchemaField } from 'tinacms';
 
+// kyDLunJrQmQNjqY9Pw  @TODO: Remove tags
 export const tags: { fields: SchemaField[] } = {
   fields: [
     {

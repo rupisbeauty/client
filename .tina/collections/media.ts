@@ -1,5 +1,6 @@
 import type { SchemaField } from 'tinacms';
 
+// 7bj31Y9RiJCRrrkMFHH3cg  @TODO: Remove media
 export const media: { fields: SchemaField[] } = {
   fields: [
     {
@@ -56,28 +57,28 @@ export const media: { fields: SchemaField[] } = {
       type: 'rich-text',
       isBody: true,
     },
-    {
-      name: 'tags',
-      label: 'Tags',
-      type: 'object',
-      list: true,
-      fields: [
-        {
-          name: 'tag',
-          label: 'Tag',
-          type: 'reference',
-          collections: ['tags'],
-        },
-      ],
-      ui: {
-        itemProps(item) {
-          return {
-            label: item.tags,
-            key: `${item.tags}-tag`,
-          };
-        },
-      },
-    },
+    // {
+    //   name: 'tags',
+    //   label: 'Tags',
+    //   type: 'object',
+    //   list: true,
+    //   fields: [
+    //     {
+    //       name: 'tag',
+    //       label: 'Tag',
+    //       type: 'reference',
+    //       collections: ['tags'],
+    //     },
+    //   ],
+    //   ui: {
+    //     itemProps(item) {
+    //       return {
+    //         label: item.tags,
+    //         key: `${item.tags}-tag`,
+    //       };
+    //     },
+    //   },
+    // },
     {
       name: 'categories',
       label: 'Categories',
