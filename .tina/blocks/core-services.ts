@@ -5,20 +5,45 @@ export const coreServicesBlock: Template = {
   name: 'coreServices',
   ui: {
     defaultItem: {
-      cta: 'Come Visit Us At Our Newest Location',
+      title: 'Core Services',
       // address: '2A Franklin Ave Pearl River, NY 10965',
     },
   },
   fields: [
     {
       type: 'string',
-      label: 'CTA Message',
-      name: 'cta',
+      label: 'Title',
+      name: 'title',
+      required: true,
+      isTitle: true,
+    },
+    {
+      label: 'Products',
+      name: 'categories',
+      type: 'object',
+      list: true,
+      fields: [
+        {
+          label: 'Product Select',
+          name: 'product',
+          type: 'reference',
+          collections: ['products'],
+        },
+      ],
     },
     // {
-    //   type: 'string',
-    //   label: 'Location Address',
-    //   name: 'address',
-    // },
+    //   type: 'object',
+    //   list: true,
+    //   name: 'core-services-list',
+    //   label: 'Core Services List',
+    //   fields: [
+    //     {
+    //       type: 'reference',
+    //       label: 'Product',
+    //       name: 'product',
+    //       collections: ['products'],
+    //     }
+    //   ]
+    // }
   ],
 };

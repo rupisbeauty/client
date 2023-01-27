@@ -3,6 +3,7 @@ import type { SchemaField, Template } from 'tinacms';
 import {
   aboutBlock,
   contactBlock,
+  coreServicesBlock,
   heroBlock,
   locationCTABlock,
   sectionTitleBlock,
@@ -22,6 +23,7 @@ export const pages: { fields: SchemaField[] } = {
         aboutBlock,
         locationCTABlock,
         contactBlock,
+        coreServicesBlock,
       ] as Template[],
     },
     {
