@@ -1,5 +1,0 @@
----
-name:
-  - skin-care
----
-

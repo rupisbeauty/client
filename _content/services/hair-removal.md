@@ -1,5 +1,0 @@
----
-name:
-  - hair-removal
----
-
