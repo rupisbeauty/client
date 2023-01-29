@@ -1,42 +1,43 @@
-import { AspectRatio, Box, chakra } from '@chakra-ui/react';
+import { Box, chakra } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { MotionBox } from 'chakra.ui';
 
-import type { CDNImage } from '@/_content';
+import type { coreServiceCategorySchema } from '@/schema';
 import type { FC } from 'react';
+import type { z } from 'zod';
 
 const ChLink = chakra(Link);
 
-export const ServiceBox: FC<{ image: CDNImage; category: string }> = ({
-  category,
-  image,
-}) => {
+export const ServiceBox: FC<{
+  item: z.TypeOf<typeof coreServiceCategorySchema>;
+}> = ({ item }) => {
   return (
     <MotionBox
-      key={image?.src}
+      key={item.image}
       position="relative"
-      w="100%"
+      w="full"
+      h="full"
       whileHover={{ y: -10 }}
     >
-      <ChLink href={`/services/${category}`}>
-        <AspectRatio ratio={16 / 9}>
+      <ChLink href={'#'}>
+        <Box w="full" h="full" objectFit="cover">
           <Image
-            src={image.src}
-            alt={`${image.alt} | ${image?.attr}`}
-            height={image.height}
-            width={image.width}
+            src={item.image}
+            alt={item.category}
+            fill={true}
             style={{
               borderRadius: '15px',
               boxShadow:
                 '0px 0px 1px rgba(48, 49, 51, 0.05), 0px 4px 8px rgba(48, 49, 51, 0.1)',
+              objectFit: 'cover',
             }}
           />
-        </AspectRatio>
+        </Box>
         <Box
           position="relative"
-          w="60%"
+          w="80%"
           zIndex={2}
           mt={-14}
           ml="auto"
@@ -53,14 +54,9 @@ export const ServiceBox: FC<{ image: CDNImage; category: string }> = ({
         >
           <chakra.p
             px={2}
-            // padding="50px"
             color="red.400"
             fontWeight={600}
             fontSize={{ base: 'lg', xl: '2xl' }}
-            // add embossed text shadow
-            title="category"
-            // textShadow="0px 0px 1px rgba(48, 49, 51, 0.05), 0px 4px 8px rgba(48, 49, 51, 0.1)"
-            // textShadow="0px 0px 1px rgba(48, 49, 51, 0.05), 0px 4px 8px rgba(48, 49, 51, 0.1)"
             _before={{
               content: '""',
               padding: 2,
@@ -78,7 +74,7 @@ export const ServiceBox: FC<{ image: CDNImage; category: string }> = ({
               left: '2px',
             }}
           >
-            {category}
+            {item.category}
           </chakra.p>
         </Box>
       </ChLink>

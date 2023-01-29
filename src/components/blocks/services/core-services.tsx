@@ -8,13 +8,12 @@ import { SectionTitle } from '../section-title';
 import { MoreBox } from './more-services-box';
 import { ServiceBox } from './service-box';
 
-import { imageMap } from '@/_content';
+import type { PagesBodyCoreServicesFilter } from '.tina';
+import { tinaSchema } from '@/schema';
 
-export const CoreServices: FC<{ title: string; images: CDNImage[] }> = ({
-  title,
-  images,
-}) => {
+export const CoreServices: FC<PagesBodyCoreServicesFilter> = (props) => {
   const router = useRouter();
+  const data = tinaSchema.coreServices.parse(props);
   return (
     <>
       <Container
@@ -30,7 +29,7 @@ export const CoreServices: FC<{ title: string; images: CDNImage[] }> = ({
           'linear(to-b, #FFF1E4, #FDE4CC )',
         ]}
       >
-        <SectionTitle title="Core Services" />
+        <SectionTitle title={String(data?.title)} />
         <SimpleGrid
           w="full"
           my={16}
@@ -38,24 +37,17 @@ export const CoreServices: FC<{ title: string; images: CDNImage[] }> = ({
           gap={9}
           alignItems="center"
           columns={[1, 2, 3]}
+          autoRows="1fr"
           justifyContent="center"
           border="6px dashed"
           borderColor="red.200"
           borderRadius="10px"
         >
-          {/* {Object.keys(imageMap).map((serviceKey) => (
-            <ServiceBox
-              key={imageMap[serviceKey as keyof ServiceImages].cover.src}
-              image={imageMap[serviceKey as keyof ServiceImages].cover}
-              category={serviceKey}
-            />
-          ))} */}
-          {images.length
-            ? images.map((image) => (
+          {data.serviceCategories?.length
+            ? data.serviceCategories?.map((category) => (
                 <ServiceBox
-                  key={image.src}
-                  image={image}
-                  category={'test'} // @FIXME: needs the service category
+                  key={category.category}
+                  item={category}
                 />
               ))
             : null}
