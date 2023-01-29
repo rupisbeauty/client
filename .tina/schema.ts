@@ -54,9 +54,9 @@ export const schema = defineSchema({
       ...servicesCategories,
     },
     {
-      name: 'services',
+      name: 'options',
       label: 'Service Options',
-      path: '_content/services',
+      path: '_content/options',
       format: 'mdx',
       ui: { global: true },
       ...servicesOptions,

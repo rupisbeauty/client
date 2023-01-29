@@ -18,22 +18,17 @@ export const coreServicesBlock: Template = {
     },
     {
       type: 'object',
+      name: 'options',
+      label: 'Options',
       list: true,
-      name: 'coreServices',
-      label: 'Core Services',
       fields: [
         {
           type: 'reference',
-          label: 'Service',
-          name: 'service',
-          collections: ['services'],
+          name: 'option',
+          label: 'Select An Option',
+          collections: ['categories'],
         },
       ],
-      ui: {
-        itemProps(item) {
-          return { label: item.coreServices };
-        },
-      },
     },
   ],
 };

@@ -14,14 +14,11 @@
   "categories": {
     "title": "Service Title",
     "description": "This is the product description should be between 150-160 characters.",
-    "price": 0,
     "slug": "service-title",
     "showCta": true,
     "showReviews": true,
     "showHeader": true,
     "showFooter": true,
-    "categories": [{ "category": "uncategorized" }],
-    "tags": [{ "tag": "untagged" }],
     "body": {
       "type": "root",
       "children": [

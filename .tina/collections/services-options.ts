@@ -47,6 +47,28 @@ export const servicesOptions: { fields: SchemaField[] } = {
       type: 'number',
     },
     {
+      name: 'categories',
+      label: 'Categories',
+      type: 'object',
+      list: true,
+      fields: [
+        {
+          name: 'category',
+          label: 'Category',
+          type: 'reference',
+          collections: ['categories'],
+        },
+      ],
+      ui: {
+        itemProps(item) {
+          return {
+            label: item.category,
+            key: `${item.category}-category`,
+          };
+        },
+      },
+    },
+    {
       type: 'boolean',
       name: 'showHeader',
       label: 'Show Header?',

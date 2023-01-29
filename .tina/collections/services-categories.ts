@@ -50,26 +50,46 @@ export const categories: { fields: SchemaField[] } = {
       // templates: [] as Template[], // @TODO: flesh out services templates
     },
     {
-      name: 'categories',
-      label: 'Categories',
       type: 'object',
+      name: 'options',
+      label: 'Options',
       list: true,
+      ui: {
+        itemProps: (item) => ({
+          id: item.option,
+          key: item.option,
+          label: item.option,
+        }),
+      },
       fields: [
         {
-          name: 'category',
-          label: 'Category',
           type: 'reference',
+          name: 'option',
+          label: 'Select A Service Option',
+          collections: ['options'],
+        },
+      ],
+    },
+    {
+      type: 'object',
+      name: 'serviceList',
+      label: 'Child Services',
+      list: true,
+      ui: {
+        itemProps: (item) => ({
+          id: item.service,
+          key: item.service,
+          label: item.service,
+        }),
+      },
+      fields: [
+        {
+          type: 'reference',
+          name: 'service',
+          label: 'Select A Child Service',
           collections: ['categories'],
         },
       ],
-      ui: {
-        itemProps(item) {
-          return {
-            label: item.category,
-            key: `${item.category}-category`,
-          };
-        },
-      },
     },
     {
       type: 'boolean',
