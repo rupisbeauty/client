@@ -74,7 +74,15 @@ export const ColumnRight: React.FC<{
       mb={{ base: 20, sm: 0 }}
     >
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
-      {image?.src && <Image {...image} priority />}
+      {image && (
+        <Image
+          src={image}
+          width={1200}
+          height={1200}
+          alt="Rupi Beauty Studio"
+          priority
+        />
+      )}
     </Box>
   );
 };

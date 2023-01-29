@@ -43,6 +43,11 @@ export const aboutBlock: Template = {
       },
     },
     {
+      type: 'image',
+      label: 'Image',
+      name: 'image',
+    },
+    {
       type: 'boolean',
       label: 'Show Licenses?',
       name: 'licenses',

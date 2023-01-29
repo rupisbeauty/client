@@ -29,42 +29,55 @@ export const heroBlock: Template = {
       label: 'Subheading',
       name: 'subheading',
     },
+    // {
+    //   type: 'object',
+    //   label: 'Image',
+    //   name: 'image',
+    //   fields: [
+    //     {
+    //       type: 'string',
+    //       label: 'Image URL',
+    //       name: 'src',
+    //     },
+    //     {
+    //       type: 'string',
+    //       label: 'Alt Text',
+    //       name: 'alt',
+    //     },
+    //     {
+    //       type: 'number',
+    //       label: 'Width',
+    //       name: 'width',
+    //     },
+    //     {
+    //       type: 'number',
+    //       label: 'Height',
+    //       name: 'height',
+    //     },
+    //   ],
+    // },
     {
-      type: 'object',
+      type: 'image',
       label: 'Image',
       name: 'image',
-      fields: [
-        {
-          type: 'string',
-          label: 'Image URL',
-          name: 'src',
-        },
-        {
-          type: 'string',
-          label: 'Alt Text',
-          name: 'alt',
-        },
-        {
-          type: 'number',
-          label: 'Width',
-          name: 'width',
-        },
-        {
-          type: 'number',
-          label: 'Height',
-          name: 'height',
-        },
-      ],
+      // ui: {
+      //   parse: (media) => ({
+      //     src: media.previewSrc,
+      //     alt: media.alt,
+      //     width: media.width,
+      //     height: media.height,
+      //   }),
+      // },
     },
     {
       type: 'string',
       label: 'Phone Call-Out-Action',
-      name: 'cta'
+      name: 'cta',
     },
     {
       type: 'string',
       label: 'Phone Number "(000) 000-0000"',
-      name: 'phone'
+      name: 'phone',
     },
   ],
 };

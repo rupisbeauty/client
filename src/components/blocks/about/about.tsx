@@ -5,7 +5,6 @@ import type { tinaSchema } from '@/schema';
 import type { FC } from 'react';
 import type { z } from 'zod';
 
-import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import { FullLogo } from '../full-logo';
 import { SectionTitle } from '../section-title';
 import { Decorators } from './decorators';
@@ -21,6 +20,7 @@ export const About: FC<z.TypeOf<typeof tinaSchema.about>> = ({
   subheading,
   caption,
   description,
+  image,
   showLicenses,
 }) => {
   return (
@@ -64,7 +64,7 @@ export const About: FC<z.TypeOf<typeof tinaSchema.about>> = ({
           mb={{ base: 3, md: 12 }}
         >
           <Image
-            src={`${CDN_URL}${LOCATIONS_DIR}/pearl-river-interior.jpeg`}
+            src={image}
             alt="Pearl River Location Interior"
             width={904 / 2}
             height={1205 / 2}
