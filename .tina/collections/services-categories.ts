@@ -1,11 +1,10 @@
 import type { SchemaField } from 'tinacms';
-import { slugify } from '../../src/utils/fns';
 
-export const services: { fields: SchemaField[] } = {
+export const categories: { fields: SchemaField[] } = {
   fields: [
     {
       name: 'title',
-      label: 'Service Title (SEO, Search results) 50-70 chars.',
+      label: 'Service Category Title (SEO, Search results) 50-70 chars.',
       type: 'string',
       required: true,
       ui: {
@@ -15,6 +14,20 @@ export const services: { fields: SchemaField[] } = {
             return `-${Number(value.length) - 70} chars remaining / 70`;
         },
       },
+      // options: [
+      //   { label: 'Eyebrows', value: 'eyebrows' },
+      //   { label: 'Hair Removal', value: 'hair-removal' },
+      //   { label: 'Skin Care', value: 'skin-care' },
+      //   { label: 'Other', value: 'other' },
+      //   { label: 'Uncategorized', value: 'uncategorized' },
+      // ],
+    },
+    {
+      name: 'slug',
+      label: 'Service Slug',
+      type: 'string',
+      required: true,
+      isTitle: true,
     },
     {
       type: 'string',
@@ -30,60 +43,12 @@ export const services: { fields: SchemaField[] } = {
       },
     },
     {
-      // @TODO: add advanced session pricing via template block
-      name: 'price',
-      label: 'Price',
-      type: 'number',
-    },
-    {
-      name: 'duration',
-      label: 'Duration',
-      type: 'number',
-    },
-    {
-      name: 'slug',
-      label: 'Service Slug',
-      type: 'string',
-      required: true,
-      isTitle: true,
-    },
-    {
       type: 'rich-text',
       name: 'body',
       label: 'body',
       isBody: true,
       // templates: [] as Template[], // @TODO: flesh out services templates
     },
-    // {
-    //   // 7bj31Y9RiJCRrrkMFHH3cg  @TODO: Replace with reference to tina media
-    //   name: 'image',
-    //   label: 'Image',
-    //   type: 'reference',
-    //   collections: ['media'],
-    // },
-    // {
-    //   // 7bj31Y9RiJCRrrkMFHH3cg  @TODO: Replace with template of tina media
-    //   name: 'gallery',
-    //   label: 'Gallery',
-    //   type: 'object',
-    //   list: true,
-    //   fields: [
-    //     {
-    //       name: 'image',
-    //       label: 'Image',
-    //       type: 'reference',
-    //       collections: ['media'],
-    //     },
-    //   ],
-    //   ui: {
-    //     itemProps(item) {
-    //       return {
-    //         label: item.image,
-    //         key: `${item.image}-image`,
-    //       };
-    //     },
-    //   },
-    // },
     {
       name: 'categories',
       label: 'Categories',
@@ -126,5 +91,32 @@ export const services: { fields: SchemaField[] } = {
       name: 'showReviews',
       label: 'Show Reviews Footer Title?',
     },
+    // {
+    //   type: 'object',
+    //   name: 'settings',
+    //   label: 'Settings',
+    //   fields: [
+    //     {
+    //       type: 'boolean',
+    //       name: 'showHeader',
+    //       label: 'Show Header?',
+    //     },
+    //     {
+    //       type: 'boolean',
+    //       name: 'showFooter',
+    //       label: 'Show Footer',
+    //     },
+    //     {
+    //       type: 'boolean',
+    //       name: 'showCta',
+    //       label: 'Show Email Signup CTA?',
+    //     },
+    //     {
+    //       type: 'boolean',
+    //       name: 'showReviews',
+    //       label: 'Show Reviews Footer Title?',
+    //     },
+    //   ],
+    // },
   ],
 };

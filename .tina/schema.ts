@@ -1,6 +1,6 @@
 import { defineSchema } from 'tinacms';
 
-import { categories, media, pages, posts, services, tags } from './collections';
+import { categories as servicesCategories, pages, posts, servicesOptions, tags } from './collections';
 import defaultItems from './collections/_defaults.json';
 
 const routers = {
@@ -12,7 +12,7 @@ const routers = {
     const crumbs = document?._sys?.breadcrumbs;
     return `/sandbox/${crumbs.join('/')}`;
   },
-  services: ({ document }) => {
+  categories: ({ document }) => {
     const crumbs = document?._sys?.breadcrumbs;
     return `/sandbox/services/${crumbs.join('/')}`;
   },
@@ -43,44 +43,23 @@ export const schema = defineSchema({
       ...pages,
     },
     {
-      name: 'services',
-      label: 'Services',
-      path: '_content/services',
+      name: 'categories',
+      label: 'Service Categories',
+      path: '_content/categories',
       format: 'mdx',
       ui: {
-        defaultItem: defaultItems.services,
-        router: routers.services,
+        defaultItem: defaultItems.categories,
+        router: routers.categories,
       },
-      ...services,
+      ...servicesCategories,
     },
     {
-      name: 'categories',
-      label: 'Categories',
-      path: '_content/categories',
-      format: 'md',
-      ui: { global: true, allowedActions: { create: true, delete: false } },
-      ...categories,
+      name: 'services',
+      label: 'Service Options',
+      path: '_content/services',
+      format: 'mdx',
+      ui: { global: true },
+      ...servicesOptions,
     },
-    // {
-    //   // 7bj31Y9RiJCRrrkMFHH3cg  @TODO: Remove media
-    //   name: 'media',
-    //   label: 'Media',
-    //   path: '_content/media',
-    //   format: 'md',
-    //   ui: {
-    //     defaultItem: defaultItems.media,
-    //   },
-    //   ...media,
-    // },
-    // {
-    //   // kyDLunJrQmQNjqY9Pw  @TODO: Remove tags
-    //   name: 'tags',
-    //   label: 'Tags',
-    //   path: '_content/tags',
-    //   format: 'md',
-    //   ui: { global: true, allowedActions: { create: false, delete: false } },
-    //   ...tags,
-    //   // @TODO: add default item as 'untagged'
-    // },
   ],
 });

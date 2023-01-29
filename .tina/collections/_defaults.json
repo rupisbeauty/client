@@ -10,7 +10,8 @@
     "backgroundColor": "#FFF1E4",
     "color": "#4A5568"
   },
-  "services": {
+  "services": {},
+  "categories": {
     "title": "Service Title",
     "description": "This is the product description should be between 150-160 characters.",
     "price": 0,
@@ -38,6 +39,5 @@
       ]
     }
   },
-  "tags": {},
-  "categories": {}
+  "tags": {}
 }
