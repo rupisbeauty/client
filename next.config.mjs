@@ -14,7 +14,11 @@ const config = {
     defaultLocale: 'en',
   },
   images: {
-    domains: ['cdn.jsdelivr.net', 'raw.githubusercontent.com'],
+    domains: [
+      'cdn.jsdelivr.net',
+      'raw.githubusercontent.com',
+      'assets.tina.io',
+    ],
   },
   // @NOTE: use partytown to enable workers
   // yarn add -D @builder.io/partytown
