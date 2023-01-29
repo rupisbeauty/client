@@ -16,12 +16,7 @@ const layoutSchema = z.object({
 const sectionTitleSchema = z.object({
   title: z.string(),
 });
-const imageSchema = z.object({
-  src: z.string().url(),
-  alt: z.string(),
-  width: z.number(),
-  height: z.number(),
-});
+const imageSchema = z.string();
 
 const heroSchema = z.object({
   heading: z.string().min(1),
