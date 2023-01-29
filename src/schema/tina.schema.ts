@@ -38,6 +38,17 @@ export const aboutSchema = z.object({
   body: z.string().min(1),
 });
 
+export const coreServiceCategorySchema = z.object({
+  category: z.string().min(1),
+  image: imageSchema,
+  link: z.string().min(1),
+});
+
+export const coreServicesSchema = z.object({
+  title: z.string().min(1),
+  serviceCategories: z.array(coreServiceCategorySchema),
+});
+
 export const locationCTASchema = z.object({
   cta: z.string().min(1),
   // address: z.string().min(1),
@@ -60,4 +71,5 @@ export const tinaSchema = {
   about: aboutSchema,
   locationCTA: locationCTASchema,
   contact: contactSchema,
+  coreServices: coreServicesSchema,
 };

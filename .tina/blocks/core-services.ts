@@ -18,16 +18,32 @@ export const coreServicesBlock: Template = {
     },
     {
       type: 'object',
-      name: 'options',
-      label: 'Options',
+      name: 'serviceCategories',
+      label: 'Service Category',
       list: true,
+      ui: {
+        itemProps: (item) => ({
+          id: item.category,
+          key: item.category,
+          label: item.category,
+        }),
+      },
       fields: [
         {
-          type: 'reference',
-          name: 'option',
-          label: 'Select An Option',
-          collections: ['categories'],
+          type: 'string',
+          name: 'category',
+          label: 'Category TItle',
         },
+        {
+          type: 'image',
+          name: 'image',
+          label: 'Image',
+        },
+        {
+          type: 'string',
+          name: 'link',
+          label: 'Relative Link',
+        }
       ],
     },
   ],
