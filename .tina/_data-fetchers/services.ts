@@ -1,5 +1,5 @@
 import type { GetStaticPropsContext } from 'next';
-import type { ServicesQuery } from '../__generated__/types';
+import type { CategoriesQuery } from '../__generated__/types';
 
 import { client } from '../__generated__/client';
 
@@ -7,16 +7,19 @@ import { getBaseUrl } from '../../src/utils';
 
 export const getServicesTinaPaths = async () => {
   try {
-    const services = await client.queries.servicesConnection();
-    const paths = services?.data?.servicesConnection?.edges?.map((service) => ({
-      params: {
-        service: service?.node?._sys?.breadcrumbs,
-      },
-    }));
+    const categories = await client.queries.categoriesConnection();
+    const paths = categories?.data?.categoriesConnection?.edges?.map(
+      (category) => ({
+        params: {
+          // x0AFBvRlUyDZmiP @FIXME: this is a hack to get the breadcrumbs to work
+          service: category?.node?._sys?.breadcrumbs,
+        },
+      })
+    );
     console.log('prod: 🦙running gsp1'); // , JSON.stringify(services.data, null, 2))
     return paths ? paths : [];
   } catch (error) {
-    console.error('🔴 | file: [...service].tsx:57 | error', error);
+    console.error('🔴 | file: [...category].tsx:57 | error', error);
     return [];
   }
 };
@@ -25,19 +28,20 @@ export const getCurrentServiceTinaProps = async (
   context: GetStaticPropsContext
 ) => {
   try {
-    const service = context.params?.service as string[];
-    const { data, query, variables } = await client.queries.services({
-      relativePath: `/${service.join('/')}.mdx`,
+    // x0AFBvRlUyDZmiP @FIXME: this is a hack to get the breadcrumbs to work
+    const category = context.params?.service as string[];
+    const { data, query, variables } = await client.queries.categories({
+      relativePath: `/${category.join('/')}.mdx`,
     });
-    console.log('prod: 🦙running gsp2:') // , JSON.stringify(data, null, 2));
+    console.log('prod: 🦙running gsp2:'); // , JSON.stringify(data, null, 2));
     return {
-      data: data as ServicesQuery,
+      data: data as CategoriesQuery,
       query,
       variables,
       baseURL: getBaseUrl(),
     };
   } catch (error) {
-    console.error('🔴 | file: [...service].tsx:57 | error', error);
+    console.error('🔴 | file: [...category].tsx:57 | error', error);
     return { notFound: true, redirect: { destination: '/' } };
   }
 };
