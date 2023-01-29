@@ -20,7 +20,23 @@
     "showHeader": true,
     "showFooter": true,
     "categories": [{ "category": "uncategorized" }],
-    "tags": [{ "tag": "untagged" }]
+    "tags": [{ "tag": "untagged" }],
+    "body": {
+      "type": "root",
+      "children": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "type": "img",
+              "url": "/uploads/assets/placeholder-sq.webp",
+              "alt": "enter a alt text here...",
+              "caption": "enter a caption here..."
+            }
+          ]
+        }
+      ]
+    }
   },
   "media": {
     "title": "file-name",

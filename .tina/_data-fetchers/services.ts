@@ -29,6 +29,7 @@ export const getCurrentServiceTinaProps = async (
     const { data, query, variables } = await client.queries.services({
       relativePath: `/${service.join('/')}.mdx`,
     });
+    console.log('prod: 🦙running gsp2:') // , JSON.stringify(data, null, 2));
     return {
       data: data as ServicesQuery,
       query,
