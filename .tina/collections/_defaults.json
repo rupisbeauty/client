@@ -38,17 +38,6 @@
       ]
     }
   },
-  "media": {
-    "title": "file-name",
-    "src": "https://picsum.photos/200",
-    "alt": "Image Alt Text",
-    "width": 200,
-    "height": 200,
-    "attr": "Add Image Attribution or Keep Blank",
-    "caption": "Include a caption or keep blank",
-    "categories": [{ "category": "uncategorized" }],
-    "tags": [{ "tag": "untagged" }]
-  },
   "tags": {},
   "categories": {}
 }
