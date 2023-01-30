@@ -1,8 +1,8 @@
 import { Template } from 'tinacms';
 import { fields } from '../fields-config';
 
-export const serviceCoverBlock: Template = {
-  label: 'Separator Image',
-  name: 'serviceCover',
+export const sectionCoverBlock: Template = {
+  label: 'Cover Image',
+  name: 'sectionCover',
   fields: fields.image,
 };

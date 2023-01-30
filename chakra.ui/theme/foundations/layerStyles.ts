@@ -17,6 +17,7 @@ export const chakraStyles = {
       marginBottom: 12,
     },
     default: {
+      // @NOTE: this is used a default style by .tina/blocks/section.ts
       width: 'full',
       py: 12,
       px: [4, 4, 6],

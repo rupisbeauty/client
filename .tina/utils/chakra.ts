@@ -29,3 +29,43 @@ export const mapSemanticTokens =
       value: typeof value === 'string' ? value : value['default'],
     };
   });
+
+export const sectionStyles = (styleObj) => {
+  const {
+    px,
+    py,
+    mx,
+    my,
+    border,
+    borderColor,
+    rounded,
+    shadow,
+    fontFamily,
+    fontSize,
+    fontWeight,
+    lineHeight,
+    letterSpacing,
+    textAlign,
+    textDecoration,
+    textOverflow,
+    textTransform,
+    ...styles
+  } = styleObj;
+
+  return {
+    ...styles,
+    spacing: { px, py, mx, my },
+    decorative: { border, borderColor, rounded, shadow },
+    typography: {
+      fontFamily,
+      fontSize,
+      fontWeight,
+      lineHeight,
+      letterSpacing,
+      textAlign,
+      textDecoration,
+      textOverflow,
+      textTransform,
+    },
+  };
+};
