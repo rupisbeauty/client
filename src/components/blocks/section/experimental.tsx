@@ -1,43 +1,52 @@
-import { Box, Container as CUIContainer } from '@chakra-ui/react';
+import { AspectRatio, Box, Container as CUIContainer } from '@chakra-ui/react';
 import Image from 'next/image';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 import type { ContainerProps } from '@chakra-ui/react';
 import type { TinaMarkdownContent } from 'tinacms/dist/rich-text';
+
 import { SectionTitle } from '../section-title';
 
 type ServiceCoverProps = {
-  objectFit?: string;
-  objectPosition?: string;
-};
-
-export const SectionCover: React.FC<{
   src: string;
   alt: string;
+  attr?: string;
   size?: { width?: number; height?: number };
-}> = (image) => {
-  return image?.src ? (
+  /**
+   * @SEE: '.tina/blocks/section-cover'
+   * @TODO: Expose the following properties to the CMS
+   */
+  objectFit?: string;
+  objectPosition?: string;
+  my: number; // @NOTE: should be added to the CUIContainer below
+};
+
+export const SectionCover: React.FC<ServiceCoverProps> = (image) => {
+  return image ? (
     <CUIContainer
+      maxH="32vh"
       w="full"
-      layerStyle="container.basic"
-      rounded="lg"
-      display="block"
-      maxH="42vh"
       overflow="hidden"
-      borderRadius="md"
-      border="1px"
+      layerStyle="container.basic"
+      rounded="xl"
+      shadow="xl"
+      p={0}
+      // m={0}
+      my={24}
     >
-      <Image
-        src={image.src}
-        alt={image.alt}
-        fill={true}
-        width={image?.size?.width}
-        height={image?.size?.height}
-        style={{
-          objectFit: 'cover',
-          objectPosition: 'top center',
-        }}
-      />
+      <AspectRatio ratio={3 / 4}>
+        <Image
+          src={'/uploads/people/woman-smooth-skin-white-clothes.webp'}
+          alt={image.alt + ' ' + String(image?.attr ? image.attr : '')}
+          fill={true}
+          width={image?.size?.width}
+          height={image?.size?.height}
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center center',
+          }}
+        />
+      </AspectRatio>
     </CUIContainer>
   ) : null;
 };
@@ -52,7 +61,7 @@ type TinaContainerProps = {
 
 const components = {
   sectionTitle: SectionTitle,
-  serviceCover: SectionCover,
+  sectionCover: SectionCover,
 };
 
 export const Section: React.FC<ContainerProps & TinaContainerProps> = ({

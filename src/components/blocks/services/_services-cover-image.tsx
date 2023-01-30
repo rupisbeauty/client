@@ -19,3 +19,6 @@ export const ServicesCoverImage: React.FC<{ cover: CDNImage }> = ({ cover }) => 
     </Container>
   );
 };
+
+
+// @NOTE: THIS IS A LEGACY COMPONENT AND CAN BE REMOVED -- CHECK IF CAN BE SAFELY REMOVED

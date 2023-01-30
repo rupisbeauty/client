@@ -1,10 +1,9 @@
 import { AspectRatio, Container, SimpleGrid } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 
-import type { CDNImage, ServiceImages } from '@/_content';
 import type { FC } from 'react';
 
-import { SectionTitle } from '../section-title';
+import { SectionTitle } from '../../section-title';
 import { MoreBox } from './more-services-box';
 import { ServiceBox } from './service-box';
 
@@ -45,10 +44,7 @@ export const CoreServices: FC<PagesBodyCoreServicesFilter> = (props) => {
         >
           {data.serviceCategories?.length
             ? data.serviceCategories?.map((category) => (
-                <ServiceBox
-                  key={category.category}
-                  item={category}
-                />
+                <ServiceBox key={category.category} item={category} />
               ))
             : null}
           <AspectRatio ratio={16 / 9}>

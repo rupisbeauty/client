@@ -14,10 +14,39 @@ seo:
   description: Rupi Beauty Studio proudly offers
 ---
 
-<sectionTitle title="Rupi's Core Services" />
+<about title="Your Neighborhood Beauty Expert" heading="Over 15 Years " subheading="of Esthetic Industry Experience" caption="Licensed in NY / NJ" description="We are committed to helping you look and feel your best. Our licensed estheticians provide best-in class threading, waxing, tinting along with thoughtful skin and eyebrow care advice." showLicenses={false} />
 
-<serviceCover
-  src="/uploads/people/woman-wavy-hair.webp"
-  size={{ width: 1920, height: 1440 }}
-  alt="Image by valuavitaly on Freepik"
+<section
+  settings={{
+    width: "full",
+    color: "text",
+    bg: "bg",
+    spacing: { px: 6, py: 12, mx: 0, my: 0 },
+    decorative: {
+      border: "0px",
+      borderColor: "transparent",
+      rounded: 0,
+      shadow: "none"
+    },
+    typography: {
+      fontFamily: "body",
+      fontSize: "base",
+      fontWeight: "normal",
+      lineHeight: "base",
+      letterSpacing: "normal",
+      textAlign: "left",
+      textDecoration: "none",
+      textOverflow: "none",
+      textTransform: "none"
+    }
+  }}
+  body={<>
+    <sectionCover
+    image={{
+    src: "/uploads/people/woman-wavy-hair.webp",
+    size: { width: 1920, height: 1440 }
+    }}
+    />
+  </>}
 />
+
