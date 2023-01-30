@@ -1,4 +1,15 @@
-import { AspectRatio, Box, Container as CUIContainer } from '@chakra-ui/react';
+import {
+  AspectRatio,
+  Box,
+  Container as CUIContainer,
+  Heading,
+  Stack,
+  TabList,
+  TabPanels,
+  Tabs,
+  Text,
+} from '@chakra-ui/react';
+
 import Image from 'next/image';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
@@ -102,5 +113,36 @@ export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
     >
       <TinaMarkdown content={body} components={components} />
     </Box>
+  );
+};
+
+export const ServiceMenu = ({ serviceOptions }: any) => {
+  return (
+    <Stack w="full" borderRadius="md" direction="row" gap={6}>
+      <Tabs
+        bg="white"
+        w="full"
+        p={2}
+        // onChange={(index) => setActiveIndex(index)}
+        borderRadius="15px"
+        border="3px solid"
+        borderColor="red.200"
+      >
+        <TabList gap={16}>{/* <TabMenu items={tabMenuItems} /> */}</TabList>
+        {/* <TabPanels>
+              {Object.keys(allServices).map((serviceKey) => {
+                const { services } = allServices[serviceKey as keyof Services];
+                if (!services) return null;
+                return (
+                  <TabPanelContent
+                    services={services}
+                    serviceKey={serviceKey as keyof ServiceImages}
+                    key={serviceKey}
+                  />
+                );
+              })}
+            </TabPanels> */}
+      </Tabs>
+    </Stack>
   );
 };
