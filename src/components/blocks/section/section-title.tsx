@@ -5,7 +5,7 @@ import type { FC } from 'react';
 
 export const SectionTitle: FC<{ title: string }> = ({ title }) => {
   return (
-    <VStack>
+    <VStack my={12}>
       <chakra.h1
         color="gray.600"
         lineHeight="1"
@@ -18,6 +18,7 @@ export const SectionTitle: FC<{ title: string }> = ({ title }) => {
       <Box
         w={453 / 2}
         h={242 / 2}
+        pt={9}
         transform="scale(0.6) rotate(23deg)"
         aria-hidden={true}
       >

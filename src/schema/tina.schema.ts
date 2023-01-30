@@ -1,6 +1,5 @@
 import { z } from 'zod';
 
-
 const sectionTitleSchema = z.object({
   title: z.string(),
 });
@@ -13,6 +12,13 @@ const imageSchema = z
       .object({
         width: z.number().nullish(),
         height: z.number().nullish(),
+      })
+      .nullish(),
+    pos: z
+      .object({
+        objectFit: z.string().nullish(),
+        objectPosition: z.string().nullish(),
+        scale: z.string().nullish(),
       })
       .nullish(),
   })

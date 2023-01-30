@@ -15,7 +15,7 @@ import type { FC } from 'react';
 import { FullLogo } from './full-logo';
 import { StoreIcon } from './icons';
 import { MapContainer } from './map';
-import { SectionTitle } from './section-title';
+import { SectionTitle } from './section/section-title';
 
 export const ContactInfo: FC<{
   address: string;

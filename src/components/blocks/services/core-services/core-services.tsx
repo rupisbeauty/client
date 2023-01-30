@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import type { FC } from 'react';
 
-import { SectionTitle } from '../../section-title';
+import { SectionTitle } from '../../section/section-title';
 import { MoreBox } from './more-services-box';
 import { ServiceBox } from './service-box';
 

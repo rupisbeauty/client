@@ -20,7 +20,7 @@ export const chakraStyles = {
       // @NOTE: this is used a default style by .tina/blocks/section.ts
       width: 'full',
       py: 12,
-      px: [4, 4, 6],
+      px: 6,
       my: 0,
       mx: 0,
       color: 'text',

@@ -6,7 +6,7 @@ import type { FC } from 'react';
 import type { z } from 'zod';
 
 import { FullLogo } from '../full-logo';
-import { SectionTitle } from '../section-title';
+import { SectionTitle } from '../section/section-title';
 import { Decorators } from './decorators';
 import { LicenseInfo } from './license-info';
 import { LicensesStack } from './licenses-stack';
