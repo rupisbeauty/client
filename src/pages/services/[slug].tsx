@@ -97,7 +97,7 @@ const ServiceCategory: NextPage<{
     >
       <SectionTitle title={content.title} />
       <ServicesCoverImage cover={cover} />
-      <Container as="section" layerStyle="container" centerContent>
+      <Container as="section" layerStyle="container.basic" centerContent>
         <Box>
           <HStack>
             <CircleBgIcon icon={icon} bg="green.200" />

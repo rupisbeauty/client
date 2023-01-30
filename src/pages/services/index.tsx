@@ -35,7 +35,7 @@ const Sandbox: NextPage = () => {
   return (
     <PageLayout title="Services" subtitle="Rupi Beauty Studio" showCta showReviews>
       <SectionTitle title="Rupi Signature Services" />
-      <Container as="section" layerStyle="container" centerContent maxW="">
+      <Container as="section" layerStyle="container.basic" centerContent maxW="">
         <Box w="full" maxH="36vh" overflow="hidden" borderRadius="md">
           <Image
             src={`${CDN_URL}${PEOPLE_DIR}/woman-wavy-hair.webp`}
@@ -53,7 +53,7 @@ const Sandbox: NextPage = () => {
           how we can help you.
         </Text>
       </Container>
-      <Container as="section" layerStyle="container" centerContent my={24}>
+      <Container as="section" layerStyle="container.basic" centerContent my={24}>
         <Stack w="full" borderRadius="md" direction="row" gap={6}>
           <Tabs
             bg="white"

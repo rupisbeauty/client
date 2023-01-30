@@ -12,6 +12,7 @@ export const Hero: FC = () => {
     <Container
       id="welcome"
       as="section"
+      layerStyle="container.basic"
       position="relative"
       w="full"
       maxW="container.xl"

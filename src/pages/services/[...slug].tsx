@@ -34,7 +34,7 @@ export const ServiceOptions: React.FC<{ path: string[] }> = ({ path }) => {
   const categoryOptions = options[category as ServiceOptionKeys];
 
   return (
-    <Container as="section" layerStyle="container">
+    <Container as="section" layerStyle="container.basic">
       <SimpleGrid columns={[2, 3, 5]} gap={8}>
         {categoryOptions?.options.map((option) => {
           const image = `${prefixUrl}/${

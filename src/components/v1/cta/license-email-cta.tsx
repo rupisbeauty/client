@@ -26,7 +26,7 @@ const content = {
 export const LicensedEmailCTA: React.FC = () => {
   return (
     <Box as="section" mt={24} bg="white" w="full" p={3} textAlign="center">
-      <Container layerStyle="container" centerContent>
+      <Container layerStyle="container.basic" centerContent>
         <SectionTitle title={content.title} />
         <Text color="gray.600" fontSize="2xl" lineHeight={2}>
           {content.subtitle}

@@ -11,33 +11,35 @@ type ServiceCoverProps = {
   objectPosition?: string;
 };
 
-export const ServiceCover: React.FC<{
+export const SectionCover: React.FC<{
   src: string;
   alt: string;
   size?: { width?: number; height?: number };
 }> = (image) => {
-  return (
+  return image?.src ? (
     <CUIContainer
-      layerStyle="container"
+      w="full"
+      layerStyle="container.basic"
       rounded="lg"
       display="block"
       maxH="42vh"
       overflow="hidden"
       borderRadius="md"
+      border="1px"
     >
       <Image
         src={image.src}
         alt={image.alt}
         fill={true}
-        // width={image?.size?.width}
-        // height={image?.size?.height}
+        width={image?.size?.width}
+        height={image?.size?.height}
         style={{
           objectFit: 'cover',
           objectPosition: 'top center',
         }}
       />
     </CUIContainer>
-  );
+  ) : null;
 };
 
 type TinaContainerProps = {
@@ -48,33 +50,9 @@ type TinaContainerProps = {
   };
 };
 
-export const SECTION_DEFAULT_STYLES = {
-  width: 'full',
-  py: 12,
-  px: [4, 4, 6],
-  my: 0,
-  mx: 0,
-  color: 'text',
-  bg: 'bg',
-  border: '1px solid',
-  borderColor: 'transparent',
-  contentContent: true,
-  rounded: 0,
-  shadow: 'none',
-  fontFamily: 'body',
-  fontSize: 'base',
-  fontWeight: 'normal',
-  lineHeight: 'base',
-  letterSpacing: 'normal',
-  textAlign: 'left',
-  textDecoration: 'none',
-  textOverflow: 'none',
-  textTransform: 'none',
-};
-
 const components = {
   sectionTitle: SectionTitle,
-  serviceCover: ServiceCover,
+  serviceCover: SectionCover,
 };
 
 export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
@@ -86,7 +64,7 @@ export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
   if (contained) {
     return (
       <CUIContainer
-        {...SECTION_DEFAULT_STYLES}
+        layerStyles="container.default"
         {...settings}
         {...typography}
         {...spacing}
@@ -98,7 +76,7 @@ export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
   }
   return (
     <Box
-      {...SECTION_DEFAULT_STYLES}
+      layerStyles="container.default"
       mx={settings?.centerContent ? 'auto' : 0}
       {...settings}
       {...typography}

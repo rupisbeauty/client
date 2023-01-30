@@ -5,7 +5,7 @@ import { ChImage } from 'chakra.ui';
 
 export const ServicesCoverImage: React.FC<{ cover: CDNImage }> = ({ cover }) => {
   return (
-    <Container as="section" layerStyle="container" p={0}>
+    <Container as="section" layerStyle="container.basic" p={0}>
       <Box w="full" maxH="36vh" overflow="hidden" borderRadius="md">
         <ChImage
           src={cover.src}
