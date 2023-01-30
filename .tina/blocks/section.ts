@@ -5,6 +5,7 @@ import { fields } from '../fields-config';
 import { sectionStyles } from '../utils/chakra';
 import { sectionCoverBlock } from './section-cover';
 import { sectionTitleBlock } from './section-title';
+import { serviceMenuBlock } from './service-menu';
 
 const full = { key: 'full', value: 'full' };
 
@@ -39,7 +40,7 @@ export const sectionBlock: Template = {
       name: 'body',
       label: 'Body',
       isBody: true,
-      templates: [sectionTitleBlock, sectionCoverBlock],
+      templates: [sectionTitleBlock, serviceMenuBlock, sectionCoverBlock],
     },
     {
       type: 'object',

@@ -25,3 +25,44 @@ seo:
   }}
 />
 
+<section
+  contained={false}
+  settings={{
+    width: "full",
+    color: "text",
+    bg: "bg",
+    spacing: { px: 6, py: 12, mx: 0, my: 0 },
+    decorative: {
+      border: "0px",
+      borderColor: "transparent",
+      rounded: 0,
+      shadow: "none"
+    },
+    typography: {
+      fontFamily: "body",
+      fontSize: "base",
+      fontWeight: "normal",
+      lineHeight: "base",
+      letterSpacing: "normal",
+      textAlign: "left",
+      textDecoration: "none",
+      textOverflow: "none",
+      textTransform: "none"
+    }
+  }}
+  body={<>
+    <serviceMenu title="Service Menu" />
+  </>}
+  title="Service Menu"
+/>
+
+<serviceMenu
+  title="Service Menu"
+  relatedServices={[
+    { service: "_content/categories/hair-removal.mdx" },
+    { service: "_content/categories/eyebrows.mdx" },
+    { service: "_content/categories/skin-care.mdx" },
+    { service: "_content/categories/addons.mdx" }
+  ]}
+/>
+

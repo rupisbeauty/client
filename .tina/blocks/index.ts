@@ -6,19 +6,25 @@ import { locationCTABlock } from './location-cta';
 import { sectionBlock } from './section';
 import { sectionCoverBlock } from './section-cover';
 import { sectionTitleBlock } from './section-title';
+import { serviceMenuBlock } from './service-menu';
 
 import type { Template } from 'tinacms';
 
 export const templates = {
   page: [
     sectionBlock,
-    aboutBlock,
-    contactBlock,
+    sectionCoverBlock,
+    sectionTitleBlock,
+    serviceMenuBlock,
     coreServicesBlock,
     heroBlock,
-    sectionTitleBlock,
+    aboutBlock,
+    contactBlock,
     locationCTABlock,
-    sectionCoverBlock,
   ] as Template[],
-  section: [sectionTitleBlock, sectionCoverBlock] as Template[],
+  section: [
+    sectionTitleBlock,
+    sectionCoverBlock,
+    serviceMenuBlock,
+  ] as Template[],
 };
