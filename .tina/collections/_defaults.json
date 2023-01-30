@@ -3,12 +3,16 @@
   "pages": {
     "title": "This is the title of your page",
     "description": "This is the description of your page",
-    "showCta": true,
-    "showReviews": true,
-    "showHeader": true,
-    "showFooter": true,
-    "backgroundColor": "#FFF1E4",
-    "color": "#4A5568"
+    "settings": {
+      "showCta": true,
+      "showReviews": true,
+      "showHeader": true,
+      "showFooter": true
+    },
+    "colors": {
+      "backgroundColor": "#FFF1E4",
+      "color": "#4A5568"
+    }
   },
   "services": {},
   "categories": {
@@ -18,23 +22,38 @@
     "showCta": true,
     "showReviews": true,
     "showHeader": true,
-    "showFooter": true,
-    "body": {
-      "type": "root",
-      "children": [
-        {
-          "type": "p",
-          "children": [
-            {
-              "type": "img",
-              "url": "/uploads/assets/placeholder-sq.webp",
-              "alt": "enter a alt text here...",
-              "caption": "enter a caption here..."
-            }
-          ]
-        }
-      ]
+    "showFooter": true
+  },
+  "image": {
+    "src": "/uploads/assets/placeholder-sq.webp",
+    "alt": "Your neighborhood beauty and skin care experts. Trained and certified estheticians | ✨ Rupi Beauty Studio ✨",
+    "size": {
+      "width": 500,
+      "height": 500
     }
   },
-  "tags": {}
+  "templates": {
+    "about": {
+      "title": "Your Neighborhood Beauty Expert",
+      "heading": "Over 15 Years ",
+      "subheading": "of Esthetic Industry Experience",
+      "caption": "Licensed in NY / NJ",
+      "description": "We are committed to helping you look and feel your best. Our licensed estheticians provide best-in class threading, waxing, tinting along with thoughtful skin and eyebrow care advice.",
+      "showLicenses": false
+    },
+    "hero": {
+      "heading": "Insert Your Most Impactful Statement Here",
+      "subheading": "Frame your statement",
+      "image": {
+        "src": "https://cdn.jsdelivr.net/gh/rupistudio/assets@main/images/people/hero-composite.png",
+        "alt": "Your neighborhood beauty and skin care experts. Trained and certified estheticians | ✨ Rupi Beauty Studio ✨",
+        "size": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "cta": "Book your first appointment today!",
+      "phone": "(862) 571-7873"
+    }
+  }
 }

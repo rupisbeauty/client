@@ -1,31 +1,10 @@
-import type { SchemaField, Template } from 'tinacms';
+import type { SchemaField,Template } from 'tinacms';
 
-import {
-  aboutBlock,
-  contactBlock,
-  coreServicesBlock,
-  heroBlock,
-  locationCTABlock,
-  sectionTitleBlock,
-} from '../blocks';
+import { templates } from '../blocks';
+import { fields } from '../fields-config';
 
 export const pages: { fields: SchemaField[] } = {
   fields: [
-    {
-      type: 'rich-text',
-      name: 'body',
-      label: 'body',
-      isBody: true,
-      ui: {},
-      templates: [
-        heroBlock,
-        sectionTitleBlock,
-        aboutBlock,
-        locationCTABlock,
-        contactBlock,
-        coreServicesBlock,
-      ] as Template[],
-    },
     {
       type: 'string',
       label: 'Page Title (SEO, Search results) 50-70 chars.',
@@ -53,40 +32,15 @@ export const pages: { fields: SchemaField[] } = {
       },
     },
     {
-      type: 'string',
-      label: 'backgroundColor',
-      name: 'backgroundColor',
-      ui: {
-        component: 'color',
-      },
+      type: 'rich-text',
+      name: 'body',
+      label: 'body',
+      isBody: true,
+      ui: {},
+      templates: templates.page,
     },
-    {
-      type: 'string',
-      label: 'color',
-      name: 'color',
-      ui: {
-        component: 'color',
-      },
-    },
-    {
-      type: 'boolean',
-      name: 'showHeader',
-      label: 'Show Header?',
-    },
-    {
-      type: 'boolean',
-      name: 'showFooter',
-      label: 'Show Footer',
-    },
-    {
-      type: 'boolean',
-      name: 'showCta',
-      label: 'Show Email Signup CTA?',
-    },
-    {
-      type: 'boolean',
-      name: 'showReviews',
-      label: 'Show Reviews Footer Title?',
-    },
+    ...fields.seo,
+    ...fields.settings,
+    ...fields.colors,
   ],
 };

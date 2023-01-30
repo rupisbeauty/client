@@ -1,22 +1,13 @@
 import { Template } from 'tinacms';
+import defaults from '../collections/_defaults.json';
+import { fields } from '../fields-config';
 
 export const heroBlock: Template = {
   label: 'Hero',
   name: 'hero',
   ui: {
     // previewSrc: 'path/to/component/preview.png'
-    defaultItem: {
-      heading: 'Insert Your Most Impactful Statement Here',
-      subheading: 'Frame your statement',
-      image: {
-        src: 'https://cdn.jsdelivr.net/gh/rupistudio/assets@main/images/people/hero-composite.png',
-        alt: 'Your neighborhood beauty and skin care experts. Trained and certified estheticians | ✨ Rupi Beauty Studio ✨',
-        width: 1920,
-        height: 1080,
-      },
-      cta: 'Book your first appointment today!',
-      phone: '(862) 571-7873',
-    },
+    defaultItem: defaults.templates.hero,
   },
   fields: [
     {
@@ -29,46 +20,7 @@ export const heroBlock: Template = {
       label: 'Subheading',
       name: 'subheading',
     },
-    // {
-    //   type: 'object',
-    //   label: 'Image',
-    //   name: 'image',
-    //   fields: [
-    //     {
-    //       type: 'string',
-    //       label: 'Image URL',
-    //       name: 'src',
-    //     },
-    //     {
-    //       type: 'string',
-    //       label: 'Alt Text',
-    //       name: 'alt',
-    //     },
-    //     {
-    //       type: 'number',
-    //       label: 'Width',
-    //       name: 'width',
-    //     },
-    //     {
-    //       type: 'number',
-    //       label: 'Height',
-    //       name: 'height',
-    //     },
-    //   ],
-    // },
-    {
-      type: 'image',
-      label: 'Image',
-      name: 'image',
-      // ui: {
-      //   parse: (media) => ({
-      //     src: media.previewSrc,
-      //     alt: media.alt,
-      //     width: media.width,
-      //     height: media.height,
-      //   }),
-      // },
-    },
+    ...fields.image,
     {
       type: 'string',
       label: 'Phone Call-Out-Action',

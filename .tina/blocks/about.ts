@@ -1,17 +1,13 @@
 import { Template } from 'tinacms';
 
+import defaults from '../collections/_defaults.json';
+import { fields } from '../fields-config';
+
 export const aboutBlock: Template = {
   label: 'About Section',
   name: 'about',
   ui: {
-    defaultItem: {
-      title: 'About',
-      heading: 'Your Neighborhood Beauty Experts',
-      subheading: 'This is a subheading',
-      caption: 'This is a caption',
-      description: 'This a a full description',
-      showLicenses: false,
-    },
+    defaultItem: defaults.templates.about,
   },
   fields: [
     {
@@ -42,15 +38,11 @@ export const aboutBlock: Template = {
         component: 'textarea',
       },
     },
-    {
-      type: 'image',
-      label: 'Image',
-      name: 'image',
-    },
+    ...fields.image,
     {
       type: 'boolean',
       label: 'Show Licenses?',
-      name: 'licenses',
+      name: 'showLicenses',
     },
   ],
 };

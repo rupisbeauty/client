@@ -1,6 +1,12 @@
 import { defineSchema } from 'tinacms';
 
-import { categories as servicesCategories, pages, posts, servicesOptions, tags } from './collections';
+import {
+  categories as servicesCategories,
+  pages,
+  posts,
+  servicesOptions,
+  tags,
+} from './collections';
 import defaultItems from './collections/_defaults.json';
 
 const routers = {
@@ -48,7 +54,7 @@ export const schema = defineSchema({
       path: '_content/categories',
       format: 'mdx',
       ui: {
-        defaultItem: defaultItems.categories,
+        defaultItem: defaultItems.categories, // @TODO:  update to newer shape
         router: routers.categories,
       },
       ...servicesCategories,
