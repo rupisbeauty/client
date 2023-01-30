@@ -20,7 +20,7 @@ export const heroBlock: Template = {
       label: 'Subheading',
       name: 'subheading',
     },
-    ...fields.image,
+    ...fields?.image,
     {
       type: 'string',
       label: 'Phone Call-Out-Action',

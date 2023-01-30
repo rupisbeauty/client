@@ -34,7 +34,7 @@ export const sectionBlock: Template = {
       type: 'object',
       name: 'settings',
       label: 'Settings',
-      fields: [...fields.spacing, ...fields.decorative, ...fields.typography],
+      fields: [...fields?.spacing, ...fields?.decorative, ...fields?.typography],
     },
   ],
 };

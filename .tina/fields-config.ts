@@ -3,7 +3,7 @@ import { Template } from 'tinacms';
 
 import { mapColors, mapOptions, mapSemanticTokens } from './utils/chakra';
 
-export const fields: Record<string, Template['fields']> = {
+export const fieldConfig: Record<string, Template['fields']> = {
   pageTitle: [
     // @TODO: this might be able to be remove (check and remove)
     {
@@ -106,7 +106,7 @@ export const fields: Record<string, Template['fields']> = {
   ],
 };
 
-fields.size = [
+fieldConfig.size = [
   {
     type: 'object',
     name: 'size',
@@ -126,46 +126,7 @@ fields.size = [
   },
 ];
 
-fields.seo = [
-  {
-    type: 'object',
-    name: 'seo',
-    label: 'SEO Settings',
-    fields: [
-      {
-        type: 'string',
-        label: 'SEO Title (SEO, Search results) 50-70 chars.',
-        name: 'title',
-        ui: {
-          validate: (value) => {
-            if (value?.length && value.length > 70)
-              return `-${Number(value.length) - 70} chars remaining / 70`;
-          },
-        },
-      },
-      {
-        type: 'string',
-        label: 'SEO Description (Seo, Search results) 150-160 chars.',
-        name: 'description',
-        ui: {
-          component: 'textarea',
-          validate: (value) => {
-            if (value?.length && value.length > 160)
-              return `-${Number(value.length) - 160} chars remaining / 160`;
-          },
-        },
-      },
-      {
-        name: 'slug',
-        label: 'SEO Slug',
-        type: 'string',
-      },
-      ...fields?.image,
-    ],
-  },
-];
-
-fields.image = [
+fieldConfig.image = [
   {
     type: 'object',
     name: 'image',
@@ -197,12 +158,12 @@ fields.image = [
         label: 'Image Credits',
         name: 'attr',
       },
-      ...fields.size,
+      ...fieldConfig.size,
     ],
   },
 ];
 
-fields.typography = [
+fieldConfig.typography = [
   {
     type: 'object',
     name: 'typography',
@@ -287,7 +248,7 @@ fields.typography = [
   },
 ];
 
-fields.decorative = [
+fieldConfig.decorative = [
   {
     type: 'object',
     name: 'decorative',
@@ -321,7 +282,7 @@ fields.decorative = [
   },
 ];
 
-fields.spacing = [
+fieldConfig.spacing = [
   {
     type: 'object',
     name: 'spacing',
@@ -355,7 +316,7 @@ fields.spacing = [
   },
 ];
 
-fields.container = [
+fieldConfig.container = [
   {
     type: 'boolean',
     name: 'centerContent',
@@ -393,7 +354,7 @@ fields.container = [
   },
 ];
 
-fields.settings = [
+fieldConfig.settings = [
   {
     type: 'object',
     name: 'settings',
@@ -423,7 +384,7 @@ fields.settings = [
   },
 ];
 
-fields.colors = [
+fieldConfig.colors = [
   {
     type: 'object',
     name: 'colors',
@@ -448,3 +409,44 @@ fields.colors = [
     ],
   },
 ];
+
+fieldConfig.seo = [
+  {
+    type: 'object',
+    name: 'seo',
+    label: 'SEO Settings',
+    fields: [
+      {
+        type: 'string',
+        label: 'SEO Title (SEO, Search results) 50-70 chars.',
+        name: 'title',
+        ui: {
+          validate: (value) => {
+            if (value?.length && value.length > 70)
+              return `-${Number(value.length) - 70} chars remaining / 70`;
+          },
+        },
+      },
+      {
+        type: 'string',
+        label: 'SEO Description (Seo, Search results) 150-160 chars.',
+        name: 'description',
+        ui: {
+          component: 'textarea',
+          validate: (value) => {
+            if (value?.length && value.length > 160)
+              return `-${Number(value.length) - 160} chars remaining / 160`;
+          },
+        },
+      },
+      {
+        name: 'slug',
+        label: 'SEO Slug',
+        type: 'string',
+      },
+      ...fieldConfig?.image,
+    ],
+  },
+];
+
+export const fields = fieldConfig;

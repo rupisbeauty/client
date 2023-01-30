@@ -3,7 +3,7 @@ import { fields } from '../fields-config';
 
 export const servicesOptions: { fields: SchemaField[] } = {
   fields: [
-    ...fields.page,
+    ...fields?.page,
     {
       name: 'slug',
       label: 'Service Slug',
@@ -22,7 +22,7 @@ export const servicesOptions: { fields: SchemaField[] } = {
       label: 'Duration',
       type: 'number',
     },
-    fields.services[1], // reference to service-categoies
-    ...fields.settings,
+    fields?.services[1], // reference to service-categories
+    ...fields?.settings,
   ],
 };

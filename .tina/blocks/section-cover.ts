@@ -4,5 +4,5 @@ import { fields } from '../fields-config';
 export const sectionCoverBlock: Template = {
   label: 'Cover Image',
   name: 'sectionCover',
-  fields: fields.image,
+  fields: fields?.image,
 };

@@ -3,7 +3,7 @@ import { fields } from '../fields-config';
 
 export const categories: { fields: SchemaField[] } = {
   fields: [
-    ...fields.page,
+    ...fields?.page,
     {
       name: 'slug',
       label: 'Service Slug',
@@ -18,9 +18,9 @@ export const categories: { fields: SchemaField[] } = {
       isBody: true,
       // templates: [] as Template[], // @TODO: flesh out services templates
     },
-    ...fields.services,
-    ...fields.settings,
-    ...fields.seo,
-    ...fields.colors,
+    ...fields?.services,
+    ...fields?.settings,
+    ...fields?.seo,
+    ...fields?.colors,
   ],
 };

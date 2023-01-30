@@ -39,8 +39,8 @@ export const pages: { fields: SchemaField[] } = {
       ui: {},
       templates: templates.page,
     },
-    ...fields.seo,
-    ...fields.settings,
-    ...fields.colors,
+    ...fields?.seo,
+    ...fields?.settings,
+    ...fields?.colors,
   ],
 };
