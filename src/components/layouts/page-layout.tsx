@@ -26,17 +26,25 @@ export const PageLayout: FC<LayoutProps> = ({
   title = 'Site Title',
   subtitle = '',
   description = '',
-  showHeader = false,
-  showFooter = false,
-  showCta = false,
-  showReviews = false,
-  backgroundColor = 'bg',
-  color = 'text',
+  settings: {
+    showHeader = false,
+    showFooter = false,
+    showCta = false,
+    showReviews = false,
+  },
+  colors: { backgroundColor = 'bg', color = 'text' },
+  seo: { title: seoTitle, description: seoDescription, image: seoImage },
   children,
 }) => {
   return (
     <>
-      <NextSeo {...SEOConfig(title, subtitle, description)} />
+      <NextSeo
+        {...SEOConfig(
+          seoTitle || title,
+          subtitle,
+          seoDescription || description
+        )}
+      />
       <SocialShare twitter facebook pinterest />
       <Sidebar />
       {showHeader && <Header />}

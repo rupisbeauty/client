@@ -12,10 +12,7 @@ import { imageMap } from '@/_content';
 
 type Images = typeof imageMap;
 
-export const CoreServices: FC<{ title: string; images: Images }> = ({
-  title,
-  images,
-}) => {
+export const CoreServices: FC = () => {
   const router = useRouter();
   return (
     <>

@@ -1,7 +1,12 @@
 import type { ChakraTheme } from '@chakra-ui/react';
-import { darken,lighten } from 'color2k'; // https://color2k.com/
+import { darken, lighten } from 'color2k'; // https://color2k.com/
 
-export const semanticTokens: ChakraTheme['semanticTokens'] = {
+const navLink = {
+  default: darken('#D3B734', 0.2),
+  _dark: lighten('#D3B734', 0.2),
+};
+
+export const tokens = {
   colors: {
     bg: {
       default: '#FFF1E4',
@@ -40,21 +45,20 @@ export const semanticTokens: ChakraTheme['semanticTokens'] = {
       default: '#FDE4CC',
       _dark: '#2D3738',
     },
-    navLink: {
-      default: darken('#D3B734', 0.2),
-      _dark: lighten('#D3B734', 0.2),
-    },
+    navLink: Object.assign(navLink),
     placeholder: {
-      default: "gray.400",
-      _dark: "whiteAlpha.300",
+      default: 'gray.400',
+      _dark: 'whiteAlpha.300',
     },
     rootBorder: {
-      default: "gray.500",
-      _dark: "gray.700"
+      default: 'gray.500',
+      _dark: 'gray.700',
     },
     text: {
-      default: "gray.700",
-      _dark: "gray.300"
-    }
+      default: 'gray.700',
+      _dark: 'gray.300',
+    },
   },
 };
+
+export const semanticTokens: ChakraTheme['semanticTokens'] = tokens;

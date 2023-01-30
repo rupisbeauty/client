@@ -63,13 +63,15 @@ export const About: FC<z.TypeOf<typeof tinaSchema.about>> = ({
           alignItems="center"
           mb={{ base: 3, md: 12 }}
         >
-          <Image
-            src={image}
-            alt="Pearl River Location Interior"
-            width={904 / 2}
-            height={1205 / 2}
-            style={{ borderRadius: '15px' }}
-          />
+          {image ? (
+            <Image
+              src={String(image.src)}
+              alt={String(image.alt)}
+              width={(image.size?.width || 904) / 2}
+              height={(image.size?.height || 1205) / 2}
+              style={{ borderRadius: '15px' }}
+            />
+          ) : null}
           <Box w="full" h="full">
             <LicenseInfo
               heading={heading}
@@ -87,13 +89,15 @@ export const About: FC<z.TypeOf<typeof tinaSchema.about>> = ({
             </Box>
           </Box>
         </Stack>
-        <Box
-          position="relative"
-          textAlign="center"
-          w={{ base: '80%', lg: 'full' }}
-        >
-          {showLicenses ? <LicensesStack heading={''} subheading={''} /> : null}
-        </Box>
+        {showLicenses ? (
+          <Box
+            position="relative"
+            textAlign="center"
+            w={{ base: '80%', lg: 'full' }}
+          >
+            <LicensesStack heading={''} subheading={''} />
+          </Box>
+        ) : null}
       </Container>
     </Box>
   );

@@ -5,6 +5,7 @@ export * from './hero';
 export * from './icons';
 export * from './map';
 export * from './scroll-section';
+export * from './section';
 export * from './section-title';
+export * from './services';
 export * from './visit-location-cta';
-export * from "./services"

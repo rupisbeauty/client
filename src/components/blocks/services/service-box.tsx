@@ -1,4 +1,4 @@
-import { Box, chakra } from '@chakra-ui/react';
+import { Box,chakra } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -15,26 +15,28 @@ export const ServiceBox: FC<{
 }> = ({ item }) => {
   return (
     <MotionBox
-      key={item.image}
+      key={item?.image?.src}
       position="relative"
       w="full"
       h="full"
       whileHover={{ y: -10 }}
     >
       <ChLink href={'#'}>
-        <Box w="full" h="full" objectFit="cover">
-          <Image
-            src={item.image}
-            alt={item.category}
-            fill={true}
-            style={{
-              borderRadius: '15px',
-              boxShadow:
-                '0px 0px 1px rgba(48, 49, 51, 0.05), 0px 4px 8px rgba(48, 49, 51, 0.1)',
-              objectFit: 'cover',
-            }}
-          />
-        </Box>
+        {item.image ? (
+          <Box w="full" h="full" objectFit="cover">
+            <Image
+              src={String(item?.image?.src)}
+              alt={item.category}
+              fill={true}
+              style={{
+                borderRadius: '15px',
+                boxShadow:
+                  '0px 0px 1px rgba(48, 49, 51, 0.05), 0px 4px 8px rgba(48, 49, 51, 0.1)',
+                objectFit: 'cover',
+              }}
+            />
+          </Box>
+        ) : null}
         <Box
           position="relative"
           w="80%"

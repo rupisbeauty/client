@@ -7,11 +7,11 @@ import type { FC } from 'react';
 
 export const ChakraNextImage = chakra(Image, {
   shouldForwardProp: (prop) => {
-    return ['width', 'height', 'src', 'alt', 'layout'].includes(prop);
+    return ['width', 'height', 'src', 'alt', 'fill'].includes(prop);
   },
 });
 
-type ChNextImageProps = ImageProps & ChakraProps;
+type ChNextImageProps = Omit<ImageProps, 'fill'> & ChakraProps;
 
 export const ChImage: FC<ChNextImageProps> = (props: ChNextImageProps) => {
   return <ChakraNextImage {...props} />;

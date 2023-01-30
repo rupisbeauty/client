@@ -76,10 +76,10 @@ export const ColumnRight: React.FC<{
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
       {image && (
         <Image
-          src={image}
-          width={1200}
-          height={1200}
-          alt="Rupi Beauty Studio"
+          src={image.src}
+          width={Number(image?.size?.width || 100)}
+          height={Number(image?.size?.width || 200)}
+          alt={image.alt + ' | ' + image.attr}
           priority
         />
       )}
