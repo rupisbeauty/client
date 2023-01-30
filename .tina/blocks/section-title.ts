@@ -13,6 +13,8 @@ export const sectionTitleBlock: Template = {
       type: 'string',
       label: 'Section Title',
       name: 'title',
+      isTitle: true,
+      required: true,
     },
   ],
 };

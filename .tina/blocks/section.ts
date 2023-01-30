@@ -16,8 +16,19 @@ export const sectionBlock: Template = {
       contained: false,
       settings: sectionStyles(chakraStyles?.container?.default),
     },
+    itemProps: (item) => ({
+      key: item.title,
+      label: item.title,
+    }),
   },
   fields: [
+    {
+      type: 'string',
+      name: 'title',
+      label: 'Title',
+      isTitle: true,
+      required: true,
+    },
     {
       type: 'boolean',
       name: 'contained',
@@ -34,7 +45,11 @@ export const sectionBlock: Template = {
       type: 'object',
       name: 'settings',
       label: 'Settings',
-      fields: [...fields?.spacing, ...fields?.decorative, ...fields?.typography],
+      fields: [
+        ...fields?.spacing,
+        ...fields?.decorative,
+        ...fields?.typography,
+      ],
     },
   ],
 };

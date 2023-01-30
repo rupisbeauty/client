@@ -1,7 +1,14 @@
 import { theme } from '@chakra-ui/react';
 import { Template } from 'tinacms';
 
-import { mapColors, mapOptions, mapSemanticTokens } from './utils/chakra';
+import {
+  mapColors,
+  mapOptions,
+  mapSemanticTokens,
+  objectFit,
+  objectPosition,
+  scale,
+} from './utils';
 
 export const fieldConfig: Record<string, Template['fields']> = {
   pageTitle: [
@@ -131,17 +138,6 @@ fieldConfig.image = [
     type: 'object',
     name: 'image',
     label: 'Add or Update Image',
-    ui: {
-      // W I P @TODO: see if this label can be more readable
-      itemProps: (item) => {
-        console.log('🚀 | file: fields-config.ts:131 | item', item);
-        return {
-          id: item.src,
-          key: item.src,
-          label: item.alt,
-        };
-      },
-    },
     fields: [
       {
         type: 'image',
@@ -152,6 +148,8 @@ fieldConfig.image = [
         type: 'string',
         label: 'Image Alt Text',
         name: 'alt',
+        isTitle: true,
+        required: true,
       },
       {
         type: 'string',
@@ -159,6 +157,31 @@ fieldConfig.image = [
         name: 'attr',
       },
       ...fieldConfig.size,
+      {
+        type: 'object',
+        name: 'pos',
+        label: 'Image Display',
+        fields: [
+          {
+            type: 'string',
+            label: 'Image Position',
+            name: 'objectPosition',
+            options: objectPosition.map(mapOptions),
+          },
+          {
+            type: 'string',
+            label: 'Image Fit',
+            name: 'objectFit',
+            options: objectFit.map(mapOptions),
+          },
+          {
+            type: 'string',
+            label: 'Transform Image',
+            name: 'transform',
+            options: scale.map(mapOptions),
+          },
+        ],
+      },
     ],
   },
 ];
