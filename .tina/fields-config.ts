@@ -1,11 +1,11 @@
 import { theme } from '@chakra-ui/react';
 import { Template } from 'tinacms';
 
-import { SECTION_DEFAULT_STYLES } from '../src/components/blocks/section/experimental';
 import { mapColors, mapOptions, mapSemanticTokens } from './utils/chakra';
 
 export const fields: Record<string, Template['fields']> = {
   pageTitle: [
+    // @TODO: this might be able to be remove (check and remove)
     {
       type: 'string',
       label: 'Page Title (SEO, Search results) 50-70 chars.',
@@ -60,289 +60,6 @@ export const fields: Record<string, Template['fields']> = {
       },
     },
   ],
-  colors: [
-    {
-      type: 'object',
-      name: 'colors',
-      label: 'Color Settings',
-      fields: [
-        {
-          type: 'string',
-          label: 'backgroundColor',
-          name: 'backgroundColor',
-          ui: {
-            component: 'color',
-          },
-        },
-        {
-          type: 'string',
-          label: 'color',
-          name: 'color',
-          ui: {
-            component: 'color',
-          },
-        },
-      ],
-    },
-  ],
-  settings: [
-    {
-      type: 'object',
-      name: 'settings',
-      label: 'Settings',
-      fields: [
-        {
-          type: 'boolean',
-          name: 'showHeader',
-          label: 'Show Header?',
-        },
-        {
-          type: 'boolean',
-          name: 'showFooter',
-          label: 'Show Footer',
-        },
-        {
-          type: 'boolean',
-          name: 'showCta',
-          label: 'Show Email Signup CTA?',
-        },
-        {
-          type: 'boolean',
-          name: 'showReviews',
-          label: 'Show Reviews Footer Title?',
-        },
-      ],
-    },
-  ],
-  image: [
-    {
-      type: 'object',
-      name: 'image',
-      label: 'Add New Image',
-      fields: [
-        {
-          type: 'image',
-          label: 'Image Source',
-          name: 'src',
-        },
-        {
-          type: 'string',
-          label: 'Image Alt Text',
-          name: 'alt',
-        },
-        {
-          type: 'string',
-          label: 'Image Credits',
-          name: 'attr',
-        },
-        {
-          type: 'object',
-          name: 'size',
-          label: 'Image Size',
-          fields: [
-            {
-              type: 'number',
-              label: 'Width',
-              name: 'width',
-            },
-            {
-              type: 'number',
-              label: 'Height',
-              name: 'height',
-            },
-          ],
-        },
-      ],
-    },
-  ],
-  container: [
-    {
-      type: 'boolean',
-      name: 'centerContent',
-      label: 'Center Content?',
-    },
-    {
-      type: 'boolean',
-      name: 'contained',
-      label: 'Use a Container?',
-    },
-    {
-      type: 'string',
-      label: 'Width',
-      name: 'width',
-      options: Object.keys(theme.sizes).map(mapOptions),
-    },
-    {
-      type: 'string',
-      label: 'Max Width',
-      name: 'maxW',
-      options: Object.keys(theme.sizes.container).map(mapOptions),
-    },
-    {
-      type: 'string',
-      label:
-        'Background Color: https://chakra-ui.com/docs/styled-system/theme#colors',
-      name: 'backgroundColor',
-      options: mapSemanticTokens.concat(mapColors),
-    },
-    {
-      type: 'string',
-      label:
-        'Text Color: https://chakra-ui.com/docs/styled-system/theme#colors',
-      name: 'color',
-      options: mapSemanticTokens.concat(mapColors),
-    },
-  ],
-  spacing: [
-    {
-      type: 'object',
-      name: 'spacing',
-      label: 'Spacing Settings',
-      fields: [
-        {
-          type: 'string',
-          label: 'Horizontal Padding',
-          name: 'px',
-          options: Object.keys(theme.space).map(mapOptions),
-        },
-        {
-          type: 'string',
-          label: 'Vertical Padding',
-          name: 'py',
-          options: Object.keys(theme.space).map(mapOptions),
-        },
-        {
-          type: 'string',
-          label: 'Horizontal Margin',
-          name: 'mx',
-          options: Object.keys(theme.space).map(mapOptions),
-        },
-        {
-          type: 'string',
-          label: 'Vertical Margin',
-          name: 'my',
-          options: Object.keys(theme.space).map(mapOptions),
-        },
-      ],
-    },
-  ],
-  decorative: [
-    {
-      type: 'object',
-      name: 'decorative',
-      label: 'Decorative Styles',
-      fields: [
-        {
-          type: 'string',
-          label: 'Border',
-          name: 'border',
-          options: Object.keys(theme.borders).map(mapOptions),
-        },
-        {
-          type: 'string',
-          label: 'Border Color',
-          name: 'borderColor',
-          options: mapSemanticTokens.concat(mapColors),
-        },
-        {
-          type: 'string',
-          label: 'Rounded',
-          name: 'rounded',
-          options: Object.keys(theme.radii).map(mapOptions),
-        },
-        {
-          type: 'string',
-          label: 'Shadow',
-          name: 'shadow',
-          options: Object.keys(theme.shadows).map(mapOptions),
-        },
-      ],
-    },
-  ],
-  typography: [
-    {
-      type: 'object',
-      name: 'typography',
-      label: 'Font Styles',
-      fields: [
-        {
-          type: 'string',
-          label: 'Font Family',
-          name: 'fontFamily',
-          options: Object.keys(theme.fonts).map(mapOptions),
-        },
-        {
-          type: 'string',
-          label: 'Font Size',
-          name: 'fontSize',
-          options: Object.keys(theme.fontSizes).map(mapOptions),
-        },
-        {
-          type: 'string',
-          label: 'Font Weight',
-          name: 'fontWeight',
-          options: Object.keys(theme.fontWeights).map(mapOptions),
-        },
-        {
-          type: 'string',
-          label: 'Line Height',
-          name: 'lineHeight',
-          options: Object.keys(theme.lineHeights).map(mapOptions),
-        },
-        {
-          type: 'string',
-          label: 'Letter Spacing',
-          name: 'letterSpacing',
-          options: Object.keys(theme.letterSpacings).map(mapOptions),
-        },
-        {
-          type: 'string',
-          label: 'Text Align',
-          name: 'textAlign',
-          options: [
-            { key: 'left', value: 'left', label: 'left' },
-            { key: 'center', value: 'center', label: 'center' },
-            { key: 'right', value: 'right', label: 'right' },
-          ],
-        },
-        {
-          type: 'string',
-          label: 'Text Transform',
-          name: 'textTransform',
-          options: [
-            { key: 'none', value: 'none', label: 'none' },
-            { key: 'uppercase', value: 'uppercase', label: 'uppercase' },
-            { key: 'lowercase', value: 'lowercase', label: 'lowercase' },
-            { key: 'capitalize', value: 'capitalize', label: 'capitalize' },
-          ],
-        },
-        {
-          type: 'string',
-          label: 'Text Decoration',
-          name: 'textDecoration',
-          options: [
-            { key: 'none', value: 'none', label: 'none' },
-            { key: 'underline', value: 'underline', label: 'underline' },
-            {
-              key: 'line-through',
-              value: 'line-through',
-              label: 'line-through',
-            },
-            { key: 'overline', value: 'overline', label: 'overline' },
-          ],
-        },
-        {
-          type: 'string',
-          label: 'Text Overflow',
-          name: 'textOverflow',
-          options: [
-            { key: 'clip', value: 'clip', label: 'clip' },
-            { key: 'ellipsis', value: 'ellipsis', label: 'ellipsis' },
-          ],
-        },
-      ],
-    },
-  ],
   services: [
     {
       type: 'object',
@@ -389,6 +106,26 @@ export const fields: Record<string, Template['fields']> = {
   ],
 };
 
+fields.size = [
+  {
+    type: 'object',
+    name: 'size',
+    label: 'Image Size',
+    fields: [
+      {
+        type: 'number',
+        label: 'Width',
+        name: 'width',
+      },
+      {
+        type: 'number',
+        label: 'Height',
+        name: 'height',
+      },
+    ],
+  },
+];
+
 fields.seo = [
   {
     type: 'object',
@@ -424,6 +161,290 @@ fields.seo = [
         type: 'string',
       },
       ...fields?.image,
+    ],
+  },
+];
+
+fields.image = [
+  {
+    type: 'object',
+    name: 'image',
+    label: 'Add or Update Image',
+    ui: {
+      // W I P @TODO: see if this label can be more readable
+      itemProps: (item) => {
+        console.log('🚀 | file: fields-config.ts:131 | item', item);
+        return {
+          id: item.src,
+          key: item.src,
+          label: item.alt,
+        };
+      },
+    },
+    fields: [
+      {
+        type: 'image',
+        label: 'Image Source',
+        name: 'src',
+      },
+      {
+        type: 'string',
+        label: 'Image Alt Text',
+        name: 'alt',
+      },
+      {
+        type: 'string',
+        label: 'Image Credits',
+        name: 'attr',
+      },
+      ...fields.size,
+    ],
+  },
+];
+
+fields.typography = [
+  {
+    type: 'object',
+    name: 'typography',
+    label: 'Font Styles',
+    fields: [
+      {
+        type: 'string',
+        label: 'Font Family',
+        name: 'fontFamily',
+        options: Object.keys(theme.fonts).map(mapOptions),
+      },
+      {
+        type: 'string',
+        label: 'Font Size',
+        name: 'fontSize',
+        options: Object.keys(theme.fontSizes).map(mapOptions),
+      },
+      {
+        type: 'string',
+        label: 'Font Weight',
+        name: 'fontWeight',
+        options: Object.keys(theme.fontWeights).map(mapOptions),
+      },
+      {
+        type: 'string',
+        label: 'Line Height',
+        name: 'lineHeight',
+        options: Object.keys(theme.lineHeights).map(mapOptions),
+      },
+      {
+        type: 'string',
+        label: 'Letter Spacing',
+        name: 'letterSpacing',
+        options: Object.keys(theme.letterSpacings).map(mapOptions),
+      },
+      {
+        type: 'string',
+        label: 'Text Align',
+        name: 'textAlign',
+        options: [
+          { key: 'left', value: 'left', label: 'left' },
+          { key: 'center', value: 'center', label: 'center' },
+          { key: 'right', value: 'right', label: 'right' },
+        ],
+      },
+      {
+        type: 'string',
+        label: 'Text Transform',
+        name: 'textTransform',
+        options: [
+          { key: 'none', value: 'none', label: 'none' },
+          { key: 'uppercase', value: 'uppercase', label: 'uppercase' },
+          { key: 'lowercase', value: 'lowercase', label: 'lowercase' },
+          { key: 'capitalize', value: 'capitalize', label: 'capitalize' },
+        ],
+      },
+      {
+        type: 'string',
+        label: 'Text Decoration',
+        name: 'textDecoration',
+        options: [
+          { key: 'none', value: 'none', label: 'none' },
+          { key: 'underline', value: 'underline', label: 'underline' },
+          {
+            key: 'line-through',
+            value: 'line-through',
+            label: 'line-through',
+          },
+          { key: 'overline', value: 'overline', label: 'overline' },
+        ],
+      },
+      {
+        type: 'string',
+        label: 'Text Overflow',
+        name: 'textOverflow',
+        options: [
+          { key: 'clip', value: 'clip', label: 'clip' },
+          { key: 'ellipsis', value: 'ellipsis', label: 'ellipsis' },
+        ],
+      },
+    ],
+  },
+];
+
+fields.decorative = [
+  {
+    type: 'object',
+    name: 'decorative',
+    label: 'Decorative Styles',
+    fields: [
+      {
+        type: 'string',
+        label: 'Border',
+        name: 'border',
+        options: Object.keys(theme.borders).map(mapOptions),
+      },
+      {
+        type: 'string',
+        label: 'Border Color',
+        name: 'borderColor',
+        options: mapSemanticTokens.concat(mapColors),
+      },
+      {
+        type: 'string',
+        label: 'Rounded',
+        name: 'rounded',
+        options: Object.keys(theme.radii).map(mapOptions),
+      },
+      {
+        type: 'string',
+        label: 'Shadow',
+        name: 'shadow',
+        options: Object.keys(theme.shadows).map(mapOptions),
+      },
+    ],
+  },
+];
+
+fields.spacing = [
+  {
+    type: 'object',
+    name: 'spacing',
+    label: 'Spacing Settings',
+    fields: [
+      {
+        type: 'string',
+        label: 'Horizontal Padding',
+        name: 'px',
+        options: Object.keys(theme.space).map(mapOptions),
+      },
+      {
+        type: 'string',
+        label: 'Vertical Padding',
+        name: 'py',
+        options: Object.keys(theme.space).map(mapOptions),
+      },
+      {
+        type: 'string',
+        label: 'Horizontal Margin',
+        name: 'mx',
+        options: Object.keys(theme.space).map(mapOptions),
+      },
+      {
+        type: 'string',
+        label: 'Vertical Margin',
+        name: 'my',
+        options: Object.keys(theme.space).map(mapOptions),
+      },
+    ],
+  },
+];
+
+fields.container = [
+  {
+    type: 'boolean',
+    name: 'centerContent',
+    label: 'Center Content?',
+  },
+  {
+    type: 'boolean',
+    name: 'contained',
+    label: 'Use a Container?',
+  },
+  {
+    type: 'string',
+    label: 'Width',
+    name: 'width',
+    options: Object.keys(theme.sizes).map(mapOptions),
+  },
+  {
+    type: 'string',
+    label: 'Max Width',
+    name: 'maxW',
+    options: Object.keys(theme.sizes.container).map(mapOptions),
+  },
+  {
+    type: 'string',
+    label:
+      'Background Color: https://chakra-ui.com/docs/styled-system/theme#colors',
+    name: 'backgroundColor',
+    options: mapSemanticTokens.concat(mapColors),
+  },
+  {
+    type: 'string',
+    label: 'Text Color: https://chakra-ui.com/docs/styled-system/theme#colors',
+    name: 'color',
+    options: mapSemanticTokens.concat(mapColors),
+  },
+];
+
+fields.settings = [
+  {
+    type: 'object',
+    name: 'settings',
+    label: 'Settings',
+    fields: [
+      {
+        type: 'boolean',
+        name: 'showHeader',
+        label: 'Show Header?',
+      },
+      {
+        type: 'boolean',
+        name: 'showFooter',
+        label: 'Show Footer',
+      },
+      {
+        type: 'boolean',
+        name: 'showCta',
+        label: 'Show Email Signup CTA?',
+      },
+      {
+        type: 'boolean',
+        name: 'showReviews',
+        label: 'Show Reviews Footer Title?',
+      },
+    ],
+  },
+];
+
+fields.colors = [
+  {
+    type: 'object',
+    name: 'colors',
+    label: 'Color Settings',
+    fields: [
+      {
+        type: 'string',
+        label: 'backgroundColor',
+        name: 'backgroundColor',
+        ui: {
+          component: 'color',
+        },
+      },
+      {
+        type: 'string',
+        label: 'color',
+        name: 'color',
+        ui: {
+          component: 'color',
+        },
+      },
     ],
   },
 ];
