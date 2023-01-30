@@ -1,9 +1,11 @@
-import { router } from "../trpc";
-import { authRouter } from "./auth";
-import { subsRouter } from "./subs";
+import { router } from '../trpc';
+import { authRouter } from './auth';
+import { mdxRouter } from './mdx';
+import { subsRouter } from './subs';
 
 export const appRouter = router({
   auth: authRouter,
+  mdx: mdxRouter,
   subs: subsRouter,
 });
 

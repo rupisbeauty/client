@@ -1,13 +1,13 @@
 import {
-  AspectRatio,
-  Box,
-  Container as CUIContainer,
-  Heading,
-  Stack,
-  TabList,
-  TabPanels,
-  Tabs,
-  Text,
+AspectRatio,
+Box,
+Container as CUIContainer,
+Heading,
+Stack,
+TabList,
+TabPanels,
+Tabs,
+Text
 } from '@chakra-ui/react';
 
 import Image from 'next/image';
@@ -16,6 +16,7 @@ import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import type { ContainerProps } from '@chakra-ui/react';
 import type { TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
+import { trpc } from '@/utils/trpc';
 import { SectionTitle } from './section-title';
 
 type ServiceCoverProps = {
@@ -70,6 +71,48 @@ export const SectionCover: React.FC<ServiceCoverProps> = ({ image }) => {
   ) : null;
 };
 
+
+export const ServiceMenu = ({ options, relatedServices }: any) => {
+  const { data: allServices } = trpc.mdx.parseFMList.useQuery({
+    filePaths: [
+      '_content/options/addons/dermaplaning.mdx',
+      '_content/options/addons/led-light-therapy.mdx',
+      '_content/options/addons/microdermabrasion.mdx',
+    ],
+  });
+
+  console.log('data', allServices);
+
+  return (
+    <Stack w="full" borderRadius="md" direction="row" gap={6}>
+      <Tabs
+        bg="white"
+        w="full"
+        p={2}
+        // onChange={(index) => setActiveIndex(index)}
+        borderRadius="15px"
+        border="3px solid"
+        borderColor="red.200"
+      >
+        <TabList gap={16}>{/* <TabMenu items={tabMenuItems} /> */}</TabList>
+        {/* <TabPanels>
+              {Object.keys(allServices).map((serviceKey) => {
+                const { services } = allServices[serviceKey as keyof Services];
+                if (!services) return null;
+                return (
+                  <TabPanelContent
+                    services={services}
+                    serviceKey={serviceKey as keyof ServiceImages}
+                    key={serviceKey}
+                  />
+                );
+              })}
+            </TabPanels> */}
+      </Tabs>
+    </Stack>
+  );
+};
+
 type TinaContainerProps = {
   contained: boolean;
   body: TinaMarkdownContent | TinaMarkdownContent[];
@@ -81,6 +124,7 @@ type TinaContainerProps = {
 const components = {
   sectionTitle: SectionTitle,
   sectionCover: SectionCover,
+  serviceMenu: ServiceMenu,
 };
 
 export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
@@ -113,36 +157,5 @@ export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
     >
       <TinaMarkdown content={body} components={components} />
     </Box>
-  );
-};
-
-export const ServiceMenu = ({ serviceOptions }: any) => {
-  return (
-    <Stack w="full" borderRadius="md" direction="row" gap={6}>
-      <Tabs
-        bg="white"
-        w="full"
-        p={2}
-        // onChange={(index) => setActiveIndex(index)}
-        borderRadius="15px"
-        border="3px solid"
-        borderColor="red.200"
-      >
-        <TabList gap={16}>{/* <TabMenu items={tabMenuItems} /> */}</TabList>
-        {/* <TabPanels>
-              {Object.keys(allServices).map((serviceKey) => {
-                const { services } = allServices[serviceKey as keyof Services];
-                if (!services) return null;
-                return (
-                  <TabPanelContent
-                    services={services}
-                    serviceKey={serviceKey as keyof ServiceImages}
-                    key={serviceKey}
-                  />
-                );
-              })}
-            </TabPanels> */}
-      </Tabs>
-    </Stack>
   );
 };
