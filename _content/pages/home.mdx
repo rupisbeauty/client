@@ -1,17 +1,44 @@
 ---
 title: Rupi Beauty Studio
 description: Rupi Beauty Studio proudly offers
-backgroundColor: '#FFF1E4'
-color: '#4A5568'
-showHeader: true
-showFooter: true
-showCta: true
-showReviews: true
+settings:
+  showHeader: true
+  showFooter: true
+  showCta: true
+  showReviews: false
+colors:
+  backgroundColor: '#FFF1E4'
+  color: '#4A5568'
+seo:
+  title: Rupi Beauty Studio
+  description: Rupi Beauty Studio proudly offers
 ---
 
-<hero heading="Reveal Your Natural Beauty" subheading="Let Us Help You" cta="Book your first appointment today!" phone="(862) 571-7873" image="/uploads/people/hero-composite.webp" />
+<hero
+  heading="Reveal Your Natural Beauty"
+  subheading="Let Us Help You"
+  cta="Book your first appointment today!"
+  phone="(862) 571-7873"
+  image={{
+    src: "/uploads/people/hero-composite.webp",
+    size: { width: 1200, height: 1200 },
+    alt: "Eybrows and Skin-care Specialists"
+  }}
+/>
 
-<about title="Your Neighborhood Beauty Experts" heading="Over 15 Years" subheading="of Esthetic Industry Experience" description="We are committed to helping you look and feel your best. Our licensed estheticians provide best-in class threading, waxing, tinting along with thoughtful skin and eyebrow care advice." caption="Licensed in NY / NJ" licenses={true} image="/uploads/assets/location/pearl-river-interior.webp" />
+<about
+  title="Your Neighborhood Beauty Expert"
+  heading="Over 15 Years "
+  subheading="of Esthetic Industry Experience"
+  caption="Licensed in NY / NJ"
+  description="We are committed to helping you look and feel your best. Our licensed estheticians provide best-in class threading, waxing, tinting along with thoughtful skin and eyebrow care advice."
+  showLicenses={true}
+  image={{
+    src: "/uploads/assets/location/pearl-river-interior.webp",
+    alt: "Pearl River Location Interior of Rupi Beauty Studio",
+    size: { width: 904, height: 1205 }
+  }}
+/>
 
 <locationCTA cta="Come Visit Us At Our Newest Location" />
 
@@ -20,26 +47,42 @@ showReviews: true
   serviceCategories={[
     {
       category: "Eyebrows",
-      image: "/uploads/services/lash-lift-result.webp",
-      link: "#"
+      image: {
+        src: "/uploads/services/lash-lift-result.webp",
+        alt: "Lash Lift Treatment Results",
+        size: { width: 995, height: 995 }
+      },
+      link: "relative-link"
     },
     {
       category: "Facials",
-      image: "/uploads/people/woman-half-face-mask.webp",
-      link: "#"
-    },
-    {
-      category: "Laser Hair Removal",
-      image: "/uploads/services/laser-hair-removal.webp",
-      link: "#"
+      image: {
+        src: "/uploads/services/facial2.webp",
+        alt: "Facial Skin-Care Treatment",
+        size: { width: 1920, height: 1280 },
+        attr: "Image by kroshka__nastya"
+      },
+      link: "relative-link"
     },
     {
       category: "Micro-needling",
-      image: "/uploads/services/micro-needling2.webp",
-      link: "services/addsons"
+      image: {
+        src: "/uploads/services/micro-needling.webp",
+        alt: "Your neighborhood beauty and skin care experts. Trained and certified estheticians | ✨ Rupi Beauty Studio ✨",
+        size: { width: 1920, height: 1280 }
+      },
+      link: "relative-link"
+    },
+    {
+      category: "Laser Hair Removal",
+      image: {
+        src: "/uploads/services/laser-hair-removal.webp",
+        alt: "Your neighborhood beauty and skin care experts. Trained and certified estheticians | ✨ Rupi Beauty Studio ✨",
+        size: { width: 500, height: 500 }
+      },
+      link: "#"
     }
   ]}
 />
 
 <contact address="2A Franklin Ave" locality="Pearl River, NY 10965" phoneNumber="(862) 571-7873" />
-
