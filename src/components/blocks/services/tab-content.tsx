@@ -8,14 +8,16 @@ import {
   Text,
 } from '@chakra-ui/react';
 
-import type {
-  ServiceCategories,
-  ServiceDetails,
-  ServiceImages,
-  Services,
-} from '@/_content';
+// import type {
+//   ServiceCategories,
+//   ServiceDetails,
+//   ServiceImages,
+//   Services,
+// } from '@/_content';
+import type { tinaSchema } from '@/schema';
+import type { z } from 'zod';
 
-import { ServiceListingCard } from '@/components/v1';
+import { ServiceListingCard } from '@/components';
 import { CustomIcon } from 'chakra.ui';
 
 export const TabMenu: React.FC<{ items: string[] }> = ({ items }) => {
@@ -49,8 +51,8 @@ export const TabPanelContent = ({
   serviceKey,
   services,
 }: {
-  serviceKey: keyof Services | keyof ServiceImages;
-  services: ServiceDetails[];
+  serviceKey: string;
+  services: z.TypeOf<typeof tinaSchema.service>[];
 }) => {
   return (
     <Collapse in={true} key={String(serviceKey)}>
@@ -62,10 +64,6 @@ export const TabPanelContent = ({
         gap={3}
       >
         {services.map((service) => {
-          const currentServiceKey =
-            serviceKey === 'all'
-              ? (service.category as keyof ServiceCategories | keyof ServiceImages)
-              : (serviceKey as keyof ServiceCategories);
           return (
             <Box
               key={service.title}
@@ -76,11 +74,7 @@ export const TabPanelContent = ({
               height="full"
               cursor="pointer"
             >
-              <ServiceListingCard
-                title={String(service.title)}
-                category={currentServiceKey}
-                slug={service.slug}
-              />
+              <ServiceListingCard category={serviceKey} service={service} />
             </Box>
           );
         })}

@@ -2,25 +2,26 @@ import {
   AspectRatio,
   Box,
   Container as CUIContainer,
-  Heading,
   Stack,
-  TabList,
   TabPanels,
   Tabs,
-  Text,
 } from '@chakra-ui/react';
 
 import Image from 'next/image';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
+import type { AppRouter } from '@/server/trpc/router/_app';
 import type { ContainerProps } from '@chakra-ui/react';
+import type { inferProcedureOutput } from '@trpc/server';
 import type { TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
 import { trpc } from '@/utils/trpc';
+import { TabPanelContent } from '../services/tab-content';
 import { SectionTitle } from './section-title';
 
-import {inferProcedureOutput} from "@trpc/server"
-import { AppRouter } from '@/server/trpc/router/_app';
+/* -------------------------------------------------------------------------- */
+/*                                Service Cover                               */
+/* -------------------------------------------------------------------------- */
 
 type ServiceCoverProps = {
   image: {
@@ -29,7 +30,7 @@ type ServiceCoverProps = {
     attr?: string;
     size?: { width?: number; height?: number };
     pos?: {
-      // @TODO: FIXME: type issue expect type to be of ObjectFit but does not accept string
+      // n9ZOvMI0UGU @TODO: FIXME: type issue expect type to be of ObjectFit but does not accept string
       objectFit?: any;
       objectPosition?: any;
       transform?: any;
@@ -55,7 +56,6 @@ export const SectionCover: React.FC<ServiceCoverProps> = ({ image }) => {
       rounded="xl"
       shadow="xl"
       p={0}
-      // m={0}
       my={24}
     >
       <AspectRatio ratio={3 / 4}>
@@ -74,53 +74,55 @@ export const SectionCover: React.FC<ServiceCoverProps> = ({ image }) => {
   ) : null;
 };
 
-export type ServiceCategoryFrontMatter = inferProcedureOutput<AppRouter['mdx']['parseFMList']>
+/* -------------------------------------------------------------------------- */
+/*                                 ServiceMenu                                */
+/* -------------------------------------------------------------------------- */
+export type ServiceCategoryFrontMatter = inferProcedureOutput<
+  AppRouter['mdx']['parseFMList']
+>;
 
-export const ServiceMenu = ({ options, relatedServices }: any) => {
+// n9ZOvMI0UGU @TODO: type this
+export const ServiceMenu = ({ options, relatedServices, ...props }: any) => {
   const { data: allServices } = trpc.mdx.parseFMList.useQuery(
     {
+      // n9ZOvMI0UGU @TODO: type this
       filePaths: relatedServices.map((service: any) => service.service),
     },
     { enabled: !!relatedServices.length }
   );
 
-  console.log('data', allServices);
-
   return (
-    <Stack w="full" borderRadius="md" direction="row" gap={6}>
-      <Tabs
-        bg="white"
-        w="full"
-        p={2}
-        // onChange={(index) => setActiveIndex(index)}
-        borderRadius="15px"
-        border="3px solid"
-        borderColor="red.200"
-      >
-        <TabList gap={16}>{/* <TabMenu items={tabMenuItems} /> */}</TabList>
-        {/* <TabPanels>
-              {Object.keys(allServices).map((serviceKey) => {
-                const { services } = allServices[serviceKey as keyof Services];
-                if (!services) return null;
-                return (
-                  <TabPanelContent
-                    services={services}
-                    serviceKey={serviceKey as keyof ServiceImages}
-                    key={serviceKey}
-                  />
-                );
-              })}
-            </TabPanels> */}
+    <Stack w="full" direction="row" gap={6} my={12} mx="auto">
+      <Tabs bg="white" w="full" p={2} borderRadius="15px" py={12}>
+        <TabPanels>
+          {allServices &&
+            Object.keys(allServices).map((serviceKey) => {
+              const service = allServices[serviceKey];
+              if (!service) return null;
+              return (
+                <TabPanelContent
+                  services={Object.keys(allServices).map(
+                    (key) => allServices[key]
+                  )}
+                  serviceKey={serviceKey}
+                  key={serviceKey}
+                />
+              );
+            })}
+        </TabPanels>
       </Tabs>
     </Stack>
   );
 };
 
+/* -------------------------------------------------------------------------- */
+/*                                   Section                                  */
+/* -------------------------------------------------------------------------- */
 type TinaContainerProps = {
   contained: boolean;
   body: TinaMarkdownContent | TinaMarkdownContent[];
   settings: {
-    [key: string]: any;
+    [key: string]: any; // n9ZOvMI0UGU @TODO: type this
   };
 };
 
@@ -135,11 +137,11 @@ export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
   body,
   settings: { spacing, decorative, typography, ...settings },
 }) => {
-  // @TODO: ADD zod validation
+  //  n9ZOvMI0UGU @TODO: ADD zod validation
   if (contained) {
     return (
       <CUIContainer
-        layerStyles="container.default"
+        layerStyle="container.default"
         {...settings}
         {...typography}
         {...spacing}
@@ -151,7 +153,7 @@ export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
   }
   return (
     <Box
-      layerStyles="container.default"
+      layerStyle="container.default"
       mx={settings?.centerContent ? 'auto' : 0}
       {...settings}
       {...typography}
