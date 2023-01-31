@@ -1,8 +1,5 @@
 import { z } from 'zod';
 
-const sectionTitleSchema = z.object({
-  title: z.string(),
-});
 const imageSchema = z
   .object({
     src: z.string().min(1),
@@ -24,29 +21,48 @@ const imageSchema = z
   })
   .nullish();
 
+const pageTitleSchemaPart = z.object({
+  title: z.string().min(1),
+  // title: z.string().min(1).max(70),
+  description: z.string().min(1),
+  // description: z.string().min(1).max(160),
+  slug: z.string().nullish(),
+});
+
+const colorSchemaPart = z.object({
+  backgroundColor: z.string().optional(),
+  color: z.string().optional(),
+});
+
+const settingsSchemaPart = z.object({
+  showHeader: z.boolean(),
+  showFooter: z.boolean(),
+  showCta: z.boolean(),
+  showReviews: z.boolean(),
+});
+
+const seoSchemaPart = z.object({
+  // title: z.string().min(1),
+  title: z.string().min(1).max(70),
+  // description: z.string().min(1),
+  description: z.string().min(1).max(160),
+  image: imageSchema,
+});
+
 const layoutSchema = z.object({
   title: z.string().min(1),
   // title: z.string().min(1).max(70),
   description: z.string().min(1),
   // description: z.string().min(1).max(160),
-  colors: z.object({
-    backgroundColor: z.string().optional(),
-    color: z.string().optional(),
-  }),
-  settings: z.object({
-    showHeader: z.boolean(),
-    showFooter: z.boolean(),
-    showCta: z.boolean(),
-    showReviews: z.boolean(),
-  }),
-  seo: z.object({
-    // title: z.string().min(1),
-    title: z.string().min(1).max(70),
-    // description: z.string().min(1),
-    description: z.string().min(1).max(160),
-    image: imageSchema,
-  }),
+  slug: z.string().min(1).nullish(),
+  colors: colorSchemaPart,
+  settings: settingsSchemaPart,
+  seo: seoSchemaPart,
 });
+
+const layoutWithImageSchema = layoutSchema.merge(
+  z.object({ image: imageSchema })
+);
 
 const heroSchema = z.object({
   heading: z.string().min(1),
@@ -94,8 +110,14 @@ export const separatorImageSchema = z.object({
   src: z.string().min(1),
 });
 
-// const blocksSchema = z.union([heroSchema, sectionTitleSchema, z.any()]);
-// export const pageSchema = layoutSchema.extend({ blocks: blocksSchema });
+export const serviceRelationsSchema = z.object({
+  options: z.array(z.object({ option: z.string() })).nullish(),
+  serviceList: z.array(z.object({ service: z.string() })).nullish(),
+});
+
+export const servicePageSchema = layoutWithImageSchema.merge(
+  serviceRelationsSchema
+);
 
 export const tinaSchema = {
   // blocks: blocksSchema,

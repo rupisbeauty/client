@@ -1,13 +1,13 @@
 import {
-AspectRatio,
-Box,
-Container as CUIContainer,
-Heading,
-Stack,
-TabList,
-TabPanels,
-Tabs,
-Text
+  AspectRatio,
+  Box,
+  Container as CUIContainer,
+  Heading,
+  Stack,
+  TabList,
+  TabPanels,
+  Tabs,
+  Text,
 } from '@chakra-ui/react';
 
 import Image from 'next/image';
@@ -18,6 +18,9 @@ import type { TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
 import { trpc } from '@/utils/trpc';
 import { SectionTitle } from './section-title';
+
+import {inferProcedureOutput} from "@trpc/server"
+import { AppRouter } from '@/server/trpc/router/_app';
 
 type ServiceCoverProps = {
   image: {
@@ -71,15 +74,15 @@ export const SectionCover: React.FC<ServiceCoverProps> = ({ image }) => {
   ) : null;
 };
 
+export type ServiceCategoryFrontMatter = inferProcedureOutput<AppRouter['mdx']['parseFMList']>
 
 export const ServiceMenu = ({ options, relatedServices }: any) => {
-  const { data: allServices } = trpc.mdx.parseFMList.useQuery({
-    filePaths: [
-      '_content/options/addons/dermaplaning.mdx',
-      '_content/options/addons/led-light-therapy.mdx',
-      '_content/options/addons/microdermabrasion.mdx',
-    ],
-  });
+  const { data: allServices } = trpc.mdx.parseFMList.useQuery(
+    {
+      filePaths: relatedServices.map((service: any) => service.service),
+    },
+    { enabled: !!relatedServices.length }
+  );
 
   console.log('data', allServices);
 
