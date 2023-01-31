@@ -5,6 +5,7 @@ import {
   Stack,
   TabPanels,
   Tabs,
+  type ChakraProps,
 } from '@chakra-ui/react';
 
 import Image from 'next/image';
@@ -119,11 +120,30 @@ export const ServiceMenu = ({ options, relatedServices, ...props }: any) => {
 /*                                   Section                                  */
 /* -------------------------------------------------------------------------- */
 type TinaContainerProps = {
-  contained: boolean;
+  // contained: boolean;
   body: TinaMarkdownContent | TinaMarkdownContent[];
   settings: {
-    [key: string]: any; // n9ZOvMI0UGU @TODO: type this
-  };
+    spacing: Pick<ChakraProps, 'px' | 'py' | 'mx' | 'my'>;
+    decorative: Pick<
+      ChakraProps,
+      'border' | 'borderColor' | 'rounded' | 'shadow'
+    >;
+    typography: Pick<
+      ChakraProps,
+      | 'fontFamily'
+      | 'fontSize'
+      | 'fontWeight'
+      | 'lineHeight'
+      | 'letterSpacing'
+      | 'textAlign'
+      | 'textTransform'
+      | 'textDecoration'
+      | 'textOverflow'
+    >;
+  } & Pick<
+    ContainerProps,
+    'centerContent' | 'width' | 'maxW' | 'backgroundColor' | 'color'
+  > & { contained: boolean };
 };
 
 const components = {
@@ -133,34 +153,37 @@ const components = {
 };
 
 export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
-  contained,
   body,
   settings: { spacing, decorative, typography, ...settings },
 }) => {
   //  n9ZOvMI0UGU @TODO: ADD zod validation
+  const { centerContent, contained } = settings;
   if (contained) {
     return (
       <CUIContainer
+        centerContent={centerContent}
         layerStyle="container.default"
-        {...settings}
         {...typography}
         {...spacing}
         {...decorative}
+        {...settings}
       >
         <TinaMarkdown content={body} components={components} />
       </CUIContainer>
     );
   }
+
   return (
     <Box
       layerStyle="container.default"
-      mx={settings?.centerContent ? 'auto' : 0}
-      {...settings}
       {...typography}
       {...spacing}
+      mx={centerContent ? 'auto' : 0}
       {...decorative}
+      {...settings}
     >
       <TinaMarkdown content={body} components={components} />
     </Box>
   );
+  return null;
 };
