@@ -19,10 +19,28 @@
     "title": "Service Title",
     "description": "This is the product description should be between 150-160 characters.",
     "slug": "service-title",
-    "showCta": true,
-    "showReviews": true,
-    "showHeader": true,
-    "showFooter": true
+    "image": {
+      "src": "/uploads/assets/placeholder-sq.webp",
+      "alt": "Your neighborhood beauty and skin care experts. Trained and certified estheticians | ✨ Rupi Beauty Studio ✨",
+      "size": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "settings": {
+      "showCta": true,
+      "showReviews": true,
+      "showHeader": true,
+      "showFooter": true
+    },
+    "seo": {
+      "title": "Rupi Beauty Studio Service",
+      "description": "Find out more about our incredible lineup of services for all of your beauty and skin-care needs."
+    },
+    "colors": {
+      "backgroundColor": "#FFF1E4",
+      "color": "#4A5568"
+    }
   },
   "image": {
     "src": "/uploads/assets/placeholder-sq.webp",

@@ -18,6 +18,7 @@ export const categories: { fields: SchemaField[] } = {
       isBody: true,
       // templates: [] as Template[], // @TODO: flesh out services templates
     },
+    ...fields?.image,
     ...fields?.services,
     ...fields?.settings,
     ...fields?.seo,

@@ -22,7 +22,8 @@ export const servicesOptions: { fields: SchemaField[] } = {
       label: 'Duration',
       type: 'number',
     },
+    ...fields.image,
     fields?.services[1], // reference to service-categories
-    ...fields?.settings,
+    // ...fields?.settings,
   ],
 };
