@@ -31,11 +31,6 @@ export const sectionBlock: Template = {
       required: true,
     },
     {
-      type: 'boolean',
-      name: 'contained',
-      label: 'Use a Container?',
-    },
-    {
       type: 'rich-text',
       name: 'body',
       label: 'Body',

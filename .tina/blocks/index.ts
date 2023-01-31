@@ -23,6 +23,7 @@ export const templates = {
     locationCTABlock,
   ] as Template[],
   section: [
+    sectionBlock,
     sectionTitleBlock,
     sectionCoverBlock,
     serviceMenuBlock,

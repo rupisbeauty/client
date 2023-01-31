@@ -10,6 +10,9 @@ import {
   scale,
 } from './utils';
 
+/* -------------------------------------------------------------------------- */
+/*                                Config:Pages                                */
+/* -------------------------------------------------------------------------- */
 export const fieldConfig: Record<string, Template['fields']> = {
   pageTitle: [
     // @TODO: this might be able to be remove (check and remove)
@@ -113,6 +116,9 @@ export const fieldConfig: Record<string, Template['fields']> = {
   ],
 };
 
+/* -------------------------------------------------------------------------- */
+/*                                 Styles:Size                                */
+/* -------------------------------------------------------------------------- */
 fieldConfig.size = [
   {
     type: 'object',
@@ -133,59 +139,9 @@ fieldConfig.size = [
   },
 ];
 
-fieldConfig.image = [
-  {
-    type: 'object',
-    name: 'image',
-    label: 'Add or Update Image',
-    fields: [
-      {
-        type: 'image',
-        label: 'Image Source',
-        name: 'src',
-      },
-      {
-        type: 'string',
-        label: 'Image Alt Text',
-        name: 'alt',
-        isTitle: true,
-        required: true,
-      },
-      {
-        type: 'string',
-        label: 'Image Credits',
-        name: 'attr',
-      },
-      ...fieldConfig.size,
-      {
-        type: 'object',
-        name: 'pos',
-        label: 'Image Display',
-        fields: [
-          {
-            type: 'string',
-            label: 'Image Position',
-            name: 'objectPosition',
-            options: objectPosition.map(mapOptions),
-          },
-          {
-            type: 'string',
-            label: 'Image Fit',
-            name: 'objectFit',
-            options: objectFit.map(mapOptions),
-          },
-          {
-            type: 'string',
-            label: 'Transform Image',
-            name: 'transform',
-            options: scale.map(mapOptions),
-          },
-        ],
-      },
-    ],
-  },
-];
-
+/* -------------------------------------------------------------------------- */
+/*                              Styles:Typography                             */
+/* -------------------------------------------------------------------------- */
 fieldConfig.typography = [
   {
     type: 'object',
@@ -271,6 +227,9 @@ fieldConfig.typography = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/*                              Styles:Decorative                             */
+/* -------------------------------------------------------------------------- */
 fieldConfig.decorative = [
   {
     type: 'object',
@@ -305,6 +264,9 @@ fieldConfig.decorative = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/*                               Styles:Spacing                               */
+/* -------------------------------------------------------------------------- */
 fieldConfig.spacing = [
   {
     type: 'object',
@@ -339,6 +301,38 @@ fieldConfig.spacing = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/*                                Styles:Colors                               */
+/* -------------------------------------------------------------------------- */
+fieldConfig.colors = [
+  {
+    type: 'object',
+    name: 'colors',
+    label: 'Color Settings',
+    fields: [
+      {
+        type: 'string',
+        label: 'backgroundColor',
+        name: 'backgroundColor',
+        ui: {
+          component: 'color',
+        },
+      },
+      {
+        type: 'string',
+        label: 'color',
+        name: 'color',
+        ui: {
+          component: 'color',
+        },
+      },
+    ],
+  },
+];
+
+/* -------------------------------------------------------------------------- */
+/*                              Styles:Container                              */
+/* -------------------------------------------------------------------------- */
 fieldConfig.container = [
   {
     type: 'boolean',
@@ -377,6 +371,9 @@ fieldConfig.container = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/*                               Config:Settings                              */
+/* -------------------------------------------------------------------------- */
 fieldConfig.settings = [
   {
     type: 'object',
@@ -407,32 +404,65 @@ fieldConfig.settings = [
   },
 ];
 
-fieldConfig.colors = [
+/* -------------------------------------------------------------------------- */
+/*                                Config:Image                                */
+/* -------------------------------------------------------------------------- */
+fieldConfig.image = [
   {
     type: 'object',
-    name: 'colors',
-    label: 'Color Settings',
+    name: 'image',
+    label: 'Add or Update Image',
     fields: [
       {
-        type: 'string',
-        label: 'backgroundColor',
-        name: 'backgroundColor',
-        ui: {
-          component: 'color',
-        },
+        type: 'image',
+        label: 'Image Source',
+        name: 'src',
       },
       {
         type: 'string',
-        label: 'color',
-        name: 'color',
-        ui: {
-          component: 'color',
-        },
+        label: 'Image Alt Text',
+        name: 'alt',
+        isTitle: true,
+        required: true,
+      },
+      {
+        type: 'string',
+        label: 'Image Credits',
+        name: 'attr',
+      },
+      ...fieldConfig.size,
+      {
+        type: 'object',
+        name: 'pos',
+        label: 'Image Display',
+        fields: [
+          {
+            type: 'string',
+            label: 'Image Position',
+            name: 'objectPosition',
+            options: objectPosition.map(mapOptions),
+          },
+          {
+            type: 'string',
+            label: 'Image Fit',
+            name: 'objectFit',
+            options: objectFit.map(mapOptions),
+          },
+          {
+            type: 'string',
+            label: 'Transform Image',
+            name: 'transform',
+            options: scale.map(mapOptions),
+          },
+        ],
       },
     ],
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/*                                 Config:Seo                                 */
+/* -------------------------------------------------------------------------- */
 fieldConfig.seo = [
   {
     type: 'object',

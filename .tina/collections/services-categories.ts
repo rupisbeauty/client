@@ -1,4 +1,5 @@
 import type { SchemaField } from 'tinacms';
+import { templates } from '../blocks';
 import { fields } from '../fields-config';
 
 export const categories: { fields: SchemaField[] } = {
@@ -16,7 +17,7 @@ export const categories: { fields: SchemaField[] } = {
       name: 'body',
       label: 'body',
       isBody: true,
-      // templates: [] as Template[], // @TODO: flesh out services templates
+      templates: templates.section,
     },
     ...fields?.image,
     ...fields?.services,
