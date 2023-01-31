@@ -327,13 +327,13 @@ fieldConfig.spacing = [
         type: 'string',
         label: 'Horizontal Margin',
         name: 'mx',
-        options: Object.keys(theme.space).map(mapOptions),
+        options: Object.keys(theme.space).map(mapOptions), // @TODO: add 'auto' as option
       },
       {
         type: 'string',
         label: 'Vertical Margin',
         name: 'my',
-        options: Object.keys(theme.space).map(mapOptions),
+        options: Object.keys(theme.space).map(mapOptions), // @TODO: add 'auto' as option
       },
     ],
   },

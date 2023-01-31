@@ -115,7 +115,7 @@ export const serviceRelationsSchema = z.object({
   serviceList: z.array(z.object({ service: z.string() })).nullish(),
 });
 
-export const servicePageSchema = layoutWithImageSchema.merge(
+export const serviceCategoryDataSchema = layoutWithImageSchema.merge(
   serviceRelationsSchema
 );
 
@@ -128,4 +128,5 @@ export const tinaSchema = {
   locationCTA: locationCTASchema,
   contact: contactSchema,
   coreServices: coreServicesSchema,
+  service: serviceCategoryDataSchema,
 };
