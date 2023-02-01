@@ -9,6 +9,7 @@ import {
   typenameSchema,
 } from './settings';
 
+// this is used on the client by the service category page
 export const singleServiceSchema = z
   .object({
     title: z.string(),
@@ -16,9 +17,11 @@ export const singleServiceSchema = z
     slug: z.string(),
     // icon: z.string().nullish(),
     image: imageSchema,
-    options: z.array(z.object({ option: z.string() })), // filenames
+    options: z.array(z.object({ option: z.string() })).nullish(), // filenames
   })
   .nullish();
+
+// used by basic-service-card
 export type SingleServiceSchema = z.infer<typeof singleServiceSchema>;
 
 export const relatedServiceSchema = z
@@ -33,7 +36,7 @@ export const relatedServiceSchema = z
       settings: settingsSchema,
       seo: seoSchema,
       image: imageSchema,
-      options: z.array(optionSchema),
+      options: z.array(optionSchema).nullish(),
       relatedServices: z.any().nullish(), // @FIXME: needs to be an array of services
     }),
   })
@@ -43,8 +46,8 @@ export const relatedServiceSchema = z
 export const serviceCategorySchema = baseSchema.merge(
   z.object({
     image: imageSchema,
-    options: z.array(optionSchema),
-    relatedServices: z.array(relatedServiceSchema), // @FIXME: needs to be an array of services
+    options: z.array(optionSchema).nullish(),
+    relatedServices: z.array(relatedServiceSchema).nullish(), // @FIXME: needs to be an array of services
     seo: seoSchema,
     settings: settingsSchema,
     colors: colorsSchema,
