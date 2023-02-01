@@ -1,11 +1,14 @@
 import {
   AspectRatio,
   Box,
+  chakra,
   Container as CUIContainer,
   Stack,
   TabPanels,
   Tabs,
+  type BoxProps,
   type ChakraProps,
+  type StackProps,
 } from '@chakra-ui/react';
 
 import Image from 'next/image';
@@ -16,10 +19,13 @@ import type { ContainerProps } from '@chakra-ui/react';
 import type { inferProcedureOutput } from '@trpc/server';
 import type { TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
+import { isBrowser } from '@/utils';
 import { trpc } from '@/utils/trpc';
+import { useEffect, useState } from 'react';
 import { TabPanelContent } from '../services/tab-content';
 import { SectionTitle } from './section-title';
 
+const CUITinaMarkdown = chakra(TinaMarkdown);
 /* -------------------------------------------------------------------------- */
 /*                                Service Cover                               */
 /* -------------------------------------------------------------------------- */
@@ -120,7 +126,6 @@ export const ServiceMenu = ({ options, relatedServices, ...props }: any) => {
 /*                                   Section                                  */
 /* -------------------------------------------------------------------------- */
 type TinaContainerProps = {
-  // contained: boolean;
   body: TinaMarkdownContent | TinaMarkdownContent[];
   settings: {
     spacing: Pick<ChakraProps, 'px' | 'py' | 'mx' | 'my'>;
@@ -143,47 +148,111 @@ type TinaContainerProps = {
   } & Pick<
     ContainerProps,
     'centerContent' | 'width' | 'maxW' | 'backgroundColor' | 'color'
-  > & { contained: boolean };
+  > & { contained: boolean; flex: Partial<StackProps> };
+};
+
+export const SectionBox: React.FC<{
+  body: TinaContainerProps['body'];
+  settings: TinaContainerProps['settings'] & {
+    box: Pick<
+      BoxProps,
+      | 'display'
+      | 'position'
+      | 'top'
+      | 'right'
+      | 'bottom'
+      | 'left'
+      | 'overflow'
+      | 'visibility'
+      | 'opacity'
+      | 'zIndex'
+      | 'rounded'
+      | 'shadow'
+      | 'border'
+    >;
+    spacing: TinaContainerProps['settings']['spacing'];
+    decorative: TinaContainerProps['settings']['decorative'];
+    typography: TinaContainerProps['settings']['typography'];
+  };
+}> = ({ body, settings, ...props }) => {
+  console.log('🚀 | file: experimental.tsx:178 | settings', settings, props);
+  return (
+    <Box
+      {...settings?.box}
+      {...settings?.spacing}
+      {...settings?.decorative}
+      {...settings?.typography}
+    >
+      <CUITinaMarkdown content={body} />
+    </Box>
+  );
 };
 
 const components = {
   sectionTitle: SectionTitle,
   sectionCover: SectionCover,
   serviceMenu: ServiceMenu,
+  box: SectionBox,
 };
 
 export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
   body,
-  settings: { spacing, decorative, typography, ...settings },
+  settings: {
+    flex,
+    spacing,
+    decorative,
+    typography,
+    centerContent,
+    contained,
+    ...settings
+  },
 }) => {
   //  n9ZOvMI0UGU @TODO: ADD zod validation
-  const { centerContent, contained } = settings;
-  if (contained) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    if (!isBrowser) return;
+    setMounted(true);
+    return () => {
+      setMounted(false);
+    };
+  }, [setMounted]);
+
+  if (mounted && contained) {
     return (
       <CUIContainer
+        as={Stack}
+        gap={0}
         centerContent={centerContent}
         layerStyle="container.default"
-        {...typography}
-        {...spacing}
         {...decorative}
         {...settings}
+        {...flex}
       >
-        <TinaMarkdown content={body} components={components} />
+        <CUITinaMarkdown
+          {...spacing}
+          {...typography}
+          content={body}
+          components={components}
+        />
       </CUIContainer>
     );
   }
 
-  return (
-    <Box
+  return mounted ? (
+    <Stack
+      gap={0}
       layerStyle="container.default"
-      {...typography}
-      {...spacing}
       mx={centerContent ? 'auto' : 0}
       {...decorative}
       {...settings}
+      {...flex}
     >
-      <TinaMarkdown content={body} components={components} />
-    </Box>
-  );
-  return null;
+      <CUITinaMarkdown
+        {...typography}
+        {...spacing}
+        content={body}
+        components={components}
+      />
+    </Stack>
+  ) : null;
 };

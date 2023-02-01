@@ -16,7 +16,7 @@ export const getServicesTinaPaths = async () => {
         },
       })
     );
-    console.log('prod: 🦙running gsp1', JSON.stringify(paths, null, 2));
+    console.log('prod: 🦙running gsp1'); // , JSON.stringify(paths, null, 2));
     return paths ? paths : [];
   } catch (error) {
     console.error('🔴 | file: [...category].tsx:57 | error', error);
@@ -33,7 +33,7 @@ export const getCurrentServiceTinaProps = async (
     const { data, query, variables } = await client.queries.categories({
       relativePath: `/${category.join('/')}.mdx`,
     });
-    console.log('prod: 🦙running gsp2:', JSON.stringify(data, null, 2));
+    console.log('prod: 🦙running gsp2:'); // , JSON.stringify(data, null, 2));
     return {
       data: data as CategoriesQuery,
       query,
