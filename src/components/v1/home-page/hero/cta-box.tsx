@@ -21,7 +21,7 @@ export const CTABox: FC = () => (
     }}
   >
     <Flex align="center" h="100%" p={{ base: 6, lg: 6 }} gap={1}>
-      <VStack layerStyle="flex-center" w="10%">
+      <VStack layerStyle="flex.center" w="10%">
         <CustomIcon
           icon="phone"
           size={[6, 10, 10, 10]}

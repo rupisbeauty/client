@@ -12,7 +12,7 @@ export const ColumnLeft: FC<{ heading: string; subheading: string }> = ({
   subheading,
 }) => {
   return (
-    <VStack h="100%" layerStyle="flex-center">
+    <VStack h="100%" layerStyle="flex.center">
       {subheading ? (
         <chakra.p
           fontSize={{ base: '2xl', md: '4xl', lg: '2xl' }}

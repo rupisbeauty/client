@@ -10,7 +10,7 @@ export const VisitLocationCTA: FC<{ cta: string; address?: string }> = ({
   address,
 }) => (
   <ScrollSection>
-    <Box zIndex={1} height={500} display="flex" layerStyle="flex-center">
+    <Box zIndex={1} height={500} display="flex" layerStyle="flex.center">
       <Stack
         direction="column"
         justifyContent="center"

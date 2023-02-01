@@ -75,7 +75,7 @@ const Main = ({ children }: { children: React.ReactNode }) => {
         w="full"
         p={4}
         direction="column"
-        layerStyle="flex-center"
+        layerStyle="flex.center"
       >
         {children}
       </Flex>

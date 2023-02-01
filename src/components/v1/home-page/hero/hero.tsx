@@ -30,7 +30,7 @@ export const Hero: FC = () => {
         direction={['column', null, null, 'row']}
         gap={[20, null, null, 16]}
       >
-        <VStack h="100%" layerStyle="flex-center">
+        <VStack h="100%" layerStyle="flex.center">
           <Column1 />
         </VStack>
         <VStack w="full" h="100%" justifyContent="center" alignItems="center">
