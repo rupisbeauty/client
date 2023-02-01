@@ -19,7 +19,6 @@ export const serviceMenuBlock: Template = {
       // required: true,
       // isTitle: true,
     },
-    ...fields.services,
-
+    ...(fields.services as Template['fields']),
   ],
 };

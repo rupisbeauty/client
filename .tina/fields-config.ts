@@ -1,13 +1,13 @@
 import { theme } from '@chakra-ui/react';
-import { Template } from 'tinacms';
+import { FieldsBuilder,Template } from 'tinacms';
 
 import {
-  mapColors,
-  mapOptions,
-  mapSemanticTokens,
-  objectFit,
-  objectPosition,
-  scale,
+mapColors,
+mapOptions,
+mapSemanticTokens,
+objectFit,
+objectPosition,
+scale
 } from './utils';
 
 import { paths } from '../chakra.ui/icons/paths';
@@ -140,7 +140,7 @@ const options = {
 /* -------------------------------------------------------------------------- */
 /*                                Config:Pages                                */
 /* -------------------------------------------------------------------------- */
-export const fieldConfig: Record<string, Template['fields']> = {
+export const fields: Record<string, Template['fields']> = {
   pageTitle: [
     // @TODO: this might be able to be remove (check and remove)
     {
@@ -269,7 +269,7 @@ export const fieldConfig: Record<string, Template['fields']> = {
 /* -------------------------------------------------------------------------- */
 /*                                 Styles:Size                                */
 /* -------------------------------------------------------------------------- */
-fieldConfig['size'] = [
+fields['size'] = [
   {
     type: 'object',
     name: 'size',
@@ -287,12 +287,12 @@ fieldConfig['size'] = [
       },
     ],
   },
-];
+] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */
 /*                              Styles:Typography                             */
 /* -------------------------------------------------------------------------- */
-fieldConfig['typography'] = [
+fields['typography'] = [
   {
     type: 'object',
     name: 'typography',
@@ -354,12 +354,12 @@ fieldConfig['typography'] = [
       },
     ],
   },
-];
+] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */
 /*                              Styles:Decorative                             */
 /* -------------------------------------------------------------------------- */
-fieldConfig['decorative'] = [
+fields['decorative'] = [
   {
     type: 'object',
     name: 'decorative',
@@ -391,12 +391,12 @@ fieldConfig['decorative'] = [
       },
     ],
   },
-];
+] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */
 /*                               Styles:Spacing                               */
 /* -------------------------------------------------------------------------- */
-fieldConfig['spacing'] = [
+fields['spacing'] = [
   {
     type: 'object',
     name: 'spacing',
@@ -428,12 +428,12 @@ fieldConfig['spacing'] = [
       },
     ],
   },
-];
+] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */
 /*                                Styles:Colors                               */
 /* -------------------------------------------------------------------------- */
-fieldConfig['colors'] = [
+fields['colors'] = [
   {
     type: 'object',
     name: 'colors',
@@ -457,12 +457,12 @@ fieldConfig['colors'] = [
       },
     ],
   },
-];
+] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */
 /*                                 Styles:Box                                 */
 /* -------------------------------------------------------------------------- */
-fieldConfig['box'] = [
+fields['box'] = [
   {
     type: 'object',
     name: 'box',
@@ -530,12 +530,12 @@ fieldConfig['box'] = [
       },
     ],
   },
-];
+] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */
 /*                                 Styles:Flex                                */
 /* -------------------------------------------------------------------------- */
-fieldConfig['flex'] = [
+fields['flex'] = [
   {
     type: 'object',
     name: 'flex',
@@ -573,13 +573,13 @@ fieldConfig['flex'] = [
       },
     ],
   },
-];
+] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */
 /*                              Styles:Container                              */
 /* -------------------------------------------------------------------------- */
 
-fieldConfig['container'] = [
+fields['container'] = [
   {
     type: 'boolean',
     name: 'centerContent',
@@ -615,12 +615,12 @@ fieldConfig['container'] = [
     name: 'color',
     options: options.colors,
   },
-];
+] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */
 /*                               Config:Settings                              */
 /* -------------------------------------------------------------------------- */
-fieldConfig['settings'] = [
+fields['settings'] = [
   {
     type: 'object',
     name: 'settings',
@@ -648,12 +648,12 @@ fieldConfig['settings'] = [
       },
     ],
   },
-];
+] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */
 /*                                Config:Image                                */
 /* -------------------------------------------------------------------------- */
-fieldConfig['image'] = [
+fields['image'] = [
   {
     type: 'object',
     name: 'image',
@@ -676,7 +676,7 @@ fieldConfig['image'] = [
         label: 'Image Credits',
         name: 'attr',
       },
-      ...fieldConfig['size'],
+      ...fields['size'],
       {
         type: 'object',
         name: 'pos',
@@ -704,12 +704,12 @@ fieldConfig['image'] = [
       },
     ],
   },
-];
+] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */
 /*                                 Config:Seo                                 */
 /* -------------------------------------------------------------------------- */
-fieldConfig['seo'] = [
+fields['seo'] = [
   {
     type: 'object',
     name: 'seo',
@@ -743,12 +743,10 @@ fieldConfig['seo'] = [
         label: 'SEO Slug',
         type: 'string',
       },
-      ...fieldConfig?.image,
+      ...fields?.image,
     ],
   },
-];
-
-export const fields = fieldConfig;
+] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */
 /*                           Get Field Names Helper                           */

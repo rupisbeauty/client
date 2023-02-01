@@ -38,7 +38,7 @@ export const aboutBlock: Template = {
         component: 'textarea',
       },
     },
-    ...fields?.image,
+    ...(fields?.image as Template['fields']),
     {
       type: 'boolean',
       label: 'Show Licenses?',

@@ -35,6 +35,17 @@ export const boxBlock: Template = {
       required: true,
     },
     {
+      type: 'string',
+      name: 'poly',
+      label: 'Box Variants',
+      options: [
+        { label: 'box', value: 'box' },
+        { label: 'stack', value: 'stack' },
+        { label: 'card', value: 'card' },
+        { label: 'hidden', value: 'hidden' },
+      ],
+    },
+    {
       type: 'rich-text',
       name: 'body',
       label: 'Body',
@@ -46,11 +57,11 @@ export const boxBlock: Template = {
       name: 'settings',
       label: 'Settings',
       fields: [
-        ...fields?.box,
-        ...fields?.spacing,
+        ...(fields.box as Template['fields']),
+        ...(fields.spacing as Template['fields']),
         // ...fields?.flex,
-        ...fields?.decorative,
-        ...fields?.typography,
+        ...(fields.decorative as Template['fields']),
+        ...(fields.typography as Template['fields']),
       ],
     },
   ],
