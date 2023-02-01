@@ -1,4 +1,4 @@
-import { isClient } from './constants';
+import { DASHES_REGEX, isClient, UNDERSCORES_REGEX } from './constants';
 
 export const getBaseUrl = () => {
   if (typeof window !== 'undefined') return ''; // browser should use relative url
@@ -73,6 +73,13 @@ export function slugify(str: string) {
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
+}
+
+export function unSlugifyFilename(slug: string) {
+  return filename(slug)
+    .split('.')[0]
+    ?.replace(UNDERSCORES_REGEX, ' + ')
+    .replace(DASHES_REGEX, ' ');
 }
 
 /**
