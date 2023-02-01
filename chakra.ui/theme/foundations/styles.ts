@@ -77,9 +77,9 @@ export const styles: ChakraTheme['styles'] = {
       boxShadow: '0 0 0 1px rgba(0, 0, 0, 0) !important',
     },
 
-    'a:hover': {
-      textDecoration: 'underline',
-    },
+    // 'a:hover': {
+    //   textDecoration: 'underline',
+    // },
     a: {
       textDecoration: 'none',
       color: 'link',
