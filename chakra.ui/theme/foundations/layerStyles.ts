@@ -1,10 +1,19 @@
 import type { ChakraTheme } from '@chakra-ui/react';
 
-export const chakraStyles = {
-  'flex-center': {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+export const customLayerStyles = {
+  flex: {
+    default: {
+      direction: 'row',
+      justify: 'flex-start',
+      align: 'flex-start',
+      wrap: 'nowrap',
+      gap: '0',
+    },
+    center: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
   },
   border: {
     border: '1px solid red',
@@ -29,17 +38,22 @@ export const chakraStyles = {
       borderColor: 'transparent',
       rounded: 0,
       shadow: 'none',
-      fontFamily: 'body',
-      fontSize: 'base',
-      fontWeight: 'normal',
-      lineHeight: 'base',
-      letterSpacing: 'normal',
-      textAlign: 'left',
-      textDecoration: 'none',
-      textOverflow: 'none',
-      textTransform: 'none',
+    },
+  },
+  box: {
+    default: {
+      display: 'block',
+      position: 'static',
+      top: 'auto',
+      right: 'auto',
+      bottom: 'auto',
+      left: 'auto',
+      overflow: 'visible',
+      visibility: 'visible',
+      opacity: '1',
+      zIndex: 'auto',
     },
   },
 };
 
-export const layerStyles: ChakraTheme['layerStyles'] = chakraStyles;
+export const layerStyles: ChakraTheme['layerStyles'] = customLayerStyles;

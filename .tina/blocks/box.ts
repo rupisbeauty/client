@@ -3,13 +3,14 @@ import type { Template } from 'tinacms';
 import { customLayerStyles } from '../../chakra.ui/theme/foundations/layerStyles';
 import { fields } from '../fields-config';
 import { mapStylesToTinaComponents, sectionStyles } from '../utils/chakra';
-import { boxBlock } from './box';
-import { sectionCoverBlock } from './section-cover';
-import { sectionTitleBlock } from './section-title';
-import { serviceMenuBlock } from './service-menu';
-export const sectionBlock: Template = {
-  label: 'Section',
-  name: 'section',
+
+// const styles = sectionStyles(customLayerStyles?.container?.default);
+const styles = mapStylesToTinaComponents();
+if (styles.flex) delete styles['flex'];
+
+export const boxBlock: Template = {
+  label: 'Box',
+  name: 'box',
   ui: {
     defaultItem: {
       title: '👩‍💼 Change This title ',
@@ -17,7 +18,7 @@ export const sectionBlock: Template = {
         width: 'full',
         backgroundColor: '#FFF1E4',
         color: '#4A5568',
-        ...mapStylesToTinaComponents(),
+        ...styles,
       },
     },
     itemProps: (item) => ({
@@ -38,21 +39,16 @@ export const sectionBlock: Template = {
       name: 'body',
       label: 'Body',
       isBody: true,
-      templates: [
-        boxBlock,
-        sectionTitleBlock,
-        serviceMenuBlock,
-        sectionCoverBlock,
-      ],
+      // templates: [],
     },
     {
       type: 'object',
       name: 'settings',
       label: 'Settings',
       fields: [
-        ...fields.container,
+        ...fields?.box,
         ...fields?.spacing,
-        ...fields?.flex,
+        // ...fields?.flex,
         ...fields?.decorative,
         ...fields?.typography,
       ],

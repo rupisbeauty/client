@@ -1,6 +1,6 @@
 import type { ChakraTheme } from '@chakra-ui/react';
 
-export const textStyles: ChakraTheme['textStyles'] = {
+export const customTextStyles = {
   h1: {
     fontSize: '5xl',
     fontFamily: 'heading',
@@ -42,4 +42,19 @@ export const textStyles: ChakraTheme['textStyles'] = {
     fontWeight: 700,
     lineHeight: 1.2,
   },
+  container: {
+    default: {
+      fontFamily: 'body',
+      fontSize: 'base',
+      fontWeight: 'normal',
+      lineHeight: 'base',
+      letterSpacing: 'normal',
+      textAlign: 'left',
+      textDecoration: 'none',
+      textOverflow: 'none',
+      textTransform: 'none',
+    },
+  },
 };
+
+export const textStyles: ChakraTheme['textStyles'] = customTextStyles
