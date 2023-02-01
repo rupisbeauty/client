@@ -75,6 +75,17 @@ export function chunkArray(arr: any[], n: number, min = 1) {
   }
   return chunks;
 }
+/**
+ *
+ *
+ * @param {*} arr
+ * @return {*}
+ */
+export function deDupeArrayOfObjects(arr: Record<string, any>[]) {
+  return Array.from(new Set(arr.map((el) => JSON.stringify(el)))).map(
+    (el: any) => JSON.parse(el)
+  );
+}
 
 /**
  *
@@ -169,3 +180,5 @@ export function isEven(n: number) {
 export function isOdd(n: number) {
   return Math.abs(n % 2) == 1;
 }
+
+export const shortId = () => Math.random().toString(36).slice(-6);
