@@ -5,6 +5,12 @@ import { client } from '../__generated__/client';
 
 import { getBaseUrl } from '../../src/utils';
 
+/**
+ * @NOTE: used by getStaticPaths and getStaticProps
+ * @SEE: 'src/pages/sandbox/[...page].tsx'
+ *
+ */
+
 export const getPagesTinaPaths = async () => {
   try {
     const pages = await client.queries.pagesConnection();
@@ -21,13 +27,15 @@ export const getPagesTinaPaths = async () => {
   }
 };
 
-export const getCurrentPageTinaProps = async (context: GetStaticPropsContext) => {
+export const getCurrentPageTinaProps = async (
+  context: GetStaticPropsContext
+) => {
   try {
     const page = context.params?.page as string[];
     const { data, query, variables } = await client.queries.pages({
       relativePath: `/${page.join('/')}.mdx`,
     });
-    console.log('🦙running gsp2'); // , JSON.stringify(data, null, 2)
+    console.log('🦙running gsp2'); // , JSON.stringify(data, null, 2));
     return {
       data: data as PagesQuery,
       query: query,

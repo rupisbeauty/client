@@ -5,6 +5,13 @@ import { client } from '../__generated__/client';
 
 import { getBaseUrl } from '../../src/utils';
 
+/**
+ * @NOTE: used by getStaticPaths and getStaticProps
+ * @SEE: 'src/pages/sandbox/services/[...service].tsx'
+ *
+ */
+
+
 export const getServicesTinaPaths = async () => {
   try {
     const categories = await client.queries.categoriesConnection();

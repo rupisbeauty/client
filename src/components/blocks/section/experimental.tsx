@@ -175,7 +175,7 @@ export const SectionBox: React.FC<{
     typography: TinaContainerProps['settings']['typography'];
   };
 }> = ({ body, settings, ...props }) => {
-  console.log('🚀 | file: experimental.tsx:178 | settings', settings, props);
+  // console.log('🚀 | file: experimental.tsx:178 | settings', settings, props);
   return (
     <Box
       {...settings?.box}
