@@ -1,11 +1,13 @@
 import {
   AspectRatio,
   Box,
+  Card,
   chakra,
   Container as CUIContainer,
   Stack,
   TabPanels,
   Tabs,
+  VisuallyHidden,
   type BoxProps,
   type ChakraProps,
   type StackProps,
@@ -122,6 +124,10 @@ export const ServiceMenu = ({ options, relatedServices, ...props }: any) => {
   );
 };
 
+/* -------------------------------------------------------------------------- */
+/*                                    BOXES                                   */
+/* -------------------------------------------------------------------------- */
+
 type Spacing = Pick<ChakraProps, 'px' | 'py' | 'mx' | 'my'>;
 type Decorative = Pick<
   ChakraProps,
@@ -167,29 +173,39 @@ type TinaSettings = {
   typography: Typography;
   box: TinaBox;
 } & DefaultSettings;
-/* -------------------------------------------------------------------------- */
-/*                                   Section                                  */
-/* -------------------------------------------------------------------------- */
+
 type TinaContainerProps = {
   body: TinaMarkdownContent | TinaMarkdownContent[];
   settings: TinaSettings;
 };
 
+/* -------------------------------------------------------------------------- */
+/*                                     BOX                                    */
+/* -------------------------------------------------------------------------- */
 type SectionBoxProps = {
+  poly: 'box' | 'stack' | 'card' | 'hidden';
   body: TinaContainerProps['body'];
   settings: TinaContainerProps['settings'] & {
     box: TinaBox;
   };
 };
+
+const polymorphicMap = {
+  box: Box,
+  stack: Stack,
+  card: Card,
+  hidden: VisuallyHidden,
+};
+
 export const SectionBox: React.FC<SectionBoxProps> = ({
+  poly = 'box',
   body,
   settings,
-  ...props
+  ...props // {title}
 }) => {
-  console.log('🚀 | file: experimental.tsx:189 | props', props);
-  // console.log('🚀 | file: experimental.tsx:178 | settings', settings, props);
   return (
     <Box
+      as={polymorphicMap[poly]}
       {...settings?.box}
       {...settings?.spacing}
       {...settings?.decorative}
@@ -199,6 +215,10 @@ export const SectionBox: React.FC<SectionBoxProps> = ({
     </Box>
   );
 };
+
+/* -------------------------------------------------------------------------- */
+/*                                   Section                                  */
+/* -------------------------------------------------------------------------- */
 
 const components = {
   sectionTitle: SectionTitle,
