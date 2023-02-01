@@ -1,16 +1,25 @@
 import { AspectRatio, Container, SimpleGrid } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 
-import type { FC } from 'react';
+import type { imageSchema } from '.tina';
+import type { z } from 'zod';
 
 import { SectionTitle } from '../../section/section-title';
 import { MoreBox } from './more-services-box';
 import { ServiceBox } from './service-box';
 
-import type { PagesBodyCoreServicesFilter } from '.tina';
 import { tinaSchema } from '@/schema';
 
-export const CoreServices: FC<PagesBodyCoreServicesFilter> = (props) => {
+export type Category = {
+  category: string;
+  image: z.TypeOf<typeof imageSchema>;
+  link: string;
+};
+
+export const CoreServices: React.FC<{
+  title: string;
+  serviceCategories: Category[];
+}> = (props) => {
   const router = useRouter();
   const data = tinaSchema.coreServices.parse(props);
   return (
@@ -42,8 +51,8 @@ export const CoreServices: FC<PagesBodyCoreServicesFilter> = (props) => {
           borderColor="red.200"
           borderRadius="10px"
         >
-          {data.serviceCategories?.length
-            ? data.serviceCategories?.map((category) => (
+          {props.serviceCategories?.length
+            ? props.serviceCategories?.map((category: Category) => (
                 <ServiceBox key={category.category} item={category} />
               ))
             : null}

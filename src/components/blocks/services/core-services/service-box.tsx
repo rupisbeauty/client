@@ -1,17 +1,15 @@
-import { Box,chakra } from '@chakra-ui/react';
+import { Box, chakra } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { MotionBox } from 'chakra.ui';
 
-import type { coreServiceCategorySchema } from '@/schema';
-import type { FC } from 'react';
-import type { z } from 'zod';
+import type { Category } from './core-services';
 
 const ChLink = chakra(Link);
 
-export const ServiceBox: FC<{
-  item: z.TypeOf<typeof coreServiceCategorySchema>;
+export const ServiceBox: React.FC<{
+  item: Category;
 }> = ({ item }) => {
   return (
     <MotionBox

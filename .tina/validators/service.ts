@@ -8,8 +8,7 @@ import {
   typenameSchema,
 } from './settings';
 
-export const categoriesOptionsSchema = z.object({
-  __typename: typenameSchema,
+export const servicecategoriesSchema = z.object({
   option: z.object({
     title: z.string().nullish(),
     description: z.string(),
@@ -25,7 +24,7 @@ export const categoriesOptionsSchema = z.object({
 export const serviceSchema = baseSchema.merge(
   z.object({
     image: imageSchema,
-    options: z.array(categoriesOptionsSchema),
+    options: z.array(servicecategoriesSchema),
     relatedServices: z.any().nullish(), // @FIXME: needs to be an array of services
     seo: seoSchema,
     settings: settingsSchema,
