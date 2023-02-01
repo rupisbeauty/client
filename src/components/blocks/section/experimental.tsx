@@ -4,9 +4,8 @@ import {
   Card,
   chakra,
   Container as CUIContainer,
+  SimpleGrid,
   Stack,
-  TabPanels,
-  Tabs,
   VisuallyHidden,
   type BoxProps,
   type ChakraProps,
@@ -24,7 +23,8 @@ import type { TinaMarkdownContent } from 'tinacms/dist/rich-text';
 import { isBrowser } from '@/utils';
 import { trpc } from '@/utils/trpc';
 import { useEffect, useState } from 'react';
-import { TabPanelContent } from '../services/tab-content';
+import { BasicServiceCard } from '../services/service-card-basic';
+import { TabPanelContent } from '../services/tab-content'; // @FIXME: Can this be safely removed?
 import { SectionTitle } from './section-title';
 
 const CUITinaMarkdown = chakra(TinaMarkdown);
@@ -101,26 +101,24 @@ export const ServiceMenu = ({ options, relatedServices, ...props }: any) => {
   );
 
   return (
-    <Stack w="full" direction="row" gap={6} my={12} mx="auto">
-      <Tabs bg="white" w="full" p={2} borderRadius="15px" py={12}>
-        <TabPanels>
-          {allServices &&
-            Object.keys(allServices).map((serviceKey) => {
-              const service = allServices[serviceKey];
-              if (!service) return null;
-              return (
-                <TabPanelContent
-                  services={Object.keys(allServices).map(
-                    (key) => allServices[key]
-                  )}
-                  serviceKey={serviceKey}
-                  key={serviceKey}
-                />
-              );
-            })}
-        </TabPanels>
-      </Tabs>
-    </Stack>
+    <SimpleGrid
+      w={['full']}
+      columns={[2, null, null, null, 4]}
+      gridAutoColumns="1fr"
+      gap={[4, null, null, null, 12]}
+      m={0}
+      mx="auto"
+      border="1px"
+      alignContent="center"
+      justifyContent="center"
+    >
+      {allServices &&
+        Object.keys(allServices).map((serviceKey) => {
+          const service = allServices[serviceKey];
+          if (!service) return null;
+          return <BasicServiceCard key={service.title} service={service} />;
+        })}
+    </SimpleGrid>
   );
 };
 
