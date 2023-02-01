@@ -120,5 +120,10 @@ export const styles: ChakraTheme['styles'] = {
     '.mobile-nav-link': {
       color: 'primary',
     },
+    '[data-trustmary-status=active]': {
+      marginTop: '5rem',
+      marginBottom: '3rem',
+      bg: 'bg',
+    },
   }),
 };
