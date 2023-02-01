@@ -8,19 +8,36 @@ import { imageSchema } from '../validators/image';
  * @param {*} config
  * @return {*}
  */
-export function schemaToZod(config) {
-  const schema = config.reduce((acc, obj) => {
-    if (obj.type === 'rich-text') {
-      acc[obj.name] = z.string();
-      return acc;
-    }
+export function schemaToZod(config: any[]) {
+  const schema = config.reduce(
+    (
+      acc: { [x: string]: any },
+      obj: { type: string; name: string; required?: boolean }
+    ) => {
+      const isRequired = obj?.required;
+      if (obj.type === 'rich-text') {
+        if (isRequired) {
+          acc[obj.name] = z.string();
+        } else {
+          acc[obj.name] = z.string().nullable();
+        }
+        return acc;
+      }
 
-    if (obj.type === 'image') {
-      acc[obj.name] = imageSchema;
-    } else {
-      acc[obj.name] = z[obj.type]();
-    }
-    return acc;
-  }, {});
+      if (obj.type === 'image') {
+        acc[obj.name] = imageSchema;
+      } else {
+        if (isRequired) {
+          // @ts-expect-error @FIXME: type issue
+          acc[obj.name] = z[obj.type]();
+        } else {
+          // @ts-expect-error @FIXME: type issue
+          acc[obj.name] = z[obj.type]().nullable();
+        }
+      }
+      return acc;
+    },
+    {}
+  );
   return z.object(schema);
 }

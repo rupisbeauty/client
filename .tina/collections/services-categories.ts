@@ -6,13 +6,6 @@ export const categories: { fields: SchemaField[] } = {
   fields: [
     ...fields?.page,
     {
-      name: 'slug',
-      label: 'Service Slug',
-      type: 'string',
-      required: true,
-      isTitle: true,
-    },
-    {
       type: 'rich-text',
       name: 'body',
       label: 'body',

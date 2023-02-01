@@ -145,16 +145,21 @@ export const fieldConfig: Record<string, Template['fields']> = {
     // @TODO: this might be able to be remove (check and remove)
     {
       type: 'string',
-      label: 'Page Title (SEO, Search results) 50-70 chars.',
+      label: 'Title',
       name: 'title',
-      isTitle: true,
-      required: true,
       ui: {
-        validate: (value) => {
+        validate: (value: any) => {
           if (value?.length && value.length > 70)
             return `-${Number(value.length) - 70} chars remaining / 70`;
         },
       },
+    },
+    {
+      name: 'slug',
+      label: 'Slug',
+      type: 'string',
+      required: true,
+      isTitle: true,
     },
     {
       type: 'string',
@@ -163,7 +168,7 @@ export const fieldConfig: Record<string, Template['fields']> = {
       required: true,
       ui: {
         component: 'textarea',
-        validate: (value) => {
+        validate: (value: any) => {
           if (value?.length && value.length > 160)
             return `-${Number(value.length) - 160} chars remaining / 160`;
         },
@@ -177,11 +182,18 @@ export const fieldConfig: Record<string, Template['fields']> = {
       name: 'title',
       required: true,
       ui: {
-        validate: (value) => {
+        validate: (value: any) => {
           if (value?.length && value.length > 70)
             return `-${Number(value.length) - 70} chars remaining / 70`;
         },
       },
+    },
+    {
+      name: 'slug',
+      label: 'Slug',
+      type: 'string',
+      required: true,
+      isTitle: true,
     },
     {
       type: 'string',
@@ -190,7 +202,7 @@ export const fieldConfig: Record<string, Template['fields']> = {
       required: true,
       ui: {
         component: 'textarea',
-        validate: (value) => {
+        validate: (value: any) => {
           if (value?.length && value.length > 160)
             return `-${Number(value.length) - 160} chars remaining / 160`;
         },
@@ -708,7 +720,7 @@ fieldConfig['seo'] = [
         label: 'SEO Title (SEO, Search results) 50-70 chars.',
         name: 'title',
         ui: {
-          validate: (value) => {
+          validate: (value: any) => {
             if (value?.length && value.length > 70)
               return `-${Number(value.length) - 70} chars remaining / 70`;
           },
@@ -720,7 +732,7 @@ fieldConfig['seo'] = [
         name: 'description',
         ui: {
           component: 'textarea',
-          validate: (value) => {
+          validate: (value: any) => {
             if (value?.length && value.length > 160)
               return `-${Number(value.length) - 160} chars remaining / 160`;
           },

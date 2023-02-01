@@ -40,7 +40,7 @@ export const coreServicesBlock: Template = {
           name: 'category',
           label: 'Category TItle',
         },
-        ...fields?.image,
+        ...(fields?.image as Template['fields']),
         {
           type: 'string',
           name: 'link',
