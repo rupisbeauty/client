@@ -9,6 +9,18 @@ import {
   typenameSchema,
 } from './settings';
 
+export const singleServiceSchema = z
+  .object({
+    title: z.string(),
+    description: z.string(),
+    slug: z.string(),
+    // icon: z.string().nullish(),
+    image: imageSchema,
+    options: z.array(z.object({ option: z.string() })), // filenames
+  })
+  .nullish();
+export type SingleServiceSchema = z.infer<typeof singleServiceSchema>;
+
 export const relatedServiceSchema = z
   .object({
     service: z.object({
@@ -16,6 +28,7 @@ export const relatedServiceSchema = z
       description: z.string().nullish(),
       slug: z.string(),
       id: z.string(),
+      icon: z.string().nullish(),
       colors: colorsSchema,
       settings: settingsSchema,
       seo: seoSchema,

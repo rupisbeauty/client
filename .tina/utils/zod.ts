@@ -28,10 +28,8 @@ export function schemaToZod(config: any[]) {
         acc[obj.name] = imageSchema;
       } else {
         if (isRequired) {
-          // @ts-expect-error @FIXME: type issue
           acc[obj.name] = z[obj.type]();
         } else {
-          // @ts-expect-error @FIXME: type issue
           acc[obj.name] = z[obj.type]().nullable();
         }
       }
