@@ -9,7 +9,7 @@ export const optionSchema = z
       description: z.string(),
       slug: z.string(),
       price: z.number().nullish(),
-      duration: z.number().nullish(),
+      duration: z.string().nullish(),
       image: imageSchema,
       relatedServices: z.any().nullish(), // @FIXME: needs to be an array of services
       id: z.string(),

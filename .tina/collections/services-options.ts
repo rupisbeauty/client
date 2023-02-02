@@ -13,7 +13,7 @@ export const servicesOptions: { fields: SchemaField[] } = {
     {
       name: 'duration',
       label: 'Duration',
-      type: 'number',
+      type: 'string',
     },
     ...fields.image,
     fields.services[0],
