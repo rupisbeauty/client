@@ -1,4 +1,4 @@
-import { chakra, ChakraProps, Divider } from '@chakra-ui/react';
+import { chakra, Divider } from '@chakra-ui/react';
 
 import {
   About,
