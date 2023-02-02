@@ -22,7 +22,7 @@ import type {
 import type { inferProcedureOutput } from '@trpc/server';
 import type { TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
-import { useComponents } from '../../../hooks/useComponents';
+import { useComponents } from '../../../hooks/use-components';
 import { BasicServiceCard } from '../services/service-card-basic';
 
 import { isBrowser } from '@/utils';
