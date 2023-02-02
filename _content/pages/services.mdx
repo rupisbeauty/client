@@ -14,7 +14,20 @@ seo:
   description: Rupi Beauty Studio proudly offers
 ---
 
-<sectionTitle title="Rupi's Beauty & Skin Care" />
+<section
+  title="Rupi Logo Full"
+  settings={{
+    width: "full",
+    backgroundColor: "#FFF1E4",
+    color: "#4A5568",
+    contained: true,
+    centerContent: true,
+    spacing: { px: "" }
+  }}
+  body={<>
+    <logo title="Rupi Beauty Studio Logo" />
+  </>}
+/>
 
 <sectionCover
   image={{
@@ -47,7 +60,8 @@ seo:
       textDecoration: "none",
       textOverflow: "none",
       textTransform: "none"
-    }
+    },
+    maxW: ""
   }}
   body={<>
     <sectionTitle title="Our Finest Beauty & Skin Care Services" />
