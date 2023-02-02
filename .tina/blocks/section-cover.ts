@@ -1,5 +1,5 @@
 import { Template } from 'tinacms';
-import { fields } from '../fields-config';
+import { fields } from '../fields';
 
 export const sectionCoverBlock: Template = {
   label: 'Cover Image',

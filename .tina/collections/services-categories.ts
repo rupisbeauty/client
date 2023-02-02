@@ -2,7 +2,7 @@ import type { SchemaField } from 'tinacms';
 
 import { templates } from '../blocks';
 import { sectionBlock } from '../blocks/section';
-import { fields } from '../fields-config';
+import { fields } from '../fields';
 
 export const categories: { fields: SchemaField[] } = {
   fields: [

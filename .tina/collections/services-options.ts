@@ -1,5 +1,5 @@
 import type { Field, SchemaField, Template } from 'tinacms';
-import { fields } from '../fields-config';
+import { fields } from '../fields';
 
 export const servicesOptions: { fields: SchemaField[] } = {
   fields: [

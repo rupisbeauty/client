@@ -1,6 +1,6 @@
 import type { Template } from 'tinacms';
 
-import { fields } from '../fields-config';
+import { fields } from '../fields';
 
 import { boxBlock } from './box';
 import { dividerBlock } from './divider';

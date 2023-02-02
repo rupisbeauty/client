@@ -1,7 +1,7 @@
 import type { SchemaField,Template } from 'tinacms';
 
 import { templates } from '../blocks';
-import { fields } from '../fields-config';
+import { fields } from '../fields';
 
 export const pages: { fields: SchemaField[] } = {
   fields: [

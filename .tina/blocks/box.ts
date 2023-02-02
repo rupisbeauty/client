@@ -1,8 +1,8 @@
 import type { Template } from 'tinacms';
 
 import { customLayerStyles } from '../../chakra.ui/theme/foundations/layerStyles';
-import { fields } from '../fields-config';
-import { mapSettingsToTinaComponents, sectionStyles } from '../utils/chakra';
+import { fields } from '../fields';
+import { mapSettingsToTinaComponents } from '../utils/chakra';
 
 import { defaults } from './_defaults';
 

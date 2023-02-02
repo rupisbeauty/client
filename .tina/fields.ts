@@ -1,5 +1,5 @@
 import { theme } from '@chakra-ui/react';
-import { FieldsBuilder,Template } from 'tinacms';
+import { Template } from 'tinacms';
 
 import {
 mapColors,

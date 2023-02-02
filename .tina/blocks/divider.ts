@@ -1,6 +1,6 @@
 import { Template } from 'tinacms';
 
-import { fields } from '../fields-config';
+import { fields } from '../fields';
 import { mapOptions } from '../utils/chakra';
 import { defaults } from './_defaults';
 
