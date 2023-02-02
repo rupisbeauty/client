@@ -7,25 +7,26 @@ import {
   SimpleGrid,
   Stack,
   VisuallyHidden,
-  type BoxProps,
-  type ChakraProps,
-  type StackProps,
 } from '@chakra-ui/react';
-
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 import type { AppRouter } from '@/server/trpc/router/_app';
-import type { ContainerProps } from '@chakra-ui/react';
+import type {
+  BoxProps,
+  ChakraProps,
+  ContainerProps,
+  StackProps,
+} from '@chakra-ui/react';
 import type { inferProcedureOutput } from '@trpc/server';
 import type { TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
+import { useComponents } from '../../../hooks/useComponents';
+import { BasicServiceCard } from '../services/service-card-basic';
+
 import { isBrowser } from '@/utils';
 import { trpc } from '@/utils/trpc';
-import { useEffect, useState } from 'react';
-import { BasicServiceCard } from '../services/service-card-basic';
-import { TabPanelContent } from '../services/tab-content'; // @FIXME: Can this be safely removed?
-import { SectionTitle } from './section-title';
 
 const CUITinaMarkdown = chakra(TinaMarkdown);
 /* -------------------------------------------------------------------------- */
@@ -218,13 +219,6 @@ export const SectionBox: React.FC<SectionBoxProps> = ({
 /*                                   Section                                  */
 /* -------------------------------------------------------------------------- */
 
-const components = {
-  sectionTitle: SectionTitle,
-  sectionCover: SectionCover,
-  serviceMenu: ServiceMenu,
-  box: SectionBox,
-};
-
 export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
   body,
   settings: {
@@ -239,6 +233,7 @@ export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
 }) => {
   //  n9ZOvMI0UGU @TODO: ADD zod validation
   const [mounted, setMounted] = useState(false);
+  const components = useComponents('section');
   useEffect(() => {
     if (!isBrowser) return;
     setMounted(true);
