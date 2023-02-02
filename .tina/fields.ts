@@ -152,12 +152,14 @@ export const fields: Record<string, Template['fields']> = {
       type: 'string',
       label: 'Title',
       name: 'title',
-      ui: {
-        validate: (value: any) => {
-          if (value?.length && value.length > 70)
-            return `-${Number(value.length) - 70} chars remaining / 70`;
-        },
-      },
+      // @NOTE: removed validation to allow the search engine to auto-truncate as needed
+
+      // ui: {
+      //   validate: (value: any) => {
+      //     if (value?.length && value.length > 70)
+      //       return `-${Number(value.length) - 70} chars remaining / 70`;
+      //   },
+      // },
     },
     {
       name: 'slug',
@@ -171,13 +173,14 @@ export const fields: Record<string, Template['fields']> = {
       label: 'Description (Seo, Search results) 150-160 chars.',
       name: 'description',
       required: true,
-      ui: {
-        component: 'textarea',
-        validate: (value: any) => {
-          if (value?.length && value.length > 160)
-            return `-${Number(value.length) - 160} chars remaining / 160`;
-        },
-      },
+      // @NOTE: removed validation to allow the search engine to auto-truncate as needed
+      // ui: {
+      //   component: 'textarea',
+      //   validate: (value: any) => {
+      //     if (value?.length && value.length > 160)
+      //       return `-${Number(value.length) - 160} chars remaining / 160`;
+      //   },
+      // },
     },
   ],
   page: [
@@ -186,12 +189,14 @@ export const fields: Record<string, Template['fields']> = {
       label: 'Page Title (SEO, Search results) 50-70 chars.',
       name: 'title',
       required: true,
-      ui: {
-        validate: (value: any) => {
-          if (value?.length && value.length > 70)
-            return `-${Number(value.length) - 70} chars remaining / 70`;
-        },
-      },
+      // @NOTE: removed validation to allow the search engine to auto-truncate as needed
+
+      // ui: {
+      //   validate: (value: any) => {
+      //     if (value?.length && value.length > 70)
+      //       return `-${Number(value.length) - 70} chars remaining / 70`;
+      //   },
+      // },
     },
     {
       name: 'slug',
@@ -207,10 +212,12 @@ export const fields: Record<string, Template['fields']> = {
       required: true,
       ui: {
         component: 'textarea',
-        validate: (value: any) => {
-          if (value?.length && value.length > 160)
-            return `-${Number(value.length) - 160} chars remaining / 160`;
-        },
+        // @NOTE: removed validation to allow the search engine to auto-truncate as needed
+
+        // validate: (value: any) => {
+        //   if (value?.length && value.length > 160)
+        //     return `-${Number(value.length) - 160} chars remaining / 160`;
+        // },
       },
     },
   ],

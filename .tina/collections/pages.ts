@@ -1,4 +1,4 @@
-import type { SchemaField,Template } from 'tinacms';
+import type { SchemaField, Template } from 'tinacms';
 
 import { templates } from '../blocks';
 import { fields } from '../fields';
@@ -11,12 +11,13 @@ export const pages: { fields: SchemaField[] } = {
       name: 'title',
       isTitle: true,
       required: true,
-      ui: {
-        validate: (value) => {
-          if (value?.length && value.length > 70)
-            return `-${Number(value.length) - 70} chars remaining / 70`;
-        },
-      },
+      // @NOTE: removed validation to allow the search engine to auto-truncate as needed
+      // ui: {
+      //   validate: (value) => {
+      //     if (value?.length && value.length > 70)
+      //       return `-${Number(value.length) - 70} chars remaining / 70`;
+      //   },
+      // },
     },
     {
       type: 'string',
@@ -25,10 +26,10 @@ export const pages: { fields: SchemaField[] } = {
       required: true,
       ui: {
         component: 'textarea',
-        validate: (value) => {
-          if (value?.length && value.length > 160)
-            return `-${Number(value.length) - 160} chars remaining / 160`;
-        },
+        // validate: (value) => {
+        //   if (value?.length && value.length > 160)
+        //     return `-${Number(value.length) - 160} chars remaining / 160`;
+        // },
       },
     },
     {
