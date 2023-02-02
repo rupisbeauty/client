@@ -29,4 +29,100 @@ relatedServices:
   - service: _content/categories/hair-removal/waxing.mdx
 ---
 
-At Rupi we offer several hair removal options to suit your needs. We use the latest materials and technology to help ensure you get the best results with the least amount of discomfort as possible.
+<section
+  title="Rupi Logo"
+  settings={{
+    width: "full",
+    backgroundColor: "#FFF1E4",
+    color: "#4A5568",
+    contained: true,
+    centerContent: true
+  }}
+  body={<>
+    <logo title="Rupi Beauty Studio Logo" />
+
+    <divider title="Give this component a default title" orientation="horizontal" borderColor="gray.600" />
+  </>}
+/>
+
+<section
+  title="Eyebrow Details"
+  settings={{
+    width: "4xl",
+    color: "gray.700",
+    bg: "bg",
+    spacing: { px: "12", py: "12", mx: "auto", my: "24" },
+    decorative: {
+      border: "2px",
+      borderColor: "gray.500",
+      rounded: "lg",
+      shadow: "xl"
+    },
+    typography: {
+      fontFamily: "body",
+      fontSize: "4xl",
+      fontWeight: "normal",
+      lineHeight: "taller",
+      letterSpacing: "normal",
+      textAlign: "left",
+      textDecoration: "none",
+      textOverflow: "clip",
+      textTransform: "none"
+    },
+    maxW: "",
+    backgroundColor: "",
+    contained: false,
+    centerContent: true,
+    flex: { direction: "column-reverse", justify: "center", align: "center" }
+  }}
+  body={<>
+    <box
+    title="Content"
+    settings={{
+    box: {
+    display: "block",
+    position: "static",
+    top: "auto",
+    right: "auto",
+    bottom: "auto",
+    left: "auto",
+    overflow: "visible",
+    visibility: "",
+    opacity: "1",
+    zIndex: "auto"
+    },
+    spacing: { px: 6, py: 12, mx: 0, my: 0 },
+    decorative: {
+    border: "none",
+    borderColor: "transparent",
+    rounded: 0,
+    shadow: "none"
+    },
+    typography: {
+    fontFamily: "body",
+    fontSize: "base",
+    fontWeight: "normal",
+    lineHeight: "base",
+    letterSpacing: "normal",
+    textAlign: "left",
+    textDecoration: "none",
+    textOverflow: "none",
+    textTransform: "none"
+    }
+    }}
+    body={<>
+    ## Eyebrows
+
+    At Rupi we take eyebrows seriously, eyebrows are the frame of your face and we use our expertise to help find you the best shape and finish for your eyebrows.
+    </>}
+    />
+
+    <sectionCover
+    image={{
+    src: "/uploads/people/leaf-eye.webp",
+    alt: "eyes peering through lush greenery",
+    pos: { objectFit: "", objectPosition: "", transform: "scale(1)" }
+    }}
+    />
+  </>}
+/>
