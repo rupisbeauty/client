@@ -2,11 +2,13 @@ import type { Template } from 'tinacms';
 
 import { customLayerStyles } from '../../chakra.ui/theme/foundations/layerStyles';
 import { fields } from '../fields-config';
-import { mapStylesToTinaComponents,sectionStyles } from '../utils/chakra';
+import { mapStylesToTinaComponents, sectionStyles } from '../utils/chakra';
 import { boxBlock } from './box';
+import { logoBlock } from './logo';
 import { sectionCoverBlock } from './section-cover';
 import { sectionTitleBlock } from './section-title';
 import { serviceMenuBlock } from './service-menu';
+
 export const sectionBlock: Template = {
   label: 'Section',
   name: 'section',
@@ -40,6 +42,7 @@ export const sectionBlock: Template = {
       isBody: true,
       templates: [
         boxBlock,
+        logoBlock,
         sectionTitleBlock,
         serviceMenuBlock,
         sectionCoverBlock,

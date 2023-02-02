@@ -1,14 +1,15 @@
+import type { Template } from 'tinacms';
+
 import { aboutBlock } from './about';
 import { contactBlock } from './contact';
 import { coreServicesBlock } from './core-services';
 import { heroBlock } from './hero';
 import { locationCTABlock } from './location-cta';
+import { logoBlock } from './logo';
 import { sectionBlock } from './section';
 import { sectionCoverBlock } from './section-cover';
 import { sectionTitleBlock } from './section-title';
 import { serviceMenuBlock } from './service-menu';
-
-import type { Template } from 'tinacms';
 
 export const templates = {
   page: [
@@ -26,6 +27,7 @@ export const templates = {
     sectionBlock,
     sectionTitleBlock,
     sectionCoverBlock,
+    logoBlock,
     serviceMenuBlock,
   ] as Template[],
 };

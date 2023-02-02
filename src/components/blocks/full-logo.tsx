@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react';
 import { ChakraNextImage } from 'chakra.ui/components';
 
 import type { FC } from 'react';
@@ -7,7 +7,12 @@ import { BRAND_DIR, CDN_URL } from '@/utils';
 
 export const FullLogo: FC = () => {
   return (
-    <Box position="relative" maxW="300px" maxH="258px">
+    <Container
+      position="relative"
+      w="full"
+      mx="auto"
+      centerContent
+    >
       <ChakraNextImage
         width="300"
         height="258"
@@ -16,6 +21,6 @@ export const FullLogo: FC = () => {
         alt="Rupi Beauty Studio"
         priority
       />
-    </Box>
+    </Container>
   );
 };
