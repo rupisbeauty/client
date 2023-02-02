@@ -5,18 +5,18 @@ import { NextSeo } from 'next-seo';
 import type { FC } from 'react';
 
 import {
-AvatarMenu,
-Footer,
-Header,
-ModeToggle,
-MotionBox,
-Sidebar,
-transitionDown as variants
+  AvatarMenu,
+  Footer,
+  Header,
+  ModeToggle,
+  MotionBox,
+  Sidebar,
+  transitionDown as variants,
 } from 'chakra.ui';
 
 import layout from '__data/layout.json';
 
-export type LayoutProps = {
+type LayoutProps = {
   title: string;
   subtitle?: string;
   description?: string;
