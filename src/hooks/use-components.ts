@@ -1,4 +1,4 @@
-import { Divider } from '@chakra-ui/react';
+import { chakra, ChakraProps, Divider } from '@chakra-ui/react';
 
 import {
   About,
@@ -25,7 +25,12 @@ export function useComponents(type: 'section' | 'page') {
       serviceMenu: ServiceMenu,
       box: SectionBox,
       logo: FullLogo,
-      divider: Divider,
+      divider: chakra(Divider, {
+        baseStyle: {
+          borderColor: 'gray.700',
+          orientation: 'horizontal',
+        },
+      }),
     },
     page: {
       logo: FullLogo,
