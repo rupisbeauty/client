@@ -604,19 +604,24 @@ fields['flex'] = [
 fields['container'] = [
   {
     type: 'boolean',
-    name: 'centerContent',
-    label: 'Center Content?',
+    name: 'contained',
+    label: 'Use a Container?',
   },
   {
     type: 'boolean',
-    name: 'contained',
-    label: 'Use a Container?',
+    name: 'centerContent',
+    label: 'Center Content? (* Requires a container)',
   },
   {
     type: 'string',
     label: 'Width',
     name: 'width',
     options: options.sizes,
+  },
+  {
+    type: 'boolean',
+    label: 'Make Container Responsive?',
+    name: 'isResponsive',
   },
   {
     type: 'string',

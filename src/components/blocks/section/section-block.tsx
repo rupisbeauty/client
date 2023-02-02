@@ -20,6 +20,7 @@ export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
     typography,
     centerContent,
     contained,
+    isResponsive,
     ...settings
   },
 }) => {
@@ -41,6 +42,11 @@ export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
         gap={0}
         centerContent={centerContent}
         layerStyle="container.default"
+        maxW={
+          isResponsive
+            ? ['container.sm', 'container.md', 'container.lg', 'container.xl']
+            : ''
+        }
         {...spacing}
         {...decorative}
         {...typography}

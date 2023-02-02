@@ -26,7 +26,7 @@ type Typography = Pick<
 type DefaultSettings = Pick<
   ContainerProps,
   'centerContent' | 'width' | 'maxW' | 'backgroundColor' | 'color'
-> & { contained: boolean; flex: Partial<StackProps> };
+> & { contained: boolean; isResponsive: boolean; flex: Partial<StackProps> };
 
 export type TinaBox = Pick<
   BoxProps,
