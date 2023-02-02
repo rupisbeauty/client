@@ -12,6 +12,8 @@ scale
 
 import { paths } from '../chakra.ui/icons/paths';
 
+const parseToString = (val?: string) => val && val.toString();
+
 /* -------------------------------------------------------------------------- */
 /*                              Options Mappings                              */
 /* -------------------------------------------------------------------------- */
@@ -19,7 +21,10 @@ const full = [{ key: 'auto', value: 'auto', label: 'auto' }];
 const options = {
   colors: mapSemanticTokens.concat(mapColors),
   shadows: Object.keys(theme.shadows).map(mapOptions),
-  space: full.concat(Object.keys(theme.space).map(mapOptions)),
+  space: full.concat(
+    [{ key: '0', value: '0', label: '0' }],
+    Object.keys(theme.space).map(mapOptions)
+  ),
   sizes: Object.keys(theme.sizes).map(mapOptions),
   radii: Object.keys(theme.radii).map(mapOptions),
   icons: Object.keys(paths).map(mapOptions),
@@ -407,24 +412,28 @@ fields['spacing'] = [
         label: 'Horizontal Padding',
         name: 'px',
         options: options.space,
+        ui: { parse: parseToString },
       },
       {
         type: 'string',
         label: 'Vertical Padding',
         name: 'py',
         options: options.space,
+        ui: { parse: parseToString },
       },
       {
         type: 'string',
         label: 'Horizontal Margin',
         name: 'mx',
-        options: options.space, // @TODO: add 'auto' as option @DONE?
+        options: options.space,
+        ui: { parse: parseToString },
       },
       {
         type: 'string',
         label: 'Vertical Margin',
         name: 'my',
-        options: options.space, // @TODO: add 'auto' as option @DONE?
+        options: options.space,
+        ui: { parse: parseToString },
       },
     ],
   },
@@ -485,24 +494,28 @@ fields['box'] = [
         label: 'Top',
         name: 'top',
         options: options.space,
+        parse: parseToString,
       },
       {
         type: 'string',
         label: 'Right',
         name: 'right',
         options: options.space,
+        parse: parseToString,
       },
       {
         type: 'string',
         label: 'Bottom',
         name: 'bottom',
         options: options.space,
+        parse: parseToString,
       },
       {
         type: 'string',
         label: 'Left',
         name: 'left',
         options: options.space,
+        parse: parseToString,
       },
       {
         type: 'string',
@@ -521,6 +534,7 @@ fields['box'] = [
         label: 'Opacity',
         name: 'opacity',
         options: options.container.box.opacity,
+        parse: parseToString,
       },
       {
         type: 'string',
@@ -566,10 +580,11 @@ fields['flex'] = [
         options: options.container.flex.wrap,
       },
       {
-        type: 'number',
+        type: 'string',
         label: 'Gap',
         name: 'gap',
         options: options.space,
+        parse: parseToString,
       },
     ],
   },

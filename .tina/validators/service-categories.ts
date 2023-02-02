@@ -18,6 +18,7 @@ export const singleServiceSchema = z
     // icon: z.string().nullish(),
     image: imageSchema,
     options: z.array(z.object({ option: z.string() })).nullish(), // filenames
+    relatedServices: z.array(z.object({ service: z.string() })).nullish(),
   })
   .nullish();
 
