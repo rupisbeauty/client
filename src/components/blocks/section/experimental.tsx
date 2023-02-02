@@ -87,26 +87,27 @@ export const SectionCover: React.FC<ServiceCoverProps> = ({ image }) => {
 /* -------------------------------------------------------------------------- */
 /*                                 ServiceMenu                                */
 /* -------------------------------------------------------------------------- */
-export type ServiceCategoryFrontMatter = inferProcedureOutput<
+export type AllServicesFrontMatter = inferProcedureOutput<
   AppRouter['mdx']['parseFMList']
 >;
 
 // n9ZOvMI0UGU @TODO: type this
 export const ServiceMenu = ({ options, relatedServices, ...props }: any) => {
+  const filePaths = relatedServices.map(
+    (service: { service: string }) => service.service
+  );
+
   const { data: allServices } = trpc.mdx.parseFMList.useQuery(
-    {
-      // n9ZOvMI0UGU @TODO: type this
-      filePaths: relatedServices.map((service: any) => service.service),
-    },
+    { filePaths },
     { enabled: !!relatedServices.length }
   );
 
   return (
     <SimpleGrid
       w={['full']}
-      columns={[2, null, null, null, 4]}
-      gridAutoColumns="1fr"
-      gap={[4, null, null, null, 12]}
+      columns={[2]}
+      gap={[12]}
+      p={6}
       m={0}
       mx="auto"
       border="1px"
@@ -249,7 +250,9 @@ export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
         gap={0}
         centerContent={centerContent}
         layerStyle="container.default"
+        {...spacing}
         {...decorative}
+        {...typography}
         {...settings}
         {...flex}
       >

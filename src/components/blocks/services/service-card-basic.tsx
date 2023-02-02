@@ -4,6 +4,9 @@ import {
   Button,
   ButtonGroup,
   Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
   Heading,
   Stack,
   Text,
@@ -22,9 +25,10 @@ export const BasicServiceCard: React.FC<{
   service: string | SingleServiceSchema;
 }> = ({ service }) => {
   const { data: serviceDetails } = trpc.mdx.parseFMList.useQuery(
-    { filePaths: [typeof service === 'string' ? service : ''] },
+    { filePaths: typeof service === 'string' ? [service] : [''] },
     { enabled: typeof service === 'string' }
   );
+
   let fileName: string, basicService: SingleServiceSchema;
 
   if (typeof service === 'string') {
@@ -39,110 +43,145 @@ export const BasicServiceCard: React.FC<{
     basicService = service as SingleServiceSchema;
   }
 
+  const hasOptions = !!basicService?.options?.length;
+  const hasServices = !!basicService?.relatedServices?.length;
+
   return (
-    <Box mx="auto">
-      <ConditionallyRender condition={!!basicService}>
-        <Card
-          maxW={'md'}
-          w={'full'}
-          bg={'white'}
-          boxShadow={'2xl'}
-          rounded={'md'}
-          p={6}
-          overflow={'hidden'}
-        >
-          <ConditionallyRender condition={!!basicService?.image}>
-            <Box
-              h={'210px'}
-              bg={'gray.100'}
-              mt={-6}
-              mx={-6}
-              mb={6}
-              pos={'relative'}
+    <Stack
+      direction="row"
+      w="full"
+      h="full"
+      position="relative"
+      bg="white"
+      boxShadow="2xl"
+      rounded="md"
+      overflow="hidden"
+    >
+      <Box position="relative" w="full" minW="40%">
+        <Image
+          src={String(basicService?.image?.src)}
+          alt={String(basicService?.image?.alt)}
+          fill={true}
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
+      </Box>
+      <Stack dir="column" w="full" p={6} position="relative">
+        <Stack h="full">
+          <ConditionallyRender condition={!!basicService?.title}>
+            <Heading
+              as="h3"
+              color={'teal.500'}
+              fontSize={'2xl'}
+              fontFamily={'body'}
+              lineHeight="taller"
             >
-              <Image
-                src={String(basicService?.image?.src)}
-                alt={String(basicService?.image?.alt)}
-                fill={true}
-                style={{ objectFit: 'cover' }}
-              />
-            </Box>
+              {basicService?.title}
+            </Heading>
+            <ServiceBadges
+              data={basicService}
+              hasOptions={hasOptions}
+              hasServices={hasServices}
+            />
           </ConditionallyRender>
-          <ConditionallyRender condition={!!basicService?.options?.length}>
-            <Stack
-              mb={6}
-              direction={'row'}
-              // spacing={4}
-              align={'center'}
-              justify="flex-start"
-              // wrap="wrap"
-            >
-              {basicService?.options?.slice(0, 2).map((option) => {
-                const serviceOption = unSlugifyFilename(option.option ?? '');
-                return (
-                  <Badge
-                    key={serviceOption}
-                    fontSize={[8, null, null, 8, 10, 12]}
-                    my={1}
-                    variant="outline"
-                    colorScheme="teal"
-                    ml={0}
-                    whiteSpace={{ base: 'nowrap' }}
-                    overflow={{ base: 'hidden', sm: 'initial' }}
-                    textOverflow={{ base: 'ellipsis', sm: 'initial' }}
-                    // maxW={{ base: '120px', sm: '' }}
-                    maxW={{ base: '120px', sm: 'initial' }}
-                    // sx={{
-                    //   whiteSpace: '',
-                    //   overflow: 'hidden',
-                    //   textOverflow: 'ellipsis',
-                    //   maxW: '120px',
-                    // }}
-                  >
-                    {serviceOption}
-                  </Badge>
-                );
-              })}
-            </Stack>
+          <ConditionallyRender condition={!!basicService?.description}>
+            <Text color={'gray.500'}>{basicService?.description}</Text>
           </ConditionallyRender>
-          <Stack>
-            <ConditionallyRender condition={!!basicService?.title}>
-              <Stack direction="row">
-                <Heading
-                  color={'teal.500'}
-                  fontSize={'2xl'}
-                  fontFamily={'body'}
-                >
-                  {basicService?.title}
-                </Heading>
-              </Stack>
-            </ConditionallyRender>
-            <ConditionallyRender condition={!!basicService?.description}>
-              <Text color={'gray.500'}>{basicService?.description}</Text>
-            </ConditionallyRender>
-          </Stack>
-          <ConditionallyRender condition={!!basicService?.options?.length}>
-            <ButtonGroup
-              as={Stack}
-              direction="row"
+        </Stack>
+        {hasOptions || hasServices ? (
+          <ButtonGroup
+            as={Stack}
+            direction="row"
+            w="full"
+            mt={'auto'}
+            align="center"
+            alignSelf="flex-end"
+            flex={0}
+          >
+            <Button
+              as={Link}
+              variant="solid"
+              colorScheme="teal"
               w="full"
-              mt={6}
-              align="center"
+              href={encodeURI(`/sandbox/services/${basicService?.slug}`)}
             >
-              {/* convert button to styled link */}
-              <Button
-                as={Link}
-                variant="solid"
-                colorScheme="teal"
-                w="full"
-                href={encodeURI(`/sandbox/services/${basicService?.slug}`)}
-              >
-                See More Options
-              </Button>
-            </ButtonGroup>
-          </ConditionallyRender>
-        </Card>
+              Learn More
+            </Button>
+          </ButtonGroup>
+        ) : null}
+      </Stack>
+    </Stack>
+  );
+};
+
+const ServiceBadges: React.FC<{
+  data: SingleServiceSchema;
+  hasOptions: boolean;
+  hasServices: boolean;
+}> = ({ data, hasOptions, hasServices }) => {
+  return (
+    <Stack
+      h="full"
+      direction={'row'}
+      align={'center'}
+      justify="flex-start"
+      maxW="120px"
+      wrap={{ base: 'wrap', lg: 'nowrap' }}
+    >
+      <ConditionallyRender condition={hasOptions}>
+        {data?.options?.slice(0, 2).map((option) => {
+          const serviceOption = unSlugifyFilename(option.option ?? '');
+          return (
+            <Badge
+              key={serviceOption}
+              fontSize={[8, null, null, 8, 10, 12]}
+              my={1}
+              variant="outline"
+              colorScheme="teal"
+              ml={0}
+              whiteSpace={{ base: 'nowrap' }}
+              overflow={{ base: 'hidden', sm: 'initial' }}
+              textOverflow={{ base: 'ellipsis', sm: 'initial' }}
+              maxW={{ base: '120px', sm: 'initial' }}
+            >
+              {serviceOption}
+            </Badge>
+          );
+        })}
       </ConditionallyRender>
-    </Box>
+      <ConditionallyRender condition={!hasOptions && hasServices}>
+        {data?.relatedServices?.slice(0, 2).map((service) => {
+          const serviceOption = unSlugifyFilename(service.service ?? '');
+          return (
+            <Badge
+              key={serviceOption}
+              fontSize={[8, null, null, 8, 10, 12]}
+              my={1}
+              variant="outline"
+              colorScheme="teal"
+              ml={0}
+              whiteSpace={['nowrap']}
+              overflow={['hidden', 'initial']}
+              textOverflow={['ellipsis', 'initial']}
+              maxW={['120px', 'initial']}
+            >
+              {serviceOption}
+            </Badge>
+          );
+        })}
+      </ConditionallyRender>
+      <Badge
+        fontSize={[8, null, null, 8, 10, 12]}
+        my={1}
+        variant="outline"
+        colorScheme="yellow"
+        ml={0}
+        whiteSpace={['nowrap']}
+        overflow={['hidden', 'initial']}
+        textOverflow={['ellipsis', 'initial']}
+        maxW={['120px', 'initial']}
+      >
+        {'+ More'}
+      </Badge>
+    </Stack>
   );
 };

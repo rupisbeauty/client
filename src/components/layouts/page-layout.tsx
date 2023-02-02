@@ -93,6 +93,7 @@ const Main: FC<MainProps> = ({
         mt={displayHeader ? 36 : 0}
         pb={displayHeader ? '1em' : 0}
         minH="100vh"
+        mb={24}
       >
         <Box position="relative" w="full" overflowX="hidden" color={color}>
           {children}
