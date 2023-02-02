@@ -1,13 +1,13 @@
 import { Template } from 'tinacms';
 
-import defaults from '../collections/_defaults.json';
 import { fields } from '../fields-config';
+import { defaults } from './_defaults';
 
 export const aboutBlock: Template = {
   label: 'About Section',
   name: 'about',
   ui: {
-    defaultItem: defaults.templates.about,
+    defaultItem: defaults.about,
   },
   fields: [
     {

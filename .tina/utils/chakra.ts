@@ -15,8 +15,7 @@ export const mapColors = Object.keys(colors)
   .map((color: string) =>
     typeof colors[color] === 'string'
       ? { key: `${color}-${shortId()}`, value: color, label: color }
-      : colors[color] &&
-        Object.keys(colors[color]).map((shade) => ({
+      : Object.keys(colors[color] || {}).map((shade) => ({
           key: `${color}.${shade}-${shortId()}}`,
           value: `${color}.${shade}`,
           label: `${color}.${shade}`,
@@ -143,9 +142,9 @@ const styleProps: Record<string, any> = {
  * @export
  * @return {*}
  */
-export function mapStylesToTinaComponents() {
-  let final: Record<string, any> = {};
-  final = Object.keys(styleProps)
+export function mapSettingsToTinaComponents() {
+  let defaults: Record<string, any> = {};
+  defaults = Object.keys(styleProps)
     .map((key) => {
       return {
         [key]: {},
@@ -156,9 +155,8 @@ export function mapStylesToTinaComponents() {
   Object.keys(styleProps).forEach((prop) => {
     const propArray = styleProps[prop];
     propArray?.forEach((key: string) => {
-      final[prop][key] = defaultStyles[key];
+      defaults[prop][key] = defaultStyles[key];
     });
   });
-  console.log('🚀 | file: chakra.ts:157 | final', final);
-  return final;
+  return defaults;
 }

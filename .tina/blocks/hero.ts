@@ -1,14 +1,12 @@
 import { Template } from 'tinacms';
-import defaults from '../collections/_defaults.json';
+
 import { fields } from '../fields-config';
+import { defaults } from './_defaults';
 
 export const heroBlock: Template = {
   label: 'Hero',
   name: 'hero',
-  ui: {
-    // previewSrc: 'path/to/component/preview.png'
-    defaultItem: defaults.templates.hero,
-  },
+  ui: { defaultItem: defaults.hero },
   fields: [
     {
       type: 'string',

@@ -1,14 +1,12 @@
 import { Template } from 'tinacms';
-import defaults from '../collections/_defaults.json';
+
 import { fields } from '../fields-config';
+import { defaults } from './_defaults';
+
 export const coreServicesBlock: Template = {
   label: 'Core Services',
   name: 'coreServices',
-  ui: {
-    defaultItem: {
-      title: 'Core Services',
-    },
-  },
+  ui: { defaultItem: defaults.coreServices },
   fields: [
     {
       type: 'string',
@@ -23,11 +21,6 @@ export const coreServicesBlock: Template = {
       label: 'Service Category',
       list: true,
       ui: {
-        defaultItem: {
-          category: 'Add A Service Category',
-          image: defaults.image,
-          link: 'relative-link',
-        },
         itemProps: (item) => ({
           id: item.category,
           key: item.category,

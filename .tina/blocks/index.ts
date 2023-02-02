@@ -27,7 +27,6 @@ export const templates: Record<string, Template[]> = {
     dividerBlock,
   ],
   section: [
-    sectionBlock,
     boxBlock,
     dividerBlock,
     sectionTitleBlock,

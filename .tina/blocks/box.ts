@@ -2,25 +2,19 @@ import type { Template } from 'tinacms';
 
 import { customLayerStyles } from '../../chakra.ui/theme/foundations/layerStyles';
 import { fields } from '../fields-config';
-import { mapStylesToTinaComponents, sectionStyles } from '../utils/chakra';
+import { mapSettingsToTinaComponents, sectionStyles } from '../utils/chakra';
+
+import { defaults } from './_defaults';
 
 // const styles = sectionStyles(customLayerStyles?.container?.default);
-const styles = mapStylesToTinaComponents();
-if (styles.flex) delete styles['flex'];
+const settings = mapSettingsToTinaComponents();
+if (settings.flex) delete settings['flex'];
 
 export const boxBlock: Template = {
   label: 'Box',
   name: 'box',
   ui: {
-    defaultItem: {
-      title: '👩‍💼 Change This title ',
-      settings: {
-        width: 'full',
-        backgroundColor: '#FFF1E4',
-        color: '#4A5568',
-        ...styles,
-      },
-    },
+    defaultItem: defaults.box,
     itemProps: (item) => ({
       key: item.title,
       label: item.title,
@@ -35,6 +29,13 @@ export const boxBlock: Template = {
       required: true,
     },
     {
+      type: 'rich-text',
+      name: 'body',
+      label: 'Body',
+      isBody: true,
+      // templates: [],
+    },
+    {
       type: 'string',
       name: 'poly',
       label: 'Box Variants',
@@ -44,13 +45,6 @@ export const boxBlock: Template = {
         { label: 'card', value: 'card' },
         { label: 'hidden', value: 'hidden' },
       ],
-    },
-    {
-      type: 'rich-text',
-      name: 'body',
-      label: 'Body',
-      isBody: true,
-      // templates: [],
     },
     {
       type: 'object',

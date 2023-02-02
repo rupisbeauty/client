@@ -1,16 +1,14 @@
 import { Template } from 'tinacms';
 
-import defaults from '../collections/_defaults.json';
 import { fields } from '../fields-config';
 import { mapOptions } from '../utils/chakra';
+import { defaults } from './_defaults';
 
 export const dividerBlock: Template = {
   label: 'Horizontal Divider',
   name: 'divider',
   ui: {
-    defaultItem: {
-      title: 'Give this component a default title',
-    },
+    defaultItem: defaults.divider,
   },
   fields: [
     {

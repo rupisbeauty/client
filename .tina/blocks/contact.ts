@@ -1,15 +1,11 @@
 import { Template } from 'tinacms';
 
+import { defaults } from './_defaults';
+
 export const contactBlock: Template = {
   label: 'Contact Information',
   name: 'contact',
-  ui: {
-    defaultItem: {
-      address: '2A Franklin Ave',
-      locality: 'Pearl River, NY 10965',
-      phoneNumber: '(862) 571-7873',
-    },
-  },
+  ui: { defaultItem: defaults.contact },
   fields: [
     {
       type: 'string',

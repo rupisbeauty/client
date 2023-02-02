@@ -1,13 +1,11 @@
 import { Template } from 'tinacms';
 
+import { defaults } from './_defaults';
+
 export const sectionTitleBlock: Template = {
   label: 'Section Title',
   name: 'sectionTitle',
-  ui: {
-    defaultItem: {
-      title: 'This is a Section Title',
-    },
-  },
+  ui: { defaultItem: defaults.sectionTitle },
   fields: [
     {
       type: 'string',

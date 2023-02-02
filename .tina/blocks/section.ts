@@ -1,31 +1,22 @@
 import type { Template } from 'tinacms';
 
-import { customLayerStyles } from '../../chakra.ui/theme/foundations/layerStyles';
 import { fields } from '../fields-config';
-import { mapStylesToTinaComponents, sectionStyles } from '../utils/chakra';
+
 import { boxBlock } from './box';
 import { dividerBlock } from './divider';
-import { templates } from './index';
 import { logoBlock } from './logo';
 import { sectionCoverBlock } from './section-cover';
 import { sectionTitleBlock } from './section-title';
 import { serviceMenuBlock } from './service-menu';
 
-const additionalSettings = mapStylesToTinaComponents();
+import { templates } from './index';
+import { defaults } from './_defaults';
 
 export const sectionBlock: Template = {
   label: 'Section',
   name: 'section',
   ui: {
-    defaultItem: {
-      title: '👩‍💼 Change This title ',
-      settings: {
-        width: 'full',
-        backgroundColor: '#FFF1E4',
-        color: '#4A5568',
-        ...additionalSettings,
-      },
-    },
+    defaultItem: defaults.section,
     itemProps: (item) => ({
       key: item.title,
       label: item.title,
@@ -44,7 +35,7 @@ export const sectionBlock: Template = {
       name: 'body',
       label: 'Body',
       isBody: true,
-      // templates: templates.section,
+      // templates: templates.section, // @FIXME: "cannot access templates before initialization"
       templates: [
         boxBlock,
         logoBlock,

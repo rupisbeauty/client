@@ -1,12 +1,12 @@
 import { Template } from 'tinacms';
 
+import { defaults } from './_defaults';
+
 export const logoBlock: Template = {
   label: 'Rupi Full Logo',
   name: 'logo',
   ui: {
-    defaultItem: {
-      title: 'Rupi Beauty Studio Logo',
-    },
+    defaultItem: defaults.logo,
   },
   fields: [
     {
