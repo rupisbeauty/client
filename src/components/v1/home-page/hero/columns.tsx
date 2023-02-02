@@ -1,8 +1,8 @@
 import { Box, chakra } from '@chakra-ui/react';
 import Image from 'next/image';
+
 import type { FC } from 'react';
 
-import { CDN_URL, PEOPLE_DIR } from '@/utils';
 import column1 from '__data/site/pages/home/hero.json';
 
 export const Column1: FC = () => {
@@ -64,7 +64,7 @@ export const Column2 = () => {
       mb={{ base: 20, sm: 0 }}
     >
       <Image
-        src={`${CDN_URL}${PEOPLE_DIR}/hero-composite.png`}
+        src="/uploads/people/hero-composite.webp"
         alt="beautiful woman touching face after treatment | Image by cookie_studio on Freepik"
         width="1200"
         height="1200"

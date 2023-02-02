@@ -1,6 +1,3 @@
-import { FullLogo } from '@/components/v1';
-import { CookiePolicyBody } from '@/components/v1/policies';
-import { CDN_URL, PEOPLE_DIR } from '@/utils/constants';
 import {
   Box,
   Button,
@@ -9,9 +6,13 @@ import {
   Divider,
   Flex,
 } from '@chakra-ui/react';
-import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+
+import type { NextPage } from 'next';
+
+import { FullLogo } from '@/components/v1';
+import { CookiePolicyBody } from '@/components/v1/policies';
 
 const Cookie: NextPage = () => {
   const router = useRouter();
@@ -23,7 +24,7 @@ const Cookie: NextPage = () => {
           <Image
             width="2400"
             height="1600"
-            src={`${CDN_URL}${PEOPLE_DIR}/girl-looking-tenderly.jpg`}
+            src="/uploads/people/woman-tenderly-touching-skin.webp"
             alt="woman getting facial treatment applied | Image by senivpetro on Freepik"
             priority
           />
