@@ -2,16 +2,14 @@ import { Box } from '@chakra-ui/react';
 import { useReducedMotion } from 'framer-motion';
 import { Parallax } from 'react-parallax';
 
-import type { FC, ReactNode } from 'react';
-
-import { BRAND_DIR, CDN_URL } from '@/utils';
+import type { FC,ReactNode } from 'react';
 
 export const ScrollSection: FC<{
   bgImage?: string;
   strength?: number;
   children: ReactNode;
 }> = ({
-  bgImage = `${CDN_URL}${BRAND_DIR}/tile_background.png`,
+  bgImage = `/uploads/assets/brand/tile_background.webp`,
   strength = -200,
   children,
 }) => {

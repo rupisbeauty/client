@@ -1,11 +1,10 @@
 import { Box, chakra, VStack } from '@chakra-ui/react';
+import Image from 'next/image';
 import React from 'react';
 
 import type { tinaSchema } from '@/schema';
 import type { FC } from 'react';
 import type { z } from 'zod';
-
-import Image from 'next/image';
 
 export const ColumnLeft: FC<{ heading: string; subheading: string }> = ({
   heading,

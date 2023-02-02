@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { MotionBox } from 'chakra.ui';
 
-import type { Category } from './core-services';
+import type { Category } from '../core-services-block';
 
 const ChLink = chakra(Link);
 

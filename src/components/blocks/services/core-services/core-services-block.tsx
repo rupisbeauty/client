@@ -5,8 +5,7 @@ import type { imageSchema } from '.tina';
 import type { z } from 'zod';
 
 import { SectionTitle } from '../../section/section-title-block';
-import { MoreBox } from './more-services-box';
-import { ServiceBox } from './service-box';
+import { MoreBox, ServiceBox } from './core-services.components';
 
 import { tinaSchema } from '@/schema';
 

@@ -5,8 +5,7 @@ import type { PagesBodyHeroFilter } from '.tina';
 import type { FC } from 'react';
 
 import { tinaSchema } from '@/schema';
-import { ColumnLeft, ColumnRight } from './columns';
-import { CTABox } from './cta-box';
+import { ColumnLeft, ColumnRight, CTABox } from './hero.components';
 
 export const Hero: FC = (props: PagesBodyHeroFilter) => {
   const data = tinaSchema.hero.parse(props);

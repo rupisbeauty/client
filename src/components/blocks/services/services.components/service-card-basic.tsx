@@ -3,10 +3,6 @@ import {
   Box,
   Button,
   ButtonGroup,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
   Heading,
   Stack,
   Text,
@@ -19,7 +15,7 @@ import type { SingleServiceSchema } from '.tina/validators';
 import { singleServiceSchema } from '.tina/validators';
 import { filename, unSlugifyFilename } from '@/utils';
 import { trpc } from '@/utils/trpc';
-import { ConditionallyRender } from '../../utils/conditionally-render';
+import { ConditionallyRender } from '../../../utils/conditionally-render';
 
 export const BasicServiceCard: React.FC<{
   service: string | SingleServiceSchema;

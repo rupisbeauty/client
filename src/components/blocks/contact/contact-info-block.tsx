@@ -12,10 +12,9 @@ import {
 
 import type { FC } from 'react';
 
-import { FullLogo } from './full-logo';
-import { StoreIcon } from './icons';
-import { MapContainer } from './map';
-import { SectionTitle } from './section/section-title-block';
+import { FullLogo } from '../full-logo-block';
+import { SectionTitle } from '../section';
+import { MapContainer, StoreIcon } from '../_shared.components';
 
 export const ContactInfo: FC<{
   address: string;

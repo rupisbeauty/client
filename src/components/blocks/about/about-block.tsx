@@ -5,14 +5,9 @@ import type { tinaSchema } from '@/schema';
 import type { FC } from 'react';
 import type { z } from 'zod';
 
-import { FullLogo } from '../full-logo';
-import { SectionTitle } from '../section/section-title-block';
-import { Decorators } from './decorators';
-import { LicenseInfo } from './license-info';
-import { LicensesStack } from './licenses-stack';
-
-import { CDN_URL, LOCATIONS_DIR } from '@/utils';
-// import about from '__data/site/pages/home/about.json';
+import { FullLogo } from '../full-logo-block';
+import { SectionTitle } from '../section';
+import { Decorators, LicenseInfo, LicensesStack } from './about.components';
 
 export const About: FC<z.TypeOf<typeof tinaSchema.about>> = ({
   title = 'About Us',

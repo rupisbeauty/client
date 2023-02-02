@@ -3,7 +3,7 @@ import { SimpleGrid } from '@chakra-ui/react';
 import type { AppRouter } from '@/server/trpc/router/_app';
 import type { inferProcedureOutput } from '@trpc/server';
 
-import { BasicServiceCard } from '../services/service-card-basic';
+import { BasicServiceCard } from '../services/services.components/service-card-basic';
 
 import { trpc } from '@/utils/trpc';
 

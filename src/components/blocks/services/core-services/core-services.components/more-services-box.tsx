@@ -2,7 +2,7 @@ import { Box, Button, chakra } from '@chakra-ui/react';
 
 import type { FC } from 'react';
 
-import { Arrow } from '../../icons/arrow-icon';
+import { Arrow } from '../../../_shared.components';
 
 export const MoreBox: FC<{ onClick: () => void }> = ({ onClick }) => {
   return (
