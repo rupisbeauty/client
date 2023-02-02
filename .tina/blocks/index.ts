@@ -1,8 +1,10 @@
 import type { Template } from 'tinacms';
 
 import { aboutBlock } from './about';
+import { boxBlock } from './box';
 import { contactBlock } from './contact';
 import { coreServicesBlock } from './core-services';
+import { dividerBlock } from './divider';
 import { heroBlock } from './hero';
 import { locationCTABlock } from './location-cta';
 import { logoBlock } from './logo';
@@ -11,7 +13,7 @@ import { sectionCoverBlock } from './section-cover';
 import { sectionTitleBlock } from './section-title';
 import { serviceMenuBlock } from './service-menu';
 
-export const templates = {
+export const templates: Record<string, Template[]> = {
   page: [
     sectionBlock,
     sectionCoverBlock,
@@ -22,12 +24,14 @@ export const templates = {
     aboutBlock,
     contactBlock,
     locationCTABlock,
-  ] as Template[],
+    dividerBlock,
+  ],
   section: [
-    sectionBlock,
+    boxBlock,
+    dividerBlock,
     sectionTitleBlock,
     sectionCoverBlock,
     logoBlock,
     serviceMenuBlock,
-  ] as Template[],
+  ],
 };
