@@ -13,3 +13,4 @@ if the block has a specific component used to register it, then
 
 - [ ] add block to component map in `src/hooks/use-components.ts` where there are two groups `page` | `section`
 - [ ] then each `TinaMarkdown` can borrow from either a `page` | `section` component block group
+- [ ] the types for each of the chakra settings fields are also available at: `src/components/blocks/section/types`
