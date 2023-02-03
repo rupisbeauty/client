@@ -27,19 +27,12 @@ export const defaults = {
     phoneNumber: '(862) 571-7873',
   },
   coreServices: {
-    title: 'Core Services',
-    serviceCategories: {
-      category: 'Add A Service Category',
-      image: {
-        src: '/uploads/assets/placeholder-sq.webp',
-        alt: 'Your neighborhood beauty and skin care experts. Trained and certified estheticians | ✨ Rupi Beauty Studio ✨',
-        size: {
-          width: 500,
-          height: 500,
-        },
-      },
-      link: 'relative-link-to-page',
-    },
+    relatedServices: [
+      { service: '_content/categories/eyebrows.mdx' },
+      { service: '_content/categories/hair-removal/body-waxing.mdx' },
+      { service: '_content/categories/hair-removal/laser-hair-removal.mdx' },
+      { service: '_content/categories/hair-removal/ipl.mdx' },
+    ],
   },
   divider: {
     title: 'Horizontal Divider',
