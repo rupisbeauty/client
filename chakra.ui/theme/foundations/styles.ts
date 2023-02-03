@@ -38,7 +38,7 @@ export const styles: ChakraTheme['styles'] = {
       scrollBehavior: 'smooth',
       // using % here allows users to override default size in browser settings??
       fontSize: '100%', // == 16px
-      fontFamily: 'default',
+      fontFamily: 'body',
       height: '100%',
     },
     body: {
