@@ -1,5 +1,5 @@
-import { chakra, Container as CUIContainer, Stack } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
+import { chakra,Container as CUIContainer } from '@chakra-ui/react';
+import { useEffect,useState } from 'react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 import type { ContainerProps } from '@chakra-ui/react';
@@ -13,6 +13,7 @@ const CUITinaMarkdown = chakra(TinaMarkdown);
 
 export const Section: React.FC<ContainerProps & TinaContainerProps> = ({
   body,
+  // U96mLYCh @NOTE: Tina Settings Implementation
   settings: { spacing, decorative, typography, ...settings },
 }) => {
   //  n9ZOvMI0UGU @TODO: ADD zod validation

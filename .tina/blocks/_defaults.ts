@@ -18,7 +18,8 @@ export const defaults = {
   box: {
     title: '👩‍💼 Change This title ',
     poly: 'box',
-    settings: settings,
+    // @TODO: check if color settings are getting applied correctly
+    // settings: settings, // U96mLYCh @NOTE: Tina Settings Definitions
   },
   contact: {
     address: '2A Franklin Ave',
@@ -69,9 +70,12 @@ export const defaults = {
   section: {
     title: '👩‍💼 Change This title ',
     settings: {
-      backgroundColor: 'bg',
-      color: 'text',
-      ...nonFlexSettings,
+      colors: {
+        // U96mLYCh @NOTE: Tina Settings Definitions
+        backgroundColor: '#FFF1E4', // bg
+        color: '#4A5568', // gray.600
+      },
+      // ...nonFlexSettings,
     },
   },
   serviceMenu: {

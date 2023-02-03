@@ -1,6 +1,6 @@
 import type { ChakraTheme } from '@chakra-ui/react';
 
-// @NOTE: All default styles are related to .tina blocks
+// U96mLYCh @NOTE: Tina Settings Definitions
 export const customLayerStyles = {
   flex: {
     default: {

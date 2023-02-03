@@ -17,6 +17,7 @@ const parseToString = (val?: string) => val && val.toString();
 /* -------------------------------------------------------------------------- */
 /*                              Options Mappings                              */
 /* -------------------------------------------------------------------------- */
+// U96mLYCh @NOTE: Tina Settings Definitions
 const full = [{ key: 'auto', value: 'auto', label: 'auto' }];
 const options = {
   colors: mapSemanticTokens.concat(mapColors),
@@ -520,18 +521,7 @@ fields['box'] = [
         name: 'minH',
         options: options.sizes,
       },
-      {
-        type: 'string',
-        label: 'Background Color',
-        name: 'backgroundColor',
-        ui: { component: 'color' },
-      },
-      {
-        type: 'string',
-        label: 'Text Color',
-        name: 'color',
-        ui: { component: 'color' },
-      },
+      ...fields['colors'], // bg ,text colors
       {
         type: 'string',
         label: 'Display',
@@ -650,19 +640,20 @@ fields['flex'] = [
 /* -------------------------------------------------------------------------- */
 
 fields['container'] = [
-  {
-    type: 'string',
-    label:
-      'Background Color: https://chakra-ui.com/docs/styled-system/theme#colors',
-    name: 'backgroundColor',
-    options: options.colors,
-  },
-  {
-    type: 'string',
-    label: 'Text Color: https://chakra-ui.com/docs/styled-system/theme#colors',
-    name: 'color',
-    options: options.colors,
-  },
+  // {
+  //   type: 'string',
+  //   label:
+  //     'Background Color: https://chakra-ui.com/docs/styled-system/theme#colors',
+  //   name: 'backgroundColor',
+  //   options: options.colors,
+  // },
+  // {
+  //   type: 'string',
+  //   label: 'Text Color: https://chakra-ui.com/docs/styled-system/theme#colors',
+  //   name: 'color',
+  //   options: options.colors,
+  // },
+  ...fields['colors'], // bg ,text colors
 ] as Template['fields'];
 
 /* -------------------------------------------------------------------------- */

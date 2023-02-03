@@ -1,15 +1,18 @@
-import { ChakraTheme, theme } from '@chakra-ui/react';
+// U96mLYCh @NOTE: Tina Settings Definitions
+import { ChakraTheme,theme } from '@chakra-ui/react';
 import { customLayerStyles } from '../../chakra.ui/theme/foundations/layerStyles';
 import { customTextStyles } from '../../chakra.ui/theme/foundations/textStyles';
 import { tokens } from '../../chakra.ui/theme/foundations/tokens';
 import { shortId } from '../../src/utils/fns';
 
+// reusable options mapper
 export const mapOptions = (key: any) => ({
   key: key,
   label: key,
   value: key,
 });
 
+// create options from all chakra theme colors
 const { colors }: { colors: ChakraTheme['colors'] } = theme;
 export const mapColors = Object.keys(colors)
   .map((color: string) =>
@@ -23,6 +26,7 @@ export const mapColors = Object.keys(colors)
   )
   .flat();
 
+// create options from all custom theme tokens
 export const mapSemanticTokens =
   tokens?.colors &&
   Object.entries(tokens?.colors).map(([key, value]) => {
@@ -43,6 +47,7 @@ const defaultStyles: Record<string, any> = {
 
 // known props / share for component block settings.
 const styleProps: Record<string, any> = {
+  colors: ['backgroundColor', 'color'],
   spacing: ['my', 'mx', 'py', 'px'],
   decorative: ['border', 'borderColor', 'rounded', 'shadow'],
   typography: [
@@ -64,6 +69,7 @@ const styleProps: Record<string, any> = {
     'height',
     'maxHeight',
     'minHeight',
+    // can colors be removed here in favor of the colors object?
     'backgroundColor',
     'color',
     'display',
