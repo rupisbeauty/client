@@ -3,7 +3,7 @@ import { SimpleGrid } from '@chakra-ui/react';
 import type { AppRouter } from '@/server/trpc/router/_app';
 import type { inferProcedureOutput } from '@trpc/server';
 
-import { BasicServiceCard } from '../services/services.components/service-card-basic';
+import { BasicServiceCard } from './services.components';
 
 import { trpc } from '@/utils/trpc';
 
@@ -25,12 +25,11 @@ export const ServiceMenu = ({ options, relatedServices, ...props }: any) => {
   return (
     <SimpleGrid
       w={['full']}
-      columns={[2]}
+      columns={[1, null, null, 2]}
       gap={[12]}
       p={6}
       m={0}
       mx="auto"
-      border="1px"
       alignContent="center"
       justifyContent="center"
     >
