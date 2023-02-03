@@ -20,8 +20,6 @@ seo:
     width: "full",
     backgroundColor: "#FFF1E4",
     color: "#4A5568",
-    contained: true,
-    centerContent: true,
     spacing: { px: "" }
   }}
   body={<>
@@ -39,33 +37,11 @@ seo:
 />
 
 <section
-  settings={{
-    color: "text",
-    bg: "bg",
-    spacing: { px: "14", py: 12, mx: "auto", my: 0 },
-    decorative: {
-      border: "0px",
-      borderColor: "transparent",
-      rounded: 0,
-      shadow: "none"
-    },
-    typography: {
-      fontFamily: "body",
-      fontSize: "base",
-      fontWeight: "normal",
-      lineHeight: "base",
-      letterSpacing: "normal",
-      textAlign: "left",
-      textDecoration: "none",
-      textOverflow: "none",
-      textTransform: "none"
-    },
-  }}
+  title="Service Menu"
+  settings={{ backgroundColor: "bg", color: "text" }}
   body={<>
-    <sectionTitle title="Our Finest Beauty & Skin Care Services" />
-
     <serviceMenu
-    title="Service Menu"
+    title="Eyebrows, Skin-Care, Hair-Removal, Addons"
     relatedServices={[
     { service: "_content/categories/eyebrows.mdx" },
     { service: "_content/categories/skin-care.mdx" },
@@ -74,5 +50,5 @@ seo:
     ]}
     />
   </>}
-  title="Service Menu"
 />
+
