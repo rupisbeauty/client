@@ -20,10 +20,10 @@ export const customLayerStyles = {
   },
   container: {
     basic: {
-      width: 'full',
+      // width: 'full',
       maxWidth: 'container.xl',
-      marginTop: '12',
-      marginBottom: '12',
+      // marginTop: '12',
+      // marginBottom: '12',
     },
     default: {
       // @NOTE: this is used a default style by .tina/blocks/section.ts

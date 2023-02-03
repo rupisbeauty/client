@@ -2,12 +2,12 @@ import { theme } from '@chakra-ui/react';
 import { Template } from 'tinacms';
 
 import {
-mapColors,
-mapOptions,
-mapSemanticTokens,
-objectFit,
-objectPosition,
-scale
+  mapColors,
+  mapOptions,
+  mapSemanticTokens,
+  objectFit,
+  objectPosition,
+  scale,
 } from './utils';
 
 import { paths } from '../chakra.ui/icons/paths';
@@ -625,7 +625,8 @@ fields['container'] = [
   },
   {
     type: 'string',
-    label: 'Max Width',
+    label:
+      'Max Width (Changing this setting will remove the responsiveness of the page. Be Careful!)',
     name: 'maxW',
     options: options.container.sizes,
   },

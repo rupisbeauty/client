@@ -69,7 +69,6 @@ export const defaults = {
   section: {
     title: '👩‍💼 Change This title ',
     settings: {
-      width: 'full',
       backgroundColor: 'bg',
       color: 'text',
       ...settings,
