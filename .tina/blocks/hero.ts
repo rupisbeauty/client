@@ -6,7 +6,11 @@ import { defaults } from './_defaults';
 export const heroBlock: Template = {
   label: 'Hero',
   name: 'hero',
-  ui: { defaultItem: defaults.hero },
+  ui: {
+    defaultItem: defaults.hero,
+    // @TODO: add all previews to blocks
+    previewSrc: `/blocks/preview-hero-composite.jpg`,
+  },
   fields: [
     {
       type: 'string',

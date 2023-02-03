@@ -8,6 +8,7 @@ export const aboutBlock: Template = {
   name: 'about',
   ui: {
     defaultItem: defaults.about,
+    previewSrc: '/blocks/preview-about.jpg'
   },
   fields: [
     {

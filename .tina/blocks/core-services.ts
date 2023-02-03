@@ -6,7 +6,10 @@ import { defaults } from './_defaults';
 export const coreServicesBlock: Template = {
   label: 'Core Services',
   name: 'coreServices',
-  ui: { defaultItem: defaults.coreServices },
+  ui: {
+    defaultItem: defaults.coreServices,
+    previewSrc: '/blocks/preview-core-services.jpg',
+  },
   fields: [
     {
       type: 'string',

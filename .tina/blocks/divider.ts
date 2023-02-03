@@ -9,6 +9,7 @@ export const dividerBlock: Template = {
   name: 'divider',
   ui: {
     defaultItem: defaults.divider,
+    previewSrc: '/blocks/preview-divider.jpg',
   },
   fields: [
     {
