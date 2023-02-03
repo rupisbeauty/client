@@ -18,7 +18,7 @@ export const defaults = {
   box: {
     title: '👩‍💼 Change This title ',
     poly: 'box',
-    settings: settings,//  // 7tNXwiua8uQ @DONE: keep flex settings for box
+    settings: settings,
   },
   contact: {
     address: '2A Franklin Ave',

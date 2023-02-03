@@ -27,6 +27,14 @@ type DefaultSettings = Pick<ContainerProps, 'backgroundColor' | 'color'>;
 
 export type TinaBox = Pick<
   BoxProps,
+  | 'width'
+  | 'maxW'
+  | 'minW'
+  | 'height'
+  | 'maxH'
+  | 'minH'
+  | 'backgroundColor'
+  | 'color'
   | 'display'
   | 'position'
   | 'top'

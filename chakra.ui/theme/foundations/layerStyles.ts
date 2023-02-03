@@ -41,6 +41,14 @@ export const customLayerStyles = {
   },
   box: {
     default: {
+      width: 'full',
+      maxW: 'container.xl',
+      minW: 'auto', // @TODO: check if this works.
+      height: 'auto',
+      maxH: 'auto',
+      minH: 'auto',
+      backgroundColor: 'bg',
+      color: 'text',
       display: 'block',
       position: 'static',
       top: 'auto',

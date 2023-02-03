@@ -2,12 +2,12 @@ import { theme } from '@chakra-ui/react';
 import { Template } from 'tinacms';
 
 import {
-  mapColors,
-  mapOptions,
-  mapSemanticTokens,
-  objectFit,
-  objectPosition,
-  scale,
+mapColors,
+mapOptions,
+mapSemanticTokens,
+objectFit,
+objectPosition,
+scale
 } from './utils';
 
 import { paths } from '../chakra.ui/icons/paths';
@@ -484,6 +484,54 @@ fields['box'] = [
     name: 'box',
     label: 'Box Settings',
     fields: [
+      {
+        type: 'string',
+        label: 'Width',
+        name: 'width',
+        options: options.sizes,
+      },
+      {
+        type: 'string',
+        label: 'Max Width',
+        name: 'maxW',
+        options: options.sizes,
+      },
+      {
+        type: 'string',
+        label: 'Min Width',
+        name: 'minW',
+        options: options.sizes,
+      },
+      {
+        type: 'string',
+        label: 'Height',
+        name: 'height',
+        options: options.sizes,
+      },
+      {
+        type: 'string',
+        label: 'Max Height',
+        name: 'maxH',
+        options: options.sizes,
+      },
+      {
+        type: 'string',
+        label: 'Min Height',
+        name: 'minH',
+        options: options.sizes,
+      },
+      {
+        type: 'string',
+        label: 'Background Color',
+        name: 'backgroundColor',
+        ui: { component: 'color' },
+      },
+      {
+        type: 'string',
+        label: 'Text Color',
+        name: 'color',
+        ui: { component: 'color' },
+      },
       {
         type: 'string',
         label: 'Display',
