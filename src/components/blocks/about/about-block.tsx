@@ -1,4 +1,4 @@
-import { Box, chakra, Container, Divider, Stack } from '@chakra-ui/react';
+import { Box,chakra,Container,Divider,Stack } from '@chakra-ui/react';
 import Image from 'next/image';
 
 import type { PagesBlocksAbout } from '.tina';
@@ -8,8 +8,9 @@ import type { z } from 'zod';
 
 import { FullLogo } from '../full-logo-block';
 import { SectionTitle } from '../section';
-import { Decorators, LicenseInfo, LicensesStack } from './about.components';
+import { Decorators,LicenseInfo,LicensesStack } from './about.components';
 
+// 00icQ @WIP : block migration : @FIXME: Remove after migration
 export const About: FC<z.TypeOf<typeof tinaSchema.about>> = ({
   title = 'About Us',
   heading,

@@ -1,4 +1,4 @@
-import { Box, chakra, Stack } from '@chakra-ui/react';
+import { Box,chakra,Stack } from '@chakra-ui/react';
 
 import type { PagesBlocksLocationCta } from '.tina';
 import type { FC } from 'react';
@@ -6,6 +6,7 @@ import type { FC } from 'react';
 import { ScrollSection } from './section';
 import { MapContainer } from './_shared.components';
 
+// 00icQ @WIP : block migration : @FIXME: Remove after migration
 export const VisitLocationCTA: FC<{ cta: string; address?: string }> = ({
   cta,
   address,

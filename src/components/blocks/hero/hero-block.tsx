@@ -8,7 +8,7 @@ import { tinaSchema } from '@/schema';
 import { ColumnLeft,ColumnRight,CTABox } from './hero.components';
 
 
-/* tEW5U @TODO: REMOVE AFTER BLOCK EDITING IMPLEMENTED */
+// 00icQ @WIP : block migration : @FIXME: Remove after migration
 export const Hero: FC = (props: PagesBlocksHeroFilter) => {
   const data = tinaSchema.hero.parse(props);
   const image = tinaSchema.image.parse(props.image);
