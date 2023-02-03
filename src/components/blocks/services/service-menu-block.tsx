@@ -3,7 +3,7 @@ import { SimpleGrid } from '@chakra-ui/react';
 import type { AppRouter } from '@/server/trpc/router/_app';
 import type { inferProcedureOutput } from '@trpc/server';
 
-import { BasicServiceCard } from './services.components';
+import { ChakraCard } from './services.components';
 
 import { trpc } from '@/utils/trpc';
 
@@ -13,13 +13,13 @@ export type AllServicesFrontMatter = inferProcedureOutput<
 
 // n9ZOvMI0UGU @TODO: type this
 export const ServiceMenu = ({ options, relatedServices, ...props }: any) => {
-  const filePaths = relatedServices.map(
-    (service: { service: string }) => service.service
-  );
+  const filePaths = relatedServices?.length
+    ? relatedServices?.map((service: { service: string }) => service.service)
+    : [];
 
   const { data: allServices } = trpc.mdx.parseFMList.useQuery(
     { filePaths },
-    { enabled: !!relatedServices.length }
+    { enabled: !!relatedServices?.length }
   );
 
   return (
@@ -30,14 +30,14 @@ export const ServiceMenu = ({ options, relatedServices, ...props }: any) => {
       p={6}
       m={0}
       mx="auto"
-      alignContent="center"
+      alignItems="center"
       justifyContent="center"
     >
       {allServices &&
         Object.keys(allServices).map((serviceKey) => {
           const service = allServices[serviceKey];
           if (!service) return null;
-          return <BasicServiceCard key={service.title} service={service} />;
+          return <ChakraCard key={service.title} service={service} />;
         })}
     </SimpleGrid>
   );
