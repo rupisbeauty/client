@@ -57,15 +57,11 @@ export const pages: { fields: SchemaField[] } = {
         visualSelector: true,
       },
       templates: [
-        // logoBlock,
         heroBlock,
         aboutBlock,
         locationCTABlock,
         coreServicesBlock,
         contactBlock,
-        // sectionTitleBlock,
-        // sectionCoverBlock,
-        // dividerBlock,
       ],
     },
 

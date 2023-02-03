@@ -4,6 +4,7 @@ import type { PagesBlocks } from '.tina';
 
 import { AboutBlock } from '../about';
 // import { FullLogoBlock } from '../full-logo-block';
+import { ContactInfoBlock } from '../contact';
 import { HeroBlock } from '../hero/hero-block';
 import { CoreServicesBlock } from '../services';
 import { LocationCTABlock } from '../visit-location-cta-block';
@@ -23,6 +24,8 @@ export const Blocks = (props: any) => {
             return <LocationCTABlock {...block} key={block.__typename} />;
           case 'PagesBlocksCoreServices':
             return <CoreServicesBlock {...block} key={block.__typename} />;
+          case 'PagesBlocksContact':
+            return <ContactInfoBlock {...block} key={block.__typename} />;
         }
       })}
     </>
