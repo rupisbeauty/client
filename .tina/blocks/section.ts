@@ -52,7 +52,6 @@ export const sectionBlock: Template = {
       fields: [
         ...(fields.container as Template['fields']),
         ...(fields?.spacing as Template['fields']),
-        ...(fields?.flex as Template['fields']),
         ...(fields?.decorative as Template['fields']),
         ...(fields?.typography as Template['fields']),
       ],

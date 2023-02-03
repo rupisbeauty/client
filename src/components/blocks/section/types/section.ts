@@ -23,10 +23,7 @@ type Typography = Pick<
   | 'textDecoration'
   | 'textOverflow'
 >;
-type DefaultSettings = Pick<
-  ContainerProps,
-  'centerContent' | 'width' | 'maxW' | 'backgroundColor' | 'color'
-> & { contained: boolean; isResponsive: boolean; flex: Partial<StackProps> };
+type DefaultSettings = Pick<ContainerProps, 'backgroundColor' | 'color'>;
 
 export type TinaBox = Pick<
   BoxProps,
@@ -55,4 +52,8 @@ type TinaSettings = {
 export type TinaContainerProps = {
   body: TinaMarkdownContent | TinaMarkdownContent[];
   settings: TinaSettings;
+};
+export type TinaBoxProps = {
+  body: TinaMarkdownContent | TinaMarkdownContent[];
+  settings: TinaSettings & { flex: Partial<StackProps> };
 };

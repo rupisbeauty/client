@@ -603,34 +603,6 @@ fields['flex'] = [
 
 fields['container'] = [
   {
-    type: 'boolean',
-    name: 'contained',
-    label: 'Use a Container?',
-  },
-  {
-    type: 'boolean',
-    name: 'centerContent',
-    label: 'Center Content? (* Requires a container)',
-  },
-  {
-    type: 'string',
-    label: 'Width',
-    name: 'width',
-    options: options.sizes,
-  },
-  {
-    type: 'boolean',
-    label: 'Make Container Responsive?',
-    name: 'isResponsive',
-  },
-  {
-    type: 'string',
-    label:
-      'Max Width (Changing this setting will remove the responsiveness of the page. Be Careful!)',
-    name: 'maxW',
-    options: options.container.sizes,
-  },
-  {
     type: 'string',
     label:
       'Background Color: https://chakra-ui.com/docs/styled-system/theme#colors',

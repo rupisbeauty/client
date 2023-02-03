@@ -1,5 +1,6 @@
 import type { ChakraTheme } from '@chakra-ui/react';
 
+// @NOTE: All default styles are related to .tina blocks
 export const customLayerStyles = {
   flex: {
     default: {
@@ -20,14 +21,12 @@ export const customLayerStyles = {
   },
   container: {
     basic: {
-      // width: 'full',
+      width: 'full',
       maxWidth: 'container.xl',
-      // marginTop: '12',
-      // marginBottom: '12',
+      marginTop: '12',
+      marginBottom: '12',
     },
     default: {
-      // @NOTE: this is used a default style by .tina/blocks/section.ts
-      width: 'full',
       py: '12',
       px: '6',
       my: '0',
@@ -35,7 +34,7 @@ export const customLayerStyles = {
       color: 'text',
       bg: 'bg',
       border: '0px',
-      borderColor: 'transparent',
+      borderColor: 'gray.300',
       rounded: '0',
       shadow: 'none',
     },

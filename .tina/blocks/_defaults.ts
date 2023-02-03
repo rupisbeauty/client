@@ -18,7 +18,7 @@ export const defaults = {
   box: {
     title: '👩‍💼 Change This title ',
     poly: 'box',
-    settings: nonFlexSettings,
+    settings: settings,//  // 7tNXwiua8uQ @DONE: keep flex settings for box
   },
   contact: {
     address: '2A Franklin Ave',
@@ -71,7 +71,7 @@ export const defaults = {
     settings: {
       backgroundColor: 'bg',
       color: 'text',
-      ...settings,
+      ...nonFlexSettings,
     },
   },
   serviceMenu: {

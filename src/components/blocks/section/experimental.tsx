@@ -3,15 +3,15 @@ import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 const CUITinaMarkdown = chakra(TinaMarkdown);
 
-import type { TinaBox, TinaContainerProps } from './types/section-box';
+import type { TinaBox, TinaBoxProps } from './types/section';
 
 /* -------------------------------------------------------------------------- */
 /*                                     BOX                                    */
 /* -------------------------------------------------------------------------- */
 type SectionBoxProps = {
   poly: 'box' | 'stack' | 'card' | 'hidden';
-  body: TinaContainerProps['body'];
-  settings: TinaContainerProps['settings'] & {
+  body: TinaBoxProps['body'];
+  settings: TinaBoxProps['settings'] & {
     box: TinaBox;
   };
 };
@@ -36,6 +36,7 @@ export const SectionBox: React.FC<SectionBoxProps> = ({
       {...settings?.spacing}
       {...settings?.decorative}
       {...settings?.typography}
+      {...settings?.flex}
     >
       <CUITinaMarkdown content={body} />
     </Box>
