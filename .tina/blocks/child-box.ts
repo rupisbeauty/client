@@ -1,16 +1,17 @@
 import type { Template } from 'tinacms';
+import { templates } from '.';
 
 import { fields } from '../fields';
 import { mapSettingsToTinaComponents } from '../utils/chakra';
-import { childBoxBlock } from './child-box';
-import { templates } from './index';
+import { boxBlock } from './box';
+import { dividerBlock } from './divider';
 import { defaults } from './_defaults';
 
 const settings = mapSettingsToTinaComponents();
 
-export const boxBlock: Template = {
+export const childBoxBlock: Template = {
   label: 'Box',
-  name: 'box',
+  name: 'childBox',
   ui: {
     defaultItem: defaults.box,
     itemProps: (item) => ({
@@ -31,7 +32,7 @@ export const boxBlock: Template = {
       name: 'body',
       label: 'Body',
       isBody: true,
-      templates: [childBoxBlock],
+      templates: [dividerBlock],
     },
     {
       type: 'string',
@@ -42,7 +43,7 @@ export const boxBlock: Template = {
         { label: 'stack', value: 'stack' },
         { label: 'card', value: 'card' },
         { label: 'hidden', value: 'hidden' },
-        // @TODO: add grid support
+        // @TOOD: add grid support
       ],
     },
     {

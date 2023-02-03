@@ -2,6 +2,7 @@ import type { Template } from 'tinacms';
 
 import { aboutBlock } from './about';
 import { boxBlock } from './box';
+import { childBoxBlock } from './child-box';
 import { contactBlock } from './contact';
 import { coreServicesBlock } from './core-services';
 import { dividerBlock } from './divider';
@@ -34,4 +35,6 @@ export const templates: Record<string, Template[]> = {
     logoBlock,
     serviceMenuBlock,
   ],
+  box: [childBoxBlock, dividerBlock],
+  childBox: [boxBlock, dividerBlock]
 };

@@ -1,4 +1,4 @@
-import { chakra, Divider } from '@chakra-ui/react';
+import { Box, chakra, Divider } from '@chakra-ui/react';
 
 import {
   About,
@@ -24,6 +24,7 @@ export function useComponents(type: 'section' | 'page') {
       sectionCover: SectionCover,
       serviceMenu: ServiceMenu,
       box: SectionBox,
+      childBox: SectionBox,
       logo: FullLogo,
       divider: chakra(Divider, {
         baseStyle: {
@@ -44,6 +45,7 @@ export function useComponents(type: 'section' | 'page') {
       section: Section,
       sectionCover: SectionCover,
       serviceMenu: ServiceMenu,
+      childBox: SectionBox,
     },
   };
   return components[type];
