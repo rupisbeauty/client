@@ -7,6 +7,8 @@ import { getBaseUrl } from '../../src/utils';
 
 /**
  * @NOTE: used by getStaticPaths and getStaticProps
+
+// SbfdQQqT @TODO: update this when out of sandbox
  * @SEE: 'src/pages/sandbox/[...page].tsx'
  *
  */
