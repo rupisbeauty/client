@@ -47,7 +47,7 @@ export const schema = defineSchema({
     },
     {
       name: 'categories',
-      label: 'Service Categories',
+      label: 'Services',
       path: '_content/categories',
       format: 'mdx',
       ui: {

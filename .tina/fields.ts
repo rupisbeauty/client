@@ -2,12 +2,12 @@ import { theme } from '@chakra-ui/react';
 import { Template } from 'tinacms';
 
 import {
-mapColors,
-mapOptions,
-mapSemanticTokens,
-objectFit,
-objectPosition,
-scale
+  mapColors,
+  mapOptions,
+  mapSemanticTokens,
+  objectFit,
+  objectPosition,
+  scale,
 } from './utils';
 
 import { paths } from '../chakra.ui/icons/paths';
@@ -164,7 +164,7 @@ export const fields: Record<string, Template['fields']> = {
     },
     {
       name: 'slug',
-      label: 'Slug',
+      label: 'Slug (all lowercase and no spaces)',
       type: 'string',
       required: true,
       isTitle: true,

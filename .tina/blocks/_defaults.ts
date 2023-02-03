@@ -42,9 +42,9 @@ export const defaults = {
     },
   },
   divider: {
-    title: '👩‍💼 Change This title ',
+    title: 'Horizontal Divider',
     orientation: 'horizontal',
-    borderColor: 'gray.400',
+    borderColor: 'gray.200',
   },
   hero: {
     heading: 'Insert Your Most Impactful Statement Here',
