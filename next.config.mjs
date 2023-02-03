@@ -19,6 +19,8 @@ const config = {
       'raw.githubusercontent.com',
       'assets.tina.io',
     ],
+    // ::dS4OgwSTmS:: these are equiv. to defaults from `chakra.ui/theme/foundations/breakpoints`
+    deviceSizes: [400, 768, 992, 1280, 1536],
   },
   // @NOTE: use partytown to enable workers
   // yarn add -D @builder.io/partytown
