@@ -7,6 +7,7 @@ export const logoBlock: Template = {
   name: 'logo',
   ui: {
     defaultItem: defaults.logo,
+    previewSrc: '/blocks/preview-full-logo.jpg',
   },
   fields: [
     {

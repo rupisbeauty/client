@@ -36,5 +36,5 @@ export const templates: Record<string, Template[]> = {
     serviceMenuBlock,
   ],
   box: [childBoxBlock, dividerBlock],
-  childBox: [boxBlock, dividerBlock]
+  childBox: [boxBlock, dividerBlock],
 };

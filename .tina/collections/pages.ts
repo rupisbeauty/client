@@ -1,6 +1,12 @@
 import type { SchemaField, Template } from 'tinacms';
 
 import { templates } from '../blocks';
+import { aboutBlock } from '../blocks/about';
+import { contactBlock } from '../blocks/contact';
+import { coreServicesBlock } from '../blocks/core-services';
+import { heroBlock } from '../blocks/hero';
+import { locationCTABlock } from '../blocks/location-cta';
+import { logoBlock } from '../blocks/logo';
 import { fields } from '../fields';
 
 export const pages: { fields: SchemaField[] } = {
@@ -32,16 +38,40 @@ export const pages: { fields: SchemaField[] } = {
         // },
       },
     },
+    // {
+    //   type: 'rich-text',
+    //   name: 'body',
+    //   label: 'body',
+    //   isBody: true,
+    //   ui: {},
+    //   templates: templates.page,
+    // },
+
     {
-      type: 'rich-text',
-      name: 'body',
-      label: 'body',
-      isBody: true,
-      ui: {},
-      templates: templates.page,
+      // // 00icQ @WIP : block migration
+      type: 'object',
+      name: 'blocks',
+      label: 'Page Sections',
+      list: true,
+      ui: {
+        visualSelector: true,
+      },
+      templates: [
+        // logoBlock,
+        heroBlock,
+        aboutBlock,
+        locationCTABlock,
+        // coreServicesBlock,
+        // contactBlock,
+        // sectionTitleBlock,
+        // sectionCoverBlock,
+        // dividerBlock,
+      ],
     },
+
+    // ...fields?.blocks,
     ...fields?.seo,
-    ...fields?.settings,
+    ...fields?.settings, // show: header, footer, emailCta, reviewHeader
     ...fields?.colors,
   ],
 };
