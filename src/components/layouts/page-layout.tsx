@@ -15,7 +15,7 @@ import {
 } from 'chakra.ui';
 
 import { SEOConfig } from '@/utils/seo/base';
-import layout from '__data/layout.json';
+import layout from '__data/layout.json'; // #81a2 Splash Page Removal flip show header/footer
 
 export const PageLayout: FC<LayoutProps> = ({
   title = 'Site Title',

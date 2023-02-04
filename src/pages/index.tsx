@@ -1,27 +1,20 @@
-import type { NextPage } from 'next';
+import { ComingSoon,PageLayout } from '@/components';
+import { type NextPage } from 'next';
 
-import {
-  About,
-  ContactInfo,
-  CoreServices,
-  Hero,
-  PageLayout,
-  VisitLocationCTA,
-} from '@/components';
-
-const Sandbox: NextPage = () => {
+// #81a2 Splash Page Removal
+const Home: NextPage = () => {
   return (
-    <PageLayout title="Rupi Beauty Studio" showCta showReviews>
-      <Hero />
-      <VisitLocationCTA title="Come Visit Us At Our Newest Location" />
-      <About />
-
-      <CoreServices />
-      <ContactInfo />
-    </PageLayout>
+    <>
+      <PageLayout
+        title="Rupi Beauty Studio"
+        description="Eyebrows, facials, waxing & more"
+      >
+        <ComingSoon />
+      </PageLayout>
+    </>
   );
 };
 
 // @link: https://codepen.io/silvandiepen/pen/NOboze
 
-export default Sandbox;
+export default Home;
