@@ -1,7 +1,7 @@
 ---
 title: Express
 price: 60
-duration: 30
+duration: 30min
 slug: express
 showHeader: true
 showFooter: true
