@@ -1,5 +1,5 @@
-import { chakra,Container as CUIContainer } from '@chakra-ui/react';
-import { useEffect,useState } from 'react';
+import { chakra, Container as CUIContainer } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 import type { ContainerProps } from '@chakra-ui/react';

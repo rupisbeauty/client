@@ -1,19 +1,14 @@
 import { Container, Divider } from '@chakra-ui/react';
 import React from 'react';
 
-import type { PagesBlocks } from '.tina';
+import type { PagesBlocks, PagesBlocksSectionCover } from '.tina';
 import type { DividerProps } from '@chakra-ui/react';
 
 import { AboutBlock } from '../about';
 import { ContactInfoBlock } from '../contact';
 import { FullLogoBlock } from '../full-logo-block';
 import { HeroBlock } from '../hero/hero-block';
-import {
-  SectionCover,
-  SectionCoverBlock,
-  SectionTitleBlock,
-  type SectionCoverProps,
-} from '../section';
+import { SectionCoverBlock, SectionTitleBlock } from '../section';
 import { CoreServicesBlock, ServiceMenuBlock } from '../services';
 import { LocationCTABlock } from '../visit-location-cta-block';
 
@@ -51,8 +46,8 @@ export const PageBlocks: React.FC<{ blocks: PagesBlocks[] }> = (props) => {
             );
           case 'PagesBlocksSectionCover':
             return (
-              <SectionCover
-                {...(block as SectionCoverProps)} // @FIXME: type issue
+              <SectionCoverBlock
+                {...(block as PagesBlocksSectionCover)} // @FIXME: type issue
                 key={block.__typename}
               />
             );

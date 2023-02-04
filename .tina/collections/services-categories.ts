@@ -13,7 +13,6 @@ export const categories: { fields: SchemaField[] } = {
   fields: [
     ...fields?.page,
     {
-      // 00icQ @WIP : block migration
       type: 'object',
       name: 'blocks',
       label: 'Service Category Sections',

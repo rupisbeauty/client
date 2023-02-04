@@ -1,27 +1,10 @@
-import type { PagesBlocksSectionCover } from '.tina';
-import {
-  AspectRatio,
-  Box,
-  Container,
-  type ResponsiveValue,
-} from '@chakra-ui/react';
-import { ChakraNextImage, ChImage } from 'chakra.ui';
+import { AspectRatio, Container } from '@chakra-ui/react';
 import Image from 'next/image';
 
-export type SectionCoverProps = {
-  image: {
-    src: string;
-    alt: string;
-    attr?: string;
-    size?: { width?: number; height?: number };
-    pos?: {
-      objectFit?: any;
-      objectPosition?: any;
-      transform?: any;
-    };
-    my: number; // @NOTE: should be added to the CUIContainer below
-  };
-};
+import type {
+  CategoriesBlocksSectionCover,
+  PagesBlocksSectionCover,
+} from '.tina';
 
 const defaultPos = {
   objectFit: 'cover',
@@ -29,37 +12,9 @@ const defaultPos = {
   transform: 'scale(1)',
 };
 
-// 00icQ @WIP : block migration : @FIXME: Remove after migration
-export const SectionCover: React.FC<SectionCoverProps> = ({ image }) => {
-  return image ? (
-    <Container
-      h="100%"
-      maxH="32vh"
-      w="full"
-      overflow="hidden"
-      layerStyle="container.basic"
-      rounded="xl"
-      shadow="xl"
-      p={0}
-      my={24}
-    >
-      <AspectRatio ratio={2 / 3}>
-        <Image
-          src={image.src}
-          alt={
-            image.alt?.trim() +
-            ' ' +
-            String(image?.attr ? image.attr?.trim() : '')
-          }
-          fill={true}
-          style={Object.assign(defaultPos, image?.pos)}
-        />
-      </AspectRatio>
-    </Container>
-  ) : null;
-};
-
-export const SectionCoverBlock: React.FC<PagesBlocksSectionCover> = (props) => {
+export const SectionCoverBlock: React.FC<
+  PagesBlocksSectionCover | CategoriesBlocksSectionCover
+> = (props) => {
   const objectFit = props?.image?.pos?.objectFit;
   const imagePosStyle = Object.assign(defaultPos, {
     ...props?.image?.pos,

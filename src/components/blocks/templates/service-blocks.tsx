@@ -1,14 +1,13 @@
 import { Container, Divider } from '@chakra-ui/react';
 import React from 'react';
 
-import type { CategoriesBlocks } from '.tina';
+import type { CategoriesBlocks, CategoriesBlocksSectionCover } from '.tina';
 import type { DividerProps } from '@chakra-ui/react';
 
 import { FullLogoBlock } from '../full-logo-block';
 import {
   SectionCoverBlock,
   SectionTitleBlock,
-  type SectionCoverProps,
 } from '../section';
 import { ServiceMenuBlock } from '../services';
 import { LocationCTABlock } from '../visit-location-cta-block';
@@ -42,7 +41,7 @@ export const ServiceBlocks: React.FC<{ blocks: CategoriesBlocks[] }> = (
           case 'CategoriesBlocksSectionCover':
             return (
               <SectionCoverBlock
-                {...(block as SectionCoverProps)} // @FIXME: type issue
+                {...(block as CategoriesBlocksSectionCover)} // @FIXME: type issue
                 key={block.__typename}
               />
             );

@@ -20,13 +20,6 @@ export const pages: { fields: SchemaField[] } = {
       name: 'title',
       isTitle: true,
       required: true,
-      // @NOTE: removed validation to allow the search engine to auto-truncate as needed
-      // ui: {
-      //   validate: (value) => {
-      //     if (value?.length && value.length > 70)
-      //       return `-${Number(value.length) - 70} chars remaining / 70`;
-      //   },
-      // },
     },
     {
       type: 'string',
@@ -35,14 +28,9 @@ export const pages: { fields: SchemaField[] } = {
       required: true,
       ui: {
         component: 'textarea',
-        // validate: (value) => {
-        //   if (value?.length && value.length > 160)
-        //     return `-${Number(value.length) - 160} chars remaining / 160`;
-        // },
       },
     },
     {
-      // 00icQ @WIP : block migration
       type: 'object',
       name: 'blocks',
       label: 'Page Sections',
@@ -63,8 +51,6 @@ export const pages: { fields: SchemaField[] } = {
         serviceMenuBlock,
       ],
     },
-
-    // ...fields?.blocks,
     ...fields?.seo,
     ...fields?.settings, // show: header, footer, emailCta, reviewHeader
     ...fields?.colors,

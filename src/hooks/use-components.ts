@@ -1,30 +1,17 @@
-// 00icQ #FIXME: @WIP : block migration - this may no longer be useful
+// @NOTE: this is still used by section-block component internally
 
 import { Box, chakra, Divider } from '@chakra-ui/react';
 
-import {
-  About,
-  ContactInfo,
-  CoreServices,
-  Hero,
-  Section,
-  VisitLocationCTA,
-} from '@/components';
-import {
-  FullLogo,
-  SectionBox,
-  SectionCover,
-  SectionTitle,
-  ServiceMenu,
-} from '../components/blocks';
+import { Section } from '@/components';
+import { FullLogo, SectionBox, SectionTitle } from '../components/blocks';
 
 export function useComponents(type: 'section' | 'page') {
   // @NOTE: components have to be defined inside the function otherwise Tina does not pick them up on re-render
   const components = {
     section: {
       sectionTitle: SectionTitle,
-      sectionCover: SectionCover,
-      serviceMenu: ServiceMenu,
+      // sectionCover: SectionCover,
+      // serviceMenu: ServiceMenu,
       box: SectionBox,
       childBox: SectionBox,
       logo: FullLogo,
@@ -37,16 +24,16 @@ export function useComponents(type: 'section' | 'page') {
     },
     page: {
       logo: FullLogo,
-      about: About,
-      hero: Hero,
+      // about: About,
+      // hero: Hero,
       sectionTitle: SectionTitle,
       divider: Divider,
-      locationCTA: VisitLocationCTA,
-      contact: ContactInfo,
-      coreServices: CoreServices,
+      // locationCTA: VisitLocationCTA,
+      // contact: ContactInfo,
+      // coreServices: CoreServices,
       section: Section,
-      sectionCover: SectionCover,
-      serviceMenu: ServiceMenu,
+      // sectionCover: SectionCover,
+      // serviceMenu: ServiceMenu,
       childBox: SectionBox,
     },
   };

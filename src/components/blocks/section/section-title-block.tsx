@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import type { FC } from 'react';
 
-// 00icQ @WIP : block migration : @FIXME: Remove after migration
+// @NOTE: Used by other blocks to internalize section title
 export const SectionTitle: FC<{ title: string }> = ({ title }) => {
   return (
     <VStack my={12}>
