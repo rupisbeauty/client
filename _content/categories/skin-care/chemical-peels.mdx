@@ -12,8 +12,8 @@ image:
 settings:
   showHeader: true
   showFooter: true
-  showCta: false
-  showReviews: false
+  showCta: true
+  showReviews: true
 seo:
   title: Rupi Beauty Studio
   description: Rupi Beauty Studio proudly offers
@@ -26,7 +26,30 @@ options:
   - option: _content/options/skin-care/chemical-peels/jessner.mdx
   - option: _content/options/skin-care/chemical-peels/mandelic.mdx
   - option: _content/options/skin-care/chemical-peels/pyruvic.mdx
+blocks:
+  - title: Rupi Beauty Studio Logo
+    _template: logo
+  - orientation: horizontal
+    borderColor: gray.400
+    _template: divider
+  - image:
+      src: /uploads/services/chemical-peels.webp
+      alt: Chemical Peel Services | Rupi Beauty Studio
+      size:
+        width: 1920
+        height: 1280
+    _template: sectionCover
+  - title: Chemical Peel Services
+    _template: sectionTitle
+  - options:
+      - option: _content/options/skin-care/chemical-peels/body.mdx
+      - option: _content/options/skin-care/chemical-peels/glycolic.mdx
+      - option: _content/options/skin-care/chemical-peels/jessner.mdx
+      - option: _content/options/skin-care/chemical-peels/mandelic.mdx
+      - option: _content/options/skin-care/chemical-peels/pyruvic.mdx
+    _template: serviceMenu
 ---
+
 
 <section
   title="Rupi Logo"
