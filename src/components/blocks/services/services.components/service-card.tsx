@@ -1,11 +1,11 @@
 import {
-AspectRatio,
-Button,
-ButtonGroup,
-Flex,
-Heading,
-Stack,
-Text
+  AspectRatio,
+  Button,
+  ButtonGroup,
+  Flex,
+  Heading,
+  Stack,
+  Text,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -39,11 +39,11 @@ export const ServiceCard: React.FC<PagesBlocksServiceMenuRelatedServices> = (
           </AspectRatio>
         ) : null}
       </Flex>
-      <Stack layerStyle="card.body">
+      <Stack layerStyle="card.body" h="full">
         {props.service?.title ? (
-          <Heading as="h3" px={3} textStyle="card.title" data-tinafield="title">
+          <Text as="h3" px={3} textStyle="card.title" data-tinafield="title">
             {props.service?.title}
-          </Heading>
+          </Text>
         ) : null}
 
         {props.service?.description ? (

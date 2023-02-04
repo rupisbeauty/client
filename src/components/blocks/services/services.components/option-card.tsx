@@ -14,39 +14,41 @@ export const OptionCard: React.FC<CategoriesBlocksServiceMenuOptions> = (
         borderLeftRadius="xl"
         w="30%"
       >
-        <Box
-          position="absolute"
-          zIndex={2}
-          bottom={4}
-          left={0}
-          boxSize={16}
-          _after={{
-            content: '""',
-            position: 'absolute',
-            width: 'full',
-            height: 'full',
-            background: 'white',
-            bottom: 4,
-            left: 2,
-            zIndex: -1,
-            opacity: 0.7,
-            rounded: '100%',
-            minH: '16',
-          }}
-        >
-          <Flex w="full" justify="center" ml={1.5} mt={1}>
-            <Heading
-              px={2}
-              color="gray.600"
-              fontWeight={600}
-              fontFamily="body"
-              fontSize={{ base: 'md', xl: '2xl' }}
-              data-tinafield="price"
-            >
-              ${props?.option?.price}
-            </Heading>
-          </Flex>
-        </Box>
+        {props?.option?.price ? (
+          <Box
+            position="absolute"
+            zIndex={2}
+            bottom={4}
+            left={0}
+            boxSize={16}
+            _after={{
+              content: '""',
+              position: 'absolute',
+              width: 'full',
+              height: 'full',
+              background: 'white',
+              bottom: 4,
+              left: 2,
+              zIndex: -1,
+              opacity: 0.7,
+              rounded: '100%',
+              minH: '16',
+            }}
+          >
+            <Flex w="full" justify="center" ml={1.5} mt={1}>
+              <Heading
+                px={2}
+                color="gray.600"
+                fontWeight={600}
+                fontFamily="body"
+                fontSize={{ base: 'md', xl: '2xl' }}
+                data-tinafield="price"
+              >
+                ${props?.option?.price}
+              </Heading>
+            </Flex>
+          </Box>
+        ) : null}
         {props?.option?.image ? (
           <AspectRatio boxSize="100%">
             <Image

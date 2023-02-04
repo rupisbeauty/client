@@ -57,7 +57,7 @@ export const customTextStyles = {
   },
   card: {
     title: {
-      fontSize: 'md',
+      fontSize: '2xl',
       fontFamily: 'body',
       color: 'teal.400',
     },
