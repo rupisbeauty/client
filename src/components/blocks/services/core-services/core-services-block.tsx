@@ -32,7 +32,6 @@ export const CoreServicesBlock: React.FC<PagesBlocksCoreServices> = (props) => {
           'linear(to-r, #FDE4CC, #FFF1E4 )',
           'linear(to-b, #FFF1E4, #FDE4CC )',
         ]}
-        tina-data
       >
         <SectionTitle title={"Rupi's Core Services"} />
         <SimpleGrid

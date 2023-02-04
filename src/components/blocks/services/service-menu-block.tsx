@@ -11,7 +11,14 @@ export const ServiceMenuBlock: React.FC<
   PagesBlocksServiceMenu | CategoriesBlocksServiceMenu
 > = (props) => {
   return (
-    <Box w="full" layerStyle="box.responsive" bg="barBg" rounded="xl" p={4}>
+    <Box
+      w="full"
+      layerStyle="box.responsive"
+      bg="barBg"
+      rounded="xl"
+      p={4}
+      my={24}
+    >
       {props?.options?.length ? (
         <SimpleGrid
           w={['full']}

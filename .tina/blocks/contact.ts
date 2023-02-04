@@ -5,7 +5,7 @@ import { defaults } from './_defaults';
 export const contactBlock: Template = {
   label: 'Contact Information',
   name: 'contact',
-  ui: { defaultItem: defaults.contact, previewSrc: '/blocks/preview-contact.jpg' },
+  ui: { defaultItem: defaults.contact, previewSrc: '/blocks/preview-contact.webp' },
   fields: [
     {
       type: 'string',

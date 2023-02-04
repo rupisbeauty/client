@@ -9,7 +9,7 @@ export const heroBlock: Template = {
   ui: {
     defaultItem: defaults.hero,
     // @TODO: add all previews to blocks
-    previewSrc: `/blocks/preview-hero-composite.jpg`,
+    previewSrc: `/blocks/preview-hero-composite.webp`,
   },
   fields: [
     {

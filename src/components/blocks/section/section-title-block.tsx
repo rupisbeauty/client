@@ -39,7 +39,7 @@ export const SectionTitleBlock: FC<
   PagesBlocksSectionTitle | CategoriesBlocksSectionTitle
 > = ({ title }) => {
   return (
-    <VStack my={12}>
+    <VStack mt={28} mb={9}>
       <chakra.h1
         color="gray.600"
         lineHeight="1"

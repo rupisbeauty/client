@@ -5,7 +5,7 @@ export const sectionCoverBlock: Template = {
   label: 'Cover Image',
   name: 'sectionCover',
   ui: {
-    previewSrc: '/blocks/preview-section-cover.jpg',
+    previewSrc: '/blocks/preview-section-cover.webp',
   },
   fields: fields?.image as Template['fields'],
 };

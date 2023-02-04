@@ -8,7 +8,7 @@ export const serviceMenuBlock: Template = {
   name: 'serviceMenu',
   ui: {
     defaultItem: defaults.serviceMenu,
-    previewSrc: '/blocks/preview-service-menu.jpg',
+    previewSrc: '/blocks/preview-service-menu.webp',
   },
   fields: [
     // {

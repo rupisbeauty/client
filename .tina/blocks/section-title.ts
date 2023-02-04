@@ -7,7 +7,7 @@ export const sectionTitleBlock: Template = {
   name: 'sectionTitle',
   ui: {
     defaultItem: defaults.sectionTitle,
-    previewSrc: '/blocks/preview-section-title.jpg',
+    previewSrc: '/blocks/preview-section-title.webp',
   },
   fields: [
     {

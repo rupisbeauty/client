@@ -7,7 +7,7 @@ export const locationCTABlock: Template = {
   name: 'locationCTA',
   ui: {
     defaultItem: defaults.locationCTA,
-    previewSrc: '/blocks/preview-location-cta.jpg',
+    previewSrc: '/blocks/preview-location-cta.webp',
   },
   fields: [
     {

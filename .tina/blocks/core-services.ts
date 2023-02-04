@@ -1,4 +1,4 @@
-import { Field, Template } from 'tinacms';
+import { Field,Template } from 'tinacms';
 
 import { fields } from '../fields';
 import { defaults } from './_defaults';
@@ -11,7 +11,7 @@ export const coreServicesBlock: Template = {
   name: 'coreServices',
   ui: {
     defaultItem: defaults.coreServices,
-    previewSrc: '/blocks/preview-core-services.jpg',
+    previewSrc: '/blocks/preview-core-services.webp',
   },
   fields: [...(relatedServices as Template['fields'])],
 };
