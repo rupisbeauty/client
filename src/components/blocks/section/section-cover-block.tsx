@@ -1,11 +1,11 @@
 import type { PagesBlocksSectionCover } from '.tina';
 import {
-AspectRatio,
-Box,
-Container,
-type ResponsiveValue
+  AspectRatio,
+  Box,
+  Container,
+  type ResponsiveValue,
 } from '@chakra-ui/react';
-import { ChakraNextImage,ChImage } from 'chakra.ui';
+import { ChakraNextImage, ChImage } from 'chakra.ui';
 import Image from 'next/image';
 
 export type SectionCoverProps = {
@@ -24,7 +24,7 @@ export type SectionCoverProps = {
 };
 
 const defaultPos = {
-  objectFit: ['cover'],
+  objectFit: 'cover',
   objectPosition: 'top center',
   transform: 'scale(1)',
 };
@@ -58,7 +58,6 @@ export const SectionCover: React.FC<SectionCoverProps> = ({ image }) => {
     </Container>
   ) : null;
 };
-
 
 export const SectionCoverBlock: React.FC<PagesBlocksSectionCover> = (props) => {
   const objectFit = props?.image?.pos?.objectFit;

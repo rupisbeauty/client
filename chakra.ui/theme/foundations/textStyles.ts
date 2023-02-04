@@ -42,7 +42,6 @@ export const customTextStyles = {
     fontFamily: 'body',
     fontWeight: 'normal',
     lineHeight: 'small',
-
   },
   tiny: {
     fontSize: 'xs',
@@ -55,6 +54,18 @@ export const customTextStyles = {
     fontFamily: 'heading',
     fontWeight: 700,
     lineHeight: 1.2,
+  },
+  card: {
+    title: {
+      fontSize: 'md',
+      fontFamily: 'body',
+      color: 'teal.400',
+    },
+    'title-sm': {
+      fontSize: 'xl',
+      fontFamily: 'body',
+      color: 'teal.400',
+    },
   },
   container: {
     default: {
@@ -71,4 +82,4 @@ export const customTextStyles = {
   },
 };
 
-export const textStyles: ChakraTheme['textStyles'] = customTextStyles
+export const textStyles: ChakraTheme['textStyles'] = customTextStyles;

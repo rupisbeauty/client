@@ -128,7 +128,7 @@ export const ChakraCard: React.FC<{
   );
 };
 
-export const ChakraCard2: React.FC<PagesBlocksServiceMenuRelatedServices> = (
+export const ServiceCard: React.FC<PagesBlocksServiceMenuRelatedServices> = (
   props
 ) => {
   const hasOptions = !!props?.service?.options?.length;
@@ -136,42 +136,28 @@ export const ChakraCard2: React.FC<PagesBlocksServiceMenuRelatedServices> = (
 
   // @TODO: convert this into a generic reusable responsive card component
   return (
-    <Stack
-      borderWidth="1px"
-      borderRadius="lg"
-      w={{ sm: '100%', lg: 'auto' }}
-      h={{ sm: 'auto', lg: 'xs' }}
-      minW={{ sm: 'auto', xl: 'xl' }}
-      direction={{ base: 'column', md: 'row' }}
-      bg="white"
-      boxShadow={'2xl'}
-      rounded="xl"
-      mx="auto"
-    >
-      <Flex flex={1} bg="blue.200" overflow="hidden" borderLeftRadius="md">
+    <Stack layerStyle="card.default" direction={{ base: 'column', md: 'row' }}>
+      <Flex layerStyle="card.header" borderLeftRadius="xl">
         {props?.service?.image ? (
           <AspectRatio boxSize="100%">
             <Image
               fill={true}
               src={String(props?.service?.image?.src)}
               alt={String(props?.service?.image?.alt)}
-              {...props?.service?.image?.pos}
+              style={{
+                objectFit: 'cover',
+                objectPosition: String(
+                  props?.service?.image?.pos?.objectPosition
+                ),
+                transform: String(props?.service?.image?.pos?.transform),
+              }}
             />
           </AspectRatio>
         ) : null}
       </Flex>
-      <Stack
-        flex={1}
-        flexDirection="column"
-        justifyContent="center"
-        pt={6}
-        px={2}
-        pb={4}
-        h="auto"
-        gap={3}
-      >
+      <Stack layerStyle="card.body">
         {props.service?.title ? (
-          <Heading px={3} fontSize={'2xl'} fontFamily={'body'} color="teal.40">
+          <Heading as="h3" px={3} textStyle="card.title">
             {props.service?.title}
           </Heading>
         ) : null}
@@ -188,8 +174,8 @@ export const ChakraCard2: React.FC<PagesBlocksServiceMenuRelatedServices> = (
         />
 
         {hasOptions || hasServices ? (
-          <ButtonGroup
-            as={Stack}
+          <Stack
+            as={ButtonGroup}
             direction="row"
             w="full"
             mt={'auto'}
@@ -208,9 +194,9 @@ export const ChakraCard2: React.FC<PagesBlocksServiceMenuRelatedServices> = (
                 bg: 'gray.200',
               }}
             >
-              Learn More
+              See Options
             </Button>
-          </ButtonGroup>
+          </Stack>
         ) : null}
       </Stack>
     </Stack>

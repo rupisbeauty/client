@@ -3,7 +3,7 @@ import { Box, SimpleGrid } from '@chakra-ui/react';
 import type { AppRouter } from '@/server/trpc/router/_app';
 import type { inferProcedureOutput } from '@trpc/server';
 
-import { ChakraCard, ChakraCard2 } from './services.components';
+import { ChakraCard, OptionCard, ServiceCard } from './services.components';
 
 import type {
   CategoriesBlocksServiceMenu,
@@ -52,7 +52,25 @@ export const ServiceMenuBlock: React.FC<
   PagesBlocksServiceMenu | CategoriesBlocksServiceMenu
 > = (props) => {
   return (
-    <Box layerStyle="box.responsive" p={6} bg="barBg" rounded="xl">
+    <Box w="full" layerStyle="box.responsive" bg="barBg" rounded="xl" p={4}>
+      {props?.options?.length ? (
+        <SimpleGrid
+          w={['full']}
+          columns={[1, null, 2]}
+          gap={[12]}
+          p={6}
+          m={0}
+          mx="auto"
+          alignItems="center"
+          justifyContent="center"
+        >
+          {props?.options.map((option) => {
+            if (option?.__typename == 'CategoriesBlocksServiceMenuOptions') {
+              return <OptionCard key={option?.option?.id} {...option} />;
+            }
+          })}
+        </SimpleGrid>
+      ) : null}
       <SimpleGrid
         w={['full']}
         columns={[1, null, null, 2]}
@@ -66,7 +84,7 @@ export const ServiceMenuBlock: React.FC<
         {props?.relatedServices &&
           props?.relatedServices.map((service) => {
             return (
-              <ChakraCard2
+              <ServiceCard
                 key={service?.service?.title}
                 service={service?.service}
               />
