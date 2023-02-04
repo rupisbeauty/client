@@ -1,5 +1,5 @@
-import { PagesBlocksSectionTitle } from '.tina';
-import { Box,chakra,VStack } from '@chakra-ui/react';
+import { CategoriesBlocksSectionTitle, PagesBlocksSectionTitle } from '.tina';
+import { Box, chakra, VStack } from '@chakra-ui/react';
 import Image from 'next/image';
 
 import type { FC } from 'react';
@@ -35,7 +35,9 @@ export const SectionTitle: FC<{ title: string }> = ({ title }) => {
   );
 };
 
-export const SectionTitleBlock: FC<PagesBlocksSectionTitle> = ({ title }) => {
+export const SectionTitleBlock: FC<
+  PagesBlocksSectionTitle | CategoriesBlocksSectionTitle
+> = ({ title }) => {
   return (
     <VStack my={12}>
       <chakra.h1

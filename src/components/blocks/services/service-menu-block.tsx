@@ -1,11 +1,14 @@
-import { Box, Container, SimpleGrid } from '@chakra-ui/react';
+import { Box, SimpleGrid } from '@chakra-ui/react';
 
 import type { AppRouter } from '@/server/trpc/router/_app';
 import type { inferProcedureOutput } from '@trpc/server';
 
 import { ChakraCard, ChakraCard2 } from './services.components';
 
-import type { PagesBlocksServiceMenu } from '.tina';
+import type {
+  CategoriesBlocksServiceMenu,
+  PagesBlocksServiceMenu,
+} from '.tina';
 import { trpc } from '@/utils/trpc';
 
 export type AllServicesFrontMatter = inferProcedureOutput<
@@ -45,7 +48,9 @@ export const ServiceMenu = ({ options, relatedServices, ...props }: any) => {
   );
 };
 
-export const ServiceMenuBlock: React.FC<PagesBlocksServiceMenu> = (props) => {
+export const ServiceMenuBlock: React.FC<
+  PagesBlocksServiceMenu | CategoriesBlocksServiceMenu
+> = (props) => {
   return (
     <Box layerStyle="box.responsive" p={6} bg="barBg" rounded="xl">
       <SimpleGrid

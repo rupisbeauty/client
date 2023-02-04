@@ -1,43 +1,33 @@
 import { Container, Divider } from '@chakra-ui/react';
 import React from 'react';
 
-import type { PagesBlocks } from '.tina';
+import type { CategoriesBlocks } from '.tina';
 import type { DividerProps } from '@chakra-ui/react';
 
-import { AboutBlock } from '../about';
-import { ContactInfoBlock } from '../contact';
 import { FullLogoBlock } from '../full-logo-block';
-import { HeroBlock } from '../hero/hero-block';
 import {
-  SectionCover,
   SectionCoverBlock,
   SectionTitleBlock,
   type SectionCoverProps,
 } from '../section';
-import { CoreServicesBlock, ServiceMenuBlock } from '../services';
+import { ServiceMenuBlock } from '../services';
 import { LocationCTABlock } from '../visit-location-cta-block';
 
-export const PageBlocks: React.FC<{ blocks: PagesBlocks[] }> = (props) => {
+export const ServiceBlocks: React.FC<{ blocks: CategoriesBlocks[] }> = (
+  props
+) => {
   return (
     // @TODO: refactor to use an object Map instead of switch
     <>
       {props?.blocks?.map((block) => {
         switch (block?.__typename) {
-          case 'PagesBlocksLogo':
+          case 'CategoriesBlocksLogo':
             return <FullLogoBlock key={block.__typename} />;
-          case 'PagesBlocksHero':
-            return <HeroBlock {...block} key={block.__typename} />;
-          case 'PagesBlocksAbout':
-            return <AboutBlock {...block} key={block.__typename} />;
-          case 'PagesBlocksLocationCTA':
+          case 'CategoriesBlocksLocationCTA':
             return <LocationCTABlock {...block} key={block.__typename} />;
-          case 'PagesBlocksCoreServices':
-            return <CoreServicesBlock {...block} key={block.__typename} />;
-          case 'PagesBlocksContact':
-            return <ContactInfoBlock {...block} key={block.__typename} />;
-          case 'PagesBlocksSectionTitle':
+          case 'CategoriesBlocksSectionTitle':
             return <SectionTitleBlock {...block} key={block.__typename} />;
-          case 'PagesBlocksDivider':
+          case 'CategoriesBlocksDivider':
             return (
               <Container maxW="container.xl" w="full">
                 <Divider
@@ -49,14 +39,14 @@ export const PageBlocks: React.FC<{ blocks: PagesBlocks[] }> = (props) => {
                 />
               </Container>
             );
-          case 'PagesBlocksSectionCover':
+          case 'CategoriesBlocksSectionCover':
             return (
-              <SectionCover
+              <SectionCoverBlock
                 {...(block as SectionCoverProps)} // @FIXME: type issue
                 key={block.__typename}
               />
             );
-          case 'PagesBlocksServiceMenu':
+          case 'CategoriesBlocksServiceMenu':
             return <ServiceMenuBlock {...block} key={block.__typename} />;
           default:
             return null;

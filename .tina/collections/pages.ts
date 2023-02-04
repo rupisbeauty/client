@@ -9,8 +9,8 @@ import { locationCTABlock } from '../blocks/location-cta';
 import { logoBlock } from '../blocks/logo';
 import { sectionCoverBlock } from '../blocks/section-cover';
 import { sectionTitleBlock } from '../blocks/section-title';
-import { fields } from '../fields';
 import { serviceMenuBlock } from '../blocks/service-menu';
+import { fields } from '../fields';
 
 export const pages: { fields: SchemaField[] } = {
   fields: [
@@ -41,17 +41,8 @@ export const pages: { fields: SchemaField[] } = {
         // },
       },
     },
-    // {
-    //   type: 'rich-text',
-    //   name: 'body',
-    //   label: 'body',
-    //   isBody: true,
-    //   ui: {},
-    //   templates: templates.page,
-    // },
-
     {
-      // // 00icQ @WIP : block migration
+      // 00icQ @WIP : block migration
       type: 'object',
       name: 'blocks',
       label: 'Page Sections',
@@ -69,7 +60,7 @@ export const pages: { fields: SchemaField[] } = {
         sectionTitleBlock,
         sectionCoverBlock,
         dividerBlock,
-        serviceMenuBlock
+        serviceMenuBlock,
       ],
     },
 

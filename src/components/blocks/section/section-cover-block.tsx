@@ -1,11 +1,11 @@
 import type { PagesBlocksSectionCover } from '.tina';
 import {
-  AspectRatio,
-  Box,
-  Container as CUIContainer,
-  type ResponsiveValue,
+AspectRatio,
+Box,
+Container,
+type ResponsiveValue
 } from '@chakra-ui/react';
-import { ChakraNextImage, ChImage } from 'chakra.ui';
+import { ChakraNextImage,ChImage } from 'chakra.ui';
 import Image from 'next/image';
 
 export type SectionCoverProps = {
@@ -15,7 +15,6 @@ export type SectionCoverProps = {
     attr?: string;
     size?: { width?: number; height?: number };
     pos?: {
-      // n9ZOvMI0UGU @TODO: FIXME: type issue expect type to be of ObjectFit but does not accept string
       objectFit?: any;
       objectPosition?: any;
       transform?: any;
@@ -33,7 +32,7 @@ const defaultPos = {
 // 00icQ @WIP : block migration : @FIXME: Remove after migration
 export const SectionCover: React.FC<SectionCoverProps> = ({ image }) => {
   return image ? (
-    <CUIContainer
+    <Container
       h="100%"
       maxH="32vh"
       w="full"
@@ -44,7 +43,7 @@ export const SectionCover: React.FC<SectionCoverProps> = ({ image }) => {
       p={0}
       my={24}
     >
-      <AspectRatio ratio={3 / 4}>
+      <AspectRatio ratio={2 / 3}>
         <Image
           src={image.src}
           alt={
@@ -56,12 +55,11 @@ export const SectionCover: React.FC<SectionCoverProps> = ({ image }) => {
           style={Object.assign(defaultPos, image?.pos)}
         />
       </AspectRatio>
-    </CUIContainer>
+    </Container>
   ) : null;
 };
 
 
-// @WIP:
 export const SectionCoverBlock: React.FC<PagesBlocksSectionCover> = (props) => {
   const objectFit = props?.image?.pos?.objectFit;
   const imagePosStyle = Object.assign(defaultPos, {
@@ -69,20 +67,19 @@ export const SectionCoverBlock: React.FC<PagesBlocksSectionCover> = (props) => {
     objectFit: objectFit || defaultPos.objectFit,
   });
   return props?.image ? (
-    <CUIContainer
+    <Container
+      position="relative"
       w="full"
       maxW={['container.sm', 'container.md', 'container.lg', 'container.xl']}
-      maxH="72"
-      h="100%"
+      maxH="32vh"
       overflow="hidden"
       rounded="xl"
       shadow="xl"
       p={0}
       my={24}
-      // border="1px solid red"
     >
-      <AspectRatio ratio={1 / 4}>
-        {/* <Image
+      <AspectRatio ratio={3 / 1}>
+        <Image
           src={String(props?.image?.src)}
           alt={
             props?.image.alt?.trim() +
@@ -91,28 +88,13 @@ export const SectionCoverBlock: React.FC<PagesBlocksSectionCover> = (props) => {
           }
           fill={true}
           priority
-          style={imagePosStyle} // @TODO: FIXME: styles type issues
-        /> */}
-        <ChImage
-          src={String(props?.image?.src)}
-          alt={
-            props?.image.alt?.trim() +
-            ' ' +
-            String(props?.image?.attr ? props?.image.attr?.trim() : '')
-          }
-          width={Number(props?.image?.size?.width) || 1920}
-          height={Number(props?.image?.size?.height) || 1440}
-          // fill={true}
-          priority
-          // style={} // @TODO: FIXME: styles type issues
-          // style={{
-          //   objectFit: 'cover',
-          //   objectPosition: imagePosStyle.objectPosition,
-          //   transform: imagePosStyle.transform,
-          // }}
-          {...props?.image?.pos}
+          style={{
+            objectFit: 'cover',
+            objectPosition: imagePosStyle.objectPosition,
+            transform: imagePosStyle.transform,
+          }}
         />
       </AspectRatio>
-    </CUIContainer>
+    </Container>
   ) : null;
 };

@@ -27,8 +27,8 @@ export const sectionBlock: Template = {
       type: 'string',
       name: 'title',
       label: 'Title',
-      isTitle: true,
-      required: true,
+      // isTitle: true,
+      // required: true,
     },
     {
       type: 'rich-text',

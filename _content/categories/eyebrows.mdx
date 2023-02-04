@@ -14,8 +14,8 @@ image:
 settings:
   showHeader: true
   showFooter: true
-  showCta: false
-  showReviews: false
+  showCta: true
+  showReviews: true
 seo:
   title: Rupi Beauty Studio
   description: Rupi Beauty Studio proudly offers
@@ -28,39 +28,32 @@ options:
   - option: _content/options/eyebrows/lash-lift.mdx
 relatedServices:
   - service: _content/categories/eyebrows/tinting.mdx
+blocks:
+  - title: Rupi Beauty Studio Logo
+    _template: logo
+  - orientation: horizontal
+    borderColor: gray.400
+    _template: divider
+  - image:
+      src: /uploads/people/woman-eyes-covering-face.webp
+      alt: woman-covering-eyes
+      size:
+        width: 1200
+        height: 639
+      pos:
+        objectPosition: center center
+        objectFit: cover
+        transform: ''
+    _template: sectionCover
+  - title: Eyebrow Services
+    _template: sectionTitle
+  - options:
+      - option: _content/options/hair-removal/threading/eyebrow.mdx
+      - option: _content/options/eyebrows/lash-lift_brow-lamination.mdx
+      - option: _content/options/eyebrows/lash-lift.mdx
+      - option: _content/options/eyebrows/brow-lamination.mdx
+    relatedServices:
+      - service: _content/categories/eyebrows/tinting.mdx
+    _template: serviceMenu
 ---
-
-<section
-  title="Rupi Logo"
-  settings={{
-    width: "full",
-    backgroundColor: "#FFF1E4",
-    color: "#4A5568",
-    contained: true,
-    centerContent: true
-  }}
-  body={<>
-    <logo title="Rupi Beauty Studio Logo" />
-    
-    <divider title="simple divider" orientation="horizontal" borderColor="gray.300" />
-  </>}
-/>
-
-<section
-  title="First Section"
-  settings={{ colors: { backgroundColor: "#FFF1E4", color: "#4A5568" } }}
-  body={<>
-    <sectionTitle title="Eyebrow Services" />
-    
-    <serviceMenu
-    title="👩‍💼 Change This title "
-    options={[
-    { option: "_content/options/eyebrows/brow-lamination.mdx" },
-    { option: "_content/options/eyebrows/lash-lift.mdx" },
-    { option: "_content/options/eyebrows/lash-lift_brow-lamination.mdx" }
-    ]}
-    relatedServices={[{ service: "_content/categories/eyebrows/tinting.mdx" }]}
-    />
-  </>}
-/>
 
