@@ -1,4 +1,4 @@
-import { SimpleGrid } from '@chakra-ui/react';
+import { Box, Container, SimpleGrid } from '@chakra-ui/react';
 
 import type { AppRouter } from '@/server/trpc/router/_app';
 import type { inferProcedureOutput } from '@trpc/server';
@@ -47,25 +47,27 @@ export const ServiceMenu = ({ options, relatedServices, ...props }: any) => {
 
 export const ServiceMenuBlock: React.FC<PagesBlocksServiceMenu> = (props) => {
   return (
-    <SimpleGrid
-      w={['full']}
-      columns={[1, null, null, 2]}
-      gap={[12]}
-      p={6}
-      m={0}
-      mx="auto"
-      alignItems="center"
-      justifyContent="center"
-    >
-      {props?.relatedServices &&
-        props?.relatedServices.map((service) => {
-          return (
-            <ChakraCard2
-              key={service?.service?.title}
-              service={service?.service}
-            />
-          );
-        })}
-    </SimpleGrid>
+    <Box layerStyle="box.responsive" p={6} bg="barBg" rounded="xl">
+      <SimpleGrid
+        w={['full']}
+        columns={[1, null, null, 2]}
+        gap={[12]}
+        p={6}
+        m={0}
+        mx="auto"
+        alignItems="center"
+        justifyContent="center"
+      >
+        {props?.relatedServices &&
+          props?.relatedServices.map((service) => {
+            return (
+              <ChakraCard2
+                key={service?.service?.title}
+                service={service?.service}
+              />
+            );
+          })}
+      </SimpleGrid>
+    </Box>
   );
 };

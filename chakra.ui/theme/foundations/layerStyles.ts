@@ -60,6 +60,11 @@ export const customLayerStyles = {
       opacity: '1',
       zIndex: 'auto',
     },
+    responsive: {
+      w: 'Full',
+      maxW: ['container.sm', 'container.md', 'container.lg', 'container.xl'],
+      mx: 'auto',
+    },
   },
 };
 
