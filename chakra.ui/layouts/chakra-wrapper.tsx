@@ -31,7 +31,8 @@ export const ChakraWrapper: FC<ChakraProps> = ({ cookies, children }) => {
       theme={theme}
       // colorModeManager={colorModeManager} //
     >
-      <CookieConsent />
+      {/* #81a2 Splash Page Removal */}
+      {/* <CookieConsent /> */}
       {children}
     </ChakraProvider>
   );

@@ -37,9 +37,9 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
       </SkipNavLink>
 
       {/* #81a2 Splash Page Removal F*/}
-      {isProd && appendScriptOnPage(['/', '/services']) ? (
+      {/* {isProd && appendScriptOnPage(['/', '/services']) ? (
         <Script src={process.env.NEXT_PUBLIC_TRUSTMARY} async />
-      ) : null}
+      ) : null} */}
       <ErrorBoundary>
         <SessionProvider session={session}>
           <ChakraWrapper cookies={cookies}>
