@@ -1,11 +1,14 @@
-import { MobileMenu, NavMenu } from '@/components';
-import { BRAND_DIR, CDN_URL } from '@/utils';
 import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
+
+import { MobileMenu, NavMenu } from '@/components';
+import { BRAND_DIR, CDN_URL } from '@/utils';
 import { Bar, ChakraNextImage } from '../components';
 import { ScrollSlide } from '../framer';
 
-export const Header = () => {
+import type { FC } from 'react';
+
+export const Header: FC = () => {
   return (
     <Box zIndex="docked" mt={{ base: 32, xl: 0 }}>
       <ScrollSlide dir="down" from="top">

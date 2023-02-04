@@ -1,7 +1,10 @@
-import { debug, dev, isClient, ONE_SECOND } from '@/utils';
 import { useToast } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+
+import type { FC } from 'react';
+
+import { debug, dev, isClient, ONE_SECOND } from '@/utils';
 
 type MessageRouterProps = {
   asPath: string;
@@ -13,7 +16,7 @@ type PrismaCustomError = {
   path: string[];
 };
 
-export const MessageRouter = ({ asPath }: MessageRouterProps) => {
+export const MessageRouter: FC<MessageRouterProps> = ({ asPath }) => {
   const router = useRouter();
   const [error, setError] = useState<string | boolean | undefined>(false);
   const [success, setSuccess] = useState<string | boolean | undefined>(false);

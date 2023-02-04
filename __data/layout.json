@@ -2,10 +2,10 @@
   "type": "default",
   "structure": {
     "header": {
-      "show": "true"
+      "show": "false"
     },
     "footer": {
-      "show": "true"
+      "show": "false"
     }
   }
 }

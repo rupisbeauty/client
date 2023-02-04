@@ -1,8 +1,9 @@
 // @link: https://blog.gilesperry.info/advanced-scroll-effects-in-framer
 
 import { useScroll, useTransform } from 'framer-motion';
-import type { ComponentType, FC } from 'react';
 import { createRef } from 'react';
+
+import type { ComponentType, FC } from 'react';
 
 // create a ref so we can attach it to the scroll container
 const ref = createRef<HTMLDivElement>();

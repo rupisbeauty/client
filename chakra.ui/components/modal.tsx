@@ -1,4 +1,3 @@
-import type { BoxProps, ModalProps } from '@chakra-ui/react';
 import {
   Button,
   Modal,
@@ -9,6 +8,9 @@ import {
   ModalHeader,
   ModalOverlay,
 } from '@chakra-ui/react';
+
+import type { BoxProps, ModalProps } from '@chakra-ui/react';
+import type { FC } from 'react';
 
 type CustomModalProps = {
   title?: string;
@@ -27,7 +29,7 @@ type CustomModalProps = {
   bg?: string;
 };
 
-export const CHModal: React.FC<ModalProps & BoxProps & CustomModalProps> = ({
+export const CHModal: FC<ModalProps & BoxProps & CustomModalProps> = ({
   title = '',
   children,
   footer,

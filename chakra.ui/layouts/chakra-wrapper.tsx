@@ -6,7 +6,11 @@ import {
 import '@fontsource/alice/400.css';
 import '@fontsource/rambla/400.css';
 import '@fontsource/rambla/700.css';
+
 import type { GetServerSidePropsContext } from 'next';
+import type { FC } from 'react';
+
+import { CookieConsent } from '@/components/consent';
 import { theme } from '../theme';
 
 type ChakraProps = {
@@ -14,7 +18,7 @@ type ChakraProps = {
   children: React.ReactNode;
 };
 
-export const ChakraWrapper: React.FC<ChakraProps> = ({ cookies, children }) => {
+export const ChakraWrapper: FC<ChakraProps> = ({ cookies, children }) => {
   const colorModeManager =
     // https://chakra-ui.com/docs/styled-system/color-mode#add-colormodemanager-optional-for-ssr
     typeof cookies === 'string'
@@ -27,6 +31,7 @@ export const ChakraWrapper: React.FC<ChakraProps> = ({ cookies, children }) => {
       theme={theme}
       // colorModeManager={colorModeManager} //
     >
+      <CookieConsent />
       {children}
     </ChakraProvider>
   );

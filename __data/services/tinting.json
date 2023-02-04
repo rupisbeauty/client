@@ -1,0 +1,26 @@
+{
+  "title": "Tinting",
+  "slug": "tinting",
+  "description": [""],
+  "disclaimer": [""],
+  "services": [
+    {
+      "title": "Brows + Tint",
+      "slug": "brows_tint",
+      "description": "Brow shaping and tinting",
+      "price": 35
+    },
+    {
+      "title": "Brow Tint",
+      "slug": "brow_tint",
+      "description": "Brow tinting",
+      "price": 25
+    },
+    {
+      "title": "Lash Tint",
+      "slug": "lash_tint",
+      "description": "Lash tinting",
+      "price": 25
+    }
+  ]
+}

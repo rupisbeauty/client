@@ -1,3 +1,5 @@
+import { servicePaths } from './service-paths';
+
 interface PI {
   [p: string]: {
     viewBox: string;
@@ -7,6 +9,7 @@ interface PI {
 }
 
 export const paths: PI = {
+  ...servicePaths,
   add: {
     viewBox: '0 0 56 56',
     d: [

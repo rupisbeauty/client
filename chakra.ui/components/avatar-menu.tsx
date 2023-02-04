@@ -14,11 +14,13 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
+import type { FC } from 'react';
+
 const defaultLinks = [{ label: 'home', href: '/' }];
 
 const ChNextLink = chakra(Link);
 
-export function AvatarMenu() {
+export const AvatarMenu: FC = () => {
   const { data: session, status } = useSession();
   const handleSignOut = async (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -90,4 +92,4 @@ export function AvatarMenu() {
       </Menu>
     </Box>
   );
-}
+};

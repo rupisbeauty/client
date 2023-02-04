@@ -1,6 +1,6 @@
 [
   {
-    "fileName": "/service-laser-hair-removal.jpg",
+    "fileName": "/laser-hair-removal.jpg",
     "title": "Laser Hair Removal",
     "alt": "Laser Hair Removal treatment",
     "attr": "Image by senivpetro on Freepik",
@@ -8,7 +8,7 @@
     "height": 800
   },
   {
-    "fileName": "/service-microneedling.jpg",
+    "fileName": "/micro-needling.jpg",
     "title": "Micro-needling",
     "alt": "Microneedling treatment",
     "attr": "Image by senivpetro",
@@ -16,7 +16,7 @@
     "height": 800
   },
   {
-    "fileName": "/service-hyaluron-pen.jpg",
+    "fileName": "/hylauron-pen.jpg",
     "title": "Hyaluron Pen",
     "alt": "Hyaluron treatment",
     "attr": "Image by senivpetro",
@@ -24,7 +24,7 @@
     "height": 800
   },
   {
-    "fileName": "/service-dermaplaning.jpg",
+    "fileName": "/dermaplaning.jpg",
     "title": "Dermaplaning",
     "alt": "Dermaplaning treatment",
     "attr": "",

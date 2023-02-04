@@ -1,12 +1,15 @@
 import { Box, Text, useDisclosure, VStack } from '@chakra-ui/react';
+
+import type { FC } from 'react';
+
 import docLinks from '__data/doc-links.json';
 import { Drawer, mapDocs } from '../components';
 
-export const Sidebar = ({ children }: { children?: React.ReactNode }) => {
+export const Sidebar: FC<{ children?: React.ReactNode }> = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box as ="aside">
+    <Box as="aside">
       <Box
         pos="absolute"
         left={0}

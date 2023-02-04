@@ -1,0 +1,82 @@
+{
+  "title": "Lipo Cavitation",
+  "slug": "lipo-cavitation",
+  "description": [
+    "Lipo cavitation is a noninvasive procedure that uses ultrasound to break down fat cells. The fat cells are then naturally eliminated by the body. The procedure is painless and has no downtime. It is a great alternative to liposuction and is a great way to get rid of stubborn fat."
+  ],
+  "disclaimer": ["*Disclaimer: Results may vary from person to person."],
+  "services": [
+    {
+      "title": "Belly Lipo Cavitation",
+      "slug": "lipo-cav-belly",
+      "pricing": [
+        {
+          "title": "1 Session",
+          "price": 150
+        },
+        {
+          "title": "3 Sessions",
+          "price": 400
+        },
+        {
+          "title": "6 Sessions",
+          "price": 800
+        }
+      ]
+    },
+    {
+      "title": "Back Lipo Cavitation",
+      "slug": "lipo-cav-back",
+      "pricing": [
+        {
+          "title": "1 Session",
+          "price": 125
+        },
+        {
+          "title": "3 Sessions",
+          "price": 450
+        },
+        {
+          "title": "6 Sessions",
+          "price": 750
+        }
+      ]
+    },
+    {
+      "title": "Cellulite Lipo Cavitation",
+      "slug": "lipo-cav-cellulite",
+      "pricing": [
+        {
+          "title": "30min Session",
+          "price": 65
+        },
+        {
+          "title": "45min Sessions",
+          "price": 90
+        },
+        {
+          "title": "60min Sessions",
+          "price": 115
+        }
+      ]
+    },
+    {
+      "title": "Other Lipo Cavitation Options",
+      "slug": "lipo-cav-other",
+      "pricing": [
+        {
+          "title": "30min Lipo Session",
+          "price": 55
+        },
+        {
+          "title": "30 min Cavitation Session",
+          "price": 75
+        },
+        {
+          "title": "60min Buttocks Cupping",
+          "price": 75
+        }
+      ]
+    }
+  ]
+}

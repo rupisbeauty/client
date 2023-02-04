@@ -113,7 +113,57 @@
       ]
     }
   ],
-  "other": [
+  "waxing": [
+    {
+      "title": "Bikini Waxing",
+      "description": ""
+    },
+    {
+      "title": "Brazilian Waxing",
+      "description": ""
+    },
+    {
+      "title": "Butt Waxing",
+      "description": ""
+    },
+    {
+      "title": "Underarm Waxing",
+      "description": ""
+    },
+    {
+      "title": "Half Arm Waxing",
+      "description": ""
+    },
+    {
+      "title": "Full Arm Waxing",
+      "description": ""
+    },
+    {
+      "title": "Upper Legs Waxing",
+      "description": ""
+    },
+    {
+      "title": "Lower Legs Waxing",
+      "description": ""
+    },
+    {
+      "title": "Full Legs Waxing",
+      "description": ""
+    },
+    {
+      "title": "Back Waxing",
+      "description": ""
+    },
+    {
+      "title": "Stomach Waxing",
+      "description": ""
+    },
+    {
+      "title": "Chest Waxing",
+      "description": ""
+    }
+  ],
+  "more": [
     {
       "title": "Micro Needling",
       "description": [

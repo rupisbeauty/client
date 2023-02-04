@@ -1,44 +1,47 @@
-import { Box, type BoxProps, type ChakraProps } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { paths } from './paths';
 
+import type { BoxProps, ChakraProps } from '@chakra-ui/react';
+import type { FC } from 'react';
+
 type CustomIconProps = {
-  icon: string;
   size: string | number | string[] | number[];
+  icon: string;
   color?: string;
   stroke?: string;
 } & BoxProps;
 
-export const CustomIcon: React.FC<CustomIconProps> = ({
-  icon = 'add',
+const Icon: FC<CustomIconProps & ChakraProps> = ({
+  color,
+  size,
+  icon,
+  stroke,
+  ...rest
+}) => {
+  return (
+    <Box
+      as="svg"
+      viewBox={paths[icon]?.viewBox}
+      width={size}
+      height={size}
+      fill={color}
+      stroke={stroke}
+      {...rest}
+    >
+      {paths[icon]?.d.map((d: string, i: number) => (
+        <path key={i} d={d} transform={paths[icon]?.transform} />
+      ))}
+    </Box>
+  );
+};
+
+export const CustomIcon: FC<CustomIconProps> = ({
   size = '1.25rem',
+  icon = 'add',
   color,
   stroke,
   ...rest
 }) => {
-  const Icon: React.FC<CustomIconProps & ChakraProps> = ({
-    color,
-    size,
-    icon,
-    stroke,
-    ...rest
-  }) => {
-    return (
-      <Box
-        as="svg"
-        viewBox={paths[icon]?.viewBox}
-        width={size}
-        height={size}
-        fill={color}
-        stroke={stroke}
-        {...rest}
-      >
-        {paths[icon]?.d.map((d: string, i: number) => (
-          <path key={i} d={d} transform={paths[icon]?.transform} />
-        ))}
-      </Box>
-    );
-  };
-
   return (
     <Icon color={color} size={size} icon={icon} stroke={stroke} {...rest} />
   );

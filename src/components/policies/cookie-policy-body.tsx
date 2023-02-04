@@ -1,7 +1,10 @@
 import { chakra } from '@chakra-ui/react';
+
+import type { FC } from 'react';
+
 import info from '__data/company/info.json';
 
-export const CookiePolicyBody = () => (
+export const CookiePolicyBody: FC = () => (
   <>
     <chakra.p pb={12} textAlign="center" color="gray.500">
       {`This is the Cookie Policy for ${info.name}, accessible from

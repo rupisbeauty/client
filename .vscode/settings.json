@@ -1,5 +1,10 @@
 {
   "marquee.widgets.npm-stats.packageNames": [
     "rupis"
+  ],
+  "cSpell.words": [
+    "Rupi",
+    "trpc",
+    "webp"
   ]
 }

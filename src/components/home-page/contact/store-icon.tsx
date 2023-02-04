@@ -1,6 +1,9 @@
-import { Box, type BoxProps } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
-export const StoreIcon = (props: BoxProps) => (
+import type { BoxProps } from '@chakra-ui/react';
+import type { FC } from 'react';
+
+export const StoreIcon: FC<BoxProps> = (props) => (
   <Box
     as="svg"
     {...props}

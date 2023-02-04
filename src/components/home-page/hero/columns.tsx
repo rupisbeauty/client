@@ -1,9 +1,11 @@
-import { CDN_URL, PEOPLE_DIR } from '@/utils';
 import { Box, chakra } from '@chakra-ui/react';
 import Image from 'next/image';
+import type { FC } from 'react';
+
+import { CDN_URL, PEOPLE_DIR } from '@/utils';
 import column1 from '__data/site/pages/home/hero.json';
 
-export const Column1 = () => {
+export const Column1: FC = () => {
   return (
     <Box>
       <chakra.p
@@ -15,6 +17,7 @@ export const Column1 = () => {
         textShadow="0px 1px 1px #555"
         textTransform="uppercase"
         w="100%"
+        mb={6}
       >
         {column1.subtitle}
       </chakra.p>

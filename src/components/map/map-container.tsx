@@ -1,7 +1,10 @@
-import { Map } from '@/components';
 import { Center } from '@chakra-ui/react';
 
-export const MapContainer = () => {
+import type { FC } from 'react';
+
+import { Map } from '@/components';
+
+export const MapContainer: FC = () => {
   return (
     <Center
       ml="auto"
@@ -12,7 +15,7 @@ export const MapContainer = () => {
       minHeight="300px"
       overflow="hidden"
     >
-      <Map width={425} height={280} />
+      <Map width={[300, 425]} height={[200, 280]} />
     </Center>
   );
 };

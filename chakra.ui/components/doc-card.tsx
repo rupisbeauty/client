@@ -1,4 +1,5 @@
 import { Flex, Heading, HStack, Link, Text } from '@chakra-ui/react';
+import type { FC } from 'react';
 
 export type DocLink = {
   documentation?: string;
@@ -19,11 +20,7 @@ type DocCardProps = {
   links?: DocLink[];
 };
 
-export const DocCard: React.FC<DocCardProps> = ({
-  name,
-  description,
-  links,
-}) => {
+export const DocCard: FC<DocCardProps> = ({ name, description, links }) => {
   return (
     <Flex
       as={Link}

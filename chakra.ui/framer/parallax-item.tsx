@@ -1,12 +1,10 @@
 // @link: https://medium.com/workbench/floating-parallax-images-with-react-and-framer-motion-2f3703a8a070
 import { chakra } from '@chakra-ui/react';
 import { useScroll, useSpring, useTransform } from 'framer-motion';
-import React, {
-  useLayoutEffect,
-  useRef,
-  useState,
-  type ReactNode,
-} from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
+
+import type { FC, ReactNode } from 'react';
+
 import { MotionBox } from './motion';
 
 const calculateMinHeight = (height: number, range: number) => {
@@ -17,7 +15,7 @@ const rand = (min = 0, max = 100) => {
   return Math.floor(Math.random() * (+max - +min)) + +min;
 };
 
-export function ParallaxItem({ children }: { children: ReactNode }) {
+export const ParallaxItem: FC<{ children: ReactNode }> = ({ children }) => {
   const range = 0.2;
   const { scrollY } = useScroll();
   const ref = useRef<HTMLDivElement | null>(null);
@@ -61,4 +59,4 @@ export function ParallaxItem({ children }: { children: ReactNode }) {
       </MotionBox>
     </chakra.div>
   );
-}
+};

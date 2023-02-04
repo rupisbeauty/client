@@ -1,5 +1,6 @@
 import { VStack } from '@chakra-ui/react';
-import React from 'react';
+
+import type { FC } from 'react';
 
 import {
   FacebookIcon,
@@ -17,15 +18,11 @@ const shareData = {
   hashtag: 'rupibeauty',
 };
 
-export const SocialShare = ({
-  twitter = false,
-  facebook = false,
-  pinterest = false,
-}: {
+export const SocialShare: FC<{
   twitter?: boolean;
   facebook?: boolean;
   pinterest?: boolean;
-}) => {
+}> = ({ twitter = false, facebook = false, pinterest = false }) => {
   return (
     <VStack position="fixed" zIndex="docked" right={4} bottom={36}>
       {facebook ? (

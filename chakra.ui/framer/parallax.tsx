@@ -1,12 +1,14 @@
 // @link: https://samuelkraft.com/blog/spring-parallax-framer-motion-guide
-
 import {
   useReducedMotion,
   useScroll,
   useSpring,
   useTransform,
 } from 'framer-motion';
-import { useLayoutEffect, useRef, useState, type ReactNode } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
+
+import type { FC, ReactNode } from 'react';
+
 import { MotionBox } from './motion';
 
 type ParallaxProps = {
@@ -14,10 +16,10 @@ type ParallaxProps = {
   offset?: number;
 };
 
-export const FramerParallax = ({
+export const FramerParallax: FC<ParallaxProps> = ({
   children,
   offset = 50,
-}: ParallaxProps): JSX.Element => {
+}): JSX.Element => {
   const prefersReducedMotion = useReducedMotion();
   const [elementTop, setElementTop] = useState(0);
   const [clientHeight, setClientHeight] = useState(0);

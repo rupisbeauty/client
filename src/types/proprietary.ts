@@ -17,3 +17,8 @@ export declare type Awaitable<T> = T | PromiseLike<T>;
 
 export type NextPageWithAuth = NextPage & { auth: boolean };
 export type NextComponentTypeWithAuth = NextComponentType & { auth?: boolean };
+
+export type Maybe = {
+  string: string | null | undefined;
+  number: string | null | undefined;
+};

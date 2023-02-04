@@ -1,9 +1,12 @@
 import { Container, Stack, VStack } from '@chakra-ui/react';
 import React from 'react';
+
+import type { FC } from 'react';
+
 import { Column1, Column2 } from './columns';
 import { CTABox } from './cta-box';
 
-export const Hero = () => {
+export const Hero: FC = () => {
   return (
     <Container
       id="welcome"

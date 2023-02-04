@@ -1,7 +1,6 @@
-import { CookieConsent } from '@/components/consent';
 import type { SessionWithUser } from '@/lib/next-auth/types/index';
 import { type NextComponentTypeWithAuth } from '@/types';
-import { ErrorBoundary } from '@/utils';
+import { ErrorBoundary, isProd } from '@/utils';
 import { trpc } from '@/utils/trpc';
 import { SkipNavLink } from '@chakra-ui/skip-nav';
 import { Analytics } from '@vercel/analytics/react';
@@ -36,7 +35,9 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
       <SkipNavLink mt={56} ml={4}>
         Skip to content
       </SkipNavLink>
-      {appendScriptOnPage(['/', '/services']) ? (
+
+      {/* #81a2 Splash Page Removal F*/}
+      {isProd && appendScriptOnPage(['/', '/services']) ? (
         <Script src={process.env.NEXT_PUBLIC_TRUSTMARY} async />
       ) : null}
       <ErrorBoundary>
@@ -49,7 +50,6 @@ const MyApp: AppType<{ session: SessionWithUser | null; cookies: string }> = ({
             ) : (
               <Component {...pageProps} />
             )}
-            <CookieConsent />
             <Analytics />
           </ChakraWrapper>
         </SessionProvider>

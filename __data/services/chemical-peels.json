@@ -1,0 +1,42 @@
+{
+  "title": "Chemical Peels",
+  "slug": "chemical-peels",
+  "description": [
+    "A Chemical Peel is a procedure that uses a chemical solution to remove the top layers of skin. This procedure is used to treat a variety of skin conditions, including acne, wrinkles, and uneven skin tone. Chemical peels are also used to treat precancerous skin growths and skin damage caused by the sun. Chemical peels are available in a variety of strengths and formulations. The type of peel used depends on the condition being treated and the depth of the peel."
+  ],
+  "disclaimer": [
+    "Chemical peels are not recommended for people with certain skin conditions, such as eczema, rosacea, or lupus. People with darker skin should not have chemical peels. If you are unsure if this procedure is right for you please feel free to speak with one of our estheticians who can help you find the procedure that works best for your skin`."
+  ],
+  "services": [
+    {
+      "title": "Glycolic Peel",
+      "slug": "glycolic-peel",
+      "description": "A glycolic peel is a chemical peel that uses glycolic acid to remove the top layers of skin. Glycolic acid is a type of alpha hydroxy acid (AHA). It is a naturally occurring chemical that is found in sugar cane. Glycolic acid is used to treat a variety of skin conditions, including acne, wrinkles, and uneven skin tone. Glycolic peels are also used to treat precancerous skin growths and skin damage caused by the sun.",
+      "price": 98
+    },
+    {
+      "title": "Mandelic Peel",
+      "slug": "mandelic-peel",
+      "description": "A mandelic peel is a chemical peel that uses mandelic acid to remove the top layers of skin. Mandelic acid is a type of alpha hydroxy acid (AHA). It is a naturally occurring chemical that is found in almonds. Mandelic acid is used to treat a variety of skin conditions, including acne, wrinkles, and uneven skin tone. Mandelic peels are also used to treat precancerous skin growths and skin damage caused by the sun.",
+      "price": 98
+    },
+    {
+      "title": "Pyruvic Peel",
+      "slug": "pyruvic-peel",
+      "description": "A pyruvic peel is a chemical peel that uses pyruvic acid to remove the top layers of skin. Pyruvic acid is a type of alpha hydroxy acid (AHA). It is a naturally occurring chemical that is found in apples. Pyruvic acid is used to treat a variety of skin conditions, including acne, wrinkles, and uneven skin tone. Pyruvic peels are also used to treat precancerous skin growths and skin damage caused by the sun.",
+      "price": 110
+    },
+    {
+      "title": "Jessner Peel",
+      "slug": "jessner-peel",
+      "description": "A Jessner peel is a chemical peel that uses a combination of resorcinol, lactic acid, and salicylic acid to remove the top layers of skin. Jessner peels are used to treat a variety of skin conditions, including acne, wrinkles, and uneven skin tone. Jessner peels are also used to treat precancerous skin growths and skin damage caused by the sun.",
+      "price": 150
+    },
+    {
+      "title": "Body Peel",
+      "slug": "body-peel",
+      "description": "A body peel is a chemical peel that uses a chemical solution to remove the top layers of skin. Body peels are used to treat a variety of skin conditions, including acne, wrinkles, and uneven skin tone. Body peels are also used to treat precancerous skin growths and skin damage caused by the sun.",
+      "price": "200+"
+    }
+  ]
+}
