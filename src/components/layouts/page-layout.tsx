@@ -6,7 +6,9 @@ import type { tinaSchema } from '@/schema';
 import type { FC } from 'react';
 import type { z } from 'zod';
 
-import { EmailCTA, SectionTitle, SocialShare } from '@/components/v1';
+import { EmailCTA } from '../blocks';
+
+import { SectionTitle, SocialShare } from '@/components/v1'; // @TODO: update to v2
 import {
   Footer,
   Header,
@@ -33,6 +35,7 @@ export const PageLayout: FC<LayoutProps> = ({
     showReviews = false,
   },
   colors: { backgroundColor = 'bg', color = 'text' },
+  // @TODO: add image from tina
   seo: { title: seoTitle, description: seoDescription, image: seoImage },
   children,
 }) => {

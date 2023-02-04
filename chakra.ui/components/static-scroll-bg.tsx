@@ -2,7 +2,7 @@ import { chakra } from '@chakra-ui/react';
 
 export const StaticScrollBackground = chakra('div', {
   baseStyle: {
-    height: '80vh',
+    height: '70vh',
     width: 'full',
     overflow: 'hidden',
     backgroundAttachment: 'fixed',

@@ -1,4 +1,5 @@
 export * from './about';
+export * from "./cta";
 export * from './contact';
 export * from './full-logo-block';
 export * from './hero';
