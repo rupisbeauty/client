@@ -1,14 +1,11 @@
-import { Divider, Flex, VStack } from '@chakra-ui/react';
+import { Box,chakra,Divider,Flex,VStack } from '@chakra-ui/react';
 import React from 'react';
-import { Box, chakra } from '@chakra-ui/react';
 
 import type { FC } from 'react';
 
 import { CustomIcon } from 'chakra.ui';
 
-export const CTABox: FC<{ cta: { title: string; subtitle: string } }> = ({
-  cta,
-}) => (
+export const CTABox: FC<{ cta: { title: string; subtitle: string } }> = ({ cta }) => (
   <Box
     position="absolute"
     bottom={{ base: 10, md: 24, lg: -4, xl: 12 }}
@@ -34,7 +31,10 @@ export const CTABox: FC<{ cta: { title: string; subtitle: string } }> = ({
       </VStack>
       <Divider transform="rotate(90deg)" w="3em" borderColor="gray.600" />
       <Box textAlign="center" w="full" flex={1}>
-        <chakra.p display={{ base: 'none', sm: 'block', md: 'block' }}>
+        <chakra.p
+          display={{ base: 'none', sm: 'block', md: 'block' }}
+          data-tinafield="title"
+        >
           {cta.title}
         </chakra.p>
         <chakra.p
@@ -47,6 +47,7 @@ export const CTABox: FC<{ cta: { title: string; subtitle: string } }> = ({
           _hover={{
             cursor: 'pointer',
           }}
+          data-tinafield="subtitle"
         >
           {cta.subtitle}
         </chakra.p>

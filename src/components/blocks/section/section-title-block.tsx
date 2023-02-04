@@ -46,6 +46,7 @@ export const SectionTitleBlock: FC<
         mb="-1em"
         fontSize={{ base: '4xl', sm: '5xl' }}
         textTransform="capitalize"
+        data-tinafield="title"
       >
         {title}
       </chakra.h1>

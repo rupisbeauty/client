@@ -73,6 +73,7 @@ export const ServiceBox: React.FC<{
               top: '2px',
               left: '2px',
             }}
+            data-tinafield="title"
           >
             {props?.item?.title}
           </chakra.p>

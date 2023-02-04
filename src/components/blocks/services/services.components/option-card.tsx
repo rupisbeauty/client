@@ -41,6 +41,7 @@ export const OptionCard: React.FC<CategoriesBlocksServiceMenuOptions> = (
               fontWeight={600}
               fontFamily="body"
               fontSize={{ base: 'md', xl: '2xl' }}
+              data-tinafield="price"
             >
               ${props?.option?.price}
             </Heading>
@@ -65,13 +66,13 @@ export const OptionCard: React.FC<CategoriesBlocksServiceMenuOptions> = (
       </Flex>
       <Stack layerStyle="card.body" h="full">
         {props.option?.title ? (
-          <Text px={3} textStyle="card.title-sm">
+          <Text px={3} textStyle="card.title-sm" data-tinafield="title">
             {props.option?.title}
           </Text>
         ) : null}
 
         {props.option?.description ? (
-          <Text color="gray.700" px={3}>
+          <Text color="gray.700" px={3} data-tinafield="description">
             {props.option?.description}
           </Text>
         ) : null}

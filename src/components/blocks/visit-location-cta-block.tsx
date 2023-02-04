@@ -33,6 +33,7 @@ export const LocationCTABlock: FC<
             textAlign="center"
             textShadow="0px 1px 1px #555"
             fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+            data-tinafield="cta"
           >
             {props.cta}
           </chakra.h2>

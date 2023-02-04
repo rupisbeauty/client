@@ -48,6 +48,7 @@ export const AboutBlock: FC<PagesBlocksAbout> = ({
           pt={6}
           pb={12}
           textAlign="center"
+          data-tinafield="title"
         >
           {title}
         </chakra.h2>
@@ -68,16 +69,20 @@ export const AboutBlock: FC<PagesBlocksAbout> = ({
           ) : null}
           <Box w="full" h="full">
             <LicenseInfo
-              heading={heading}
-              subheading={subheading}
-              caption={caption}
+              heading={String(heading)}
+              subheading={String(subheading)}
+              caption={String(caption)}
             />
             <Box
               color="gray.600"
               textAlign={{ base: 'justify' }}
               p={{ base: 2, md: 6 }}
             >
-              <chakra.p fontSize={{ base: 'lg', lg: 'xl' }} mb={9}>
+              <chakra.p
+                fontSize={{ base: 'lg', lg: 'xl' }}
+                mb={9}
+                data-tinafield="description"
+              >
                 {description}
               </chakra.p>
             </Box>

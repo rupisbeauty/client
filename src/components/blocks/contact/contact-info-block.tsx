@@ -76,12 +76,14 @@ export const ContactInfoBlock: FC<PagesBlocksContact> = ({
                   fontSize={{ base: '2xl', lg: 'xl', xl: '2xl' }}
                   lineHeight={1}
                   fontWeight={600}
+                  data-tinafield="address"
                 >
                   {address}
                 </chakra.p>
                 <chakra.p
                   fontSize={{ base: 'xl', lg: 'lg', xl: 'xl' }}
                   fontWeight={600}
+                  data-tinafield="locality"
                 >
                   {locality}
                 </chakra.p>
@@ -105,6 +107,7 @@ export const ContactInfoBlock: FC<PagesBlocksContact> = ({
               <chakra.p
                 fontSize={{ base: '2xl', lg: 'xl', xl: '2xl' }}
                 fontWeight={600}
+                data-tinafield="phoneNumber"
               >
                 {phoneNumber}
               </chakra.p>

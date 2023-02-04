@@ -1,4 +1,4 @@
-import { Box, chakra, VStack } from '@chakra-ui/react';
+import { Box,chakra,VStack } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -22,6 +22,7 @@ export const ColumnLeft: FC<{ heading: string; subheading: string }> = ({
           textTransform="uppercase"
           w="100%"
           mb={6}
+          data-tinafield="subheading"
         >
           {subheading}
         </chakra.p>
@@ -36,6 +37,7 @@ export const ColumnLeft: FC<{ heading: string; subheading: string }> = ({
             lineHeight={1.2}
             textShadow="0px 1px 1px #555"
             textAlign={['center', null, null, 'left']}
+            data-tinafield="heading"
           >
             {heading}
           </chakra.h2>
