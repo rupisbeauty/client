@@ -4,15 +4,41 @@ description: Rupi Beauty Studio proudly offers
 settings:
   showHeader: true
   showFooter: true
-  showCta: false
-  showReviews: false
+  showCta: true
+  showReviews: true
 colors:
   backgroundColor: '#FFF1E4'
   color: '#4A5568'
 seo:
   title: Rupi Beauty Studio
   description: Rupi Beauty Studio proudly offers
+blocks:
+  - title: Rupi Beauty Studio Logo
+    _template: logo
+  - image:
+      src: /uploads/people/woman-wavy-hair.webp
+      alt: woman with wavy hair
+      size:
+        width: 1920
+        height: 1440
+      pos:
+        objectPosition: top
+        objectFit: none
+        transform: ''
+    _template: sectionCover
+  - title: Rupi Core Services
+    _template: sectionTitle
+  - relatedServices:
+      - service: _content/categories/eyebrows.mdx
+      - service: _content/categories/skin-care.mdx
+      - service: _content/categories/hair-removal.mdx
+      - service: _content/categories/addons.mdx
+    _template: serviceMenu
 ---
+
+
+
+
 
 <section
   title="Rupi Logo Full"

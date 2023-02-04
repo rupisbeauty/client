@@ -35,9 +35,9 @@ export const defaults = {
     ],
   },
   divider: {
-    title: 'Horizontal Divider',
+    // title: 'Horizontal Divider',
     orientation: 'horizontal',
-    borderColor: 'gray.200',
+    borderColor: 'gray.400',
   },
   hero: {
     heading: 'Insert Your Most Impactful Statement Here',

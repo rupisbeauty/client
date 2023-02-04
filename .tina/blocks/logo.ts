@@ -14,8 +14,6 @@ export const logoBlock: Template = {
       type: 'string',
       label: 'Title',
       name: 'title',
-      isTitle: true,
-      required: true,
     },
   ],
 };

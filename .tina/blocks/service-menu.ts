@@ -11,13 +11,13 @@ export const serviceMenuBlock: Template = {
     previewSrc: '/blocks/preview-service-menu.jpg',
   },
   fields: [
-    {
-      type: 'string',
-      label: 'Title',
-      name: 'title',
-      required: true,
-      isTitle: true,
-    },
+    // {
+    //   type: 'string',
+    //   label: 'Title',
+    //   name: 'title',
+    //   required: true,
+    //   isTitle: true,
+    // },
     ...(fields.services as Template['fields']),
   ],
 };

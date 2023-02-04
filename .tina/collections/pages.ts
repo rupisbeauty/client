@@ -1,13 +1,16 @@
 import type { SchemaField, Template } from 'tinacms';
 
-import { templates } from '../blocks';
 import { aboutBlock } from '../blocks/about';
 import { contactBlock } from '../blocks/contact';
 import { coreServicesBlock } from '../blocks/core-services';
+import { dividerBlock } from '../blocks/divider';
 import { heroBlock } from '../blocks/hero';
 import { locationCTABlock } from '../blocks/location-cta';
 import { logoBlock } from '../blocks/logo';
+import { sectionCoverBlock } from '../blocks/section-cover';
+import { sectionTitleBlock } from '../blocks/section-title';
 import { fields } from '../fields';
+import { serviceMenuBlock } from '../blocks/service-menu';
 
 export const pages: { fields: SchemaField[] } = {
   fields: [
@@ -62,6 +65,11 @@ export const pages: { fields: SchemaField[] } = {
         locationCTABlock,
         coreServicesBlock,
         contactBlock,
+        logoBlock,
+        sectionTitleBlock,
+        sectionCoverBlock,
+        dividerBlock,
+        serviceMenuBlock
       ],
     },
 
