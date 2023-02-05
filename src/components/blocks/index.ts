@@ -5,4 +5,3 @@ export * from './full-logo-block';
 export * from './hero';
 export * from './section';
 export * from './services';
-export * from './_scaffold';

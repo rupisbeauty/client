@@ -2,7 +2,7 @@ import { Box, HStack, Text } from '@chakra-ui/react';
 
 import type { FC } from 'react';
 
-import { NavMenu } from '@/components/_v1';
+import { NavMenu } from '@/components';
 import { BRAND_DIR, CDN_URL } from '@/utils';
 import { Bar, ChakraNextImage } from '../components';
 import { ScrollSlide } from '../framer';

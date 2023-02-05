@@ -12,8 +12,8 @@ import Link from 'next/link';
 
 import { Drawer } from 'chakra.ui';
 import { MenuIcon } from 'chakra.ui/icons/menu-icon';
-import { FullLogo } from '../full-logo-block';
-import { StoreIcon } from '../_shared.components';
+import { FullLogo } from '../blocks/full-logo-block';
+import { StoreIcon } from '../blocks/_shared.components';
 
 type MenuLink = Record<string, string>;
 const menu: MenuLink = {
