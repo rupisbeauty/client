@@ -8,7 +8,8 @@ import type { z } from 'zod';
 
 import { EmailCTA } from '../blocks';
 
-import { SectionTitle, SocialShare } from '@/components/v1'; // @TODO: update to v2
+import { SocialShare } from '@/components';
+import { SectionTitle } from '@/components/blocks'; // @TODO: update to v2
 import {
   Footer,
   Header,
