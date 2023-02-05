@@ -16,3 +16,4 @@ export * from './scroll-section';
 export * from './section-title';
 // export * from './sandbox';
 export * from './services';
+export * from './social';

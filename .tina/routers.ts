@@ -3,10 +3,12 @@ export const routers = {
   pages: ({ document }) => {
     if (document._sys.filename === 'home') {
       // SbfdQQqT @TODO: update this when out of sandbox
-      return `/sandbox/home`;
+      // return `/sandbox/home`;
+      return `home`;
     }
     const crumbs = document?._sys?.breadcrumbs;
     // SbfdQQqT @TODO: update this when out of sandbox
+    return `/sandbox/${crumbs.join('/')}`;
     return `/sandbox/${crumbs.join('/')}`;
   },
   categories: ({ document }) => {

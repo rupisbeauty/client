@@ -27,5 +27,14 @@ const config = {
   // experimental: {
   //   nextScriptWorkers: true,
   // },
+  async rewrites() {
+    return [
+      {
+        // write index route to /home -- this is where tina loads
+        source: '/',
+        destination: '/home',
+      },
+    ];
+  },
 };
 export default config;
