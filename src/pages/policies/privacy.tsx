@@ -11,8 +11,7 @@ import { useRouter } from 'next/router';
 
 import type { NextPage } from 'next';
 
-import { FullLogo } from '@/components/_v1';
-import { PrivacyPolicyBody } from '@/components/_v1/policies';
+import { FullLogo, PrivacyPolicyBody } from '@/components';
 
 const Privacy: NextPage = () => {
   const router = useRouter();

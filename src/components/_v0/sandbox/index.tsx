@@ -17,7 +17,7 @@ import type { NextPage } from 'next';
 
 import { ChImage, MotionCard, MotionCardBody } from 'chakra.ui';
 
-import { PageLayout } from '@/components/_v1';
+import { PageLayout } from '@/components/_v0';
 
 import { CDN_URL, SERVICES_DIR } from '@/utils';
 import services from '__data/company';

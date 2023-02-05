@@ -1,34 +1,17 @@
-import { ComingSoon, Hero, PageLayout } from '@/components/_v1';
+import { BaseLayout, ComingSoon } from '@/components';
 import { type NextPage } from 'next';
-import { isDev } from '../utils/constants';
 
 const Home: NextPage = () => {
   return (
-    <>
-      <PageLayout
-        title="Rupi Beauty Studio"
-        description="Eyebrows, facials, waxing & more"
-      >
-        <ComingSoon />
-      </PageLayout>
-    </>
+    <BaseLayout
+      title="Rupi Beauty Studio"
+      description="Eyebrows, facials, waxing & more"
+    >
+      <ComingSoon />
+    </BaseLayout>
   );
 };
 
 // @link: https://codepen.io/silvandiepen/pen/NOboze
 
 export default Home;
-
-export const Initial = () => {
-  return (
-    <>
-      {!isDev ? (
-        <>
-          <Hero />
-        </>
-      ) : (
-        <ComingSoon />
-      )}
-    </>
-  );
-};

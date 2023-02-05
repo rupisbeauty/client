@@ -15,7 +15,7 @@ import type {
   Services,
 } from '@/_content';
 
-import { ServiceListingCard } from '@/components/_v1';
+import { ServiceListingCard } from '@/components/_v0';
 import { CustomIcon } from 'chakra.ui';
 
 export const TabMenu: React.FC<{ items: string[] }> = ({ items }) => {

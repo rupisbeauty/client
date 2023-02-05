@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo';
 
 import type { FC } from 'react';
 
-import { EmailCTA, SectionTitle, SocialShare } from '@/components/_v1';
+import { EmailCTA, SectionTitle, SocialShare } from '@/components/_v0';
 import {
   Footer,
   Header,
@@ -37,7 +37,6 @@ export const PageLayout: FC<LayoutProps> = ({
   color = 'text',
   children,
 }) => {
-  console.log(showCta, showReviews);
   const displayHeader = layout?.structure?.header.show !== 'false';
   const displayFooter = layout?.structure?.footer.show !== 'false';
 
