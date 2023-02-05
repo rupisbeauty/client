@@ -25,7 +25,9 @@ export const debug = isDev && false;
 
 export const NEXT_AUTH_SESSION_TOKEN_KEY = 'next-auth.session-token';
 
-// image cdn link components -- still used by components/blocks/about/license-info.tsx
+// image cdn link components -- still used by:
+// - components/blocks/about/license-info.tsx
+// - components/blocks/about/license-stack.tsx
 export const CDN_URL = 'https://cdn.jsdelivr.net/gh/rupistudio/assets@main';
 export const LOCATIONS_DIR = '/images/locations';
 export const BRAND_DIR = '/brand';

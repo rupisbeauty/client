@@ -4,7 +4,41 @@ import type { FC } from 'react';
 
 import { CDN_URL, SERVICES_DIR } from '@/utils';
 import { ChImage } from 'chakra.ui';
-import licenses from '__data/company/service-licenses.json';
+
+const licenses = [
+  {
+    fileName: '/laser-hair-removal.jpg',
+    title: 'Laser Hair Removal',
+    alt: 'Laser Hair Removal treatment',
+    attr: 'Image by senivpetro on Freepik',
+    width: 1200,
+    height: 800,
+  },
+  {
+    fileName: '/micro-needling.jpg',
+    title: 'Micro-needling',
+    alt: 'Micro-needling treatment',
+    attr: 'Image by senivpetro',
+    width: 1200,
+    height: 800,
+  },
+  {
+    fileName: '/hyaluron-pen.jpg',
+    title: 'Hyaluron Pen',
+    alt: 'Hyaluron treatment',
+    attr: 'Image by senivpetro',
+    width: 1200,
+    height: 800,
+  },
+  {
+    fileName: '/dermaplaning.jpg',
+    title: 'Dermaplaning',
+    alt: 'Dermaplaning treatment',
+    attr: '',
+    width: 1000,
+    height: 800,
+  },
+];
 
 export const LicensesStack: FC<{
   heading: string;
