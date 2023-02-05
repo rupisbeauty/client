@@ -3,7 +3,7 @@ title: Waxing
 description: This is the description for waxing
 slug: waxing
 image:
-  src: /uploads/services/lower-legs-waxing2.webp
+  src: /uploads/services/eyebrow-waxing.webp
   alt: Waxing Services | Rupi Beauty Studio
   attr: Image by Freepik
   size:
@@ -34,38 +34,34 @@ options:
   - option: _content/options/hair-removal/waxing/nose-inside.mdx
   - option: _content/options/hair-removal/waxing/nose-outside.mdx
   - option: _content/options/hair-removal/waxing/sides.mdx
+blocks:
+  - title: Rupi Beauty Studio Logo
+    _template: logo
+  - orientation: horizontal
+    borderColor: gray.400
+    _template: divider
+  - image:
+      src: /uploads/services/chest-waxing2.webp
+      alt: Waxing Services | Rupi Beauty Studio
+      size:
+        width: 1920
+        height: 1280
+    _template: sectionCover
+  - title: Waxing Services
+    _template: sectionTitle
+  - options:
+      - option: _content/options/hair-removal/waxing/chin.mdx
+      - option: _content/options/hair-removal/waxing/chin_lower-chin.mdx
+      - option: _content/options/hair-removal/waxing/eyebrow.mdx
+      - option: _content/options/hair-removal/waxing/forehead.mdx
+      - option: _content/options/hair-removal/waxing/full-face.mdx
+      - option: _content/options/hair-removal/waxing/full-face_lower-chin.mdx
+      - option: _content/options/hair-removal/waxing/full-face_neck.mdx
+      - option: _content/options/hair-removal/waxing/lip.mdx
+      - option: _content/options/hair-removal/waxing/lower-lip.mdx
+      - option: _content/options/hair-removal/waxing/neck.mdx
+      - option: _content/options/hair-removal/waxing/nose-inside.mdx
+      - option: _content/options/hair-removal/waxing/nose-outside.mdx
+      - option: _content/options/hair-removal/waxing/sides.mdx
+    _template: serviceMenu
 ---
-
-<section
-  title="Rupi Logo"
-  settings={{
-    width: "full",
-    backgroundColor: "#FFF1E4",
-    color: "#4A5568",
-    contained: true,
-    centerContent: true
-  }}
-  body={<>
-    <logo title="Rupi Beauty Studio Logo" />
-
-    <divider title="Give this component a default title" orientation="horizontal" borderColor="gray.600" />
-  </>}
-/>
-
-<section
-  title="First Section"
-  settings={{ colors: { backgroundColor: "#FFF1E4", color: "#4A5568" } }}
-  body={<>
-    <sectionTitle title="Eyebrow Services" />
-
-    <serviceMenu
-    title="👩‍💼 Change This title "
-    options={[
-    { option: "_content/options/eyebrows/brow-lamination.mdx" },
-    { option: "_content/options/eyebrows/lash-lift.mdx" },
-    { option: "_content/options/eyebrows/lash-lift_brow-lamination.mdx" }
-    ]}
-    relatedServices={[{ service: "_content/categories/eyebrows/tinting.mdx" }]}
-    />
-  </>}
-/>
