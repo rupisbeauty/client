@@ -3,7 +3,6 @@ import { defineSchema } from 'tinacms';
 import {
   categories as servicesCategories,
   pages,
-  posts,
   servicesOptions,
 } from './collections';
 import { defaults } from './collections/_defaults';
