@@ -4,6 +4,7 @@ import { fields } from '../fields';
 export const servicesOptions: { fields: SchemaField[] } = {
   fields: [
     ...fields.page,
+    ...fields.image,
     {
       // @TODO: add advanced session pricing via template block
       name: 'price',
@@ -15,7 +16,5 @@ export const servicesOptions: { fields: SchemaField[] } = {
       label: 'Duration',
       type: 'string',
     },
-    ...fields.image,
-    fields.services[0],
   ],
 };

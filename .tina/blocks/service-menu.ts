@@ -10,14 +10,5 @@ export const serviceMenuBlock: Template = {
     defaultItem: defaults.serviceMenu,
     previewSrc: '/blocks/preview-service-menu.webp',
   },
-  fields: [
-    // {
-    //   type: 'string',
-    //   label: 'Title',
-    //   name: 'title',
-    //   required: true,
-    //   isTitle: true,
-    // },
-    ...(fields.services as Template['fields']),
-  ],
+  fields: fields.services as Template['fields'],
 };

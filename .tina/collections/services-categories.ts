@@ -12,6 +12,7 @@ import { fields } from '../fields';
 export const categories: { fields: SchemaField[] } = {
   fields: [
     ...fields?.page,
+    ...fields?.image,
     {
       type: 'object',
       name: 'blocks',
@@ -30,8 +31,6 @@ export const categories: { fields: SchemaField[] } = {
         sectionBlock,
       ],
     },
-    ...fields?.image,
-    ...fields?.services,
     ...fields?.settings,
     ...fields?.seo,
     ...fields?.colors,
