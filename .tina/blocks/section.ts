@@ -11,7 +11,7 @@ import {
   serviceMenuBlock,
 } from '.';
 
-
+import { contentBlock } from './content';
 import { defaults } from './_defaults';
 
 export const sectionBlock: Template = {
@@ -35,14 +35,7 @@ export const sectionBlock: Template = {
       name: 'body',
       label: 'Body',
       isBody: true,
-      templates: [
-        boxBlock,
-        logoBlock,
-        dividerBlock,
-        sectionTitleBlock,
-        sectionCoverBlock,
-        serviceMenuBlock,
-      ],
+      templates: [boxBlock],
     },
     {
       type: 'object',

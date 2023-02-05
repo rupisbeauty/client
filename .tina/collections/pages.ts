@@ -8,6 +8,7 @@ import { dividerBlock } from '../blocks/divider';
 import { heroBlock } from '../blocks/hero';
 import { locationCTABlock } from '../blocks/location-cta';
 import { logoBlock } from '../blocks/logo';
+import { sectionBlock } from '../blocks/section';
 import { sectionCoverBlock } from '../blocks/section-cover';
 import { sectionTitleBlock } from '../blocks/section-title';
 import { serviceMenuBlock } from '../blocks/service-menu';
@@ -43,6 +44,7 @@ export const pages: { fields: SchemaField[] } = {
       templates: [
         contentBlock,
         dividerBlock,
+        sectionBlock,
         sectionTitleBlock,
         sectionCoverBlock,
         logoBlock,
