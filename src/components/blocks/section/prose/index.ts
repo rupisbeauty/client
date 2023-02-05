@@ -1,1 +1,1 @@
-export * as Experimental from '../experimental';
+export * from './simple-content'

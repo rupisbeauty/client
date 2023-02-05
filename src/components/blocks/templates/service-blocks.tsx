@@ -1,16 +1,14 @@
-import { Container,Divider } from '@chakra-ui/react';
+import { Container, Divider } from '@chakra-ui/react';
 import React from 'react';
 
-import type { CategoriesBlocks,CategoriesBlocksSectionCover } from '.tina';
+import type { CategoriesBlocks, CategoriesBlocksSectionCover } from '.tina';
 import type { DividerProps } from '@chakra-ui/react';
 
-import { FullLogoBlock } from '../full-logo-block';
-import {
-SectionCoverBlock,
-SectionTitleBlock
-} from '../section';
-import { ServiceMenuBlock } from '../services';
 import { LocationCTABlock } from '../cta/visit-location-cta-block';
+import { FullLogoBlock } from '../full-logo-block';
+import { SectionCoverBlock, SectionTitleBlock } from '../section';
+import { SimpleContent } from '../section/prose';
+import { ServiceMenuBlock } from '../services';
 
 export const ServiceBlocks: React.FC<{ blocks: CategoriesBlocks[] }> = (
   props
@@ -46,6 +44,8 @@ export const ServiceBlocks: React.FC<{ blocks: CategoriesBlocks[] }> = (
             );
           case 'CategoriesBlocksServiceMenu':
             return <ServiceMenuBlock {...block} key={block.__typename} />;
+          case 'CategoriesBlocksContent':
+            return <SimpleContent {...block} key={block.__typename} />;
           default:
             return null;
         }

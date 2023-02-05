@@ -11,6 +11,7 @@ import { HeroBlock } from '../hero/hero-block';
 import { SectionCoverBlock, SectionTitleBlock } from '../section';
 import { CoreServicesBlock, ServiceMenuBlock } from '../services';
 import { LocationCTABlock } from '../cta/visit-location-cta-block';
+import { SimpleContent } from '../section/prose/simple-content';
 
 export const PageBlocks: React.FC<{ blocks: PagesBlocks[] }> = (props) => {
   return (
@@ -52,6 +53,8 @@ export const PageBlocks: React.FC<{ blocks: PagesBlocks[] }> = (props) => {
             );
           case 'PagesBlocksServiceMenu':
             return <ServiceMenuBlock {...block} key={block.__typename} />;
+          case 'PagesBlocksContent':
+            return <SimpleContent {...block} key={block.__typename} />;
           default:
             return null;
         }
