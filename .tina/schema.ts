@@ -24,17 +24,6 @@ import { routers } from './routers';
 export const schema = defineSchema({
   collections: [
     {
-      name: 'post',
-      label: 'Posts',
-      path: '_content/posts',
-      format: 'md',
-      ui: {
-        // This is an DEMO router. You can remove this to fit your site
-        router: routers.posts,
-      },
-      ...posts,
-    },
-    {
       name: 'pages',
       label: 'Pages',
       path: '_content/pages',
