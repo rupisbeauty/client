@@ -1,6 +1,7 @@
 import type { SchemaField } from 'tinacms';
 
 import {
+  contentBlock,
   dividerBlock,
   locationCTABlock,
   logoBlock,
@@ -24,13 +25,14 @@ export const categories: { fields: SchemaField[] } = {
         visualSelector: true,
       },
       templates: [
-        locationCTABlock,
-        logoBlock,
+        contentBlock,
+        dividerBlock,
         sectionTitleBlock,
         sectionCoverBlock,
-        dividerBlock,
+        logoBlock,
         serviceMenuBlock,
         sectionBlock,
+        locationCTABlock,
       ],
     },
     ...fields?.settings,

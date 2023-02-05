@@ -1,7 +1,8 @@
-import type { SchemaField,Template } from 'tinacms';
+import type { SchemaField, Template } from 'tinacms';
 
 import { aboutBlock } from '../blocks/about';
 import { contactBlock } from '../blocks/contact';
+import { contentBlock } from '../blocks/content';
 import { coreServicesBlock } from '../blocks/core-services';
 import { dividerBlock } from '../blocks/divider';
 import { heroBlock } from '../blocks/hero';
@@ -10,6 +11,7 @@ import { logoBlock } from '../blocks/logo';
 import { sectionCoverBlock } from '../blocks/section-cover';
 import { sectionTitleBlock } from '../blocks/section-title';
 import { serviceMenuBlock } from '../blocks/service-menu';
+
 import { fields } from '../fields';
 
 export const pages: { fields: SchemaField[] } = {
@@ -39,16 +41,17 @@ export const pages: { fields: SchemaField[] } = {
         visualSelector: true,
       },
       templates: [
-        heroBlock,
-        aboutBlock,
-        locationCTABlock,
-        coreServicesBlock,
-        contactBlock,
-        logoBlock,
+        contentBlock,
+        dividerBlock,
         sectionTitleBlock,
         sectionCoverBlock,
-        dividerBlock,
+        logoBlock,
         serviceMenuBlock,
+        heroBlock,
+        aboutBlock,
+        contactBlock,
+        coreServicesBlock,
+        locationCTABlock,
       ],
     },
     ...fields?.seo,
