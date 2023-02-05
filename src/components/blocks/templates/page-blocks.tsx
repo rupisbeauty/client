@@ -34,13 +34,12 @@ export const PageBlocks: React.FC<{ blocks: PagesBlocks[] }> = (props) => {
             return <SectionTitleBlock {...block} key={block.__typename} />;
           case 'PagesBlocksDivider':
             return (
-              <Container maxW="container.xl" w="full">
+              <Container maxW="container.xl" w="full" key={block.__typename}>
                 <Divider
                   orientation={
                     String(block.orientation) as DividerProps['orientation']
                   }
                   borderColor={String(block.borderColor)}
-                  key={block.__typename}
                 />
               </Container>
             );
