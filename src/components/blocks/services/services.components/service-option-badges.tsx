@@ -1,9 +1,9 @@
 import { Badge, Stack } from '@chakra-ui/react';
 
-import type { PagesBlocksServiceMenuRelatedServices } from '.tina';
+import type { CategoriesBlocksServiceMenu } from '.tina';
 
 export const ServiceBadges: React.FC<{
-  data: PagesBlocksServiceMenuRelatedServices['service'];
+  data: CategoriesBlocksServiceMenu | null | undefined;
   hasOptions: boolean;
   hasServices: boolean;
 }> = ({ data, hasOptions, hasServices }) => {
@@ -29,7 +29,6 @@ export const ServiceBadges: React.FC<{
     >
       {hasOptions
         ? data?.options?.slice(0, 2).map((option) => {
-            // const serviceOption = unSlugifyFilename(option.option ?? '');
             return (
               <Badge
                 key={option?.option?.id}
@@ -43,7 +42,6 @@ export const ServiceBadges: React.FC<{
         : null}
       {!hasOptions && hasServices
         ? data?.relatedServices?.slice(0, 2).map((service) => {
-            // const serviceOption = unSlugifyFilename(service.service ?? '');
             return (
               <Badge
                 key={service?.service?.id}

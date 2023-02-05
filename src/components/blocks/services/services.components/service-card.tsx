@@ -10,15 +10,28 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 
-import type { PagesBlocksServiceMenuRelatedServices } from '.tina';
+import type {
+  CategoriesBlocksServiceMenu,
+  CategoriesBlocksServiceMenuRelatedServices,
+} from '.tina';
 
 import { ServiceBadges } from './service-option-badges';
 
-export const ServiceCard: React.FC<PagesBlocksServiceMenuRelatedServices> = (
-  props
-) => {
-  const hasOptions = !!props?.service?.options?.length;
-  const hasServices = !!props?.service?.relatedServices?.length;
+export const ServiceCard: React.FC<
+  CategoriesBlocksServiceMenuRelatedServices
+> = (props) => {
+  const serviceOptions: CategoriesBlocksServiceMenu | null | undefined =
+    props?.service?.blocks
+      ?.map((block) => {
+        if (block?.__typename == 'CategoriesBlocksServiceMenu') {
+          return block;
+        }
+        return null;
+      })
+      .filter(Boolean)[0];
+
+  const hasOptions = !!serviceOptions?.options?.length;
+  const hasServices = !!serviceOptions?.relatedServices?.length;
   return (
     <Stack layerStyle="card.default" direction={{ base: 'column', md: 'row' }}>
       <Flex layerStyle="card.header" borderLeftRadius="xl">
@@ -51,36 +64,38 @@ export const ServiceCard: React.FC<PagesBlocksServiceMenuRelatedServices> = (
             {props.service?.description}
           </Text>
         ) : null}
-        <ServiceBadges
-          data={props.service}
-          hasOptions={hasOptions}
-          hasServices={hasServices}
-        />
 
         {hasOptions || hasServices ? (
-          <Stack
-            as={ButtonGroup}
-            direction="row"
-            w="full"
-            mt={'auto'}
-            align="center"
-            alignSelf="flex-end"
-            flex={0}
-          >
-            <Button
-              as={Link}
-              // SbfdQQqT @TODO: update this when out of sandbox
-              href={encodeURI(`/sandbox/services/${props.service?.slug}`)}
-              flex={1}
-              fontSize={'sm'}
-              colorScheme="teal"
-              _focus={{
-                bg: 'gray.200',
-              }}
+          <>
+            <ServiceBadges
+              data={serviceOptions}
+              hasOptions={hasOptions}
+              hasServices={hasServices}
+            />
+            <Stack
+              as={ButtonGroup}
+              direction="row"
+              w="full"
+              mt={'auto'}
+              align="center"
+              alignSelf="flex-end"
+              flex={0}
             >
-              See Options
-            </Button>
-          </Stack>
+              <Button
+                as={Link}
+                // SbfdQQqT @TODO: update this when out of sandbox
+                href={encodeURI(`/sandbox/services/${props.service?.slug}`)}
+                flex={1}
+                fontSize={'sm'}
+                colorScheme="teal"
+                _focus={{
+                  bg: 'gray.200',
+                }}
+              >
+                See Options
+              </Button>
+            </Stack>
+          </>
         ) : null}
       </Stack>
     </Stack>

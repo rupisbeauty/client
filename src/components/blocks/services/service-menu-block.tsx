@@ -32,6 +32,7 @@ export const ServiceMenuBlock: React.FC<
         >
           {props?.options.map((option) => {
             if (option?.__typename == 'CategoriesBlocksServiceMenuOptions') {
+              // @NOTE: we only need to display options for categories, pages wont have options
               return <OptionCard key={option?.option?.id} {...option} />;
             }
           })}
