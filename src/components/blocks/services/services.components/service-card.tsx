@@ -15,6 +15,7 @@ import type {
   CategoriesBlocksServiceMenuRelatedServices,
 } from '.tina';
 
+import { truncate } from '@/utils';
 import { ServiceBadges } from './service-option-badges';
 
 export const ServiceCard: React.FC<
@@ -32,6 +33,7 @@ export const ServiceCard: React.FC<
 
   const hasOptions = !!serviceOptions?.options?.length;
   const hasServices = !!serviceOptions?.relatedServices?.length;
+
   return (
     <Stack layerStyle="card.default" direction={{ base: 'column', md: 'row' }}>
       <Flex layerStyle="card.header" borderLeftRadius="xl">
@@ -61,7 +63,7 @@ export const ServiceCard: React.FC<
 
         {props.service?.description ? (
           <Text color="gray.700" px={3} data-tinafield="description">
-            {props.service?.description}
+            {truncate(props?.service?.description, 200)}
           </Text>
         ) : null}
 

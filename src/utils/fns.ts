@@ -1,4 +1,4 @@
-import { DASHES_REGEX, isClient, UNDERSCORES_REGEX } from './constants';
+import { DASHES_REGEX,isClient,UNDERSCORES_REGEX } from './constants';
 
 export const getBaseUrl = () => {
   if (typeof window !== 'undefined') return ''; // browser should use relative url
@@ -59,6 +59,17 @@ export function deDupeArrayOfObjects(arr: Record<string, any>[]) {
 /* -------------------------------------------------------------------------- */
 /*                                STRING UTILS                                */
 /* -------------------------------------------------------------------------- */
+/**
+ * truncate a string to a certain length
+ *
+ * @export
+ * @param {string} str
+ * @param {number} n
+ * @return {*}
+ */
+export function truncate(str: string, n: number) {
+  return str?.length > n ? str.substring(0, n - 1) + '...' : str;
+}
 
 /**
  * works well for simple strings. No language support

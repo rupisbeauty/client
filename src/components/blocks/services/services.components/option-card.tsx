@@ -2,6 +2,7 @@ import { AspectRatio, Box, Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 
 import type { CategoriesBlocksServiceMenuOptions } from '.tina';
+import { truncate } from '@/utils';
 
 export const OptionCard: React.FC<CategoriesBlocksServiceMenuOptions> = (
   props
@@ -75,7 +76,7 @@ export const OptionCard: React.FC<CategoriesBlocksServiceMenuOptions> = (
 
         {props.option?.description ? (
           <Text color="gray.700" px={3} data-tinafield="description">
-            {props.option?.description}
+            {truncate(props.option?.description, 200)}
           </Text>
         ) : null}
       </Stack>
