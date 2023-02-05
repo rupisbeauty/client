@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import type { imageSchema, PagesBlocksCoreServices } from '.tina';
 import type { z } from 'zod';
 
+import { shortId } from '../../../../utils/fns';
 import { SectionTitle } from '../../section/section-title-block';
 import { MoreBox, ServiceBox } from './core-services.components';
 
@@ -53,7 +54,7 @@ export const CoreServicesBlock: React.FC<PagesBlocksCoreServices> = (props) => {
                 (service: any) =>
                   service?.service && (
                     <ServiceBox // 15c1e649 Rename Components
-                      key={service?.service?.__typename}
+                      key={service?.service?.title}
                       item={service?.service}
                     />
                   )
