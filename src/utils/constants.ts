@@ -25,14 +25,13 @@ export const debug = isDev && false;
 
 export const NEXT_AUTH_SESSION_TOKEN_KEY = 'next-auth.session-token';
 
-// image cdn link components
+// image cdn link components -- still used by components/blocks/about/license-info.tsx
 export const CDN_URL = 'https://cdn.jsdelivr.net/gh/rupistudio/assets@main';
 export const LOCATIONS_DIR = '/images/locations';
 export const BRAND_DIR = '/brand';
 export const PEOPLE_DIR = '/images/people';
 export const PLACEHOLDER_DIR = '/images/placeholder';
 export const SERVICES_DIR = '/images/services';
-
 
 /* -------------------------------------------------------------------------- */
 /*                                    REGEX                                   */
@@ -41,7 +40,8 @@ export const SERVICES_DIR = '/images/services';
 export const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 export const PHONE_REGEX = /^\d{3}-\d{3}-\d{4}$/;
 export const ZIP_REGEX = /^\d{5}(?:[-\s]\d{4})?$/;
-export const URL_REGEX = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+export const URL_REGEX =
+  /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
 export const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 export const SPECIAL_CHAR_REGEX = /[^a-zA-Z ]/g;
 export const DASHES_REGEX = /-/g;

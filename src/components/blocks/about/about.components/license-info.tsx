@@ -1,12 +1,70 @@
-import { Box, chakra, HStack } from '@chakra-ui/react';
+import { Box,chakra,HStack } from '@chakra-ui/react';
 
 import type { FC } from 'react';
 
 import { ChImage } from 'chakra.ui';
 
-import { BRAND_DIR, CDN_URL } from '@/utils';
+import { BRAND_DIR,CDN_URL } from '@/utils';
 
-import images from '@/_content/services/images/images.json';
+// import images from '@/content/services/images/images.json';
+const images = [
+  {
+    title: 'State Licensed Logo',
+    filename: '/rupi-license-logo.png',
+    width: 900,
+    height: 564,
+    alt: 'Licensed Esthetician in NY and NJ.',
+    attr: 'Rupi Beauty Studio',
+  },
+  {
+    title: 'NY State Certified',
+    filename: '/ny-cert.webp',
+    width: 622,
+    height: 630,
+    alt: 'Licensed Esthetician in NY.',
+    attr: 'Rupi Beauty Studio',
+  },
+  {
+    title: 'NJ State Certified',
+    filename: '/nj-cert.webp',
+    width: 622,
+    height: 630,
+    alt: 'Licensed Esthetician in NJ.',
+    attr: 'Rupi Beauty Studio',
+  },
+  {
+    filename: '/eyebrow-threading2.webp',
+    title: 'Threading',
+    alt: 'Eyebrow Threading',
+    attr: 'Image by diana.grytsku',
+    width: 1200,
+    height: 800,
+  },
+  {
+    filename: '/facial.webp',
+    title: 'Facials',
+    alt: 'Facial mask treatment',
+    attr: 'Image by kroshka__nastya',
+    width: 1200,
+    height: 800,
+  },
+  {
+    filename: '/lower-legs-waxing2.webp',
+    title: 'Waxing',
+    alt: 'Leg waxing treatment',
+    attr: 'Image by prostooleh',
+    width: 1200,
+    height: 700,
+  },
+  {
+    filename: '/micro-needling.web',
+    title: 'Micro-needling',
+    alt: 'Microneedling treatment',
+    attr: 'Image by senivpetro',
+    width: 1200,
+    height: 800,
+  },
+];
 
 const licenseImages = images.filter(
   (img) =>
