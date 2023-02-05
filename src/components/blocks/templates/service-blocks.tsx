@@ -10,7 +10,7 @@ SectionCoverBlock,
 SectionTitleBlock
 } from '../section';
 import { ServiceMenuBlock } from '../services';
-import { LocationCTABlock } from '../visit-location-cta-block';
+import { LocationCTABlock } from '../cta/visit-location-cta-block';
 
 export const ServiceBlocks: React.FC<{ blocks: CategoriesBlocks[] }> = (
   props

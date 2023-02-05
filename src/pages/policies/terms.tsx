@@ -11,8 +11,8 @@ import { useRouter } from 'next/router';
 
 import type { NextPage } from 'next';
 
-import { FullLogo } from '@/components/v1';
-import { TermsAndConditionsBody } from '@/components/v1/policies';
+import { FullLogo } from '@/components/_v1';
+import { TermsAndConditionsBody } from '@/components/_v1/policies';
 
 const Terms: NextPage = () => {
   const router = useRouter();

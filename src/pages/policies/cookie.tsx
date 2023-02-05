@@ -11,8 +11,8 @@ import { useRouter } from 'next/router';
 
 import type { NextPage } from 'next';
 
-import { FullLogo } from '@/components/v1';
-import { CookiePolicyBody } from '@/components/v1/policies';
+import { FullLogo } from '@/components';
+import { CookiePolicyBody } from '@/components/_v1/policies';
 
 const Cookie: NextPage = () => {
   const router = useRouter();

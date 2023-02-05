@@ -10,7 +10,7 @@ import { FullLogoBlock } from '../full-logo-block';
 import { HeroBlock } from '../hero/hero-block';
 import { SectionCoverBlock, SectionTitleBlock } from '../section';
 import { CoreServicesBlock, ServiceMenuBlock } from '../services';
-import { LocationCTABlock } from '../visit-location-cta-block';
+import { LocationCTABlock } from '../cta/visit-location-cta-block';
 
 export const PageBlocks: React.FC<{ blocks: PagesBlocks[] }> = (props) => {
   return (

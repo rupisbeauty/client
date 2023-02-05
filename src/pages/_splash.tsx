@@ -1,4 +1,4 @@
-import { ComingSoon, Hero, PageLayout } from '@/components/v1';
+import { ComingSoon, Hero, PageLayout } from '@/components/_v1';
 import { type NextPage } from 'next';
 import { isDev } from '../utils/constants';
 

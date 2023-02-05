@@ -10,7 +10,7 @@ import '@fontsource/rambla/700.css';
 import type { GetServerSidePropsContext } from 'next';
 import type { FC } from 'react';
 
-import { CookieConsent } from '@/components/v1';
+import { CookieConsent } from '@/components';
 import { theme } from '../theme';
 
 type ChakraProps = {

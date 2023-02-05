@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
 
-import { MobileMenu, NavMenu } from '@/components/v1';
+import { MobileMenu, NavMenu } from '@/components';
 import { BRAND_DIR, CDN_URL } from '@/utils';
 import { Bar, ChakraNextImage } from '../components';
 import { ScrollSlide } from '../framer';

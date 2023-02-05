@@ -6,8 +6,8 @@ import type {
 } from '.tina';
 import type { FC } from 'react';
 
-import { ScrollSection } from './section';
-import { MapContainer } from './_shared.components';
+import { ScrollSection } from '../section';
+import { MapContainer } from '../_shared.components';
 
 export const LocationCTABlock: FC<
   PagesBlocksLocationCta | CategoriesBlocksLocationCta
