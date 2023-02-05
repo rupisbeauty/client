@@ -7,7 +7,7 @@ export const OptionCard: React.FC<CategoriesBlocksServiceMenuOptions> = (
   props
 ) => {
   return (
-    <Stack layerStyle="card.option" direction="row">
+    <Stack layerStyle="card.option" direction="row" minW="xl">
       <Flex
         layerStyle="card.header"
         position="relative"
