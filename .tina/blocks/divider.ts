@@ -4,6 +4,7 @@ import { fields } from '../fields';
 import { mapOptions } from '../utils/chakra';
 import { defaults } from './_defaults';
 
+// @TODO: add these to the fields object imported above
 export const dividerBlock: Template = {
   label: 'Horizontal Divider',
   name: 'divider',

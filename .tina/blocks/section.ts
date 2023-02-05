@@ -2,14 +2,16 @@ import type { Template } from 'tinacms';
 
 import { fields } from '../fields';
 
-import { boxBlock } from './box';
-import { dividerBlock } from './divider';
-import { logoBlock } from './logo';
-import { sectionCoverBlock } from './section-cover';
-import { sectionTitleBlock } from './section-title';
-import { serviceMenuBlock } from './service-menu';
+import {
+  boxBlock,
+  dividerBlock,
+  logoBlock,
+  sectionCoverBlock,
+  sectionTitleBlock,
+  serviceMenuBlock,
+} from '.';
 
-import { templates } from './index';
+
 import { defaults } from './_defaults';
 
 export const sectionBlock: Template = {
@@ -27,15 +29,12 @@ export const sectionBlock: Template = {
       type: 'string',
       name: 'title',
       label: 'Title',
-      // isTitle: true,
-      // required: true,
     },
     {
       type: 'rich-text',
       name: 'body',
       label: 'Body',
       isBody: true,
-      // templates: templates.section, // @FIXME: "cannot access templates before initialization"
       templates: [
         boxBlock,
         logoBlock,

@@ -1,9 +1,7 @@
 import type { Template } from 'tinacms';
-import { templates } from '.';
 
 import { fields } from '../fields';
 import { mapSettingsToTinaComponents } from '../utils/chakra';
-import { boxBlock } from './box';
 import { dividerBlock } from './divider';
 import { defaults } from './_defaults';
 

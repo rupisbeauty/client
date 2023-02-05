@@ -1,12 +1,14 @@
 import type { SchemaField } from 'tinacms';
 
-import { dividerBlock } from '../blocks/divider';
-import { locationCTABlock } from '../blocks/location-cta';
-import { logoBlock } from '../blocks/logo';
-import { sectionBlock } from '../blocks/section';
-import { sectionCoverBlock } from '../blocks/section-cover';
-import { sectionTitleBlock } from '../blocks/section-title';
-import { serviceMenuBlock } from '../blocks/service-menu';
+import {
+  dividerBlock,
+  locationCTABlock,
+  logoBlock,
+  sectionBlock,
+  sectionCoverBlock,
+  sectionTitleBlock,
+  serviceMenuBlock,
+} from '../blocks';
 import { fields } from '../fields';
 
 export const categories: { fields: SchemaField[] } = {

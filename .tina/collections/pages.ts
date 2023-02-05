@@ -1,4 +1,4 @@
-import type { SchemaField, Template } from 'tinacms';
+import type { SchemaField,Template } from 'tinacms';
 
 import { aboutBlock } from '../blocks/about';
 import { contactBlock } from '../blocks/contact';

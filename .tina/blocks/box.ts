@@ -3,7 +3,6 @@ import type { Template } from 'tinacms';
 import { fields } from '../fields';
 import { mapSettingsToTinaComponents } from '../utils/chakra';
 import { childBoxBlock } from './child-box';
-import { templates } from './index';
 import { defaults } from './_defaults';
 
 const settings = mapSettingsToTinaComponents();
