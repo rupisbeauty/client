@@ -147,57 +147,12 @@ const options = {
 /*                                Config:Pages                                */
 /* -------------------------------------------------------------------------- */
 export const fields: Record<string, Template['fields']> = {
-  pageTitle: [
-    // @TODO: this might be able to be remove (check and remove)
-    {
-      type: 'string',
-      label: 'Title',
-      name: 'title',
-      // @NOTE: removed validation to allow the search engine to auto-truncate as needed
-
-      // ui: {
-      //   validate: (value: any) => {
-      //     if (value?.length && value.length > 70)
-      //       return `-${Number(value.length) - 70} chars remaining / 70`;
-      //   },
-      // },
-    },
-    {
-      name: 'slug',
-      label: 'Slug (all lowercase and no spaces)',
-      type: 'string',
-      required: true,
-      isTitle: true,
-    },
-    {
-      type: 'string',
-      label: 'Description (Seo, Search results) 150-160 chars.',
-      name: 'description',
-      required: true,
-      // @NOTE: removed validation to allow the search engine to auto-truncate as needed
-      // ui: {
-      //   component: 'textarea',
-      //   validate: (value: any) => {
-      //     if (value?.length && value.length > 160)
-      //       return `-${Number(value.length) - 160} chars remaining / 160`;
-      //   },
-      // },
-    },
-  ],
   page: [
     {
       type: 'string',
       label: 'Page Title (SEO, Search results) 50-70 chars.',
       name: 'title',
       required: true,
-      // @NOTE: removed validation to allow the search engine to auto-truncate as needed
-
-      // ui: {
-      //   validate: (value: any) => {
-      //     if (value?.length && value.length > 70)
-      //       return `-${Number(value.length) - 70} chars remaining / 70`;
-      //   },
-      // },
     },
     {
       name: 'slug',
@@ -213,12 +168,6 @@ export const fields: Record<string, Template['fields']> = {
       required: true,
       ui: {
         component: 'textarea',
-        // @NOTE: removed validation to allow the search engine to auto-truncate as needed
-
-        // validate: (value: any) => {
-        //   if (value?.length && value.length > 160)
-        //     return `-${Number(value.length) - 160} chars remaining / 160`;
-        // },
       },
     },
   ],
@@ -640,6 +589,7 @@ fields['flex'] = [
 /* -------------------------------------------------------------------------- */
 
 fields['container'] = [
+  // @NOTE: used to define section block colors '.tina/blocks/section.ts'
   // {
   //   type: 'string',
   //   label:
@@ -676,6 +626,7 @@ fields['settings'] = [
         label: 'Show Footer',
       },
       {
+        // @TODO: convert this to a block
         type: 'boolean',
         name: 'showCta',
         label: 'Show Email Signup CTA?',
@@ -737,7 +688,7 @@ fields['image'] = [
             type: 'string',
             label: 'Transform Image',
             name: 'transform',
-            options: scale.map(mapOptions),
+            options: scale.map(mapOptions), // @TODO: add translate options
           },
         ],
       },

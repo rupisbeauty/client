@@ -38,13 +38,6 @@ export const defaults = {
     description: 'Description (Seo, Search results) 150-160 chars.',
     slug: 'category-slug',
     image: defaultImage,
-    options: [],
-    relatedServices: [
-      { service: '_content/categories/eyebrows.mdx' },
-      { service: '_content/categories/skin-care.mdx' },
-      { service: '_content/categories/facials.mdx' },
-      { service: '_content/categories/addons.mdx' },
-    ],
     settings: defaultLayoutSettings,
     colors: defaultColors,
     seo: defaultSEO,
@@ -56,6 +49,5 @@ export const defaults = {
     price: 0,
     duration: 30,
     image: defaultImage,
-    options: [],
   },
 };
