@@ -20,6 +20,7 @@ export const ServiceBox: React.FC<{
       whileHover={{ y: -10 }}
     >
       <ChLink href={'#'}>
+      {/* @FIXME: Add Link */}
         {props.item?.image ? (
           <Box w="full" h="full" objectFit="cover">
             <Image

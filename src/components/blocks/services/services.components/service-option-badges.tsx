@@ -10,7 +10,6 @@ export const ServiceBadges: React.FC<{
   const badgeStyles = {
     my: 1,
     variant: 'outline',
-    coloScheme: 'teal',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     maxW: ['auto', null, '160px'],
@@ -33,6 +32,7 @@ export const ServiceBadges: React.FC<{
               <Badge
                 key={option?.option?.id}
                 {...badgeStyles}
+                colorScheme="teal"
                 whiteSpace={['nowrap']}
               >
                 {option?.option?.title}

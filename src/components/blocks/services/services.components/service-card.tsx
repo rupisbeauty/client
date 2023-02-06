@@ -3,7 +3,6 @@ import {
   Button,
   ButtonGroup,
   Flex,
-  Heading,
   Stack,
   Text,
 } from '@chakra-ui/react';
@@ -85,8 +84,7 @@ export const ServiceCard: React.FC<
             >
               <Button
                 as={Link}
-                // SbfdQQqT @TODO: update this when out of sandbox
-                href={encodeURI(`/sandbox/services/${props.service?.slug}`)}
+                href={encodeURI(`/services/${props.service?.slug}`)}
                 flex={1}
                 fontSize={'sm'}
                 colorScheme="teal"
