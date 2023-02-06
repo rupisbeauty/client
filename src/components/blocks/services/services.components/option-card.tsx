@@ -88,7 +88,14 @@ export const SimpleOptionCard: React.FC<CategoriesBlocksServiceMenuOptions> = (
   props
 ) => {
   return (
-    <Flex layerStyle="card.header" position="relative" rounded="xl" w="100%">
+    <Flex
+      layerStyle="card.header"
+      position="relative"
+      rounded="xl"
+      w="100%"
+      borderColor="gold"
+      border="4px solid"
+    >
       {props?.option?.price ? (
         <Box
           position="absolute"
@@ -109,7 +116,7 @@ export const SimpleOptionCard: React.FC<CategoriesBlocksServiceMenuOptions> = (
             rounded: '100%',
             minH: '16',
             border: '2px solid',
-            borderColor: 'white'
+            borderColor: 'white',
           }}
         >
           <Flex w="full" justify="center" ml={1.5} mt={1}>
