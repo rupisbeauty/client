@@ -29,9 +29,10 @@ export const defaults = {
   page: {
     title: 'Page Title (SEO, Search results) 50-70 chars.',
     description: 'Description (Seo, Search results) 150-160 chars.',
-    seo: defaultSEO,
-    settings: defaultLayoutSettings,
-    colors: defaultColors,
+    // 87kmsc3 @WIP: ISSUE FIX
+    // seo: defaultSEO,
+    // settings: defaultLayoutSettings,
+    // colors: defaultColors,
   },
   categories: {
     title: 'Page Title (SEO, Search results) 50-70 chars.',

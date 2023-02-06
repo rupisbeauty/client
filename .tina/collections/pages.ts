@@ -44,7 +44,8 @@ export const pages: { fields: SchemaField[] } = {
       templates: [
         contentBlock,
         dividerBlock,
-        sectionBlock,
+        // 87kmsc3 @WIP: ISSUE FIX
+        // sectionBlock,
         sectionTitleBlock,
         sectionCoverBlock,
         logoBlock,
