@@ -37,7 +37,7 @@ export const PageLayout: FC<LayoutProps> = ({
   },
   colors: { backgroundColor = 'bg', color = 'text' },
   // @TODO: add image from tina
-  seo: { title: seoTitle, description: seoDescription, image: seoImage },
+  seo: { title: seoTitle, description: seoDescription /* , image: seoImage */ },
   children,
 }) => {
   return (

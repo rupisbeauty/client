@@ -27,7 +27,7 @@ export const SectionBox: React.FC<SectionBoxProps> = ({
   poly = 'box',
   body,
   settings,
-  ...props // {title}
+  // ...props // {title}
 }) => {
   return (
     <Box

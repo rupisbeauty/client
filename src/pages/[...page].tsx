@@ -8,7 +8,7 @@ import type {
 
 import { PageLayout } from '@/components';
 
-import { pageSchema } from '.tina';
+// import { pageSchema } from '.tina';
 import {
   getCurrentPageTinaProps,
   getPagesTinaPaths,

@@ -21,13 +21,13 @@ const imageSchema = z
   })
   .nullish();
 
-const pageTitleSchemaPart = z.object({
-  title: z.string().min(1),
-  // title: z.string().min(1).max(70),
-  description: z.string().min(1),
-  // description: z.string().min(1).max(160),
-  slug: z.string().nullish(),
-});
+// const pageTitleSchemaPart = z.object({
+//   title: z.string().min(1),
+//   // title: z.string().min(1).max(70),
+//   description: z.string().min(1),
+//   // description: z.string().min(1).max(160),
+//   slug: z.string().nullish(),
+// });
 
 const colorSchemaPart = z.object({
   backgroundColor: z.string().optional(),

@@ -1,6 +1,6 @@
 // @NOTE: this is still used by section-block component internally
 
-import { Box, chakra, Divider } from '@chakra-ui/react';
+import { chakra, Divider } from '@chakra-ui/react';
 
 import { Section } from '@/components';
 import { FullLogo, SectionBox, SectionTitle } from '../components/blocks';

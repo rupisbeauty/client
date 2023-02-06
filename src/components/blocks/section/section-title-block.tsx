@@ -1,4 +1,4 @@
-import { CategoriesBlocksSectionTitle, PagesBlocksSectionTitle } from '.tina';
+import type { CategoriesBlocksSectionTitle, PagesBlocksSectionTitle } from '.tina';
 import { Box, chakra, VStack } from '@chakra-ui/react';
 import Image from 'next/image';
 
