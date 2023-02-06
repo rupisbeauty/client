@@ -29,7 +29,7 @@ export const schema = defineSchema({
       format: 'mdx',
       ui: {
         defaultItem: defaults.page,
-        // router: routers.pages,
+        router: routers.pages,
       },
       ...pages,
     },
