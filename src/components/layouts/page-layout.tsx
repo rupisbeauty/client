@@ -1,9 +1,9 @@
 import { Box, chakra } from '@chakra-ui/react';
 import { SkipNavContent } from '@chakra-ui/skip-nav';
 import { NextSeo } from 'next-seo';
+import { useLayoutEffect } from 'react';
 
 import type { tinaSchema } from '@/schema';
-import type { FC } from 'react';
 import type { z } from 'zod';
 
 import { EmailCTA } from '../blocks';
@@ -25,7 +25,7 @@ export type LayoutProps = z.TypeOf<typeof tinaSchema.layout> & {
   children?: React.ReactNode;
 };
 
-export const PageLayout: FC<LayoutProps> = ({
+export const PageLayout: React.FC<LayoutProps> = ({
   title = 'Site Title',
   subtitle = '',
   description = '',
@@ -40,6 +40,11 @@ export const PageLayout: FC<LayoutProps> = ({
   seo: { title: seoTitle, description: seoDescription /* , image: seoImage */ },
   children,
 }) => {
+  useLayoutEffect(() => {
+    if (backgroundColor !== 'bg') return;
+    document.body.style.backgroundColor = backgroundColor;
+  }, []);
+
   return (
     <>
       <NextSeo
@@ -56,6 +61,7 @@ export const PageLayout: FC<LayoutProps> = ({
         displayHeader={showHeader}
         backgroundColor={backgroundColor}
         color={color}
+        showReviews={showReviews}
       >
         {children}
         {showCta ? <EmailCTA /> : null}
@@ -74,18 +80,19 @@ type MainProps = {
   backgroundColor: string;
   color: string;
   displayHeader: boolean;
+  showReviews: boolean;
   children: React.ReactNode;
 };
 
-const Main: FC<MainProps> = ({
+const Main: React.FC<MainProps> = ({
   backgroundColor,
   color,
   displayHeader,
+  showReviews,
   children,
 }) => {
   return (
     <chakra.main bg={backgroundColor}>
-      <SkipNavContent />
       <MotionBox
         initial="hidden"
         animate="enter"
@@ -97,8 +104,9 @@ const Main: FC<MainProps> = ({
         mt={displayHeader ? 36 : 0}
         pb={displayHeader ? '1em' : 0}
         minH="100vh"
-        mb={20}
+        mb={!showReviews ? 20 : 0}
       >
+        <SkipNavContent />
         <Box position="relative" w="full" overflowX="hidden" color={color}>
           {children}
         </Box>
