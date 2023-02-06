@@ -28,9 +28,8 @@ export const schema = defineSchema({
       path: '_content/pages',
       format: 'mdx',
       ui: {
-        // 87kmsc3 @WIP: ISSUE FIX
-        // defaultItem: defaults.page,
-        router: routers.pages,
+        defaultItem: defaults.page,
+        // router: routers.pages,
       },
       ...pages,
     },
