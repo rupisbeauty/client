@@ -43,7 +43,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
   useLayoutEffect(() => {
     if (backgroundColor !== 'bg') return;
     document.body.style.backgroundColor = backgroundColor;
-  }, []);
+  }, [backgroundColor]);
 
   return (
     <>
@@ -57,12 +57,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
       <SocialShare twitter facebook pinterest />
       <Sidebar />
       {showHeader && <Header />}
-      <Main
-        displayHeader={showHeader}
-        backgroundColor={backgroundColor}
-        color={color}
-        showReviews={showReviews}
-      >
+      <Main displayHeader={showHeader} color={color} showReviews={showReviews}>
         {children}
         {showCta ? <EmailCTA /> : null}
         {showReviews ? (
@@ -77,7 +72,6 @@ export const PageLayout: React.FC<LayoutProps> = ({
 };
 
 type MainProps = {
-  backgroundColor: string;
   color: string;
   displayHeader: boolean;
   showReviews: boolean;
@@ -85,14 +79,13 @@ type MainProps = {
 };
 
 const Main: React.FC<MainProps> = ({
-  backgroundColor,
   color,
   displayHeader,
   showReviews,
   children,
 }) => {
   return (
-    <chakra.main bg={backgroundColor}>
+    <chakra.main>
       <MotionBox
         initial="hidden"
         animate="enter"
