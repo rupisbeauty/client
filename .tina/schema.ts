@@ -12,10 +12,10 @@ import { routers } from './routers';
  * Schema file defines the individual collections available in our CMS
  *
  * Each collection has a definition stored in `./collections/*`
- * Each collection will have fields where define the inputs exposed in the TinaCloud Sidebar
- * The field config definitions a all located in a single file `./fields-config.ts` then imported into each field array. This way a particular set of fields only has to be defined once and their definitions can then be re-used by different collections or template blocks.
+ * Each collection will have fields where we define the inputs exposed in the TinaCloud Sidebar
+ * The field config definitions are all located in a single file `./fields-config.ts` then imported into each field array as needed. This way a particular set of fields only has to be defined once and their definitions can then be re-used by different collections or template blocks.
  *
- * Templating occurs at the collection level and at the block level, both types are instantiated in `./blocks/* The blocks index also exposes a object mapping which helps easily add a group of blocks to another block or a collection.
+ * Templating occurs at the collection level and at the block level, both types are instantiated in `./blocks/*
  * For more information on handling blocks
  * @SEE: `./blocks/README.md`
  */
