@@ -8,6 +8,7 @@ import {
   objectFit,
   objectPosition,
   scale,
+  translate,
 } from './utils';
 
 import { paths } from '../chakra.ui/icons/paths';
@@ -644,7 +645,7 @@ fields['image'] = [
             type: 'string',
             label: 'Transform Image',
             name: 'transform',
-            options: scale.map(mapOptions), // @TODO: add translate options
+            options: translate.map(mapOptions), // @TODO: add translate options
           },
         ],
       },
