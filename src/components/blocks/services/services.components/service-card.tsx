@@ -18,7 +18,7 @@ import { truncate } from '@/utils';
 import { ServiceBadges } from './service-option-badges';
 
 export const ServiceCard: React.FC<
-  CategoriesBlocksServiceMenuRelatedServices
+  CategoriesBlocksServiceMenuRelatedServices & { category?: string }
 > = (props) => {
   const serviceOptions: CategoriesBlocksServiceMenu | null | undefined =
     props?.service?.blocks
@@ -32,6 +32,9 @@ export const ServiceCard: React.FC<
 
   const hasOptions = !!serviceOptions?.options?.length;
   const hasServices = !!serviceOptions?.relatedServices?.length;
+  const serviceLink = props?.category
+    ? `/services/${props?.category}/${props.service?.slug}`
+    : `/services/${props.service?.slug}`;
 
   return (
     <Stack layerStyle="card.default" direction={{ base: 'column', md: 'row' }}>
@@ -84,7 +87,7 @@ export const ServiceCard: React.FC<
             >
               <Button
                 as={Link}
-                href={encodeURI(`/services/${props.service?.slug}`)}
+                href={encodeURI(serviceLink)}
                 flex={1}
                 fontSize={'sm'}
                 colorScheme="teal"

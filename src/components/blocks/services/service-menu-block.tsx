@@ -1,14 +1,15 @@
-import { Box, SimpleGrid } from '@chakra-ui/react';
+import { Box,SimpleGrid } from '@chakra-ui/react';
 
 import type {
-  CategoriesBlocksServiceMenu,
-  PagesBlocksServiceMenu,
+CategoriesBlocksServiceMenu,
+PagesBlocksServiceMenu
 } from '.tina';
 
-import { OptionCard, ServiceCard } from './services.components';
+import { OptionCard,ServiceCard } from './services.components';
 
 export const ServiceMenuBlock: React.FC<
-  PagesBlocksServiceMenu | CategoriesBlocksServiceMenu
+  | (PagesBlocksServiceMenu & { category?: string })
+  | (CategoriesBlocksServiceMenu & { category?: string })
 > = (props) => {
   return (
     <Box
@@ -54,6 +55,7 @@ export const ServiceMenuBlock: React.FC<
               <ServiceCard
                 key={service?.service?.title}
                 service={service?.service}
+                category={props?.category}
               />
             );
           })}

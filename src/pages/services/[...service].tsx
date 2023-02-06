@@ -7,7 +7,7 @@ import { useTina } from 'tinacms/dist/react';
 
 import { PageLayout } from '@/components';
 
-import { serviceCategorySchema } from '.tina/validators';
+// import { serviceCategorySchema } from '.tina/validators';
 import {
   getCurrentServiceTinaProps,
   getServicesTinaPaths,

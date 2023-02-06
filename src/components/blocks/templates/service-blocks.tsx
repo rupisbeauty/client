@@ -1,7 +1,7 @@
 import { Container, Divider } from '@chakra-ui/react';
 import React from 'react';
 
-import type { CategoriesBlocks, CategoriesBlocksSectionCover } from '.tina';
+import type { Categories, CategoriesBlocksSectionCover } from '.tina';
 import type { DividerProps } from '@chakra-ui/react';
 
 import { LocationCTABlock } from '../cta/visit-location-cta-block';
@@ -10,9 +10,7 @@ import { SectionCoverBlock, SectionTitleBlock } from '../section';
 import { SimpleContent } from '../section/prose';
 import { ServiceMenuBlock } from '../services';
 
-export const ServiceBlocks: React.FC<{ blocks: CategoriesBlocks[] }> = (
-  props
-) => {
+export const ServiceBlocks: React.FC<Categories> = (props) => {
   return (
     // @TODO: refactor to use an object Map instead of switch
     <>
@@ -43,7 +41,13 @@ export const ServiceBlocks: React.FC<{ blocks: CategoriesBlocks[] }> = (
               />
             );
           case 'CategoriesBlocksServiceMenu':
-            return <ServiceMenuBlock {...block} key={block.__typename} />;
+            return (
+              <ServiceMenuBlock
+                {...block}
+                key={block.__typename}
+                category={props?.slug}
+              />
+            );
           case 'CategoriesBlocksContent':
             return <SimpleContent {...block} key={block.__typename} />;
           default:

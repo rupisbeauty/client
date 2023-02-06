@@ -1,19 +1,19 @@
 import { Container, Divider } from '@chakra-ui/react';
 import React from 'react';
 
-import type { PagesBlocks, PagesBlocksSectionCover } from '.tina';
+import type { Pages, PagesBlocksSectionCover } from '.tina';
 import type { DividerProps } from '@chakra-ui/react';
 
 import { AboutBlock } from '../about';
 import { ContactInfoBlock } from '../contact';
+import { LocationCTABlock } from '../cta/visit-location-cta-block';
 import { FullLogoBlock } from '../full-logo-block';
 import { HeroBlock } from '../hero/hero-block';
 import { SectionCoverBlock, SectionTitleBlock } from '../section';
-import { CoreServicesBlock, ServiceMenuBlock } from '../services';
-import { LocationCTABlock } from '../cta/visit-location-cta-block';
 import { SimpleContent } from '../section/prose/simple-content';
+import { CoreServicesBlock, ServiceMenuBlock } from '../services';
 
-export const PageBlocks: React.FC<{ blocks: PagesBlocks[] }> = (props) => {
+export const PageBlocks: React.FC<Pages> = (props) => {
   return (
     // @TODO: refactor to use an object Map instead of switch
     <>
@@ -52,7 +52,13 @@ export const PageBlocks: React.FC<{ blocks: PagesBlocks[] }> = (props) => {
               />
             );
           case 'PagesBlocksServiceMenu':
-            return <ServiceMenuBlock {...block} key={block.__typename} />;
+            return (
+              <ServiceMenuBlock
+                {...block}
+                key={block.__typename}
+                // category={props?.slug}
+              />
+            );
           case 'PagesBlocksContent':
             return <SimpleContent {...block} key={block.__typename} />;
           default:
