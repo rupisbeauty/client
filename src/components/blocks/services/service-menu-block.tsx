@@ -1,29 +1,28 @@
 import { PhoneIcon } from '@chakra-ui/icons';
 import {
-Box,
-Button,
-ButtonGroup,
-Divider,
-Heading,
-SimpleGrid,
-Stack,
-Text
+  Box,
+  Button,
+  ButtonGroup,
+  Divider,
+  Heading,
+  SimpleGrid,
+  Stack,
+  Text,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 
-import type {
-CategoriesBlocksServiceMenu,
-PagesBlocksServiceMenu
-} from '.tina';
+import type { CategoriesBlocksServiceMenu } from '.tina';
 
 import { unplauralize } from '../../../utils/fns';
 import { SectionTitle } from '../section';
-import { ServiceCard,SimpleOptionCard } from './services.components';
+import { ServiceCard, SimpleOptionCard } from './services.components';
 
-export const ServiceMenuBlock: React.FC<
-  | (PagesBlocksServiceMenu & { category?: string })
-  | (CategoriesBlocksServiceMenu & { category?: string })
-> = (props) => {
+export const ServiceMenuBlock: React.FC<any> = (props) => {
+  // c3c9 @WIP
+  // export const ServiceMenuBlock: React.FC<
+  //   | (PagesBlocksServiceMenu & { category?: string })
+  //   | (CategoriesBlocksServiceMenu & { category?: string })
+  // > = (props) => {
   const serviceCols =
     props.relatedServices && Number(props.relatedServices?.length) > 1
       ? [1, null, null, 2]
@@ -75,7 +74,8 @@ export const ServiceMenuBlock: React.FC<
               alignItems="center"
               justifyContent="center"
             >
-              {props?.options?.map((option) => {
+              {props?.options?.map((option: any) => {
+                // c3c9 @WIP -- remove any type -- option is inferred
                 if (
                   option?.__typename == 'CategoriesBlocksServiceMenuOptions'
                 ) {
@@ -113,7 +113,7 @@ export const ServiceMenuBlock: React.FC<
                 justifyContent="center"
               >
                 {props?.relatedServices &&
-                  props?.relatedServices.map((service) => {
+                  props?.relatedServices.map((service: any) => {
                     return (
                       <ServiceCard
                         key={service?.service?.title}

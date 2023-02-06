@@ -1,17 +1,16 @@
-import { Box, chakra, Stack } from '@chakra-ui/react';
+import { Box,chakra,Stack } from '@chakra-ui/react';
 
-import type {
-  CategoriesBlocksLocationCta,
-  PagesBlocksLocationCta,
-} from '.tina';
+import type { CategoriesBlocksLocationCta } from '.tina';
 import type { FC } from 'react';
 
 import { ScrollSection } from '../section';
 import { MapContainer } from '../_shared.components';
 
-export const LocationCTABlock: FC<
-  PagesBlocksLocationCta | CategoriesBlocksLocationCta
-> = (props) => {
+// export const LocationCTABlock: FC<
+//   PagesBlocksLocationCta | CategoriesBlocksLocationCta
+// > = (props) => {
+export const LocationCTABlock: FC<any> = (props) => {
+  // c3c9 @WIP
   // @TODO: consider adding address to tina schema
   const address = '2A Franklin Ave, Pearl River, NY 10965';
   return (

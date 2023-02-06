@@ -1,8 +1,8 @@
-import { Box, chakra } from '@chakra-ui/react';
+import { Box,chakra } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import type { PagesBlocksCoreServicesRelatedServices } from '.tina';
+// import type { PagesBlocksCoreServicesRelatedServices } from '.tina'; // c3c9 @WIP
 
 import { truncate } from '@/utils';
 import { MotionBox } from 'chakra.ui';
@@ -13,9 +13,13 @@ function getRouteFromId(id: string) {
   return id.split('.')[0]?.replace('_content/categories/', '');
 }
 
+// export const ServiceBox: React.FC<{
+//   item: PagesBlocksCoreServicesRelatedServices['service'];
+// }> = (props) => {
 export const ServiceBox: React.FC<{
-  item: PagesBlocksCoreServicesRelatedServices['service'];
+  item: any;
 }> = (props) => {
+  // c3c9 @WIP
   return (
     <MotionBox
       key={props.item?.image?.src}

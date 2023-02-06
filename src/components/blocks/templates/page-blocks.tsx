@@ -1,7 +1,7 @@
-import { Container, Divider } from '@chakra-ui/react';
+import { Container,Divider } from '@chakra-ui/react';
 import React from 'react';
-
-import type { Pages, PagesBlocksSectionCover } from '.tina';
+// PagesBlocksSectionCover
+import type { Pages } from '.tina';
 import type { DividerProps } from '@chakra-ui/react';
 
 import { AboutBlock } from '../about';
@@ -9,15 +9,16 @@ import { ContactInfoBlock } from '../contact';
 import { LocationCTABlock } from '../cta/visit-location-cta-block';
 import { FullLogoBlock } from '../full-logo-block';
 import { HeroBlock } from '../hero/hero-block';
-import { SectionCoverBlock, SectionTitleBlock } from '../section';
+import { SectionCoverBlock,SectionTitleBlock } from '../section';
 import { SimpleContent } from '../section/prose/simple-content';
-import { CoreServicesBlock, ServiceMenuBlock } from '../services';
+import { CoreServicesBlock,ServiceMenuBlock } from '../services';
 
 export const PageBlocks: React.FC<Pages> = (props) => {
   return (
+    // c3c9 @WIP
     // @TODO: refactor to use an object Map instead of switch
     <>
-      {props?.blocks?.map((block) => {
+      {/* {props?.blocks?.map((block) => {
         switch (block?.__typename) {
           case 'PagesBlocksLogo':
             return <FullLogoBlock key={block.__typename} />;
@@ -65,7 +66,7 @@ export const PageBlocks: React.FC<Pages> = (props) => {
           default:
             return null;
         }
-      })}
+      })} */}
     </>
   );
 };

@@ -1,23 +1,25 @@
 import { PhoneIcon } from '@chakra-ui/icons';
 import {
-  Box,
-  chakra,
-  Circle,
-  Container,
-  Divider,
-  HStack,
-  Stack,
-  VStack,
+Box,
+chakra,
+Circle,
+Container,
+Divider,
+HStack,
+Stack,
+VStack
 } from '@chakra-ui/react';
 
-import type { PagesBlocksContact } from '.tina';
+// import type { PagesBlocksContact } from '.tina'; // c3c9 @WIP
 import type { FC } from 'react';
 
 import { FullLogo } from '../full-logo-block';
 import { SectionTitle } from '../section';
-import { MapContainer, StoreIcon } from '../_shared.components';
+import { MapContainer,StoreIcon } from '../_shared.components';
 
-export const ContactInfoBlock: FC<PagesBlocksContact> = ({
+// export const ContactInfoBlock: FC<PagesBlocksContact> = ({
+export const ContactInfoBlock: FC<any> = ({
+  // c3c9 @WIP
   address = '2A Franklin Ave',
   locality = 'Pearl River, N.Y. 10965',
   phoneNumber = '(862) 571-7873',

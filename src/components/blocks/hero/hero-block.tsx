@@ -1,13 +1,14 @@
-import { Container, Stack, VStack } from '@chakra-ui/react';
+import { Container,Stack,VStack } from '@chakra-ui/react';
 import React from 'react';
 
-import type { PagesBlocksHero } from '.tina';
+// import type { PagesBlocksHero } from '.tina'; // c3c9 @WIP
 import type { FC } from 'react';
 
 import { tinaSchema } from '@/schema';
-import { ColumnLeft, ColumnRight, CTABox } from './hero.components';
+import { ColumnLeft,ColumnRight,CTABox } from './hero.components';
 
-export const HeroBlock: FC = (props: PagesBlocksHero) => {
+// export const HeroBlock: FC = (props: PagesBlocksHero) => {
+export const HeroBlock: FC = (props: any) => {
   const data = tinaSchema.hero.parse(props);
   const image = tinaSchema.image.parse(props.image);
   return (
