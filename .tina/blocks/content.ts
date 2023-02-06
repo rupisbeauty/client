@@ -8,7 +8,7 @@ export const contentBlock: Template = {
   label: 'Simple Text Block',
   name: 'content',
   ui: {
-    defaultItem: defaults.content,
+    // defaultItem: defaults.content,
   },
   fields: [
     {
