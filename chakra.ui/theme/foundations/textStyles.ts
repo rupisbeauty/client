@@ -2,28 +2,32 @@ import type { ChakraTheme } from '@chakra-ui/react';
 
 export const customTextStyles = {
   h1: {
-    fontSize: '5xl',
+    fontSize: { base: '4xl', sm: '5xl' },
     fontFamily: 'heading',
     fontWeight: 900,
     lineHeight: 'taller',
+    textTransform: 'capitalize',
   },
   h2: {
-    fontSize: '3xl',
+    fontSize: { base: '2xl', sm: '3xl' },
     fontFamily: 'heading',
     fontWeight: 800,
     lineHeight: 'tall',
+    textTransform: 'capitalize',
   },
   h3: {
     fontSize: '2xl',
     fontFamily: 'heading',
     fontWeight: 700,
     lineHeight: 'tall',
+    textTransform: 'capitalize',
   },
   h4: {
     fontSize: 'xl',
     fontFamily: 'heading',
     fontWeight: 600,
     lineHeight: 'tall',
+    textTransform: 'capitalize',
   },
   body: {
     fontSize: 'initial',
@@ -54,17 +58,20 @@ export const customTextStyles = {
     fontFamily: 'heading',
     fontWeight: 700,
     lineHeight: 1.2,
+    textTransform: 'capitalize',
   },
   card: {
     title: {
       fontSize: '2xl',
       fontFamily: 'body',
       color: 'teal.400',
+      textTransform: 'capitalize',
     },
     'title-sm': {
       fontSize: 'xl',
       fontFamily: 'body',
       color: 'teal.400',
+      textTransform: 'capitalize',
     },
   },
   container: {
@@ -101,7 +108,7 @@ export const customTextStyles = {
       textAlign: 'center',
       textDecoration: 'none',
       textOverflow: 'none',
-      textTransform: 'none',
+      textTransform: 'capitalize',
     },
   },
 };
