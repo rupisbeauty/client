@@ -5,7 +5,7 @@ import type {
   PagesBlocksServiceMenu,
 } from '.tina';
 
-import { OptionCard, ServiceCard } from './services.components';
+import { ServiceCard, SimpleOptionCard } from './services.components';
 
 export const ServiceMenuBlock: React.FC<
   | (PagesBlocksServiceMenu & { category?: string })
@@ -16,14 +16,14 @@ export const ServiceMenuBlock: React.FC<
       ? [1, null, null, 2]
       : 1;
   const optionCols =
-    props.options && Number(props.options?.length) > 1 ? [1, null, 2] : 1;
+    props.options && Number(props.options?.length) > 1 ? [1, null, 2, 4] : 1;
   return (
     <>
-      {props.relatedServices?.length ? (
+      {/* {props.relatedServices?.length ? (
         <Box
           w="full"
           layerStyle="box.responsive"
-          bg="gray.700"
+          bg="gray.400"
           rounded="xl"
           p={4}
           my={24}
@@ -50,7 +50,7 @@ export const ServiceMenuBlock: React.FC<
               })}
           </SimpleGrid>
         </Box>
-      ) : null}
+      ) : null} */}
       {props?.options?.length ? (
         <Box
           w="full"
@@ -73,10 +73,35 @@ export const ServiceMenuBlock: React.FC<
             {props?.options.map((option) => {
               if (option?.__typename == 'CategoriesBlocksServiceMenuOptions') {
                 // @NOTE: we only need to display options for categories, pages wont have options
-                return <OptionCard key={option?.option?.id} {...option} />;
+                return (
+                  <SimpleOptionCard key={option?.option?.id} {...option} />
+                );
               }
             })}
           </SimpleGrid>
+          {props?.relatedServices?.length ? (
+            <SimpleGrid
+              w={['full']}
+              columns={serviceCols}
+              gap={[12]}
+              p={6}
+              m={0}
+              mx="auto"
+              alignItems="center"
+              justifyContent="center"
+            >
+              {props?.relatedServices &&
+                props?.relatedServices.map((service) => {
+                  return (
+                    <ServiceCard
+                      key={service?.service?.title}
+                      service={service?.service}
+                      category={props?.category}
+                    />
+                  );
+                })}
+            </SimpleGrid>
+          ) : null}
         </Box>
       ) : null}
     </>
