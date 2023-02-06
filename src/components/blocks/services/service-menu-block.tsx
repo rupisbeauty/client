@@ -16,33 +16,7 @@ export const ServiceMenuBlock: React.FC<
       ? [1, null, null, 2]
       : 1;
   return (
-    <Box
-      w="full"
-      layerStyle="box.responsive"
-      bg="gray.700"
-      rounded="xl"
-      p={4}
-      my={24}
-    >
-      {props?.options?.length ? (
-        <SimpleGrid
-          w={['full']}
-          columns={[1, null, 2]}
-          gap={[12]}
-          p={6}
-          m={0}
-          mx="auto"
-          alignItems="center"
-          justifyContent="center"
-        >
-          {props?.options.map((option) => {
-            if (option?.__typename == 'CategoriesBlocksServiceMenuOptions') {
-              // @NOTE: we only need to display options for categories, pages wont have options
-              return <OptionCard key={option?.option?.id} {...option} />;
-            }
-          })}
-        </SimpleGrid>
-      ) : null}
+    <>
       <SimpleGrid
         w={['full']}
         columns={singleCol}
@@ -64,6 +38,34 @@ export const ServiceMenuBlock: React.FC<
             );
           })}
       </SimpleGrid>
-    </Box>
+      <Box
+        w="full"
+        layerStyle="box.responsive"
+        bg="gray.700"
+        rounded="xl"
+        p={4}
+        my={24}
+      >
+        {props?.options?.length ? (
+          <SimpleGrid
+            w={['full']}
+            columns={[1, null, 2]}
+            gap={[12]}
+            p={6}
+            m={0}
+            mx="auto"
+            alignItems="center"
+            justifyContent="center"
+          >
+            {props?.options.map((option) => {
+              if (option?.__typename == 'CategoriesBlocksServiceMenuOptions') {
+                // @NOTE: we only need to display options for categories, pages wont have options
+                return <OptionCard key={option?.option?.id} {...option} />;
+              }
+            })}
+          </SimpleGrid>
+        ) : null}
+      </Box>
+    </>
   );
 };
