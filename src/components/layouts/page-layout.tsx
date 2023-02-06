@@ -1,7 +1,7 @@
 import { Box, chakra } from '@chakra-ui/react';
 import { SkipNavContent } from '@chakra-ui/skip-nav';
 import { NextSeo } from 'next-seo';
-import { useLayoutEffect } from 'react';
+import { useEffect } from 'react';
 
 import type { tinaSchema } from '@/schema';
 import type { z } from 'zod';
@@ -40,7 +40,7 @@ export const PageLayout: React.FC<LayoutProps> = ({
   seo: { title: seoTitle, description: seoDescription /* , image: seoImage */ },
   children,
 }) => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (backgroundColor !== 'bg') return;
     document.body.style.backgroundColor = backgroundColor;
   }, [backgroundColor]);
