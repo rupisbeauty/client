@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import type { PagesBlocksCoreServicesRelatedServices } from '.tina';
 
+import { truncate } from '@/utils';
 import { MotionBox } from 'chakra.ui';
 
 const ChLink = chakra(Link);
@@ -79,7 +80,7 @@ export const ServiceBox: React.FC<{
             }}
             data-tinafield="title"
           >
-            {props?.item?.title}
+            {truncate(String(props?.item?.title), 20)}
           </chakra.p>
         </Box>
       </ChLink>

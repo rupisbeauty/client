@@ -39,19 +39,21 @@ export const AboutBlock: FC<PagesBlocksAbout> = ({
         <Decorators />
         <FullLogo />
         <Divider borderColor="gray.200" />
-        <chakra.h2
-          fontSize={{ base: '4xl', xl: '6xl' }}
-          color="secondary"
-          fontFamily="body"
-          letterSpacing="wider"
-          lineHeight={1.3}
-          pt={6}
-          pb={12}
-          textAlign="center"
-          data-tinafield="title"
-        >
-          {title}
-        </chakra.h2>
+        {title ? (
+          <chakra.h2
+            fontSize={{ base: '4xl', xl: '6xl' }}
+            color="secondary"
+            fontFamily="body"
+            letterSpacing="wider"
+            lineHeight={1.3}
+            pt={6}
+            pb={12}
+            textAlign="center"
+            data-tinafield="title"
+          >
+            {title}
+          </chakra.h2>
+        ) : null}
         <Stack
           w="full"
           direction={{ base: 'column', lg: 'row' }}
@@ -68,24 +70,28 @@ export const AboutBlock: FC<PagesBlocksAbout> = ({
             />
           ) : null}
           <Box w="full" h="full">
-            <LicenseInfo
-              heading={String(heading)}
-              subheading={String(subheading)}
-              caption={String(caption)}
-            />
-            <Box
-              color="gray.600"
-              textAlign={{ base: 'justify' }}
-              p={{ base: 2, md: 6 }}
-            >
-              <chakra.p
-                fontSize={{ base: 'lg', lg: 'xl' }}
-                mb={9}
-                data-tinafield="description"
+            {heading && subheading && caption ? (
+              <LicenseInfo
+                heading={String(heading)}
+                subheading={String(subheading)}
+                caption={String(caption)}
+              />
+            ) : null}
+            {description ? (
+              <Box
+                color="gray.600"
+                textAlign={{ base: 'justify' }}
+                p={{ base: 2, md: 6 }}
               >
-                {description}
-              </chakra.p>
-            </Box>
+                <chakra.p
+                  fontSize={{ base: 'lg', lg: 'xl' }}
+                  mb={9}
+                  data-tinafield="description"
+                >
+                  {description}
+                </chakra.p>
+              </Box>
+            ) : null}
           </Box>
         </Stack>
         {showLicenses ? (
@@ -94,7 +100,10 @@ export const AboutBlock: FC<PagesBlocksAbout> = ({
             textAlign="center"
             w={{ base: '80%', lg: 'full' }}
           >
-            <LicensesStack heading={''} subheading={''} />
+            <LicensesStack
+              heading={'Certified Estheticians'}
+              subheading={'Our Estheticians are certified in:'}
+            />
           </Box>
         ) : null}
       </Container>
