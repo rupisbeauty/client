@@ -8,6 +8,10 @@ import { MotionBox } from 'chakra.ui';
 
 const ChLink = chakra(Link);
 
+function getRouteFromId(id: string) {
+  return id.split('.')[0]?.replace('_content/categories/', '');
+}
+
 export const ServiceBox: React.FC<{
   item: PagesBlocksCoreServicesRelatedServices['service'];
 }> = (props) => {
@@ -19,8 +23,7 @@ export const ServiceBox: React.FC<{
       h="full"
       whileHover={{ y: -10 }}
     >
-      <ChLink href={'#'}>
-      {/* @FIXME: Add Link */}
+      <ChLink href={`/services/${getRouteFromId(String(props?.item?.id))}`}>
         {props.item?.image ? (
           <Box w="full" h="full" objectFit="cover">
             <Image

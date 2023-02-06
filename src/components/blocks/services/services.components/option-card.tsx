@@ -76,7 +76,7 @@ export const OptionCard: React.FC<CategoriesBlocksServiceMenuOptions> = (
 
         {props.option?.description ? (
           <Text color="gray.700" px={3} data-tinafield="description">
-            {truncate(props.option?.description, 200)}
+            {truncate(props.option?.description, 175)}
           </Text>
         ) : null}
       </Stack>
