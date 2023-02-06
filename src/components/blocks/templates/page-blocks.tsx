@@ -60,6 +60,7 @@ export const PageBlocks: React.FC<Pages> = (props) => {
               />
             );
           case 'PagesBlocksContent':
+            // @TODO: update key -- this element might have multiple instances so need a better key
             return <SimpleContent {...block} key={block.__typename} />;
           default:
             return null;

@@ -1,12 +1,12 @@
-import { Container, Divider } from '@chakra-ui/react';
+import { Container,Divider } from '@chakra-ui/react';
 import React from 'react';
 
-import type { Categories, CategoriesBlocksSectionCover } from '.tina';
+import type { Categories,CategoriesBlocksSectionCover } from '.tina';
 import type { DividerProps } from '@chakra-ui/react';
 
 import { LocationCTABlock } from '../cta/visit-location-cta-block';
 import { FullLogoBlock } from '../full-logo-block';
-import { SectionCoverBlock, SectionTitleBlock } from '../section';
+import { SectionCoverBlock,SectionTitleBlock } from '../section';
 import { SimpleContent } from '../section/prose';
 import { ServiceMenuBlock } from '../services';
 
@@ -49,6 +49,7 @@ export const ServiceBlocks: React.FC<Categories> = (props) => {
               />
             );
           case 'CategoriesBlocksContent':
+            // @TODO: update key -- this element might have multiple instances so need a better key
             return <SimpleContent {...block} key={block.__typename} />;
           default:
             return null;
