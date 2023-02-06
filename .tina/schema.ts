@@ -1,9 +1,9 @@
 import { defineSchema } from 'tinacms';
 
 import {
-categories as servicesCategories,
-pages,
-servicesOptions
+  categories as servicesCategories,
+  pages,
+  servicesOptions,
 } from './collections';
 import { defaults } from './collections/_defaults';
 import { routers } from './routers';
