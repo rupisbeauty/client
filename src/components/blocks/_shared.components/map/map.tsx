@@ -11,6 +11,7 @@ export const Map: FC<{
 
   return (
     <Box
+      title="google-map"
       as="iframe"
       src={url}
       width={width}
