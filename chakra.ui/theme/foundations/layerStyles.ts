@@ -38,6 +38,11 @@ export const customLayerStyles = {
       rounded: '0',
       shadow: 'none',
     },
+    responsive: {
+      w: 'full',
+      maxW: ['container.sm', 'container.md', 'container.lg', 'container.xl'],
+      mx: 'auto',
+    },
   },
   box: {
     default: {

@@ -1,3 +1,4 @@
+import { customTextStyles } from '../../chakra.ui/theme/foundations/textStyles';
 import { mapSettingsToTinaComponents } from '../utils/chakra';
 
 const settings = mapSettingsToTinaComponents();
@@ -16,7 +17,7 @@ export const defaults = {
     showLicenses: false,
   },
   box: {
-    title: '👩‍💼 Change This title ',
+    title: '🚫 Change This title ',
     poly: 'box',
     // @TODO: check if color settings are getting applied correctly
     // settings: settings, // U96mLYCh @NOTE: Tina Settings Definitions
@@ -58,10 +59,10 @@ export const defaults = {
     title: 'Rupi Beauty Studio Logo',
   },
   sectionTitle: {
-    title: '👩‍💼 Change This title ',
+    title: '🚫 Change This title ',
   },
   section: {
-    title: '👩‍💼 Change This title ',
+    title: '🚫 Change This title ',
     settings: {
       colors: {
         // U96mLYCh @NOTE: Tina Settings Definitions
@@ -72,6 +73,20 @@ export const defaults = {
     },
   },
   serviceMenu: {
-    title: '👩‍💼 Change This title ',
+    title: '🚫 Change This title ',
+  },
+  content: {
+    heading: 'Change this text to customize this section. ',
+    headingSettings: {
+      color: '#4A5568', // gray.600
+      typography: customTextStyles.content.heading,
+    },
+    text: 'Change this text to customize this section. ',
+    textSettings: {
+      color: '#4A5568', // gray.600
+      typography: customTextStyles.content.default,
+    },
+    // spacing: settings.spacing,
+    // colors: settings.colors,
   },
 };

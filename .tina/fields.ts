@@ -11,15 +11,16 @@ import {
 } from './utils';
 
 import { paths } from '../chakra.ui/icons/paths';
+import { customTextStyles } from '../chakra.ui/theme/foundations/textStyles';
 
-const parseToString = (val?: string) => val && val.toString();
+export const parseToString = (val?: string) => val && val.toString();
 
 /* -------------------------------------------------------------------------- */
 /*                              Options Mappings                              */
 /* -------------------------------------------------------------------------- */
 // U96mLYCh @NOTE: Tina Settings Definitions
 const full = [{ key: 'auto', value: 'auto', label: 'auto' }];
-const options = {
+export const options = {
   colors: mapSemanticTokens.concat(mapColors),
   shadows: Object.keys(theme.shadows).map(mapOptions),
   space: full.concat(
@@ -32,77 +33,42 @@ const options = {
   container: {
     sizes: Object.keys(theme.sizes.container).map(mapOptions),
     flex: {
-      direction: [
-        { key: 'row', label: 'row', value: 'row' },
-        { key: 'column', label: 'column', value: 'column' },
-        { key: 'row-reverse', label: 'row-reverse', value: 'row-reverse' },
-        {
-          key: 'column-reverse',
-          label: 'column-reverse',
-          value: 'column-reverse',
-        },
-      ],
-      wrap: [
-        { key: 'nowrap', label: 'No Wrap', value: 'nowrap' },
-        { key: 'wrap', label: 'Wrap', value: 'wrap' },
-        { key: 'wrap-reverse', label: 'Wrap Reverse', value: 'wrap-reverse' },
-      ],
+      direction: ['row', 'column', 'row-reverse', 'column-reverse'].map(
+        mapOptions
+      ),
+      wrap: ['nowrap', 'wrap', 'wrap-reverse'].map(mapOptions),
       justify: [
-        { key: 'flex-start', label: 'Start', value: 'flex-start' },
-        { key: 'flex-end', label: 'End', value: 'flex-end' },
-        { key: 'center', label: 'Center', value: 'center' },
-        {
-          key: 'space-between',
-          label: 'Space Between',
-          value: 'space-between',
-        },
-        { key: 'space-around', label: 'Space Around', value: 'space-around' },
-        { key: 'space-evenly', label: 'Space Evenly', value: 'space-evenly' },
-      ],
-      align: [
-        { key: 'stretch', label: 'Stretch', value: 'stretch' },
-        { key: 'flex-start', label: 'Start', value: 'flex-start' },
-        { key: 'flex-end', label: 'End', value: 'flex-end' },
-        { key: 'center', label: 'Center', value: 'center' },
-        { key: 'baseline', label: 'Baseline', value: 'baseline' },
-      ],
+        'flex-start',
+        'flex-end',
+        'center',
+        'space-between',
+        'space-around',
+        'space-evenly',
+      ].map(mapOptions),
+      align: ['stretch', 'flex-start', 'flex-end', 'center', 'baseline'].map(
+        mapOptions
+      ),
     },
     box: {
-      display: [
-        { key: 'block', label: 'Block', value: 'block' },
-        { key: 'inline-block', label: 'Inline Block', value: 'inline-block' },
-        { key: 'inline', label: 'Inline', value: 'inline' },
-      ],
-      position: [
-        { key: 'static', label: 'Static', value: 'static' },
-        { key: 'relative', label: 'Relative', value: 'relative' },
-        { key: 'absolute', label: 'Absolute', value: 'absolute' },
-        { key: 'fixed', label: 'Fixed', value: 'fixed' },
-        { key: 'sticky', label: 'Sticky', value: 'sticky' },
-      ],
-      overflow: [
-        { key: 'visible', label: 'Visible', value: 'visible' },
-        { key: 'hidden', label: 'Hidden', value: 'hidden' },
-        { key: 'scroll', label: 'Scroll', value: 'scroll' },
-        { key: 'auto', label: 'Auto', value: 'auto' },
-      ],
-      visibility: [
-        { key: 'visible', label: 'Visible', value: 'visible' },
-        { key: 'hidden', label: 'Hidden', value: 'hidden' },
-      ],
+      display: ['block', 'inline-block', 'inline'].map(mapOptions),
+      position: ['static', 'relative', 'absolute', 'fixed', 'sticky'].map(
+        mapOptions
+      ),
+      overflow: ['visible', 'hidden', 'scroll', 'auto'].map(mapOptions),
+      visibility: ['visible', 'hidden'].map(mapOptions),
       opacity: [
-        { key: '0', label: '0', value: '0' },
-        { key: '0.1', label: '0.1', value: '0.1' },
-        { key: '0.2', label: '0.2', value: '0.2' },
-        { key: '0.3', label: '0.3', value: '0.3' },
-        { key: '0.4', label: '0.4', value: '0.4' },
-        { key: '0.5', label: '0.5', value: '0.5' },
-        { key: '0.6', label: '0.6', value: '0.6' },
-        { key: '0.7', label: '0.7', value: '0.7' },
-        { key: '0.8', label: '0.8', value: '0.8' },
-        { key: '0.9', label: '0.9', value: '0.9' },
-        { key: '1', label: '1', value: '1' },
-      ],
+        '0',
+        '0.1',
+        '0.2',
+        '0.3',
+        '0.4',
+        '0.5',
+        '0.6',
+        '0.7',
+        '0.8',
+        '0.9',
+        '1',
+      ].map(mapOptions),
       zIndex: Object.keys(theme.zIndices).map(mapOptions),
     },
   },
@@ -112,31 +78,14 @@ const options = {
     fontWeights: Object.keys(theme.fontWeights).map(mapOptions),
     lineHeights: Object.keys(theme.lineHeights).map(mapOptions),
     letterSpacings: Object.keys(theme.letterSpacings).map(mapOptions),
-    textAlign: [
-      { key: 'left', value: 'left', label: 'left' },
-      { key: 'center', value: 'center', label: 'center' },
-      { key: 'right', value: 'right', label: 'right' },
-    ],
-    textTransforms: [
-      { key: 'none', value: 'none', label: 'none' },
-      { key: 'uppercase', value: 'uppercase', label: 'uppercase' },
-      { key: 'lowercase', value: 'lowercase', label: 'lowercase' },
-      { key: 'capitalize', value: 'capitalize', label: 'capitalize' },
-    ],
-    textDecorations: [
-      { key: 'none', value: 'none', label: 'none' },
-      { key: 'underline', value: 'underline', label: 'underline' },
-      {
-        key: 'line-through',
-        value: 'line-through',
-        label: 'line-through',
-      },
-      { key: 'overline', value: 'overline', label: 'overline' },
-    ],
-    textOverflow: [
-      { key: 'clip', value: 'clip', label: 'clip' },
-      { key: 'ellipsis', value: 'ellipsis', label: 'ellipsis' },
-    ],
+    textAlign: ['left', 'center', 'right'].map(mapOptions),
+    textTransform: ['none', 'uppercase', 'lowercase', 'capitalize'].map(
+      mapOptions
+    ),
+    textDecoration: ['none', 'underline', 'line-through', 'overline'].map(
+      mapOptions
+    ),
+    textOverflow: ['clip', 'ellipsis'].map(mapOptions),
   },
   decorative: {
     border: Object.keys(theme.borders).map(mapOptions),
@@ -300,13 +249,13 @@ fields['typography'] = [
         type: 'string',
         label: 'Text Transform',
         name: 'textTransform',
-        options: options.typography.textTransforms,
+        options: options.typography.textTransform,
       },
       {
         type: 'string',
         label: 'Text Decoration',
         name: 'textDecoration',
-        options: options.typography.textDecorations,
+        options: options.typography.textDecoration,
       },
       {
         type: 'string',
@@ -560,25 +509,32 @@ fields['flex'] = [
         label: 'Horizontal Spacing',
         name: 'justify',
         options: options.container.flex.justify,
+        ui: { defaultItem: 'flex-start' },
       },
       {
         type: 'string',
         label: 'Vertical Spacing',
         name: 'align',
         options: options.container.flex.align,
+        ui: { defaultItem: 'stretch' },
       },
       {
         type: 'string',
         label: 'Wrap',
         name: 'wrap',
         options: options.container.flex.wrap,
+        ui: { defaultItem: 'nowrap' },
       },
       {
         type: 'string',
         label: 'Gap',
         name: 'gap',
+        required: true,
         options: options.space,
-        parse: parseToString,
+        ui: {
+          defaultItem: 'auto',
+          parse: parseToString,
+        },
       },
     ],
   },

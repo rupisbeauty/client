@@ -80,6 +80,30 @@ export const customTextStyles = {
       textTransform: 'none',
     },
   },
+  content: {
+    default: {
+      fontFamily: 'body',
+      fontSize: 'xl',
+      fontWeight: 'normal',
+      lineHeight: 'base',
+      letterSpacing: 'normal',
+      textAlign: 'center',
+      textDecoration: 'none',
+      textOverflow: 'none',
+      textTransform: 'none',
+    },
+    heading: {
+      fontFamily: 'heading',
+      fontSize: '3xl',
+      fontWeight: '600',
+      lineHeight: 'taller',
+      letterSpacing: 'normal',
+      textAlign: 'center',
+      textDecoration: 'none',
+      textOverflow: 'none',
+      textTransform: 'none',
+    },
+  },
 };
 
 export const textStyles: ChakraTheme['textStyles'] = customTextStyles;
