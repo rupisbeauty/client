@@ -11,45 +11,58 @@ export const ServiceMenuBlock: React.FC<
   | (PagesBlocksServiceMenu & { category?: string })
   | (CategoriesBlocksServiceMenu & { category?: string })
 > = (props) => {
-  const singleCol =
+  const serviceCols =
     props.relatedServices && Number(props.relatedServices?.length) > 1
       ? [1, null, null, 2]
       : 1;
+  const optionCols =
+    props.options && Number(props.options?.length) > 1 ? [1, null, 2] : 1;
   return (
     <>
-      <SimpleGrid
-        w={['full']}
-        columns={singleCol}
-        gap={[12]}
-        p={6}
-        m={0}
-        mx="auto"
-        alignItems="center"
-        justifyContent="center"
-      >
-        {props?.relatedServices &&
-          props?.relatedServices.map((service) => {
-            return (
-              <ServiceCard
-                key={service?.service?.title}
-                service={service?.service}
-                category={props?.category}
-              />
-            );
-          })}
-      </SimpleGrid>
-      <Box
-        w="full"
-        layerStyle="box.responsive"
-        bg="gray.700"
-        rounded="xl"
-        p={4}
-        my={24}
-      >
-        {props?.options?.length ? (
+      {props.relatedServices?.length ? (
+        <Box
+          w="full"
+          layerStyle="box.responsive"
+          bg="gray.700"
+          rounded="xl"
+          p={4}
+          my={24}
+        >
           <SimpleGrid
             w={['full']}
-            columns={[1, null, 2]}
+            columns={serviceCols}
+            gap={[12]}
+            p={6}
+            m={0}
+            mx="auto"
+            alignItems="center"
+            justifyContent="center"
+          >
+            {props?.relatedServices &&
+              props?.relatedServices.map((service) => {
+                return (
+                  <ServiceCard
+                    key={service?.service?.title}
+                    service={service?.service}
+                    category={props?.category}
+                  />
+                );
+              })}
+          </SimpleGrid>
+        </Box>
+      ) : null}
+      {props?.options?.length ? (
+        <Box
+          w="full"
+          layerStyle="box.responsive"
+          bg="gray.700"
+          rounded="xl"
+          p={4}
+          my={24}
+        >
+          <SimpleGrid
+            w={['full']}
+            columns={optionCols}
             gap={[12]}
             p={6}
             m={0}
@@ -64,8 +77,8 @@ export const ServiceMenuBlock: React.FC<
               }
             })}
           </SimpleGrid>
-        ) : null}
-      </Box>
+        </Box>
+      ) : null}
     </>
   );
 };
