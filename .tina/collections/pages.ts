@@ -42,8 +42,8 @@ export const pages: { fields: SchemaField[] } = {
         visualSelector: true,
       },
       templates: [
-        // contentBlock,
-        // dividerBlock,
+        contentBlock,
+        dividerBlock,
         // sectionBlock,
         sectionTitleBlock,
         sectionCoverBlock,

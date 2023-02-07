@@ -1,16 +1,14 @@
 import { Box, chakra, Container, Divider, Stack } from '@chakra-ui/react';
 import Image from 'next/image';
 
-// import type { PagesBlocksAbout } from '.tina'; // c3c9 @WIP
+import type { PagesBlocksAbout } from '.tina';
 import type { FC } from 'react';
 
 import { FullLogo } from '../full-logo-block';
 import { SectionTitle } from '../section';
 import { Decorators, LicenseInfo, LicensesStack } from './about.components';
 
-// export const AboutBlock: FC<PagesBlocksAbout> = ({
-export const AboutBlock: FC<any> = ({
-  // c3c9 @WIP
+export const AboutBlock: FC<PagesBlocksAbout> = ({
   title = 'About Us',
   heading,
   subheading,

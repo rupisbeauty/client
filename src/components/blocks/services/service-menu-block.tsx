@@ -11,18 +11,19 @@ import {
 } from '@chakra-ui/react';
 import Link from 'next/link';
 
-import type { CategoriesBlocksServiceMenu } from '.tina';
+import type {
+  CategoriesBlocksServiceMenu,
+  PagesBlocksServiceMenu,
+} from '.tina';
 
 import { unplauralize } from '../../../utils/fns';
 import { SectionTitle } from '../section';
 import { ServiceCard, SimpleOptionCard } from './services.components';
 
-export const ServiceMenuBlock: React.FC<any> = (props) => {
-  // c3c9 @WIP
-  // export const ServiceMenuBlock: React.FC<
-  //   | (PagesBlocksServiceMenu & { category?: string })
-  //   | (CategoriesBlocksServiceMenu & { category?: string })
-  // > = (props) => {
+export const ServiceMenuBlock: React.FC<
+  | (PagesBlocksServiceMenu & { category?: string })
+  | (CategoriesBlocksServiceMenu & { category?: string })
+> = (props) => {
   const serviceCols =
     props.relatedServices && Number(props.relatedServices?.length) > 1
       ? [1, null, null, 2]

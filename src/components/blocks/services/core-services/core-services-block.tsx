@@ -1,7 +1,7 @@
 import { AspectRatio, Container, SimpleGrid } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-// PagesBlocksCoreServices // c3c9 @WIP
-import type { imageSchema } from '.tina';
+
+import type { imageSchema, PagesBlocksCoreServices } from '.tina';
 import type { z } from 'zod';
 
 import { SectionTitle } from '../../section/section-title-block';
@@ -13,9 +13,7 @@ export type Category = {
   link: string;
 };
 
-// export const CoreServicesBlock: React.FC<PagesBlocksCoreServices> = (props) => {
-export const CoreServicesBlock: React.FC<any> = (props) => {
-  // c3c9 @WIP
+export const CoreServicesBlock: React.FC<PagesBlocksCoreServices> = (props) => {
   const router = useRouter();
 
   // @FIXME: update zod schema
@@ -52,7 +50,7 @@ export const CoreServicesBlock: React.FC<any> = (props) => {
           {props.relatedServices?.length
             ? props.relatedServices?.map(
                 // @FIXME: update type
-                (service: any) =>
+                (service) =>
                   service?.service && (
                     <ServiceBox // 15c1e649 Rename Components
                       key={service?.service?.title}
