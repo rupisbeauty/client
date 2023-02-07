@@ -44,7 +44,7 @@ export const pages: { fields: SchemaField[] } = {
       templates: [
         contentBlock,
         dividerBlock,
-        // sectionBlock,
+        sectionBlock,
         sectionTitleBlock,
         sectionCoverBlock,
         logoBlock,
