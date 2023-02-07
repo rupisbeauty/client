@@ -1,9 +1,10 @@
-import { AspectRatio, Container } from '@chakra-ui/react';
+import { AspectRatio,Container } from '@chakra-ui/react';
 import Image from 'next/image';
 
 import type {
-  CategoriesBlocksSectionCover,
-  PagesBlocksSectionCover,
+CategoriesBlocksSectionCover,
+PagesBlocksSectionCover,
+RoutesBlocksSectionCover
 } from '.tina';
 
 const defaultPos = {
@@ -12,8 +13,11 @@ const defaultPos = {
   transform: 'scale(1)',
 };
 
+// 5886
 export const SectionCoverBlock: React.FC<
-  PagesBlocksSectionCover | CategoriesBlocksSectionCover
+  | PagesBlocksSectionCover
+  | CategoriesBlocksSectionCover
+  | RoutesBlocksSectionCover
 > = (props) => {
   const objectFit = props?.image?.pos?.objectFit;
   const imagePosStyle = Object.assign(defaultPos, {

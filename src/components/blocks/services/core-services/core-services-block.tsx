@@ -1,7 +1,11 @@
 import { AspectRatio, Container, SimpleGrid } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 
-import type { imageSchema, PagesBlocksCoreServices } from '.tina';
+import type {
+  imageSchema,
+  PagesBlocksCoreServices,
+  RoutesBlocksCoreServices,
+} from '.tina';
 import type { z } from 'zod';
 
 import { SectionTitle } from '../../section/section-title-block';
@@ -12,8 +16,10 @@ export type Category = {
   image: z.TypeOf<typeof imageSchema>;
   link: string;
 };
-
-export const CoreServicesBlock: React.FC<PagesBlocksCoreServices> = (props) => {
+// 5886
+export const CoreServicesBlock: React.FC<
+  PagesBlocksCoreServices | RoutesBlocksCoreServices
+> = (props) => {
   const router = useRouter();
 
   // @FIXME: update zod schema

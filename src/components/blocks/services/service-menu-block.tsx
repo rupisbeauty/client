@@ -1,28 +1,31 @@
 import { PhoneIcon } from '@chakra-ui/icons';
 import {
-  Box,
-  Button,
-  ButtonGroup,
-  Divider,
-  Heading,
-  SimpleGrid,
-  Stack,
-  Text,
+Box,
+Button,
+ButtonGroup,
+Divider,
+Heading,
+SimpleGrid,
+Stack,
+Text
 } from '@chakra-ui/react';
 import Link from 'next/link';
 
 import type {
-  CategoriesBlocksServiceMenu,
-  PagesBlocksServiceMenu,
+CategoriesBlocksServiceMenu,
+PagesBlocksServiceMenu,
+RoutesBlocksServiceMenu
 } from '.tina';
 
 import { unplauralize } from '../../../utils/fns';
 import { SectionTitle } from '../section';
-import { ServiceCard, SimpleOptionCard } from './services.components';
+import { ServiceCard,SimpleOptionCard } from './services.components';
 
+// 5886
 export const ServiceMenuBlock: React.FC<
   | (PagesBlocksServiceMenu & { category?: string })
   | (CategoriesBlocksServiceMenu & { category?: string })
+  | (RoutesBlocksServiceMenu & { category?: string })
 > = (props) => {
   const serviceCols =
     props.relatedServices && Number(props.relatedServices?.length) > 1

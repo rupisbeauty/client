@@ -1,14 +1,20 @@
-import type { CategoriesBlocksContent, PagesBlocksContent } from '.tina';
+import { Box, Heading, Stack, Text } from '@chakra-ui/react';
+
+import type {
+  CategoriesBlocksContent,
+  PagesBlocksContent,
+  RoutesBlocksContent,
+} from '.tina';
 import type {
   BoxProps,
   ChakraProps,
   HeadingProps,
   TextProps,
 } from '@chakra-ui/react';
-import { Box, Heading, Stack, Text } from '@chakra-ui/react';
 
+// 5886
 export const SimpleContent: React.FC<
-  PagesBlocksContent | CategoriesBlocksContent
+  PagesBlocksContent | CategoriesBlocksContent | RoutesBlocksContent
 > = (props) => {
   return props?.text ? (
     <Box

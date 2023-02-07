@@ -3,6 +3,7 @@ import { defineSchema } from 'tinacms';
 import {
   categories as servicesCategories,
   pages,
+  routes,
   servicesOptions,
 } from './collections';
 import { defaults } from './collections/_defaults';
@@ -22,6 +23,17 @@ import { routers } from './routers';
 
 export const schema = defineSchema({
   collections: [
+    {
+      // 5886
+      name: 'routes',
+      label: 'Routes',
+      path: '_content/routes',
+      format: 'mdx',
+      ui: {
+        router: routers.routes
+      },
+      ...routes,
+    },
     {
       name: 'pages',
       label: 'Pages',
