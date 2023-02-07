@@ -8,9 +8,10 @@ export const routers = {
   },
   // 5886
   routes: ({ document }) => {
-    if (document._sys.filename === 'home') {
-      return `/sandbox/`;
-    }
+    // if (document._sys.filename === 'home') {
+    //   return `/sandbox/home`;
+    // }
+    console.log('document', JSON.stringify(document, null, 2));
     const crumbs = document?._sys?.breadcrumbs;
     return `/sandbox/${crumbs.join('/')}`;
   },

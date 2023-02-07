@@ -30,7 +30,8 @@ export const schema = defineSchema({
       path: '_content/routes',
       format: 'mdx',
       ui: {
-        router: routers.routes
+        defaultItem: defaults.page,
+        router: routers.routes,
       },
       ...routes,
     },
@@ -41,7 +42,7 @@ export const schema = defineSchema({
       format: 'mdx',
       ui: {
         defaultItem: defaults.page,
-        // router: routers.pages,
+        router: routers.pages,
       },
       ...pages,
     },
