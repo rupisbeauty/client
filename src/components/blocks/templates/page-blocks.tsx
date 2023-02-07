@@ -44,13 +44,13 @@ export const PageBlocks: React.FC<Pages> = (props) => {
                 />
               </Container>
             );
-          case 'PagesBlocksSectionCover':
-            return (
-              <SectionCoverBlock
-                {...(block as PagesBlocksSectionCover)} // @FIXME: type issue
-                key={block.__typename}
-              />
-            );
+          // case 'PagesBlocksSectionCover':
+          //   return (
+          //     <SectionCoverBlock
+          //       {...(block as PagesBlocksSectionCover)} // @FIXME: type issue
+          //       key={block.__typename}
+          //     />
+          //   );
           case 'PagesBlocksServiceMenu':
             return (
               <ServiceMenuBlock
