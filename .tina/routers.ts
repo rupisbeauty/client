@@ -13,7 +13,7 @@ export const routers = {
     // }
     console.log('document', JSON.stringify(document, null, 2));
     const crumbs = document?._sys?.breadcrumbs;
-    return `/sandbox/${crumbs.join('/')}`;
+    return `/route/${crumbs.join('/')}`;
   },
   categories: ({ document }) => {
     const crumbs = document?._sys?.breadcrumbs;
